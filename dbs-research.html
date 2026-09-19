@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DBS Group | Equity Research | Supriya Rai</title>
+
+<meta name="description"
+content="Independent equity research on DBS Group Holdings — financial performance, profitability, wealth management, capital strength and valuation framework by Supriya Rai.">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #07111f;
+    color: #e8eef7;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1120px, 92%);
+    margin: auto;
+}
+
+/* NAVIGATION */
+
+.nav {
+    border-bottom: 1px solid #1d3048;
+    background: rgba(7,17,31,0.96);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #6ea8fe;
+}
+
+.back {
+    color: #9db0c7;
+    font-size: 14px;
+}
+
+.back:hover {
+    color: white;
+}
+
+/* HERO */
+
+.hero {
+    padding: 90px 0 70px;
+    border-bottom: 1px solid #1d3048;
+}
+
+.eyebrow {
+    color: #6ea8fe;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: #6ea8fe;
+}
+
+.hero-subtitle {
+    max-width: 800px;
+    font-size: 20px;
+    color: #aebdd0;
+    margin-bottom: 25px;
+}
+
+.meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.meta span {
+    border: 1px solid #2a405c;
+    padding: 7px 12px;
+    border-radius: 4px;
+    color: #9fb2c9;
+    font-size: 13px;
+}
+
+/* DISCLAIMER */
+
+.disclaimer {
+    margin: 35px 0;
+    padding: 18px 20px;
+    border-left: 3px solid #6ea8fe;
+    background: #0c1929;
+    color: #aebdd0;
+    font-size: 14px;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 70px 0;
+    border-bottom: 1px solid #172a40;
+}
+
+.section-label {
+    color: #6ea8fe;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 34px;
+    margin-bottom: 22px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+p {
+    color: #b4c1d0;
+    margin-bottom: 16px;
+}
+
+/* EXECUTIVE SUMMARY */
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.metric {
+    background: #0c1929;
+    border: 1px solid #20344c;
+    padding: 22px;
+}
+
+.metric-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #f1f5fa;
+}
+
+.metric-label {
+    font-size: 13px;
+    color: #8499b1;
+    margin-top: 5px;
+}
+
+/* TWO COLUMN */
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.card {
+    background: #0c1929;
+    border: 1px solid #20344c;
+    padding: 28px;
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+.card li {
+    color: #b4c1d0;
+    margin-bottom: 10px;
+}
+
+/* TABLE */
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 14px 16px;
+    border-bottom: 1px solid #22364e;
+}
+
+th {
+    background: #0c1929;
+    color: #dce7f3;
+    font-size: 13px;
+}
+
+td {
+    color: #aebdd0;
+    font-size: 14px;
+}
+
+.highlight {
+    color: #f1f5fa;
+    font-weight: 700;
+}
+
+/* INSIGHT BOX */
+
+.insight {
+    margin-top: 25px;
+    padding: 25px;
+    background: #0b1726;
+    border: 1px solid #2b4663;
+}
+
+.insight strong {
+    color: #eaf2fb;
+}
+
+/* DRIVER CARDS */
+
+.driver-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.driver {
+    padding: 25px;
+    background: #0c1929;
+    border: 1px solid #20344c;
+}
+
+.driver-number {
+    color: #6ea8fe;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* VALUATION */
+
+.valuation-box {
+    background: #0c1929;
+    border: 1px solid #2a405c;
+    padding: 30px;
+    margin-top: 25px;
+}
+
+.valuation-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 0;
+    border-bottom: 1px solid #22364e;
+}
+
+.valuation-row:last-child {
+    border-bottom: none;
+}
+
+.valuation-row span:first-child {
+    color: #91a4bb;
+}
+
+.valuation-row span:last-child {
+    font-weight: 700;
+}
+
+/* RISK */
+
+.risk-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.risk {
+    background: #0c1929;
+    border: 1px solid #20344c;
+    padding: 25px;
+}
+
+.risk h3 {
+    color: #dbe6f2;
+}
+
+/* SOURCES */
+
+.sources a {
+    display: block;
+    padding: 12px 0;
+    color: #80b5ff;
+    border-bottom: 1px solid #1d3048;
+}
+
+.sources a:hover {
+    color: white;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 40px 0;
+    color: #71849b;
+    font-size: 13px;
+}
+
+.footer-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .two-col,
+    .risk-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .driver-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 60px 0 45px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav class="nav">
+    <div class="container nav-inner">
+
+        <div class="logo">
+            SUPRIYA <span>RAI</span>
+        </div>
+
+        <a href="index.html" class="back">
+            ← Back to Portfolio
+        </a>
+
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            Equity Research | Singapore Banking
+        </div>
+
+        <h1>
+            DBS <span>Group</span>
+        </h1>
+
+        <div class="hero-subtitle">
+            Financial performance, earnings drivers, capital strength,
+            wealth management and valuation framework.
+        </div>
+
+        <div class="meta">
+            <span>DBS Group Holdings Ltd</span>
+            <span>SGX: D05</span>
+            <span>FY2025 Review</span>
+            <span>Research Project 01</span>
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- DISCLAIMER -->
+
+<div class="container">
+
+    <div class="disclaimer">
+
+        <strong>Portfolio Research Disclaimer:</strong>
+        This page is an independent educational equity-research project
+        created for professional portfolio demonstration purposes.
+        It is not investment advice, a recommendation, or a solicitation
+        to buy or sell securities.
+
+    </div>
+
+</div>
+
+
+<!-- EXECUTIVE SUMMARY -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            01 — Executive Summary
+        </div>
+
+        <h2>DBS at a glance</h2>
+
+        <p>
+            DBS Group delivered another year of high profitability in FY2025.
+            Total income increased to SGD 22.9 billion while profit before tax
+            reached SGD 13.1 billion. Return on equity was 16.2%.
+        </p>
+
+        <div class="summary-grid">
+
+            <div class="metric">
+                <div class="metric-value">SGD 22.9B</div>
+                <div class="metric-label">Total Income</div>
+            </div>
+
+            <div class="metric">
+                <div class="metric-value">SGD 13.1B</div>
+                <div class="metric-label">Profit Before Tax</div>
+            </div>
+
+            <div class="metric">
+                <div class="metric-value">16.2%</div>
+                <div class="metric-label">Return on Equity</div>
+            </div>
+
+            <div class="metric">
+                <div class="metric-value">SGD 11.0B</div>
+                <div class="metric-label">Net Profit</div>
+            </div>
+
+        </div>
+
+        <div class="insight">
+
+            <strong>Research observation:</strong>
+
+            DBS's FY2025 performance shows a diversified earnings profile.
+            Net interest income remained resilient despite lower interest rates,
+            while fee income and treasury customer sales supported non-interest
+            income growth. Wealth management was a notable contributor to the
+            increase in fee income.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BUSINESS OVERVIEW -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            02 — Business Overview
+        </div>
+
+        <h2>Understanding the franchise</h2>
+
+        <div class="two-col">
+
+            <div class="card">
+
+                <h3>Core businesses</h3>
+
+                <ul>
+
+                    <li>
+                        Consumer Banking / Wealth Management
+                    </li>
+
+                    <li>
+                        Institutional Banking
+                    </li>
+
+                    <li>
+                        Treasury Markets
+                    </li>
+
+                    <li>
+                        Digital banking and technology-enabled services
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Geographic positioning</h3>
+
+                <p>
+                    DBS is headquartered in Singapore and has a regional
+                    presence across key Asian markets including Hong Kong,
+                    India, Indonesia, China and Taiwan.
+                </p>
+
+                <p>
+                    The bank's business model combines domestic Singapore
+                    franchise strength with regional corporate banking,
+                    wealth management and financial-market activities.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FINANCIAL SNAPSHOT -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            03 — Financial Performance
+        </div>
+
+        <h2>FY2025 financial snapshot</h2>
+
+        <p>
+            The following figures are based on DBS Group's FY2025 annual report.
+            Amounts are presented in SGD millions unless otherwise stated.
+        </p>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Metric</th>
+                        <th>FY2025</th>
+                        <th>FY2024</th>
+                        <th>Change</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Total income</td>
+                        <td class="highlight">22,900</td>
+                        <td>22,297</td>
+                        <td>+3%</td>
+                    </tr>
+
+                    <tr>
+                        <td>Net interest income</td>
+                        <td class="highlight">14,500</td>
+                        <td>14,424</td>
+                        <td>+1%</td>
+                    </tr>
+
+                    <tr>
+                        <td>Net fee & commission income</td>
+                        <td class="highlight">4,898</td>
+                        <td>4,168</td>
+                        <td>+18%</td>
+                    </tr>
+
+                    <tr>
+                        <td>Net trading income</td>
+                        <td>3,361</td>
+                        <td>3,381</td>
+                        <td>-1%</td>
+                    </tr>
+
+                    <tr>
+                        <td>Profit before tax</td>
+                        <td class="highlight">12,999</td>
+                        <td>12,884</td>
+                        <td>+1%</td>
+                    </tr>
+
+                    <tr>
+                        <td>Net profit</td>
+                        <td class="highlight">10,934</td>
+                        <td>11,290</td>
+                        <td>-3%</td>
+                    </tr>
+
+                    <tr>
+                        <td>Basic EPS</td>
+                        <td class="highlight">SGD 3.84</td>
+                        <td>SGD 3.94</td>
+                        <td>-3%</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="insight">
+
+            <strong>Key interpretation:</strong>
+
+            Total income and profit before tax reached new highs.
+            Net profit declined despite higher pre-tax profit, reflecting
+            higher tax expense associated with the global minimum tax.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EARNINGS DRIVERS -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            04 — Earnings Drivers
+        </div>
+
+        <h2>What drove FY2025 performance?</h2>
+
+        <div class="driver-grid">
+
+            <div class="driver">
+
+                <div class="driver-number">01</div>
+
+                <h3>Resilient net interest income</h3>
+
+                <p>
+                    Net interest income increased slightly to SGD 14.5 billion
+                    despite significant rate headwinds. DBS attributed resilience
+                    to balance-sheet hedging and deposit growth.
+                </p>
+
+            </div>
+
+
+            <div class="driver">
+
+                <div class="driver-number">02</div>
+
+                <h3>Fee income growth</h3>
+
+                <p>
+                    Net fee and commission income increased to approximately
+                    SGD 4.9 billion. Wealth management was an important
+                    contributor to the increase.
+                </p>
+
+            </div>
+
+
+            <div class="driver">
+
+                <div class="driver-number">03</div>
+
+                <h3>Wealth management momentum</h3>
+
+                <p>
+                    DBS reported SGD 39 billion of net new money during 2025,
+                    supporting the expansion of wealth-related revenues.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- NIM -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            05 — Banking Economics
+        </div>
+
+        <h2>Net interest margin & rates</h2>
+
+        <div class="two-col">
+
+            <div class="card">
+
+                <h3>Why NIM matters</h3>
+
+                <p>
+                    Net interest margin measures the spread between interest
+                    earned on assets and interest paid on funding, relative
+                    to the interest-earning asset base.
+                </p>
+
+                <p>
+                    For a bank, changes in benchmark interest rates can
+                    materially affect loan yields, deposit costs and
+                    therefore net interest income.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>FY2025 observation</h3>
+
+                <p>
+                    DBS operated in an environment of sharply lower benchmark
+                    interest rates in Singapore and Hong Kong.
+                </p>
+
+                <p>
+                    The bank reported that proactive balance-sheet hedging
+                    and strong deposit inflows helped offset pressure on
+                    interest margins.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WEALTH MANAGEMENT -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            06 — Wealth Management
+        </div>
+
+        <h2>A key non-interest income engine</h2>
+
+        <p>
+            Wealth management is strategically important because it can
+            generate fee-based revenue while diversifying a bank's earnings
+            away from pure interest income.
+        </p>
+
+        <div class="summary-grid">
+
+            <div class="metric">
+                <div class="metric-value">SGD 39B</div>
+                <div class="metric-label">Net New Money in 2025</div>
+            </div>
+
+            <div class="metric">
+                <div class="metric-value">SGD 4.90B</div>
+                <div class="metric-label">Net Fee Income</div>
+            </div>
+
+            <div class="metric">
+                <div class="metric-value">+18%</div>
+                <div class="metric-label">Fee Income YoY</div>
+            </div>
+
+            <div class="metric">
+                <div class="metric-value">SGD 7.03B</div>
+                <div class="metric-label">Commercial Book Non-interest Income</div>
+            </div>
+
+        </div>
+
+        <div class="insight">
+
+            <strong>Research angle:</strong>
+
+            For an equity-research analyst, the wealth-management franchise
+            is worth monitoring because sustained client asset gathering,
+            investment-product activity and fee generation can provide
+            an earnings-growth channel that is less directly dependent
+            on net interest margins.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ASSET QUALITY -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            07 — Risk & Capital
+        </div>
+
+        <h2>Asset quality and capital strength</h2>
+
+        <div class="summary-grid">
+
+            <div class="metric">
+                <div class="metric-value">1.0%</div>
+                <div class="metric-label">NPL Ratio</div>
+            </div>
+
+            <div class="metric">
+                <div class="metric-value">130%</div>
+                <div class="metric-label">Allowance Coverage</div>
+            </div>
+
+            <div class="metric">
+                <div class="metric-value">17.0%</div>
+                <div class="metric-label">CET1 Transitional</div>
+            </div>
+
+            <div class="metric">
+                <div class="metric-value">15.0%</div>
+                <div class="metric-label">CET1 Fully Phased-in</div>
+            </div>
+
+        </div>
+
+        <p>
+            DBS reported a stable NPL ratio of 1.0% in FY2025. The bank also
+            reported strong capitalisation, providing an important buffer
+            against credit and macroeconomic risks.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- BALANCE SHEET -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            08 — Balance Sheet
+        </div>
+
+        <h2>Scale of the balance sheet</h2>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Metric</th>
+                        <th>FY2025</th>
+                        <th>FY2024</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Total assets</td>
+                        <td class="highlight">SGD 897.5B</td>
+                        <td>SGD 827.2B</td>
+                    </tr>
+
+                    <tr>
+                        <td>Customer loans</td>
+                        <td class="highlight">SGD 445.0B</td>
+                        <td>SGD 430.6B</td>
+                    </tr>
+
+                    <tr>
+                        <td>Customer deposits</td>
+                        <td class="highlight">SGD 610.0B</td>
+                        <td>SGD 561.7B</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="insight">
+
+            <strong>Analyst observation:</strong>
+
+            Deposit growth exceeded loan growth during FY2025.
+            This provides useful context when analysing liquidity,
+            funding structure and future balance-sheet deployment.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- VALUATION -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            09 — Valuation Framework
+        </div>
+
+        <h2>How I would value a bank</h2>
+
+        <p>
+            Traditional FCFF-based DCF models are less suitable for banks
+            because debt is part of the operating and funding structure.
+            A bank-focused framework can instead combine earnings,
+            book value, ROE, dividends and relative valuation.
+        </p>
+
+        <div class="two-col">
+
+            <div class="card">
+
+                <h3>Primary framework</h3>
+
+                <ul>
+
+                    <li>
+                        Price-to-book relative to sustainable ROE
+                    </li>
+
+                    <li>
+                        P/E based on forward earnings
+                    </li>
+
+                    <li>
+                        Dividend yield and payout sustainability
+                    </li>
+
+                    <li>
+                        Earnings sensitivity to NIM and credit costs
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Supporting framework</h3>
+
+                <ul>
+
+                    <li>
+                        Dividend Discount Model
+                    </li>
+
+                    <li>
+                        Residual / excess-return framework
+                    </li>
+
+                    <li>
+                        Peer comparison with Singapore banks
+                    </li>
+
+                    <li>
+                        ROE versus cost-of-equity analysis
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="valuation-box">
+
+            <h3>Reference valuation snapshot</h3>
+
+            <p>
+                DBS's official investor-relations page showed a share price
+                of SGD 78.84 at 12:00:17 PM SGT on 4 September 2026.
+            </p>
+
+            <div class="valuation-row">
+
+                <span>Reference share price</span>
+                <span>SGD 78.84</span>
+
+            </div>
+
+            <div class="valuation-row">
+
+                <span>FY2025 basic EPS</span>
+                <span>SGD 3.84</span>
+
+            </div>
+
+            <div class="valuation-row">
+
+                <span>Reference P/E using FY2025 EPS</span>
+                <span>~20.5x</span>
+
+            </div>
+
+            <div class="valuation-row">
+
+                <span>FY2025 total dividend</span>
+                <span>SGD 3.06/share</span>
+
+            </div>
+
+            <div class="valuation-row">
+
+                <span>Reference dividend yield</span>
+                <span>~3.9%</span>
+
+            </div>
+
+        </div>
+
+        <p style="margin-top:18px;font-size:13px;color:#71849b;">
+
+            Note: The valuation snapshot uses the stated reference date
+            of 4 September 2026 and is not a live market quote.
+            P/E is calculated using the FY2025 basic EPS reported by DBS.
+            This page does not provide a target price.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CATALYSTS -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            10 — Potential Earnings Drivers
+        </div>
+
+        <h2>Variables to monitor</h2>
+
+        <div class="driver-grid">
+
+            <div class="driver">
+
+                <div class="driver-number">01</div>
+
+                <h3>Interest-rate cycle</h3>
+
+                <p>
+                    Changes in benchmark rates and deposit pricing can
+                    influence NIM and net interest income.
+                </p>
+
+            </div>
+
+
+            <div class="driver">
+
+                <div class="driver-number">02</div>
+
+                <h3>Wealth inflows</h3>
+
+                <p>
+                    Continued net new money and client investment activity
+                    could support recurring fee income.
+                </p>
+
+            </div>
+
+
+            <div class="driver">
+
+                <div class="driver-number">03</div>
+
+                <h3>Capital returns</h3>
+
+                <p>
+                    Dividend policy and share buybacks can influence
+                    shareholder distributions and per-share metrics.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RISKS -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            11 — Key Risks
+        </div>
+
+        <h2>Risk factors</h2>
+
+        <div class="risk-grid">
+
+            <div class="risk">
+
+                <h3>Interest-rate risk</h3>
+
+                <p>
+                    Further rate changes can pressure lending yields,
+                    deposit economics and NIM.
+                </p>
+
+            </div>
+
+
+            <div class="risk">
+
+                <h3>Credit risk</h3>
+
+                <p>
+                    Deterioration in borrower quality or specific
+                    sector exposures could increase credit costs.
+                </p>
+
+            </div>
+
+
+            <div class="risk">
+
+                <h3>Market risk</h3>
+
+                <p>
+                    Capital-market volatility can affect trading activity,
+                    wealth-management flows and client sentiment.
+                </p>
+
+            </div>
+
+
+            <div class="risk">
+
+                <h3>Regulatory & capital risk</h3>
+
+                <p>
+                    Changes in capital requirements, regulation and
+                    tax rules can affect returns and distributions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- INVESTMENT RESEARCH FRAMEWORK -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            12 — Research Framework
+        </div>
+
+        <h2>My analyst checklist</h2>
+
+        <div class="card">
+
+            <ul>
+
+                <li>
+                    Revenue growth and earnings quality
+                </li>
+
+                <li>
+                    NIM and interest-rate sensitivity
+                </li>
+
+                <li>
+                    Fee-income diversification
+                </li>
+
+                <li>
+                    Wealth-management net new money
+                </li>
+
+                <li>
+                    Loan and deposit growth
+                </li>
+
+                <li>
+                    Asset quality and credit costs
+                </li>
+
+                <li>
+                    CET1 and capital allocation
+                </li>
+
+                <li>
+                    ROE and sustainable profitability
+                </li>
+
+                <li>
+                    Dividend and buyback policy
+                </li>
+
+                <li>
+                    Relative valuation versus regional peers
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONCLUSION -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            13 — Research Conclusion
+        </div>
+
+        <h2>Key takeaways</h2>
+
+        <div class="two-col">
+
+            <div class="card">
+
+                <h3>Earnings profile</h3>
+
+                <p>
+                    FY2025 demonstrates the importance of DBS's diversified
+                    revenue model. Net interest income remained resilient,
+                    while fee-related income provided additional support.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>What I would monitor next</h3>
+
+                <p>
+                    The next stages of this research would focus on
+                    quarterly NIM trends, loan growth, credit costs,
+                    wealth-management flows, capital returns and peer
+                    valuation.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SOURCES -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            14 — Sources
+        </div>
+
+        <h2>Primary research sources</h2>
+
+        <div class="sources">
+
+            <a href="https://www.dbs.com/annualreports/2025/index.html"
+               target="_blank">
+                DBS Group Annual Report 2025 →
+            </a>
+
+            <a href="https://www.dbs.com/iwov-resources/images/investors/annual-report/dbs-annual-report-2025.pdf"
+               target="_blank">
+                DBS Group Annual Report 2025 — PDF →
+            </a>
+
+            <a href="https://www.dbs.com/newsroom/Full_year_profit_before_tax_at_record_SGD_13_1_billion_net_profit_at_SGD_11_0_billion_with_ROE_at_16_2pct"
+               target="_blank">
+                DBS FY2025 Full-Year Results →
+            </a>
+
+            <a href="https://www.dbs.com/investors/financials/quarterly-financials"
+               target="_blank">
+                DBS Investor Relations — Quarterly Financials →
+            </a>
+
+            <a href="https://www.dbs.com/investors/default.page"
+               target="_blank">
+                DBS Investor Relations →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-line">
+
+            <span>
+                © 2026 Supriya Rai
+            </span>
+
+            <span>
+                Equity Research Portfolio | Singapore
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
