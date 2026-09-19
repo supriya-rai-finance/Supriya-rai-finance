@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Supriya Rai | Equity Research & Investment Professional</title>
+    <title>Supriya Rai | Finance & Investment Research</title>
 
-    <meta name="description" content="Supriya Rai - Finance and Investment Professional specializing in Indian and Singapore equities, equity research, financial modelling, valuation and wealth management.">
+    <meta name="description"
+          content="Supriya Rai - Finance professional specialising in Indian equities, Singapore equities, equity research, financial modelling, valuation and wealth management.">
 
     <style>
         * {
@@ -21,9 +22,9 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #0b0f14;
-            color: #f4f4f4;
-            line-height: 1.6;
+            background: #07111f;
+            color: #e8eef7;
+            line-height: 1.7;
         }
 
         a {
@@ -32,380 +33,529 @@
         }
 
         .container {
-            width: 90%;
-            max-width: 1180px;
-            margin: auto;
+            width: min(1120px, 92%);
+            margin: 0 auto;
         }
 
-        /* NAVIGATION */
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(11, 15, 20, 0.94);
-            border-bottom: 1px solid #222a33;
+            background: rgba(7, 17, 31, 0.96);
+            border-bottom: 1px solid #1d3047;
             backdrop-filter: blur(10px);
         }
 
         .nav-inner {
+            min-height: 72px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            height: 72px;
+            justify-content: space-between;
+            gap: 30px;
         }
 
         .logo {
-            font-size: 21px;
+            font-size: 20px;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
         .logo span {
-            color: #c9a86a;
+            color: #8fb8ff;
         }
 
         .nav-links {
             display: flex;
-            gap: 28px;
+            gap: 26px;
             list-style: none;
             font-size: 14px;
         }
 
         .nav-links a {
-            color: #b9c0c8;
-            transition: 0.3s;
+            color: #b9c7d9;
+            transition: 0.2s ease;
         }
 
         .nav-links a:hover {
-            color: #c9a86a;
+            color: #ffffff;
         }
 
-        /* HERO */
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
-            min-height: 88vh;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid #222a33;
+            padding: 110px 0 95px;
+            border-bottom: 1px solid #172a40;
         }
 
-        .hero-content {
-            max-width: 850px;
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 0.8fr;
+            gap: 70px;
+            align-items: center;
         }
 
         .eyebrow {
-            color: #c9a86a;
-            text-transform: uppercase;
-            letter-spacing: 3px;
+            color: #8fb8ff;
             font-size: 13px;
-            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+            text-transform: uppercase;
         }
 
         .hero h1 {
-            font-size: clamp(48px, 8vw, 88px);
-            line-height: 0.98;
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 1.05;
+            letter-spacing: -2px;
             margin-bottom: 25px;
-            letter-spacing: -3px;
         }
 
         .hero h1 span {
-            color: #c9a86a;
-        }
-
-        .hero-subtitle {
-            font-size: 23px;
-            color: #d4d8dd;
-            max-width: 780px;
-            margin-bottom: 20px;
+            color: #8fb8ff;
         }
 
         .hero-description {
-            color: #8e98a3;
             max-width: 720px;
-            font-size: 16px;
+            color: #aebed1;
+            font-size: 18px;
+            margin-bottom: 32px;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 15px;
-            margin-top: 35px;
             flex-wrap: wrap;
+            gap: 14px;
         }
 
         .btn {
             display: inline-block;
-            padding: 13px 22px;
-            border: 1px solid #c9a86a;
-            transition: 0.3s;
+            padding: 13px 21px;
+            border-radius: 6px;
             font-size: 14px;
-            font-weight: 600;
+            font-weight: 700;
+            transition: 0.2s ease;
         }
 
         .btn-primary {
-            background: #c9a86a;
-            color: #0b0f14;
+            background: #8fb8ff;
+            color: #07111f;
         }
 
         .btn-primary:hover {
-            background: #e1c88e;
+            background: #b1cdff;
         }
 
         .btn-secondary {
-            color: #c9a86a;
+            border: 1px solid #40566f;
+            color: #dce7f5;
         }
 
         .btn-secondary:hover {
-            background: #c9a86a;
-            color: #0b0f14;
+            border-color: #8fb8ff;
+            color: #ffffff;
         }
 
-        /* GENERAL */
-
-        section {
-            padding: 100px 0;
-            border-bottom: 1px solid #222a33;
+        .hero-card {
+            border: 1px solid #253b55;
+            background: #0b192b;
+            padding: 30px;
+            border-radius: 10px;
         }
 
-        .section-number {
-            color: #c9a86a;
-            font-size: 13px;
-            letter-spacing: 2px;
-            margin-bottom: 12px;
-        }
-
-        .section-title {
-            font-size: 42px;
+        .hero-card-label {
+            color: #7f95ad;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
             margin-bottom: 18px;
         }
 
-        .section-intro {
-            color: #8e98a3;
-            max-width: 720px;
-            margin-bottom: 50px;
+        .hero-card h3 {
+            font-size: 23px;
+            margin-bottom: 16px;
         }
 
-        /* ABOUT */
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 70px;
-        }
-
-        .about-text {
-            color: #b8c0c8;
-            font-size: 17px;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
+        .hero-card p {
+            color: #9eb0c5;
+            font-size: 14px;
         }
 
         .stats {
             display: grid;
-            gap: 18px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 25px;
         }
 
         .stat {
-            border: 1px solid #29313b;
-            padding: 24px;
-            background: #10161d;
+            padding: 15px;
+            border: 1px solid #20364f;
+            border-radius: 7px;
+            background: #091526;
         }
 
-        .stat-number {
-            font-size: 34px;
-            color: #c9a86a;
+        .stat strong {
+            display: block;
+            font-size: 21px;
+            color: #eaf2ff;
+        }
+
+        .stat span {
+            font-size: 11px;
+            color: #8095ac;
+        }
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+            padding: 95px 0;
+        }
+
+        .section-number {
+            color: #66809d;
+            font-size: 12px;
+            letter-spacing: 2px;
             font-weight: 700;
-        }
-
-        .stat-label {
-            color: #929ca7;
-            font-size: 13px;
-        }
-
-        /* EXPERIENCE */
-
-        .experience-item {
-            display: grid;
-            grid-template-columns: 220px 1fr;
-            gap: 45px;
-            padding: 35px 0;
-            border-top: 1px solid #29313b;
-        }
-
-        .experience-date {
-            color: #c9a86a;
-            font-size: 14px;
-        }
-
-        .experience h3 {
-            font-size: 23px;
-            margin-bottom: 4px;
-        }
-
-        .company {
-            color: #89939e;
-            margin-bottom: 15px;
-        }
-
-        .experience ul {
-            padding-left: 18px;
-            color: #aeb6bf;
-        }
-
-        .experience li {
-            margin-bottom: 8px;
-        }
-
-        /* SKILLS */
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .skill-card {
-            border: 1px solid #29313b;
-            padding: 28px;
-            background: #10161d;
-        }
-
-        .skill-card h3 {
-            color: #c9a86a;
             margin-bottom: 12px;
         }
 
-        .skill-card p {
-            color: #9ca6b0;
+        .section-title {
+            font-size: 38px;
+            line-height: 1.2;
+            margin-bottom: 16px;
         }
 
-        /* PROJECTS */
+        .section-intro {
+            max-width: 760px;
+            color: #9eb0c5;
+            margin-bottom: 45px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 55px;
+        }
+
+        .about-text p {
+            color: #aebdce;
+            margin-bottom: 18px;
+        }
+
+        .focus-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .focus-item {
+            border-left: 2px solid #5279a7;
+            background: #0b192b;
+            padding: 17px 20px;
+        }
+
+        .focus-item strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .focus-item span {
+            color: #8fa2b8;
+            font-size: 14px;
+        }
+
+        /* =========================
+           RESEARCH PROJECTS
+        ========================= */
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 22px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            align-items: stretch;
         }
 
         .project {
-            border: 1px solid #29313b;
+            display: flex;
+            flex-direction: column;
+            min-height: 300px;
             padding: 30px;
-            background: linear-gradient(145deg, #111820, #0d1218);
-            transition: 0.3s;
+            border: 1px solid #243b54;
+            border-radius: 10px;
+            background: #0b192b;
+            transition: transform 0.2s ease,
+                        border-color 0.2s ease,
+                        background 0.2s ease;
         }
 
         .project:hover {
             transform: translateY(-4px);
-            border-color: #c9a86a;
+            border-color: #5279a7;
+            background: #0d1e32;
         }
 
-        .project-tag {
-            color: #c9a86a;
-            font-size: 12px;
-            letter-spacing: 1px;
+        .project-tag,
+        .project-meta {
+            display: inline-block;
+            color: #8fb8ff;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
+            margin-bottom: 22px;
         }
 
         .project h3 {
-            margin: 12px 0;
-            font-size: 22px;
+            font-size: 23px;
+            line-height: 1.3;
+            margin-bottom: 15px;
         }
 
         .project p {
-            color: #909aa5;
-            margin-bottom: 20px;
+            color: #94a8bd;
+            font-size: 14px;
+            margin-bottom: 25px;
         }
 
         .project-link {
-            color: #c9a86a;
+            margin-top: auto;
+            color: #c5d8f2;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .project:hover .project-link {
+            color: #8fb8ff;
+        }
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .skill-box {
+            padding: 25px;
+            background: #0b192b;
+            border: 1px solid #243b54;
+            border-radius: 9px;
+        }
+
+        .skill-box h3 {
+            font-size: 17px;
+            margin-bottom: 12px;
+        }
+
+        .skill-box p {
+            color: #91a4ba;
             font-size: 14px;
         }
 
-        /* CERTIFICATIONS */
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .experience {
+            border-left: 1px solid #2a425c;
+            padding-left: 30px;
+        }
+
+        .experience-item {
+            position: relative;
+            padding-bottom: 35px;
+        }
+
+        .experience-item::before {
+            content: "";
+            position: absolute;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #8fb8ff;
+            left: -35px;
+            top: 8px;
+        }
+
+        .experience-item h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .experience-item .company {
+            color: #8fb8ff;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .experience-item p {
+            color: #95a8bd;
+            font-size: 14px;
+        }
+
+        /* =========================
+           EDUCATION / CERTIFICATIONS
+        ========================= */
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .education-card {
+            background: #0b192b;
+            border: 1px solid #243b54;
+            padding: 28px;
+            border-radius: 9px;
+        }
+
+        .education-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .education-card p {
+            color: #92a6bc;
+            font-size: 14px;
+        }
 
         .certifications {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
         }
 
         .cert {
-            padding: 22px;
-            border-left: 2px solid #c9a86a;
-            background: #10161d;
-            color: #c0c7ce;
+            border: 1px solid #304860;
+            padding: 8px 13px;
+            border-radius: 5px;
+            color: #a9bbcf;
+            font-size: 12px;
         }
 
-        /* CONTACT */
+        /* =========================
+           CONTACT
+        ========================= */
 
         .contact-box {
-            border: 1px solid #29313b;
             padding: 45px;
-            background: #10161d;
-            max-width: 850px;
+            border: 1px solid #2b435d;
+            border-radius: 10px;
+            background: #0b192b;
         }
 
-        .contact-box h3 {
-            font-size: 28px;
+        .contact-box h2 {
+            font-size: 34px;
             margin-bottom: 15px;
         }
 
         .contact-box p {
-            color: #929ca7;
+            color: #99acc1;
+            max-width: 700px;
             margin-bottom: 25px;
         }
 
         .contact-links {
             display: flex;
-            gap: 15px;
             flex-wrap: wrap;
+            gap: 14px;
         }
 
-        /* FOOTER */
+        .contact-link {
+            border: 1px solid #344d67;
+            padding: 11px 16px;
+            border-radius: 5px;
+            color: #b9c9dc;
+            font-size: 13px;
+        }
+
+        .contact-link:hover {
+            border-color: #8fb8ff;
+            color: #ffffff;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
-            padding: 35px 0;
-            color: #69737e;
-            font-size: 13px;
-            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid #172a40;
+            color: #667d96;
+            font-size: 12px;
         }
 
-        /* MOBILE */
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
 
-        @media (max-width: 800px) {
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .hero-grid,
+            .about-grid,
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
 
             .nav-links {
                 display: none;
             }
 
-            .hero h1 {
-                font-size: 55px;
+            .hero {
+                padding: 75px 0;
             }
+        }
 
-            .hero-subtitle {
-                font-size: 19px;
-            }
-
-            .about-grid,
-            .skills-grid,
-            .projects-grid,
-            .certifications {
-                grid-template-columns: 1fr;
-            }
-
-            .experience-item {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
+        @media (max-width: 550px) {
 
             section {
                 padding: 70px 0;
             }
 
-            .section-title {
-                font-size: 34px;
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .contact-box {
+                padding: 28px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
             }
         }
     </style>
@@ -413,124 +563,187 @@
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
     <div class="container nav-inner">
-        <div class="logo">SUPRIYA<span>RAI</span></div>
+
+        <a href="#" class="logo">
+            Supriya <span>Rai</span>
+        </a>
 
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Expertise</a></li>
             <li><a href="#projects">Research</a></li>
-            <li><a href="#certifications">Credentials</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+
     </div>
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <header class="hero">
-    <div class="container hero-content">
 
-        <div class="eyebrow">
-Equity Research & Investment Professional        </div>
+    <div class="container hero-grid">
 
-        <h1>
-            SUPRIYA<br>
-            <span>RAI</span>
-        </h1>
+        <div>
 
-        <div class="hero-subtitle">
-            Indian & Singapore Equities · Equity Research · Financial Modelling · Wealth Management
+            <div class="eyebrow">
+                Finance & Investment Research
+            </div>
+
+            <h1>
+                Supriya <span>Rai</span>
+            </h1>
+
+            <p class="hero-description">
+                Finance professional with 9+ years of experience across
+                Indian equities, investment advisory, wealth management,
+                HNI/UHNI client coverage and financial services.
+                Building research-led perspectives across Indian and
+                Singapore financial markets.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a class="btn btn-primary" href="#projects">
+                    VIEW RESEARCH
+                </a>
+
+                <a class="btn btn-secondary"
+                   href="Supriya%20Rai_Resume.pdf"
+                   download>
+                    DOWNLOAD CV
+                </a>
+
+            </div>
+
         </div>
 
-        <p class="hero-description">
-            9+ years of experience across Indian equities, investment advisory,
-            HNI/UHNI client coverage, wealth management and financial-services
-            business development. Currently based in Singapore and pursuing an MBA.
-        </p>
 
-        <div class="hero-buttons">
-            <a class="btn btn-primary" href="#projects">
-                VIEW RESEARCH
-            </a>
+        <div class="hero-card">
 
-            <a class="btn btn-secondary" href="Supriya%20Rai_Resume.pdf" download>
-                DOWNLOAD CV
-            </a>
+            <div class="hero-card-label">
+                Professional Focus
+            </div>
+
+            <h3>
+                Equity Research · Financial Modelling · Wealth Management
+            </h3>
+
+            <p>
+                Focused on fundamental analysis, valuation, financial
+                modelling, investment research, HNI/UHNI coverage and
+                data-driven financial decision making.
+            </p>
+
+            <div class="stats">
+
+                <div class="stat">
+                    <strong>9+</strong>
+                    <span>Years Experience</span>
+                </div>
+
+                <div class="stat">
+                    <strong>150+</strong>
+                    <span>HNI/UHNI Relationships</span>
+                </div>
+
+                <div class="stat">
+                    <strong>FMVA</strong>
+                    <span>Financial Modelling</span>
+                </div>
+
+                <div class="stat">
+                    <strong>NISM</strong>
+                    <span>Research & Advisory</span>
+                </div>
+
+            </div>
+
         </div>
 
     </div>
+
 </header>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about">
 
     <div class="container">
 
-        <div class="section-number">01 — ABOUT</div>
+        <div class="section-number">
+            01 — PROFILE
+        </div>
 
         <h2 class="section-title">
-            Finance with a market perspective.
+            Finance professional with a research mindset.
         </h2>
+
+        <p class="section-intro">
+            My experience combines investment advisory, equity markets,
+            wealth management, client coverage, business development and
+            financial analysis.
+        </p>
 
         <div class="about-grid">
 
             <div class="about-text">
 
                 <p>
-                    I am a finance and investment professional with 9+ years of
-                    experience across Indian equities, investment advisory,
-                    wealth management, HNI/UHNI client coverage and financial
-                    services.
+                    I have worked across Indian equities and financial
+                    services, supporting HNI and UHNI clients through
+                    market research, investment analysis, portfolio
+                    discussions and relationship management.
                 </p>
 
                 <p>
-                    My experience combines financial-market knowledge with
-                    client coverage, investment analysis, relationship management
-                    and business development.
+                    My current career focus is moving further toward
+                    equity research, financial modelling, valuation,
+                    investment analysis and finance roles within
+                    Singapore and regional financial markets.
                 </p>
 
                 <p>
-                    I am currently expanding my analytical capabilities through
-                    financial modelling, valuation, AI in finance and research
-                    focused on both Indian and Singapore equity markets.
-                </p>
-
-                <p>
-                    My professional interests include equity research,
-                    investment analysis, wealth management, corporate banking
-                    and financial-services opportunities in Singapore.
+                    This portfolio showcases selected research projects,
+                    valuation frameworks and financial analysis work.
                 </p>
 
             </div>
 
-            <div class="stats">
 
-                <div class="stat">
-                    <div class="stat-number">9+</div>
-                    <div class="stat-label">Years in Financial Services</div>
+            <div class="focus-list">
+
+                <div class="focus-item">
+                    <strong>Indian Equities</strong>
+                    <span>Fundamental and technical market analysis</span>
                 </div>
 
-                <div class="stat">
-                    <div class="stat-number">150+</div>
-                    <div class="stat-label">HNI / UHNI Client Relationships</div>
+                <div class="focus-item">
+                    <strong>Equity Research</strong>
+                    <span>Company analysis, earnings and valuation</span>
                 </div>
 
-                <div class="stat">
-                    <div class="stat-number">40%</div>
-                    <div class="stat-label">HNI Client Base Growth</div>
+                <div class="focus-item">
+                    <strong>Financial Modelling</strong>
+                    <span>DCF, forecasting, comparable companies and valuation</span>
                 </div>
 
-                <div class="stat">
-                    <div class="stat-number">35%</div>
-                    <div class="stat-label">YoY Revenue Growth</div>
+                <div class="focus-item">
+                    <strong>Wealth Management</strong>
+                    <span>HNI/UHNI coverage and investment advisory</span>
                 </div>
 
             </div>
@@ -542,222 +755,38 @@ Equity Research & Investment Professional        </div>
 </section>
 
 
-<!-- EXPERIENCE -->
-
-<section id="experience">
-
-    <div class="container">
-
-        <div class="section-number">02 — EXPERIENCE</div>
-
-        <h2 class="section-title">Professional Experience</h2>
-
-        <p class="section-intro">
-            Experience across investment advisory, Indian equities,
-            wealth management, client coverage and financial-services
-            business development.
-        </p>
-
-
-        <div class="experience">
-
-            <div class="experience-item">
-
-                <div class="experience-date">
-                    MAY 2025 — DEC 2025
-                </div>
-
-                <div>
-
-                    <h3>Senior Business Head</h3>
-
-                    <div class="company">
-                        Wise Global Research Services · India
-                    </div>
-
-                    <ul>
-                        <li>Led financial advisors supporting HNI clients across equities, mutual funds, derivatives and portfolio strategy.</li>
-                        <li>Expanded the HNI client base by 40% through relationship management and personalised investment strategies.</li>
-                        <li>Translated market research into client-facing investment solutions.</li>
-                        <li>Directed advisor training across financial planning, risk assessment and goal-based investing.</li>
-                        <li>Maintained SEBI, NISM and KYC compliance across client engagements.</li>
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-            <div class="experience-item">
-
-                <div class="experience-date">
-                    JAN 2020 — MAY 2025
-                </div>
-
-                <div>
-
-                    <h3>Business Head</h3>
-
-                    <div class="company">
-                        ResearchMart Services Pvt Ltd & Capital Ways · India
-                    </div>
-
-                    <ul>
-                        <li>Managed 150+ HNI/UHNI client relationships.</li>
-                        <li>Conducted market research, financial analysis and risk profiling.</li>
-                        <li>Supported strategic asset allocation and long-term wealth planning.</li>
-                        <li>Led client acquisition initiatives supporting AUM growth.</li>
-                        <li>Worked closely with research and advisory teams to convert market insights into investment recommendations.</li>
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-            <div class="experience-item">
-
-                <div class="experience-date">
-                    JAN 2017 — DEC 2019
-                </div>
-
-                <div>
-
-                    <h3>Team Lead</h3>
-
-                    <div class="company">
-                        Dezire Research · India
-                    </div>
-
-                    <ul>
-                        <li>Led advisory professionals across retail and HNI client servicing.</li>
-                        <li>Delivered 35% YoY revenue growth through targeted strategies.</li>
-                        <li>Conducted technical and fundamental analysis workshops.</li>
-                        <li>Supported client retention through structured investment discussions.</li>
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-            <div class="experience-item">
-
-                <div class="experience-date">
-                    MAY 2016 — DEC 2016
-                </div>
-
-                <div>
-
-                    <h3>Business Analyst</h3>
-
-                    <div class="company">
-                        CapitalVia · India
-                    </div>
-
-                    <ul>
-                        <li>Supported advisory and research teams with market analysis.</li>
-                        <li>Conducted investment research across equity and commodity markets.</li>
-                        <li>Prepared client reports and investment insights with senior analysts.</li>
-                    </ul>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- EXPERTISE -->
-
-<section id="skills">
-
-    <div class="container">
-
-        <div class="section-number">03 — EXPERTISE</div>
-
-        <h2 class="section-title">Areas of Expertise</h2>
-
-        <div class="skills-grid">
-
-            <div class="skill-card">
-                <h3>Indian Equities</h3>
-                <p>
-                    Equity markets, fundamental analysis, technical analysis,
-                    investment advisory, portfolio strategy and market research.
-                </p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Singapore Equities</h3>
-                <p>
-                    Developing research coverage across SGX-listed companies,
-                    Singapore banks, REITs, industrials, consumer businesses
-                    and financial services.
-                </p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Financial Modelling & Valuation</h3>
-                <p>
-                    DCF valuation, comparable-company analysis, financial
-                    statement analysis, forecasting and M&A fundamentals.
-                </p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Wealth Management</h3>
-                <p>
-                    HNI/UHNI client coverage, investment advisory, risk
-                    profiling, portfolio strategy and relationship management.
-                </p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Corporate & Institutional Coverage</h3>
-                <p>
-                    Relationship management, business development, key-account
-                    management, stakeholder management and financial services.
-                </p>
-            </div>
-
-            <div class="skill-card">
-                <h3>AI in Finance</h3>
-                <p>
-                    GenAI-powered research, data analytics, client insights,
-                    reporting and AI-assisted financial analysis.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- RESEARCH PROJECTS -->
+<!-- =========================
+     RESEARCH PROJECTS
+========================= -->
 
 <section id="projects">
 
     <div class="container">
 
-        <div class="section-number">04 — RESEARCH</div>
+        <div class="section-number">
+            04 — RESEARCH
+        </div>
 
-        <h2 class="section-title">Investment Research</h2>
+        <h2 class="section-title">
+            Investment Research
+        </h2>
 
         <p class="section-intro">
             Selected research and valuation projects covering Indian and
-            Singapore financial markets. Detailed reports will be added as
-            the portfolio develops.
+            Singapore financial markets. Detailed reports will be added
+            as the portfolio develops.
         </p>
 
 
+        <!-- IMPORTANT:
+             Every project is a separate grid item.
+             This structure fixes the previous nested-card problem.
+        -->
+
         <div class="projects-grid">
+
+
+            <!-- PROJECT 1 — DBS -->
 
             <a href="dbs-research.html" class="project">
 
@@ -765,7 +794,9 @@ Equity Research & Investment Professional        </div>
                     Singapore Equities
                 </div>
 
-                <h3>DBS Group — Equity Research</h3>
+                <h3>
+                    DBS Group — Equity Research
+                </h3>
 
                 <p>
                     Fundamental analysis of Singapore's banking sector,
@@ -777,57 +808,69 @@ Equity Research & Investment Professional        </div>
                 </span>
 
             </a>
-<a href="bank-peer-comparison.html" class="project">
-
-    <div class="project-meta">
-        EQUITY RESEARCH
-    </div>
-
-    <h3>
-        Singapore Banking Peer Comparison
-    </h3>
-
-    <p>
-        DBS vs OCBC vs UOB — comparative analysis of financial
-        performance, profitability, balance sheet, capital,
-        valuation, catalysts and risks.
-    </p>
-
-    <span class="project-link">
-        VIEW RESEARCH →
-    </span>
-
-</a>
 
 
-<a href="reliance-equity-research.html" class="project">
+            <!-- PROJECT 2 — BANK PEER COMPARISON -->
 
-    <div class="project-meta">
-        EQUITY RESEARCH
-    </div>
+            <a href="bank-peer-comparison.html" class="project">
 
-    <h3>
-        Reliance Industries — Equity Research
-    </h3>
+                <div class="project-meta">
+                    Equity Research
+                </div>
 
-    <p>
-        Fundamental analysis of Reliance Industries covering financial
-        performance, forecasting, DCF valuation, trading comparables,
-        SOTP analysis, catalysts and risks.
-    </p>
+                <h3>
+                    Singapore Banking Peer Comparison
+                </h3>
 
-    <span class="project-link">
-        VIEW RESEARCH →
-    </span>
+                <p>
+                    DBS vs OCBC vs UOB — comparative analysis of financial
+                    performance, profitability, balance sheet, capital,
+                    valuation, catalysts and risks.
+                </p>
 
-</a>
+                <span class="project-link">
+                    VIEW RESEARCH →
+                </span>
+
+            </a>
+
+
+            <!-- PROJECT 3 — RELIANCE -->
+
+            <a href="reliance-equity-research.html" class="project">
+
+                <div class="project-meta">
+                    Equity Research
+                </div>
+
+                <h3>
+                    Reliance Industries — Equity Research
+                </h3>
+
+                <p>
+                    Fundamental analysis of Reliance Industries covering
+                    financial performance, forecasting, DCF valuation,
+                    trading comparables, SOTP analysis, catalysts and risks.
+                </p>
+
+                <span class="project-link">
+                    VIEW RESEARCH →
+                </span>
+
+            </a>
+
+
+            <!-- PROJECT 4 — SINGAPORE REITS -->
+
             <div class="project">
 
                 <div class="project-tag">
                     Singapore REITs
                 </div>
 
-                <h3>Singapore REIT Analysis</h3>
+                <h3>
+                    Singapore REIT Analysis
+                </h3>
 
                 <p>
                     Research framework covering occupancy, rental income,
@@ -835,30 +878,11 @@ Equity Research & Investment Professional        </div>
                 </p>
 
                 <span class="project-link">
-                    Research Report — Coming Soon →
+                    RESEARCH REPORT — COMING SOON →
                 </span>
 
             </div>
 
-
-            <div class="project">
-
-                <div class="project-tag">
-                    AI × Finance
-                </div>
-
-                <h3>AI-Assisted Equity Research</h3>
-
-                <p>
-                    Exploring how generative AI can support financial research,
-                    company analysis, reporting and investment workflows.
-                </p>
-
-                <span class="project-link">
-                    Project — Coming Soon →
-                </span>
-
-            </div>
 
         </div>
 
@@ -867,46 +891,112 @@ Equity Research & Investment Professional        </div>
 </section>
 
 
-<!-- CERTIFICATIONS -->
+<!-- =========================
+     SKILLS
+========================= -->
 
-<section id="certifications">
+<section id="skills">
 
     <div class="container">
 
-        <div class="section-number">05 — CREDENTIALS</div>
+        <div class="section-number">
+            05 — CAPABILITIES
+        </div>
 
-        <h2 class="section-title">Education & Certifications</h2>
+        <h2 class="section-title">
+            Core Skills
+        </h2>
 
-        <div class="certifications">
+        <p class="section-intro">
+            A combination of investment research, financial analysis,
+            client coverage and financial modelling capabilities.
+        </p>
 
-            <div class="cert">
-                <strong>Financial Modeling & Valuation Analyst (FMVA)</strong><br>
-                Corporate Finance Institute
+
+        <div class="skills-grid">
+
+            <div class="skill-box">
+
+                <h3>
+                    Equity Research
+                </h3>
+
+                <p>
+                    Fundamental analysis, technical analysis, earnings
+                    analysis, company research, sector research and
+                    investment thesis development.
+                </p>
+
             </div>
 
-            <div class="cert">
-                <strong>AI in Finance</strong><br>
-                Corporate Finance Institute
+
+            <div class="skill-box">
+
+                <h3>
+                    Valuation
+                </h3>
+
+                <p>
+                    DCF modelling, trading comparables, P/E, EV/EBITDA,
+                    P/B, SOTP and sensitivity analysis.
+                </p>
+
             </div>
 
-            <div class="cert">
-                <strong>NISM Series XV</strong><br>
-                Research Analyst Certification
+
+            <div class="skill-box">
+
+                <h3>
+                    Financial Modelling
+                </h3>
+
+                <p>
+                    Financial statements, forecasting, assumptions,
+                    scenario analysis and Excel-based modelling.
+                </p>
+
             </div>
 
-            <div class="cert">
-                <strong>NISM Series X-A & X-B</strong><br>
-                Investment Adviser Certification
+
+            <div class="skill-box">
+
+                <h3>
+                    Wealth Management
+                </h3>
+
+                <p>
+                    HNI/UHNI relationship management, investment advisory,
+                    risk profiling and portfolio discussions.
+                </p>
+
             </div>
 
-            <div class="cert">
-                <strong>MBA </strong><br>
-                Nanyang Institute of Management, Singapore
+
+            <div class="skill-box">
+
+                <h3>
+                    Financial Markets
+                </h3>
+
+                <p>
+                    Indian equities, Singapore equities, mutual funds,
+                    derivatives, fixed income and portfolio strategy.
+                </p>
+
             </div>
 
-            <div class="cert">
-                <strong>MBA — Marketing</strong><br>
-                Banasthali Vidyapith, India
+
+            <div class="skill-box">
+
+                <h3>
+                    AI in Finance
+                </h3>
+
+                <p>
+                    GenAI-supported research, financial analysis,
+                    reporting, data interpretation and productivity.
+                </p>
+
             </div>
 
         </div>
@@ -916,39 +1006,241 @@ Equity Research & Investment Professional        </div>
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section id="experience">
+
+    <div class="container">
+
+        <div class="section-number">
+            06 — EXPERIENCE
+        </div>
+
+        <h2 class="section-title">
+            Professional Experience
+        </h2>
+
+        <p class="section-intro">
+            Experience across investment advisory, equity markets,
+            financial services, HNI/UHNI coverage and sales leadership.
+        </p>
+
+
+        <div class="experience">
+
+
+            <div class="experience-item">
+
+                <h3>
+                    Senior Business Head
+                </h3>
+
+                <div class="company">
+                    Wise Global Research Services · India
+                </div>
+
+                <p>
+                    Led advisory teams serving HNI clients across equity
+                    analysis, mutual funds, derivatives and portfolio
+                    strategy. Worked with research teams and supported
+                    SEBI/NISM and KYC-related compliance processes.
+                </p>
+
+            </div>
+
+
+            <div class="experience-item">
+
+                <h3>
+                    Business Head
+                </h3>
+
+                <div class="company">
+                    ResearchMart Services Pvt Ltd / Capital Ways · India
+                </div>
+
+                <p>
+                    Managed 150+ HNI/UHNI relationships, supporting market
+                    research, financial analysis, risk profiling, client
+                    acquisition, portfolio growth and investment advisory.
+                </p>
+
+            </div>
+
+
+            <div class="experience-item">
+
+                <h3>
+                    Team Lead
+                </h3>
+
+                <div class="company">
+                    Dezire Research · India
+                </div>
+
+                <p>
+                    Managed an advisory team, supported client retention,
+                    conducted fundamental and technical analysis workshops
+                    and contributed to revenue growth.
+                </p>
+
+            </div>
+
+
+            <div class="experience-item">
+
+                <h3>
+                    Business Analyst
+                </h3>
+
+                <div class="company">
+                    CapitalVia · India
+                </div>
+
+                <p>
+                    Conducted market analysis and investment research
+                    covering equities and commodities and contributed to
+                    research reports.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section id="education">
+
+    <div class="container">
+
+        <div class="section-number">
+            07 — EDUCATION
+        </div>
+
+        <h2 class="section-title">
+            Education & Certifications
+        </h2>
+
+        <div class="education-grid">
+
+            <div class="education-card">
+
+                <h3>
+                    MBA — Finance & Financial Management Services
+                </h3>
+
+                <p>
+                    Nanyang Institute of Management, Singapore
+                    <br>
+                    In affiliation with University of West Scotland
+                </p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <h3>
+                    MBA — Marketing
+                </h3>
+
+                <p>
+                    Banasthali Vidyapith, India
+                </p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <h3>
+                    Bachelor of Commerce
+                </h3>
+
+                <p>
+                    SHIATS, Allahabad, India
+                </p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <h3>
+                    Professional Certifications
+                </h3>
+
+                <div class="certifications">
+
+                    <span class="cert">CFI FMVA</span>
+
+                    <span class="cert">NISM Research Analyst</span>
+
+                    <span class="cert">NISM Investment Adviser</span>
+
+                    <span class="cert">AI in Finance</span>
+
+                    <span class="cert">GenAI-Powered Data Analytics</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section id="contact">
 
     <div class="container">
 
-        <div class="section-number">06 — CONTACT</div>
-
-        <h2 class="section-title">
-            Let's connect.
-        </h2>
-
         <div class="contact-box">
 
-            <h3>Open to finance opportunities in Singapore</h3>
+            <div class="section-number">
+                08 — CONTACT
+            </div>
+
+            <h2>
+                Let's connect.
+            </h2>
 
             <p>
-                I am interested in opportunities across equity research,
-                Indian and Singapore equities, wealth management, investment
-                analysis, corporate banking and financial services.
+                I am open to opportunities across equity research,
+                investment research, financial analysis, wealth management,
+                client coverage and business development within financial
+                services.
             </p>
+
 
             <div class="contact-links">
 
-                <a class="btn btn-primary"
+                <a class="contact-link"
                    href="mailto:supriyasrai135@gmail.com">
-                    EMAIL ME
+                    Email
                 </a>
 
-                <a class="btn btn-secondary"
+                <a class="contact-link"
                    href="https://www.linkedin.com/in/rai-supriya"
-                   target="_blank">
-                    LINKEDIN
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    LinkedIn
                 </a>
 
             </div>
@@ -960,12 +1252,24 @@ Equity Research & Investment Professional        </div>
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
-    <div class="container">
-        © 2026 Supriya Rai · Finance & Investment Portfolio
+
+    <div class="container footer-inner">
+
+        <span>
+            © 2026 Supriya Rai
+        </span>
+
+        <span>
+            Finance · Investment Research · Valuation
+        </span>
+
     </div>
+
 </footer>
 
 </body>
