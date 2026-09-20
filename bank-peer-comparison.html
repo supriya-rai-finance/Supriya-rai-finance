@@ -275,12 +275,30 @@
 .peer-tagline span{padding:7px 9px;background:#fff;border:1px solid #dce3ea;border-radius:5px;color:#65758a;font-size:8px;font-weight:700;letter-spacing:.5px}
 @media(max-width:800px){.peer-cards,.peer-grid{grid-template-columns:1fr}.peer-body{padding:20px 16px}}
 
+
+/* Recruiter navigation layer */
+.project-progress{position:fixed;top:0;left:0;width:0;height:3px;background:linear-gradient(90deg,#6ea8fe,#c99b3b,#16c784);z-index:5000;box-shadow:0 0 12px rgba(110,168,254,.3)}
+.recruiter-rail{position:fixed;right:18px;bottom:18px;z-index:1200;display:flex;gap:7px;align-items:center}
+.recruiter-rail a,.recruiter-rail button{border:1px solid #39536d;background:rgba(7,17,31,.94);color:#cbd8e5;padding:9px 11px;border-radius:5px;font:700 9px Arial,Helvetica,sans-serif;letter-spacing:.5px;cursor:pointer;backdrop-filter:blur(8px)}
+.recruiter-rail a:hover,.recruiter-rail button:hover{border-color:#7fb0ff;color:#fff}
+.recruiter-rail .rail-primary{color:#f0c674;border-color:#6b5731}
+.detail-reveal{opacity:0;transform:translateY(10px);transition:opacity .55s ease,transform .55s ease}
+.detail-reveal.visible{opacity:1;transform:none}
+@media(max-width:600px){.recruiter-rail{right:10px;bottom:10px}.recruiter-rail a,.recruiter-rail button{padding:8px 9px;font-size:8px}}
+@media(prefers-reduced-motion:reduce){.detail-reveal{opacity:1;transform:none;transition:none}}
+
 </style>
 
 </head>
 
 
-<body>
+<body id="top">
+<div class="project-progress" id="projectProgress"></div>
+<div class="recruiter-rail">
+<a href="index.html#projects">← PORTFOLIO</a>
+<a href="#top">↑ TOP</a>
+
+</div>
 
 
 <header>
