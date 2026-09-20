@@ -484,6 +484,37 @@ footer {
 .sensitivity{margin-top:28px}.sensitivity table{min-width:0;background:#fff;border:1px solid #dce2e9}.sensitivity th{background:#edf2f7;color:#42536a;text-align:center;font-size:11px}.sensitivity td{text-align:center;color:#405169;font-size:12px}.sensitivity td:first-child{font-weight:700;background:#f7f9fb}.sensitivity .base{background:#e8f0fb;color:#123d70;font-weight:800;box-shadow:inset 0 0 0 2px #86aee0}
 .vw-note{margin-top:18px;padding:15px 17px;background:#eef3f8;border-left:3px solid #6c91bf;color:#65758a;font-size:11px;line-height:1.65}
 .vw-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.vw-button{display:inline-block;padding:12px 17px;border-radius:5px;border:1px solid #2e4867;background:#14253a;color:#eaf1f8;font-size:11px;font-weight:700;letter-spacing:.7px}.vw-button.primary{background:#c99b3b;border-color:#c99b3b;color:#101c2d}.vw-button:hover{opacity:.88}
+
+/* VALUATION FOOTBALL FIELD */
+.football-wrap{margin-top:28px;background:#fff;border:1px solid #dce2e9;border-radius:9px;padding:25px}
+.football-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:22px}
+.football-head h3{margin:0;color:#172235;font-size:18px}
+.football-head p{margin:4px 0 0;color:#718097;font-size:11px;line-height:1.5}
+.football-ref{font-size:10px;color:#718097;text-align:right;white-space:nowrap}
+.football-ref strong{display:block;color:#172235;font-size:16px;margin-top:3px}
+.football-scale{display:flex;justify-content:space-between;margin:0 0 7px 145px;color:#8a97a8;font-size:9px}
+.football-row{display:grid;grid-template-columns:130px 1fr 95px;align-items:center;gap:15px;margin:18px 0}
+.football-method{color:#33445a;font-size:12px;font-weight:700}
+.football-track{position:relative;height:24px;background:#eef2f6;border:1px solid #dce2e9;border-radius:5px;overflow:visible}
+.football-range{position:absolute;top:3px;height:16px;border-radius:4px;background:#8fb0d8}
+.football-range.pb{background:#6f95c1}
+.football-range.pe{background:#91abc9}
+.football-range.ddm{background:#9bb9b0}
+.football-marker{position:absolute;top:-5px;width:2px;height:34px;background:#c99b3b;z-index:3}
+.football-marker::after{content:"";position:absolute;top:-14px;left:50%;transform:translateX(-50%);width:7px;height:7px;border-radius:50%;background:#c99b3b}
+.football-values{color:#526277;font-size:10px;text-align:right;white-space:nowrap}
+.football-legend{display:flex;flex-wrap:wrap;gap:18px;margin-top:22px;padding-top:15px;border-top:1px solid #e5e9ee;color:#6f7e91;font-size:10px}
+.football-legend span{display:flex;align-items:center;gap:6px}
+.football-dot{width:9px;height:9px;border-radius:2px;background:#6f95c1;display:inline-block}
+.football-dot.ref{width:2px;height:13px;border-radius:0;background:#c99b3b}
+@media(max-width:700px){
+    .football-head{display:block}
+    .football-ref{text-align:left;margin-top:10px}
+    .football-scale{margin-left:0}
+    .football-row{grid-template-columns:1fr;gap:7px}
+    .football-values{text-align:left}
+}
+
 @media(max-width:900px){.vw-metrics{grid-template-columns:repeat(3,1fr)}.vw-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.vw-head{padding:28px 22px}.vw-head-row{flex-direction:column;align-items:flex-start}.vw-price{text-align:left}.vw-body{padding:24px 18px 30px}.vw-metrics{grid-template-columns:repeat(2,1fr)}.vw-range{grid-template-columns:1fr}}
 @media print{.nav,footer,.disclaimer,.vw-tabs,.vw-actions{display:none!important}.valuation-workspace{padding:0!important;background:#fff!important}.vw-shell{box-shadow:none!important;border:0!important}.vw-card,.vw-metric{break-inside:avoid}}
@@ -586,6 +617,49 @@ footer {
 <div class="vw-card" id="dbs-financial-dashboard"><div class="vw-label">Financial Dashboard</div><h3>Latest operating indicators</h3><p>1H26 total income reached S$12.0B and net profit S$6.01B. Loans rose 5% and deposits 4% in constant-currency terms over the first six months.</p><div class="vw-range"><div><span>1H26 NII</span><strong>S$7.08B</strong></div><div><span>Fee income</span><strong>S$2.94B</strong></div><div><span>Cost / income</span><strong>39%</strong></div></div></div>
 </div>
 <div class="sensitivity" id="dbs-valuation-sensitivity"><div class="vw-label">Valuation Workspace</div><div class="vw-card"><h3>Illustrative Price-to-Book Sensitivity</h3><p>Based on FY2025 net book value of S$24.29 per share. The matrix shows implied share value under different P/B assumptions; it is a sensitivity framework, not a price target.</p><div class="table-wrapper"><table><thead><tr><th>P/B</th><th>2.4x</th><th>2.6x</th><th>2.8x</th><th>3.0x</th><th>3.2x</th><th>3.4x</th><th>3.6x</th></tr></thead><tbody><tr><td>Implied value</td><td>S$58.30</td><td>S$63.15</td><td>S$68.01</td><td>S$72.87</td><td class="base">S$77.73</td><td>S$82.59</td><td>S$87.44</td></tr></tbody></table></div><div class="vw-note"><strong>Model note:</strong> The reference price of S$76.86 as of 18 Sep 2026 is shown for comparison only. The sensitivity uses FY2025 net book value per share and does not incorporate a forecast target, analyst consensus or a recommendation.</div><div class="vw-actions"><a class="vw-button primary" href="#valuation-workspace" onclick="window.print();return false;">▣ PRINT / SAVE VALUATION SUMMARY AS PDF</a><a class="vw-button" href="#dbs-valuation-sensitivity">VIEW P/B SENSITIVITY</a></div></div></div>
+
+<div class="football-wrap" id="dbs-football-field">
+<div class="football-head">
+<div><div class="vw-label">Valuation Range View</div><h3>Illustrative Valuation Football Field</h3><p>Method ranges are derived from explicitly stated illustrative assumptions, not analyst targets.</p></div>
+<div class="football-ref">Market reference<strong>S$76.86</strong>18 Sep 2026 close</div>
+</div>
+<div class="football-scale"><span>S$50</span><span>S$60</span><span>S$70</span><span>S$80</span><span>S$90</span></div>
+
+<div class="football-row">
+<div class="football-method">P/B</div>
+<div class="football-track">
+<div class="football-range pb" style="left:45.025%;width:48.575%;"></div>
+<div class="football-marker" style="left:67.15%;"></div>
+</div>
+<div class="football-values">S$68.01 — S$87.44</div>
+</div>
+
+<div class="football-row">
+<div class="football-method">P/E</div>
+<div class="football-track">
+<div class="football-range pe" style="left:30.2%;width:38.8%;"></div>
+<div class="football-marker" style="left:67.15%;"></div>
+</div>
+<div class="football-values">S$62.08 — S$77.60</div>
+</div>
+
+<div class="football-row">
+<div class="football-method">Dividend Yield</div>
+<div class="football-track">
+<div class="football-range ddm" style="left:28%;width:38.25%;"></div>
+<div class="football-marker" style="left:67.15%;"></div>
+</div>
+<div class="football-values">S$61.20 — S$76.50</div>
+</div>
+
+<div class="football-legend">
+<span><i class="football-dot"></i>Illustrative valuation range</span>
+<span><i class="football-dot ref"></i>18 Sep 2026 market reference</span>
+</div>
+<div class="vw-note">
+<strong>Assumptions:</strong> P/B uses 2.8x–3.6x applied to FY2025 net asset value of S$24.29/share; P/E uses 16x–20x applied to FY2025 basic EPS of S$3.88; Dividend Yield uses a 4.0%–5.0% yield applied to FY2025 DPS of S$3.06. These are illustrative sensitivity assumptions for portfolio demonstration and are not price targets or recommendations.
+</div>
+</div>
 </div></div></div>
 </section>
 
