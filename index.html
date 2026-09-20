@@ -3093,6 +3093,71 @@ box-shadow:0 18px 45px rgba(0,0,0,.18),inset 0 0 0 1px rgba(255,255,255,.65)}
 .research-terminal .coverage-tile strong{color:#fff}
 .research-terminal .coverage-tile span{color:#88a8c3}
 </style>
+<style id="research-terminal-reference-match">
+/* Reference-matched Research → Model → Pitchbook composition */
+.research-terminal{background:#071b2f!important;padding:42px 0 46px!important}
+.research-terminal .terminal-head{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:end;margin-bottom:34px}
+.research-terminal .terminal-head h2{font-size:clamp(42px,5vw,72px)!important;line-height:.94!important;letter-spacing:-3px!important;margin:0!important;color:#fff!important}
+.research-terminal .terminal-head p{font-size:16px!important;line-height:1.65!important;color:#a9c3db!important;max-width:560px;margin:0 0 4px!important}
+.research-terminal .terminal-grid{display:grid!important;grid-template-columns:1.6fr 1fr!important;gap:22px!important}
+.research-terminal .terminal-panel{border-radius:15px!important}
+.research-terminal .terminal-panel.feature{
+min-height:405px!important;padding:30px!important;
+background:
+radial-gradient(circle at 74% 23%,rgba(218,44,50,.13),transparent 22%),
+radial-gradient(circle at 86% 72%,rgba(218,169,70,.18),transparent 28%),
+linear-gradient(135deg,#fffdf6 0%,#fff9ed 58%,#f3e6ca 100%)!important;
+border:1px solid #d7c08b!important;color:#071a31!important;
+box-shadow:0 18px 45px rgba(0,0,0,.18)!important}
+.research-terminal .terminal-panel.feature:after{content:"✦";position:absolute;right:22%;top:8%;font-size:170px;color:rgba(208,31,42,.065);transform:rotate(-18deg);pointer-events:none}
+.research-terminal .terminal-panel.feature:before{content:"DBS";right:-25px!important;bottom:-58px!important;color:rgba(194,28,39,.055)!important;font-size:145px!important}
+.research-terminal .terminal-panel.feature .terminal-label{color:#d01822!important}
+.research-terminal .terminal-company{font-size:42px!important;letter-spacing:-1.5px;color:#071a31!important}
+.research-terminal .terminal-company:before{content:"✦";display:inline-grid;place-items:center;width:34px;height:34px;margin-right:8px;border-radius:7px;background:#d71920;color:#fff;font-size:23px;vertical-align:5px}
+.research-terminal .terminal-company span{color:#0a2340!important;font-weight:900}
+.research-terminal .terminal-sub{max-width:600px;font-size:14px!important;color:#324d67!important}
+.research-terminal .terminal-metrics{gap:9px!important;margin-top:28px!important}
+.research-terminal .terminal-metric{background:rgba(255,255,255,.66)!important;border:1px solid #e4cfa0!important;border-left:1px solid #e4cfa0!important;border-radius:8px!important;padding:12px!important}
+.research-terminal .terminal-metric b{color:#071a31!important;font-size:22px!important}
+.research-terminal .terminal-metric small{color:#667b91!important}
+.research-terminal .terminal-links{margin-top:20px!important}
+.research-terminal .terminal-btn{border-radius:7px!important;padding:13px 15px!important;background:#d9ae4f!important;border-color:#d9ae4f!important;color:#071a31!important}
+.research-terminal .terminal-btn.alt{background:#09233c!important;border-color:#294a67!important;color:#fff!important}
+
+/* Coverage panel and image-like company cards */
+.research-terminal .terminal-grid>.terminal-panel:nth-child(2){padding:22px!important;background:linear-gradient(145deg,#071d32,#0a253b)!important;border:1px solid #284c69!important}
+.research-terminal .coverage-grid{gap:9px!important}
+.research-terminal .coverage-tile{
+height:86px!important;min-height:86px!important;padding:13px 15px!important;border-radius:9px!important;
+display:flex!important;flex-direction:column!important;justify-content:center!important;
+position:relative!important;overflow:hidden!important;border:1px solid rgba(255,255,255,.18)!important;
+box-shadow:inset 0 0 0 1px rgba(255,255,255,.04),0 7px 16px rgba(0,0,0,.16)!important}
+.research-terminal .coverage-tile:before{content:"";position:absolute;inset:0;opacity:.34;background:
+linear-gradient(110deg,transparent 42%,rgba(255,255,255,.16) 43%,transparent 45%),
+linear-gradient(160deg,transparent 58%,rgba(0,0,0,.22) 59%,transparent 62%);
+pointer-events:none}
+.research-terminal .coverage-tile:after{content:"→";display:block;position:absolute;right:12px;bottom:9px;color:rgba(255,255,255,.8);font-size:15px}
+.research-terminal .coverage-tile strong,.research-terminal .coverage-tile span{position:relative;z-index:2}
+.research-terminal .coverage-tile strong{font-size:18px!important;color:#fff!important}
+.research-terminal .coverage-tile span{font-size:8px!important;letter-spacing:1.2px;color:#d7e4ee!important;margin-top:5px}
+
+/* company-native photo-like backgrounds */
+.research-terminal .coverage-tile:nth-child(1){background:linear-gradient(135deg,#780e18,#bd2630 54%,#521018)!important}
+.research-terminal .coverage-tile:nth-child(1):before{background:linear-gradient(145deg,transparent 42%,rgba(255,255,255,.18) 43%,transparent 45%),linear-gradient(90deg,transparent 60%,rgba(255,240,215,.12) 60%,rgba(255,240,215,.04) 82%)}
+.research-terminal .coverage-tile:nth-child(2){background:linear-gradient(135deg,#751019,#c72b2d 55%,#4b0c13)!important}
+.research-terminal .coverage-tile:nth-child(3){background:linear-gradient(135deg,#052e70,#1159ad 58%,#082854)!important}
+.research-terminal .coverage-tile:nth-child(4){background:linear-gradient(135deg,#0d3b72,#216da6 56%,#0a284a)!important}
+.research-terminal .coverage-tile:nth-child(5){background:linear-gradient(135deg,#062e5c,#0b5ea8 57%,#061f42)!important}
+.research-terminal .coverage-tile:nth-child(6){background:linear-gradient(135deg,#07544d,#0b8b7b 57%,#063b36)!important}
+.research-terminal .coverage-tile:hover{transform:translateY(-2px)!important;filter:saturate(1.08)!important;box-shadow:0 11px 22px rgba(0,0,0,.25)!important}
+
+/* Workflow */
+.research-terminal .workflow-band{margin-top:22px!important;border-radius:10px!important;background:#08223a!important;border:1px solid #294d6a!important}
+.research-terminal .workflow-step{padding:17px 22px!important}
+.research-terminal .workflow-step b{color:#d8ac49!important}
+.research-terminal .workflow-step span{color:#fff!important}
+@media(max-width:850px){.research-terminal .terminal-head,.research-terminal .terminal-grid{grid-template-columns:1fr!important}.research-terminal .terminal-head h2{font-size:48px!important}.research-terminal .terminal-panel.feature{min-height:auto!important}}
+</style>
 </head>
 
 
