@@ -696,14 +696,304 @@
                 padding: 22px;
             }
         }
+/* =========================
+   MARKET PULSE
+========================= */
 
+.market-pulse {
+    position: relative;
+    width: 100%;
+    height: 46px;
+    background: #081321;
+    border-bottom: 1px solid #1d3047;
+    overflow: hidden;
+    z-index: 1100;
+}
+
+.market-pulse-inner {
+    display: flex;
+    align-items: center;
+    height: 46px;
+    width: max-content;
+    animation: marketScroll 32s linear infinite;
+}
+
+.market-pulse:hover .market-pulse-inner {
+    animation-play-state: paused;
+}
+
+.market-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 46px;
+    padding: 0 22px 0 16px;
+    background: #0b192b;
+    border-right: 1px solid #243b54;
+    color: #d7ad52;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    white-space: nowrap;
+}
+
+.market-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #16c784;
+    box-shadow: 0 0 8px rgba(22,199,132,.45);
+}
+
+.market-wave {
+    color: #d7ad52;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.market-items {
+    display: flex;
+    align-items: center;
+    height: 46px;
+}
+
+.market-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    height: 46px;
+    padding: 0 25px;
+    border-right: 1px solid #172a40;
+    white-space: nowrap;
+}
+
+.market-symbol {
+    color: #dce6f2;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.market-price {
+    color: #aebdce;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.market-change {
+    padding: 3px 7px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.market-up {
+    color: #16c784;
+    background: rgba(22,199,132,.10);
+    border: 1px solid rgba(22,199,132,.22);
+}
+
+.market-down {
+    color: #f05b78;
+    background: rgba(240,91,120,.10);
+    border: 1px solid rgba(240,91,120,.22);
+}
+
+.market-status {
+    position: sticky;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 46px;
+    padding: 0 15px;
+    background: #081321;
+    border-left: 1px solid #243b54;
+    color: #d7ad52;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .4px;
+    white-space: nowrap;
+}
+
+@keyframes marketScroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 650px) {
+
+    .market-pulse {
+        height: 42px;
+    }
+
+    .market-pulse-inner,
+    .market-brand,
+    .market-item,
+    .market-status {
+        height: 42px;
+    }
+
+    .market-brand {
+        padding: 0 15px;
+        font-size: 10px;
+    }
+
+    .market-item {
+        padding: 0 17px;
+    }
+
+    .market-symbol,
+    .market-price {
+        font-size: 11px;
+    }
+
+    .market-change {
+        font-size: 9px;
+    }
+
+    .market-status {
+        display: none;
+    }
+}
     </style>
 
 </head>
 
 
 <body>
+<!-- =========================
+     MARKET PULSE
+========================= -->
 
+<div class="market-pulse">
+
+    <div class="market-pulse-inner">
+
+        <div class="market-brand">
+            <span class="market-dot"></span>
+            <span>MARKET PULSE</span>
+            <span class="market-wave">〽</span>
+        </div>
+
+        <div class="market-items">
+
+            <div class="market-item">
+                <span class="market-symbol">ITC</span>
+                <span class="market-price">₹414.80</span>
+                <span class="market-change market-up">↗ +0.85%</span>
+            </div>
+
+            <div class="market-item">
+                <span class="market-symbol">RELIANCE</span>
+                <span class="market-price">₹2,980.50</span>
+                <span class="market-change market-down">↘ -0.32%</span>
+            </div>
+
+            <div class="market-item">
+                <span class="market-symbol">HINDUNILVR</span>
+                <span class="market-price">₹2,688.15</span>
+                <span class="market-change market-up">↗ +0.60%</span>
+            </div>
+
+            <div class="market-item">
+                <span class="market-symbol">M&amp;M</span>
+                <span class="market-price">₹2,910.40</span>
+                <span class="market-change market-up">↗ +1.15%</span>
+            </div>
+
+            <div class="market-item">
+                <span class="market-symbol">SUNPHARMA</span>
+                <span class="market-price">₹1,845.20</span>
+                <span class="market-change market-up">↗ +0.40%</span>
+            </div>
+
+            <div class="market-item">
+                <span class="market-symbol">TCS</span>
+                <span class="market-price">₹3,120.00</span>
+                <span class="market-change market-down">↘ -0.25%</span>
+            </div>
+
+            <div class="market-item">
+                <span class="market-symbol">HDFCBANK</span>
+                <span class="market-price">₹1,982.40</span>
+                <span class="market-change market-up">↗ +0.72%</span>
+            </div>
+
+            <div class="market-item">
+                <span class="market-symbol">INFY</span>
+                <span class="market-price">₹1,548.60</span>
+                <span class="market-change market-up">↗ +0.38%</span>
+            </div>
+
+        </div>
+
+
+        <!-- Duplicate items for seamless ticker -->
+
+        <div class="market-items">
+
+            <div class="market-item">
+                <span class="market-symbol">ITC</span>
+                <span class="market-price">₹414.80</span>
+                <span class="market-change market-up">↗ +0.85%</span>
+            </div>
+
+            <div class="market-item">
+                <span class="market-symbol">RELIANCE</span>
+                <span class="market-price">₹2,980.50</span>
+                <span class="market-change market-down">↘ -0.32%</span>
+            </div>
+
+            <div class="market-item">
+                <span class="market-symbol">HINDUNILVR</span>
+                <span class="market-price">₹2,688.15</span>
+                <span class="market-change market-up">↗ +0.60%</span>
+            </div>
+
+            <div class="market-item">
+                <span class="market-symbol">M&amp;M</span>
+                <span class="market-price">₹2,910.40</span>
+                <span class="market-change market-up">↗ +1.15%</span>
+            </div>
+
+            <div class="market-item">
+                <span class="market-symbol">SUNPHARMA</span>
+                <span class="market-price">₹1,845.20</span>
+                <span class="market-change market-up">↗ +0.40%</span>
+            </div>
+
+            <div class="market-item">
+                <span class="market-symbol">TCS</span>
+                <span class="market-price">₹3,120.00</span>
+                <span class="market-change market-down">↘ -0.25%</span>
+            </div>
+
+            <div class="market-item">
+                <span class="market-symbol">HDFCBANK</span>
+                <span class="market-price">₹1,982.40</span>
+                <span class="market-change market-up">↗ +0.72%</span>
+            </div>
+
+            <div class="market-item">
+                <span class="market-symbol">INFY</span>
+                <span class="market-price">₹1,548.60</span>
+                <span class="market-change market-up">↗ +0.38%</span>
+            </div>
+
+        </div>
+
+        <div class="market-status">
+            HOVER: PAUSE
+        </div>
+
+    </div>
+
+</div>
 
     <!-- =========================
          NAVIGATION
