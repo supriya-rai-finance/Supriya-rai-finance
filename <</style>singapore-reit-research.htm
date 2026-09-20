@@ -396,7 +396,63 @@ footer {
         flex-direction: column;
     }
 }
+.snapshot-panel {
+    margin-top: 24px;
+    padding: 26px;
+    background: #0b1b2f;
+    border: 1px solid #1d3858;
+    border-radius: 10px;
+}
 
+.snapshot-title {
+    margin-bottom: 20px;
+    color: #7fb0ff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.snapshot-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.snapshot-item {
+    padding: 18px;
+    background: #0f2239;
+    border: 1px solid #193452;
+    border-radius: 8px;
+    min-height: 72px;
+}
+
+.snapshot-item span {
+    display: block;
+    margin-bottom: 9px;
+    color: #7f9bb8;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.snapshot-item strong {
+    display: block;
+    color: #e8f0fb;
+    font-size: 17px;
+    line-height: 1.25;
+}
+
+@media (max-width: 800px) {
+    .snapshot-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .snapshot-grid {
+        grid-template-columns: 1fr;
+    }
+}
 </style>
 </head>
 
@@ -598,7 +654,55 @@ footer {
     occupancy was 96.9%. Aggregate leverage was 38.6% and average
     cost of debt was 3.2%.
 </p>
+<div class="snapshot-panel">
+    <div class="snapshot-title">
+        INVESTMENT SNAPSHOT
+    </div>
 
+    <div class="snapshot-grid">
+
+        <div class="snapshot-item">
+            <span>PORTFOLIO VALUE</span>
+            <strong>S$27.4B</strong>
+        </div>
+
+        <div class="snapshot-item">
+            <span>FY2025 DPU</span>
+            <strong>11.58¢</strong>
+        </div>
+
+        <div class="snapshot-item">
+            <span>OCCUPANCY</span>
+            <strong>96.9%</strong>
+        </div>
+
+        <div class="snapshot-item">
+            <span>AGGREGATE LEVERAGE</span>
+            <strong>38.6%</strong>
+        </div>
+
+        <div class="snapshot-item">
+            <span>AVERAGE COST OF DEBT</span>
+            <strong>3.2%</strong>
+        </div>
+
+        <div class="snapshot-item">
+            <span>KEY SENSITIVITY</span>
+            <strong>Interest Rates</strong>
+        </div>
+
+        <div class="snapshot-item">
+            <span>VALUATION LENS</span>
+            <strong>NAV + DPU Yield</strong>
+        </div>
+
+        <div class="snapshot-item">
+            <span>KEY RISKS</span>
+            <strong>Rates · Refinancing · Asset Values</strong>
+        </div>
+
+    </div>
+</div>
 </div>
 
 </div>
