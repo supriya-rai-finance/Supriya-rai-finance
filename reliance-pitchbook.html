@@ -49,9 +49,12 @@ h3{font-size:16px;margin:0 0 8px}
 .note{font-size:9px;color:#7b899b;line-height:1.55;margin-top:16px}.sources{font-size:10px;line-height:1.8;color:#64748a}.sources div{border-bottom:1px solid #e3e7ec;padding:7px 0}
 @media(max-width:800px){.deck{padding:0}.slide{min-height:720px;padding:38px 30px 45px}.hero-layout,.grid4,.grid3,.grid2{grid-template-columns:1fr}.hero-layout{height:auto;gap:25px}.hero-title h1{font-size:46px}.slide-footer{left:30px;right:30px}.frow{grid-template-columns:90px 1fr}.fvalues{font-size:8px}.scale{margin-left:104px}}
 @media print{body{background:#fff}.deck{padding:0}.slide{box-shadow:none;margin:0;page-break-after:always;width:100%;min-height:100vh}.slide:last-child{page-break-after:auto}}
+.deck-progress{position:fixed;top:0;left:0;width:0;height:3px;background:linear-gradient(90deg,#c99b3b,#6ea8fe,#16c784);z-index:5000}.deck-nav{position:fixed;right:18px;bottom:18px;z-index:1200;display:flex;gap:7px}.deck-nav a{padding:9px 11px;border:1px solid #516274;border-radius:5px;background:rgba(12,27,46,.94);color:#fff;font:700 9px Arial;letter-spacing:.5px}.deck-nav a:first-child{color:#f0c674;border-color:#756037}@media(max-width:600px){.deck-nav{right:10px;bottom:10px}.deck-nav a{font-size:8px;padding:8px 9px}}
 </style>
 </head>
-<body><div class="deck">
+<body>
+<div class="deck-progress" id="deckProgress"></div>
+<div class="deck-nav"><a href="index.html#projects">← PORTFOLIO</a><a href="#top">↑ TOP</a></div><div class="deck">
 
 <section class="slide dark">
 <div class="topline"></div>
@@ -207,4 +210,7 @@ h3{font-size:16px;margin:0 0 8px}
 <div class="slide-footer"><span>Supriya Rai · Finance & Equity Research Portfolio</span><span>11</span></div>
 </section>
 
-</div></body></html>
+</div><script>
+(function(){const b=document.getElementById('deckProgress');const u=()=>{const h=document.documentElement.scrollHeight-innerHeight;b.style.width=(h>0?(scrollY/h)*100:0)+'%'};addEventListener('scroll',u,{passive:true});u();})();
+</script>
+</body></html>
