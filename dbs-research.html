@@ -178,5 +178,15 @@ footer{padding:34px 0;color:#71849b;font-size:11px}.footer-line{display:flex;jus
 </div></section>
 
 <footer><div class="container"><div class="footer-line"><span>© 2026 Supriya Rai</span><span>Equity Research Portfolio · Singapore</span></div></div></footer>
+<script>
+(function(){
+ const bar=document.getElementById('projectProgress');
+ const update=()=>{const h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(h>0?(scrollY/h)*100:0)+'%';};
+ addEventListener('scroll',update,{passive:true});update();
+ const els=document.querySelectorAll('section,.card,.metric,.valuation-box,.snapshot-panel,.dashboard,.pitch-card');
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:.08});
+ els.forEach(e=>io.observe(e));
+})();
+</script>
 </body>
 </html>
