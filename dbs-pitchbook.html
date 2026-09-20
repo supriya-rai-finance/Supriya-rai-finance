@@ -82,9 +82,12 @@ h3{font-size:16px;margin-bottom:8px}
 @media print{
 body{background:#fff}.deck{padding:0}.slide{box-shadow:none;margin:0;page-break-after:always;width:100%;min-height:100vh}.slide:last-child{page-break-after:auto}
 }
+.deck-progress{position:fixed;top:0;left:0;width:0;height:3px;background:linear-gradient(90deg,#c99b3b,#6ea8fe,#16c784);z-index:5000}.deck-nav{position:fixed;right:18px;bottom:18px;z-index:1200;display:flex;gap:7px}.deck-nav a{padding:9px 11px;border:1px solid #516274;border-radius:5px;background:rgba(12,27,46,.94);color:#fff;font:700 9px Arial;letter-spacing:.5px}.deck-nav a:first-child{color:#f0c674;border-color:#756037}@media(max-width:600px){.deck-nav{right:10px;bottom:10px}.deck-nav a{font-size:8px;padding:8px 9px}}
 </style>
 </head>
 <body>
+<div class="deck-progress" id="deckProgress"></div>
+<div class="deck-nav"><a href="index.html#projects">← PORTFOLIO</a><a href="#top">↑ TOP</a></div>
 <div class="deck">
 
 <section class="slide dark">
@@ -229,5 +232,8 @@ body{background:#fff}.deck{padding:0}.slide{box-shadow:none;margin:0;page-break-
 </section>
 
 </div>
+<script>
+(function(){const b=document.getElementById('deckProgress');const u=()=>{const h=document.documentElement.scrollHeight-innerHeight;b.style.width=(h>0?(scrollY/h)*100:0)+'%'};addEventListener('scroll',u,{passive:true});u();})();
+</script>
 </body>
 </html>
