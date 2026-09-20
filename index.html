@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -264,7 +266,7 @@
         }
 
         /* =========================
-           PROJECTS
+           RESEARCH PROJECTS
         ========================= */
 
         .projects-grid {
@@ -382,6 +384,79 @@
 
         .methodology-note strong {
             color: #dce8f6;
+        }
+
+        /* =========================
+           RESEARCH DASHBOARD
+        ========================= */
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .dashboard-card {
+            padding: 28px;
+            background: #0b192b;
+            border: 1px solid #243b54;
+            border-radius: 9px;
+            transition:
+                transform 0.2s ease,
+                border-color 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-3px);
+            border-color: #5279a7;
+            background: #0d1e32;
+        }
+
+        .dashboard-value {
+            color: #e8f0fb;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        .dashboard-label {
+            color: #7297c4;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+        }
+
+        .coverage-panel {
+            margin-top: 24px;
+            padding: 24px 26px;
+            background: #0b192b;
+            border: 1px solid #243b54;
+            border-radius: 9px;
+        }
+
+        .coverage-title {
+            color: #82aef0;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            margin-bottom: 18px;
+        }
+
+        .coverage-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .coverage-list span {
+            padding: 8px 13px;
+            background: #0f2239;
+            border: 1px solid #193452;
+            border-radius: 5px;
+            color: #b7c8da;
+            font-size: 11px;
         }
 
         /* =========================
@@ -552,6 +627,10 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
+            .dashboard-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .education-grid {
                 grid-template-columns: 1fr;
             }
@@ -585,7 +664,8 @@
 
             .projects-grid,
             .skills-grid,
-            .methodology-grid {
+            .methodology-grid,
+            .dashboard-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -610,6 +690,7 @@
 
             .project,
             .methodology-card,
+            .dashboard-card,
             .skill-box,
             .education-card {
                 padding: 22px;
@@ -617,15 +698,19 @@
         }
 
     </style>
+
 </head>
 
+
 <body>
+
 
     <!-- =========================
          NAVIGATION
     ========================= -->
 
     <nav>
+
         <div class="container nav-inner">
 
             <a href="#top" class="logo">
@@ -633,25 +718,51 @@
             </a>
 
             <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#projects">Research</a>
-                <a href="#methodology">Methodology</a>
-                <a href="#skills">Skills</a>
-                <a href="#experience">Experience</a>
-                <a href="#contact">Contact</a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#projects">
+                    Research
+                </a>
+
+                <a href="#methodology">
+                    Methodology
+                </a>
+
+                <a href="#dashboard">
+                    Dashboard
+                </a>
+
+                <a href="#skills">
+                    Skills
+                </a>
+
+                <a href="#experience">
+                    Experience
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
             </div>
 
         </div>
+
     </nav>
 
 
     <main id="top">
+
 
         <!-- =========================
              HERO
         ========================= -->
 
         <section class="hero-section" style="border-top:none;">
+
             <div class="container hero">
 
                 <div>
@@ -696,36 +807,60 @@
                     </div>
 
                     <div class="focus-item">
-                        <div class="focus-number">9+</div>
+
+                        <div class="focus-number">
+                            9+
+                        </div>
+
                         <div class="focus-label">
                             Years in Finance & Investment Advisory
                         </div>
+
                     </div>
 
+
                     <div class="focus-item">
-                        <div class="focus-number">150+</div>
+
+                        <div class="focus-number">
+                            150+
+                        </div>
+
                         <div class="focus-label">
                             HNI / UHNI Client Relationships
                         </div>
+
                     </div>
 
+
                     <div class="focus-item">
-                        <div class="focus-number">FMVA</div>
+
+                        <div class="focus-number">
+                            FMVA
+                        </div>
+
                         <div class="focus-label">
                             Financial Modelling & Valuation
                         </div>
+
                     </div>
 
+
                     <div class="focus-item">
-                        <div class="focus-number">NISM</div>
+
+                        <div class="focus-number">
+                            NISM
+                        </div>
+
                         <div class="focus-label">
                             Research & Investment Advisory
                         </div>
+
                     </div>
 
                 </div>
 
             </div>
+
         </section>
 
 
@@ -775,31 +910,55 @@
                     <div class="about-highlights">
 
                         <div class="highlight">
-                            <strong>Indian Equities</strong>
+
+                            <strong>
+                                Indian Equities
+                            </strong>
+
                             <span>
                                 Fundamental and market-oriented equity analysis
                             </span>
+
                         </div>
 
+
                         <div class="highlight">
-                            <strong>Financial Modelling</strong>
+
+                            <strong>
+                                Financial Modelling
+                            </strong>
+
                             <span>
                                 DCF, comparable companies and financial analysis
                             </span>
+
                         </div>
 
+
                         <div class="highlight">
-                            <strong>Wealth Management</strong>
+
+                            <strong>
+                                Wealth Management
+                            </strong>
+
                             <span>
                                 HNI/UHNI relationship and investment advisory
                             </span>
+
                         </div>
 
+
                         <div class="highlight">
-                            <strong>Singapore Market</strong>
+
+                            <strong>
+                                Singapore Market
+                            </strong>
+
                             <span>
-                                Developing research coverage across Singapore equities and REITs
+                                Developing research coverage across Singapore
+                                equities and REITs
                             </span>
+
                         </div>
 
                     </div>
@@ -835,6 +994,7 @@
 
 
                 <div class="projects-grid">
+
 
                     <!-- DBS -->
 
@@ -982,6 +1142,7 @@
 
                     </a>
 
+
                 </div>
 
             </div>
@@ -1014,7 +1175,6 @@
 
                 <div class="methodology-grid">
 
-                    <!-- 01 -->
 
                     <div class="methodology-card">
 
@@ -1035,8 +1195,6 @@
                     </div>
 
 
-                    <!-- 02 -->
-
                     <div class="methodology-card">
 
                         <div class="methodology-number">
@@ -1055,8 +1213,6 @@
 
                     </div>
 
-
-                    <!-- 03 -->
 
                     <div class="methodology-card">
 
@@ -1077,8 +1233,6 @@
                     </div>
 
 
-                    <!-- 04 -->
-
                     <div class="methodology-card">
 
                         <div class="methodology-number">
@@ -1098,8 +1252,6 @@
                     </div>
 
 
-                    <!-- 05 -->
-
                     <div class="methodology-card">
 
                         <div class="methodology-number">
@@ -1118,8 +1270,6 @@
 
                     </div>
 
-
-                    <!-- 06 -->
 
                     <div class="methodology-card">
 
@@ -1144,10 +1294,159 @@
 
                 <div class="methodology-note">
 
-                    <strong>Research principle:</strong>
+                    <strong>
+                        Research principle:
+                    </strong>
+
                     Focus on evidence, transparent assumptions and measurable
                     financial drivers rather than relying only on headline market
                     narratives.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RESEARCH DASHBOARD
+        ========================= -->
+
+        <section id="dashboard">
+
+            <div class="container">
+
+                <div class="section-number">
+                    04 — RESEARCH DASHBOARD
+                </div>
+
+                <h2 class="section-title">
+                    Research at a glance
+                </h2>
+
+                <p class="section-intro">
+                    A snapshot of my finance experience, research coverage,
+                    analytical capabilities and professional credentials.
+                </p>
+
+
+                <div class="dashboard-grid">
+
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-value">
+                            9+
+                        </div>
+
+                        <div class="dashboard-label">
+                            YEARS IN FINANCE
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-value">
+                            150+
+                        </div>
+
+                        <div class="dashboard-label">
+                            HNI / UHNI RELATIONSHIPS
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-value">
+                            5
+                        </div>
+
+                        <div class="dashboard-label">
+                            RESEARCH PROJECTS
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-value">
+                            FMVA
+                        </div>
+
+                        <div class="dashboard-label">
+                            FINANCIAL MODELLING
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-value">
+                            NISM
+                        </div>
+
+                        <div class="dashboard-label">
+                            RESEARCH &amp; ADVISORY
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-value">
+                            2
+                        </div>
+
+                        <div class="dashboard-label">
+                            MARKET FOCUS
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="coverage-panel">
+
+                    <div class="coverage-title">
+                        RESEARCH COVERAGE
+                    </div>
+
+                    <div class="coverage-list">
+
+                        <span>
+                            Indian Equities
+                        </span>
+
+                        <span>
+                            Singapore Banks
+                        </span>
+
+                        <span>
+                            Singapore REITs
+                        </span>
+
+                        <span>
+                            Financial Modelling
+                        </span>
+
+                        <span>
+                            Valuation
+                        </span>
+
+                        <span>
+                            Investment Analysis
+                        </span>
+
+                    </div>
 
                 </div>
 
@@ -1165,7 +1464,7 @@
             <div class="container">
 
                 <div class="section-number">
-                    04 — CAPABILITIES
+                    05 — CAPABILITIES
                 </div>
 
                 <h2 class="section-title">
@@ -1179,6 +1478,7 @@
 
 
                 <div class="skills-grid">
+
 
                     <div class="skill-box">
 
@@ -1284,7 +1584,7 @@
             <div class="container">
 
                 <div class="section-number">
-                    05 — EXPERIENCE
+                    06 — EXPERIENCE
                 </div>
 
                 <h2 class="section-title">
@@ -1293,6 +1593,7 @@
 
 
                 <div class="experience-list">
+
 
                     <div class="experience-item">
 
@@ -1421,7 +1722,7 @@
             <div class="container">
 
                 <div class="section-number">
-                    06 — EDUCATION
+                    07 — EDUCATION
                 </div>
 
                 <h2 class="section-title">
@@ -1430,6 +1731,7 @@
 
 
                 <div class="education-grid">
+
 
                     <div class="education-card">
 
@@ -1531,7 +1833,7 @@
             <div class="container">
 
                 <div class="section-number">
-                    07 — CONTACT
+                    08 — CONTACT
                 </div>
 
                 <h2 class="section-title">
@@ -1546,6 +1848,7 @@
 
 
                 <div class="contact-box">
+
 
                     <div class="contact-item">
 
@@ -1628,6 +1931,7 @@
         </div>
 
     </footer>
+
 
 </body>
 </html>
