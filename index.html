@@ -1884,37 +1884,33 @@ img {
 
 .contact-section {
     position: relative;
-    padding: 86px 0 92px;
-    background:
-        radial-gradient(circle at 20% 20%, rgba(213,169,70,.08), transparent 30%),
-        #f7f6f2;
+    padding: 78px 0 86px;
+    background: #f7f6f2;
     overflow: hidden;
 }
 
 .contact-section::before {
     content: "06";
     position: absolute;
-    left: 2%;
-    bottom: -42px;
+    left: -8px;
+    bottom: -45px;
     color: rgba(8,26,49,.035);
     font-family: Georgia, serif;
-    font-size: 190px;
+    font-size: 180px;
     line-height: 1;
     font-weight: 700;
+    pointer-events: none;
 }
 
 .contact-box-main {
-    position: relative;
     display: grid;
-    grid-template-columns: minmax(0, 1.08fr) minmax(430px, .92fr);
-    gap: 0;
+    grid-template-columns: minmax(0, 1.05fr) minmax(420px, .95fr);
     margin-top: 30px;
     overflow: hidden;
-    min-height: 475px;
     background: #fff;
-    border: 1px solid #dcd9d2;
+    border: 1px solid #d9d7d0;
     border-radius: 10px;
-    box-shadow: 0 20px 45px rgba(8,26,49,.08);
+    box-shadow: 0 18px 45px rgba(8,26,49,.08);
 }
 
 .contact-intro {
@@ -1922,37 +1918,46 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 48px 48px 38px;
-    overflow: hidden;
+    min-width: 0;
+    padding: 44px 42px 34px;
     background:
-        radial-gradient(circle at 72% 48%, rgba(213,169,70,.13), transparent 24%),
-        linear-gradient(135deg,#fff 0%,#fbfaf6 72%,#f5f0e4 100%);
+        radial-gradient(circle at 80% 72%, rgba(213,169,70,.11), transparent 28%),
+        linear-gradient(135deg,#fff 0%,#fbfaf7 100%);
 }
 
 .contact-intro::after {
     content: "";
     position: absolute;
-    right: -30px;
-    bottom: -20px;
-    width: 61%;
-    height: 48%;
-    opacity: .42;
-    background:
-        linear-gradient(90deg,transparent 0 7%,#8b9aaa 7% 10%,transparent 10% 18%,#697c90 18% 24%,transparent 24% 31%,#91a0ad 31% 38%,transparent 38% 46%,#65788c 46% 52%,transparent 52% 59%,#8998a5 59% 65%,transparent 65% 73%,#62758a 73% 79%,transparent 79%);
-    clip-path: polygon(0 100%,0 70%,7% 70%,7% 47%,18% 47%,18% 61%,31% 61%,31% 28%,38% 28%,38% 53%,46% 53%,46% 18%,52% 18%,52% 45%,59% 45%,59% 8%,65% 8%,65% 38%,73% 38%,73% 14%,79% 14%,79% 48%,100% 48%,100% 100%);
+    right: 20px;
+    bottom: 0;
+    width: 250px;
+    height: 155px;
+    opacity: .12;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent 0 25px,
+        #496276 25px 43px,
+        transparent 43px 63px
+    );
+    clip-path: polygon(
+        0 100%,0 78%,10% 78%,10% 58%,20% 58%,20% 70%,
+        30% 70%,30% 42%,40% 42%,40% 62%,50% 62%,50% 27%,
+        60% 27%,60% 50%,70% 50%,70% 13%,80% 13%,80% 38%,
+        90% 38%,90% 0,100% 0,100% 100%
+    );
     pointer-events: none;
 }
 
 .contact-intro::before {
-    content: "SINGAPORE";
+    content: "SG / FINANCE";
     position: absolute;
-    right: 15%;
-    top: 72px;
-    color: rgba(181,135,41,.72);
-    font-family: Georgia, serif;
-    font-size: 31px;
-    font-style: italic;
-    transform: rotate(-5deg);
+    right: 40px;
+    top: 39px;
+    color: #c69a3d;
+    font-family: monospace;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 2px;
     z-index: 2;
 }
 
@@ -1961,21 +1966,21 @@ img {
     z-index: 3;
     color: #8a929a;
     font-family: monospace;
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 900;
     letter-spacing: 3px;
-    margin-bottom: 11px;
+    margin-bottom: 13px;
 }
 
 .contact-title {
     position: relative;
     z-index: 3;
-    max-width: 680px;
+    max-width: 590px;
     color: var(--navy);
-    font-size: clamp(42px,4.2vw,61px);
+    font-size: clamp(42px,4.1vw,58px);
     line-height: .98;
-    letter-spacing: -2.4px;
-    margin-bottom: 20px;
+    letter-spacing: -2.3px;
+    margin: 0 0 20px;
 }
 
 .contact-title strong {
@@ -1986,9 +1991,9 @@ img {
 .contact-description {
     position: relative;
     z-index: 3;
-    max-width: 680px;
+    max-width: 610px;
     color: #64788d;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.8;
 }
 
@@ -1997,85 +2002,91 @@ img {
     z-index: 4;
     display: flex;
     flex-wrap: wrap;
-    gap: 9px;
-    max-width: 690px;
-    margin-top: 23px;
+    gap: 8px;
+    max-width: 630px;
+    margin-top: 21px;
 }
 
 .contact-focus span {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 10px 14px;
-    background: rgba(255,255,255,.82);
-    border: 1px solid #dfddd6;
+    gap: 7px;
+    padding: 9px 12px;
+    background: #fff;
+    border: 1px solid #dedbd2;
     border-radius: 18px;
     color: #29445f;
-    font-size: 10px;
+    font-size: 9.5px;
     font-weight: 700;
-    box-shadow: 0 4px 10px rgba(8,26,49,.035);
 }
 
 .contact-focus span::before {
-    content: "◈";
-    color: #b98b2e;
-    font-size: 9px;
+    content: "◆";
+    color: #c39739;
+    font-size: 6px;
 }
 
 .contact-quote {
     position: relative;
     z-index: 4;
-    max-width: 570px;
-    margin-top: 25px;
-    padding-left: 17px;
+    max-width: 560px;
+    margin-top: 23px;
+    padding-left: 15px;
     border-left: 3px solid #d5a946;
     color: #263d56;
     font-family: Georgia, serif;
-    font-size: 17px;
+    font-size: 16px;
     font-style: italic;
-    line-height: 1.55;
+    line-height: 1.5;
 }
 
 .contact-quote small {
     display: block;
-    margin-top: 8px;
+    margin-top: 7px;
     color: #8b8e8e;
     font-family: monospace;
-    font-size: 8px;
+    font-size: 7.5px;
     font-style: normal;
     font-weight: 800;
-    letter-spacing: 1.7px;
+    letter-spacing: 1.5px;
 }
 
 .contact-meta {
     position: relative;
     z-index: 4;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 28px;
-    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 0;
+    margin-top: 27px;
+    max-width: 650px;
 }
 
 .contact-meta-item {
-    padding-right: 28px;
-    border-right: 1px solid #cfcac0;
+    min-width: 0;
+    padding: 0 20px;
+    border-right: 1px solid #d6d2c9;
 }
 
-.contact-meta-item:last-child { border-right: none; }
+.contact-meta-item:first-child { padding-left: 0; }
+.contact-meta-item:last-child {
+    padding-right: 0;
+    border-right: none;
+}
 
 .contact-meta-item span {
     display: block;
     color: #b08631;
     font-family: monospace;
-    font-size: 8px;
+    font-size: 7.5px;
     font-weight: 900;
     letter-spacing: 1px;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
 .contact-meta-item strong {
     color: #27425d;
-    font-size: 11px;
+    font-size: 10px;
+    line-height: 1.45;
 }
 
 .contact-details {
@@ -2083,33 +2094,35 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-content: center;
-    gap: 11px;
-    padding: 38px;
+    gap: 10px;
+    padding: 43px 34px 31px;
     background:
-        radial-gradient(circle at 90% 10%, rgba(70,105,140,.28), transparent 30%),
-        linear-gradient(145deg,#071a31 0%,#0b2039 62%,#102844 100%);
+        radial-gradient(circle at 92% 5%, rgba(70,105,140,.22), transparent 31%),
+        linear-gradient(145deg,#071a31 0%,#0b2039 68%,#102844 100%);
     border-left: 1px solid #304b66;
 }
 
 .contact-details::before {
     content: "GET IN TOUCH";
     position: absolute;
-    top: 31px;
-    left: 38px;
+    top: 30px;
+    left: 34px;
     color: var(--gold);
     font-family: monospace;
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 900;
     letter-spacing: 2px;
 }
 
 .contact-detail {
-    min-height: 112px;
-    padding: 17px;
+    min-width: 0;
+    min-height: 108px;
+    padding: 15px;
     background: rgba(255,255,255,.97);
     border: 1px solid #dfe1df;
     border-radius: 7px;
-    transition: transform .2s ease, border-color .2s ease;
+    transition: transform .2s ease,border-color .2s ease;
+    text-decoration: none;
 }
 
 .contact-detail:hover {
@@ -2121,95 +2134,90 @@ img {
     display: block;
     color: #8395a5;
     font-family: monospace;
-    font-size: 8px;
+    font-size: 7.5px;
     font-weight: 900;
     letter-spacing: 1.2px;
-    margin-bottom: 8px;
+    margin-bottom: 7px;
 }
 
 .contact-detail strong {
     display: block;
     color: var(--navy);
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1.45;
+    overflow-wrap: anywhere;
 }
 
 .contact-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 28px;
-    height: 28px;
-    margin-bottom: 10px;
-    background: #f5ead0;
+    width: 27px;
+    height: 27px;
+    margin-bottom: 9px;
+    background: #f6ead0;
     border-radius: 50%;
     color: #a77b20;
-    font-size: 13px;
-}
-
-.linkedin-card {
-    color: inherit;
+    font-family: Arial,sans-serif;
+    font-size: 11px;
+    font-weight: 700;
 }
 
 .linkedin-card small {
     display: block;
-    margin-top: 9px;
+    margin-top: 8px;
     color: #1766a9;
     font-family: monospace;
-    font-size: 8px;
-    font-weight: 900;
-    letter-spacing: .5px;
-}
-
-.contact-cv {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    min-height: 54px;
-    grid-column: 1 / -1;
-    margin-top: 2px;
-    background: var(--gold);
-    color: #081a31;
-    border-radius: 5px;
-    font-size: 11px;
+    font-size: 7px;
     font-weight: 900;
     letter-spacing: .4px;
-    transition: transform .2s ease, background .2s ease;
 }
 
-.contact-cv:hover {
-    transform: translateY(-2px);
-    background: #e0b455;
-}
-
+.contact-cv,
 .contact-message {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 54px;
-    border: 1px solid #b28a38;
+    min-height: 51px;
     border-radius: 5px;
-    color: #fff;
     font-size: 10px;
     font-weight: 900;
     letter-spacing: .5px;
+    text-decoration: none;
+}
+
+.contact-cv {
+    background: var(--gold);
+    color: #081a31;
+    border: 1px solid var(--gold);
+}
+
+.contact-message {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #b28a38;
+}
+
+.contact-cv:hover,
+.contact-message:hover {
+    transform: translateY(-2px);
 }
 
 .contact-status {
     grid-column: 1 / -1;
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding-top: 7px;
+    gap: 9px;
+    padding-top: 3px;
     color: #9fb0bf;
-    font-size: 9px;
+    font-size: 8.5px;
 }
 
 .contact-status::before {
     content: "";
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
+    flex: 0 0 auto;
     background: var(--green);
     border-radius: 50%;
     box-shadow: 0 0 0 4px rgba(22,199,132,.09);
@@ -2218,20 +2226,24 @@ img {
 @media (max-width: 950px) {
     .contact-box-main { grid-template-columns: 1fr; }
     .contact-details { border-left: none; border-top: 1px solid #304b66; }
-    .contact-intro { min-height: 500px; }
+    .contact-intro { min-height: auto; }
 }
 
-@media (max-width: 600px) {
-    .contact-section { padding: 60px 0; }
-    .contact-intro { padding: 34px 25px; min-height: 620px; }
-    .contact-details { grid-template-columns: 1fr; padding: 28px 22px; }
-    .contact-detail { min-height: auto; }
-    .contact-cv { grid-column: auto; }
-    .contact-message { grid-column: auto; }
-    .contact-status { grid-column: auto; }
-    .contact-title { font-size: 40px; }
-    .contact-meta { gap: 14px; }
-    .contact-meta-item { border-right: none; padding-right: 0; }
+@media (max-width: 620px) {
+    .contact-section { padding: 58px 0; }
+    .contact-intro { padding: 34px 24px; }
+    .contact-intro::before { right: 24px; top: 31px; }
+    .contact-details { grid-template-columns: 1fr; padding: 40px 22px 25px; }
+    .contact-title { font-size: 39px; }
+    .contact-meta { grid-template-columns: 1fr; gap: 13px; }
+    .contact-meta-item,
+    .contact-meta-item:first-child,
+    .contact-meta-item:last-child {
+        padding: 0 0 10px;
+        border-right: none;
+        border-bottom: 1px solid #d6d2c9;
+    }
+    .contact-cv,.contact-message,.contact-status { grid-column: 1; }
 }
 /* =========================================================
    LINKEDIN
@@ -4095,7 +4107,6 @@ footer {
 ========================================================= -->
 
 <section id="contact" class="contact-section">
-
 <div class="container">
 
 <div class="section-label">06 — DIRECT CONNECT</div>
@@ -4103,11 +4114,9 @@ footer {
 <div class="contact-box-main">
 
 <div class="contact-intro">
-
 <div>
 <div class="contact-eyebrow">OPEN TO OPPORTUNITIES</div>
 <h2 class="contact-title">Let’s build value,<strong>together.</strong></h2>
-
 <p class="contact-description">
 Open to opportunities across equity research, investment research,
 financial analysis, wealth management, valuation and related finance roles.
@@ -4129,20 +4138,10 @@ financial analysis, wealth management, valuation and related finance roles.
 </div>
 
 <div class="contact-meta">
-<div class="contact-meta-item">
-<span>OPEN TO</span>
-<strong>Full-time Opportunities</strong>
+<div class="contact-meta-item"><span>OPEN TO</span><strong>Full-time Opportunities</strong></div>
+<div class="contact-meta-item"><span>PREFERRED LOCATION</span><strong>Singapore &amp; APAC</strong></div>
+<div class="contact-meta-item"><span>FOCUS</span><strong>Finance · Research · Valuation</strong></div>
 </div>
-<div class="contact-meta-item">
-<span>PREFERRED LOCATION</span>
-<strong>Singapore &amp; APAC</strong>
-</div>
-<div class="contact-meta-item">
-<span>FOCUS</span>
-<strong>Finance · Research · Valuation</strong>
-</div>
-</div>
-
 </div>
 
 <div class="contact-details">
@@ -4153,12 +4152,7 @@ financial analysis, wealth management, valuation and related finance roles.
 <strong>supriyasrai135@gmail.com</strong>
 </a>
 
-<a
-    href="https://www.linkedin.com/in/rai-supriya/"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="contact-detail linkedin-card"
->
+<a href="https://www.linkedin.com/in/rai-supriya/" target="_blank" rel="noopener noreferrer" class="contact-detail linkedin-card">
 <div class="contact-icon">in</div>
 <span>LINKEDIN</span>
 <strong>www.linkedin.com/in/rai-supriya</strong>
@@ -4178,13 +4172,11 @@ financial analysis, wealth management, valuation and related finance roles.
 </div>
 
 <a href="Supriya%20Rai_Resume.pdf" download class="contact-cv">↓ &nbsp; DOWNLOAD CV</a>
-
 <a href="mailto:supriyasrai135@gmail.com?subject=Finance%20Portfolio%20-%20Supriya%20Rai" class="contact-message">✈ &nbsp; SEND A MESSAGE</a>
 
 <div class="contact-status">Available for discussions &nbsp; · &nbsp; Singapore / APAC opportunities</div>
 
 </div>
-
 </div>
 </div>
 </section>
