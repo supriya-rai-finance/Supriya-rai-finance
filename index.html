@@ -2937,6 +2937,31 @@ footer {
 <style id="portfolio-upgrade">
 .research-terminal{background:#06182c;color:#fff;padding:78px 0;border-top:1px solid #183653;border-bottom:1px solid #183653;position:relative;overflow:hidden}.research-terminal:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 10%,rgba(213,169,70,.12),transparent 35%);pointer-events:none}.terminal-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px;position:relative}.terminal-kicker{font:700 10px/1.2 monospace;letter-spacing:2.5px;color:#e0b858}.terminal-head h2{font-size:clamp(32px,4vw,54px);line-height:1;margin-top:10px;letter-spacing:-1.5px}.terminal-head p{max-width:500px;color:#9eb2c8}.terminal-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;position:relative}.terminal-panel{border:1px solid #25445f;background:rgba(12,36,61,.78);padding:25px;border-radius:12px}.terminal-panel.feature{min-height:330px}.terminal-label{font:700 9px monospace;letter-spacing:2px;color:#7fa5c8;margin-bottom:16px}.terminal-feature{display:flex;justify-content:space-between;gap:25px;align-items:start}.terminal-company{font-size:34px;font-weight:800;line-height:1}.terminal-company span{color:#e0b858}.terminal-sub{color:#9eb2c8;margin:10px 0 22px;max-width:620px}.terminal-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:20px 0}.terminal-metric{padding:14px;background:#0a2138;border:1px solid #24445f;border-radius:8px}.terminal-metric b{display:block;font-size:20px}.terminal-metric small{color:#7691ab;font:700 9px monospace;letter-spacing:1px}.terminal-links{display:flex;gap:10px;flex-wrap:wrap}.terminal-btn{padding:11px 14px;border-radius:7px;background:#d5a946;color:#07182c;font-weight:800;font-size:11px}.terminal-btn.alt{background:transparent;border:1px solid #466580;color:#dbe6f2}.coverage-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.coverage-tile{padding:18px;background:#0a2138;border:1px solid #24445f;border-radius:9px;transition:.25s}.coverage-tile:hover{transform:translateY(-3px);border-color:#d5a946}.coverage-tile strong{display:block;font-size:15px}.coverage-tile span{display:block;color:#7892aa;font:10px monospace;letter-spacing:1px;margin-top:4px}.workflow-band{margin-top:18px;display:grid;grid-template-columns:repeat(5,1fr);border:1px solid #25445f;border-radius:10px;overflow:hidden}.workflow-step{padding:18px;background:#0a2138;border-right:1px solid #25445f}.workflow-step:last-child{border:0}.workflow-step b{display:block;color:#e0b858;font:700 9px monospace;letter-spacing:1.5px;margin-bottom:7px}.workflow-step span{font-weight:700;font-size:13px}.cert-strip{margin-top:18px;padding:22px;border:1px solid #d6d1c6;background:#fff;color:#10243d;border-radius:12px;display:grid;grid-template-columns:1.1fr 2fr;gap:25px;align-items:center}.cert-strip h3{font-size:24px}.cert-strip p{color:#62768b;font-size:13px}.cert-list{display:flex;gap:8px;flex-wrap:wrap}.cert-pill{padding:9px 11px;border:1px solid #d8d6cf;border-radius:999px;background:#f7f6f2;font:700 10px monospace;letter-spacing:.4px}@media(max-width:800px){.terminal-grid{grid-template-columns:1fr}.terminal-metrics{grid-template-columns:repeat(2,1fr)}.workflow-band{grid-template-columns:1fr}.workflow-step{border-right:0;border-bottom:1px solid #25445f}.cert-strip{grid-template-columns:1fr}.terminal-head{display:block}}
 </style>
+<style>
+.valuation-lab-home{padding:76px 0;background:#f7f6f2}
+.vlab-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:28px}
+.vlab-head h2{margin:8px 0 0;color:#071a31;font-size:42px;letter-spacing:-1.4px}
+.vlab-head p{max-width:430px;margin:0;color:#718296;font-size:11px;line-height:1.7}
+.vlab-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:14px}
+.vlab-card{position:relative;overflow:hidden;padding:26px;background:#fff;border:1px solid #dcd9d2;border-radius:8px;text-decoration:none}
+.vlab-card.featured{background:linear-gradient(145deg,#071a31,#0d2947);border-color:#294b68;color:#fff}
+.vlab-card::after{content:"DCF";position:absolute;right:-10px;bottom:-31px;color:rgba(213,169,70,.06);font:900 100px Georgia,serif}
+.vlab-kicker{color:#b08631;font:900 8px monospace;letter-spacing:1.5px;margin-bottom:9px}
+.vlab-card h3{margin:0;color:#071a31;font-size:24px}
+.vlab-card.featured h3{color:#fff}
+.vlab-card p{max-width:600px;color:#718296;font-size:10px;line-height:1.7}
+.vlab-card.featured p{color:#a5b7c8}
+.vlab-tags{display:flex;flex-wrap:wrap;gap:7px;margin:17px 0}
+.vlab-tags span{padding:6px 8px;border:1px solid #dedbd2;border-radius:14px;color:#536b82;font:800 7px monospace}
+.vlab-card.featured .vlab-tags span{border-color:#3a5874;color:#c5d1dc}
+.vlab-value{display:flex;gap:10px;margin:18px 0}.vlab-metric{padding:10px 12px;border-left:2px solid #d5a946}.vlab-metric small{display:block;color:#8495a5;font:900 7px monospace}.vlab-metric strong{display:block;color:#071a31;font-size:18px}.featured .vlab-metric strong{color:#fff}
+.vlab-link{display:inline-flex;margin-top:6px;color:#a77b20;font:900 8px monospace;letter-spacing:.5px}
+.vlab-mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.vlab-mini{padding:17px;background:#fff;border:1px solid #dcd9d2;border-radius:7px}
+.vlab-mini strong{display:block;color:#071a31;font-size:15px}.vlab-mini span{display:block;margin-top:5px;color:#7c8d9e;font:800 7px monospace;letter-spacing:.6px}
+@media(max-width:800px){.vlab-grid{grid-template-columns:1fr}.vlab-head{align-items:flex-start;flex-direction:column}.vlab-mini-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.vlab-head h2{font-size:34px}.vlab-mini-grid{grid-template-columns:1fr}}
+</style>
 </head>
 
 
@@ -3770,6 +3795,28 @@ footer {
 
 </section>
 
+
+<section class="valuation-lab-home">
+<div class="container">
+<div class="vlab-head"><div><div class="section-label">VALUATION LAB · FINANCIAL MODELLING</div><h2>Where research becomes a model.</h2></div><p>Company-level valuation workbooks translated into recruiter-friendly proof of work — with the full Excel model behind every case.</p></div>
+<div class="vlab-grid">
+<a href="dbs-valuation.html" class="vlab-card featured">
+<div class="vlab-kicker">FEATURED MODEL · SINGAPORE BANKING · SGX: D05</div>
+<h3>DBS Group Valuation</h3>
+<p>Bank-specific FCFE DCF with Bear / Base / Bull scenarios, P/B cross-checks and sensitivity analysis.</p>
+<div class="vlab-tags"><span>FCFE DCF</span><span>P/B</span><span>SCENARIOS</span><span>SENSITIVITY</span></div>
+<div class="vlab-value"><div class="vlab-metric"><small>BASE DCF</small><strong>S$70.41</strong></div><div class="vlab-metric"><small>CURRENT PRICE</small><strong>S$76.86</strong></div></div>
+<span class="vlab-link">VIEW FULL VALUATION →</span>
+</a>
+<div class="vlab-mini-grid">
+<div class="vlab-mini"><strong>OCBC</strong><span>DCF · P/B · BANKING</span></div>
+<div class="vlab-mini"><strong>UOB</strong><span>DCF · P/B · BANKING</span></div>
+<div class="vlab-mini"><strong>RELIANCE</strong><span>DCF · FCFF · EQUITY</span></div>
+<div class="vlab-mini"><strong>L&amp;T</strong><span>DCF · FCFF · INDUSTRIALS</span></div>
+</div>
+</div>
+</div>
+</section>
 
 <!-- =========================================================
      RESEARCH TERMINAL — EVIDENCE DASHBOARD
