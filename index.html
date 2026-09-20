@@ -8,14 +8,14 @@
 <title>Supriya Rai | Finance & Equity Research</title>
 
 <meta
-name="description"
-content="Supriya Rai — Finance, Equity Research, Financial Modelling, Valuation and Investment Analysis."
->
+    name="description"
+    content="Supriya Rai — Finance & Equity Research | Financial Modelling | Valuation | AI in Finance"
+/>
 
 <style>
 
 /* =========================================================
-   RESET
+   GLOBAL
 ========================================================= */
 
 * {
@@ -36,50 +36,32 @@ body {
 }
 
 a {
-    color: inherit;
     text-decoration: none;
+    color: inherit;
 }
 
 img {
-    display: block;
     max-width: 100%;
+    display: block;
 }
-
-
-/* =========================================================
-   VARIABLES
-========================================================= */
 
 :root {
     --navy: #081a31;
-    --navy-2: #0d2340;
-    --navy-3: #112c4c;
-
-    --gold: #d6aa4d;
-    --gold-dark: #b6872d;
-
+    --navy2: #0d2340;
+    --navy3: #112c4d;
+    --gold: #d5a946;
+    --gold2: #b98729;
     --cream: #f7f6f2;
     --white: #ffffff;
-
-    --text: #0b1b33;
-    --muted: #687b90;
-    --muted-light: #aebdcd;
-
+    --muted: #728399;
     --green: #16c784;
-    --red: #e05b73;
-
-    --border: #dcd9d1;
-    --dark-border: #294665;
+    --red: #e05670;
+    --border: #ddd9d0;
 }
 
-
-/* =========================================================
-   CONTAINER
-========================================================= */
-
 .container {
-    width: min(1450px, 93%);
-    margin: 0 auto;
+    width: min(1045px, 92%);
+    margin: auto;
 }
 
 
@@ -88,55 +70,56 @@ img {
 ========================================================= */
 
 .market-pulse {
-    width: 100%;
+    height: 30px;
     overflow: hidden;
-    background: #06172b;
-    color: #ffffff;
-    border-bottom: 1px solid #213751;
+    background: #06162a;
+    color: #fff;
+    border-bottom: 1px solid #20364f;
 }
 
 .pulse-track {
-    display: flex;
     width: max-content;
-    animation: pulse-scroll 42s linear infinite;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+
+    animation: ticker 42s linear infinite;
 }
 
 .pulse-item {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 7px;
 
-    padding: 9px 23px;
+    height: 30px;
+    padding: 0 18px;
 
-    border-right: 1px solid #1b314b;
-
-    font-family: monospace;
-    font-size: 10px;
+    border-right: 1px solid #20364f;
 
     white-space: nowrap;
+
+    font-family: monospace;
+    font-size: 8px;
 }
 
 .pulse-name {
-    color: #ffffff;
     font-weight: 800;
 }
 
 .pulse-price {
-    color: #b6c5d5;
+    color: #b9c6d4;
 }
 
 .positive {
     color: var(--green);
-    font-weight: 800;
 }
 
 .negative {
     color: var(--red);
-    font-weight: 800;
 }
 
-@keyframes pulse-scroll {
-
+@keyframes ticker {
     from {
         transform: translateX(0);
     }
@@ -144,42 +127,37 @@ img {
     to {
         transform: translateX(-50%);
     }
-
 }
 
 
 /* =========================================================
-   NAVIGATION
+   NAVBAR
 ========================================================= */
 
 .navbar {
-    background: var(--navy);
-    color: #ffffff;
-    border-bottom: 1px solid #203853;
+    background: #13253d;
+    color: #fff;
+    border-bottom: 1px solid #2a4058;
 }
 
 .nav-inner {
-    min-height: 70px;
+    min-height: 67px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    gap: 30px;
+    gap: 25px;
 }
 
 .brand {
     display: flex;
     align-items: center;
-    gap: 11px;
-
-    font-size: 18px;
-    font-weight: 800;
+    gap: 10px;
 }
 
 .brand-mark {
-    width: 34px;
-    height: 34px;
+    width: 35px;
+    height: 35px;
 
     display: flex;
     align-items: center;
@@ -190,325 +168,257 @@ img {
     color: var(--gold);
 
     font-family: Georgia, serif;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
 }
 
-.brand-subtitle {
-    display: block;
+.brand-name {
+    font-size: 16px;
+    font-weight: 800;
+}
 
-    margin-top: 2px;
+.brand-role {
+    margin-top: 1px;
 
     color: var(--gold);
 
     font-family: monospace;
-    font-size: 7px;
+    font-size: 6px;
     letter-spacing: 1px;
-    text-transform: uppercase;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 26px;
+    gap: 25px;
 
-    color: #b8c5d4;
+    color: #bdc8d5;
 
-    font-size: 10px;
-    font-weight: 700;
-}
-
-.nav-links a {
-    transition: color .2s ease;
+    font-size: 8px;
+    font-weight: 800;
 }
 
 .nav-links a:hover {
-    color: #ffffff;
+    color: #fff;
 }
 
-.nav-cv {
-    padding: 10px 17px;
+.nav-resume {
+    padding: 10px 16px;
 
     background: var(--gold);
 
-    color: #07182d;
+    color: #081a31;
 
     border-radius: 3px;
 
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 900;
 }
 
 
 /* =========================================================
-   PROFESSIONAL PROFILE
+   01 — PROFESSIONAL PROFILE
 ========================================================= */
 
 .profile-section {
-    background: var(--navy);
+    padding: 28px 0 38px;
 
-    color: #ffffff;
+    background:
+        radial-gradient(
+            circle at 75% 20%,
+            rgba(45, 76, 108, .22),
+            transparent 32%
+        ),
+        #071a31;
 
-    padding: 45px 0 52px;
-
-    position: relative;
-
-    overflow: hidden;
+    color: #fff;
 }
 
+.profile-shell {
+    width: min(1045px, 92%);
+    margin: auto;
 
-/* subtle institutional texture */
+    padding: 25px 48px 32px;
 
-.profile-section::before {
-    content: "";
+    border: 1px solid #53606c;
 
-    position: absolute;
+    border-radius: 3px;
 
-    inset: 0;
-
-    background-image:
+    background:
         radial-gradient(
-            circle at 15% 20%,
+            circle at 85% 10%,
             rgba(255,255,255,.035) 1px,
             transparent 1px
-        );
+        ),
+        #07192f;
 
-    background-size: 19px 19px;
-
-    opacity: .4;
-
-    pointer-events: none;
-}
-
-.profile-inner {
-    position: relative;
-    z-index: 2;
-}
-
-
-/* TOP LABEL */
-
-.profile-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    margin-bottom: 25px;
-}
-
-.profile-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-
-    padding: 7px 13px;
-
-    border: 1px solid #4c6480;
-
-    border-radius: 20px;
-
-    color: var(--gold);
-
-    font-family: monospace;
-    font-size: 9px;
-    font-weight: 800;
-
-    letter-spacing: 1.4px;
-}
-
-.profile-label-number {
-    color: #ffffff;
-}
-
-.profile-status {
-    color: #7891aa;
-
-    font-family: monospace;
-    font-size: 8px;
-    letter-spacing: 1px;
-}
-
-
-/* MAIN PROFILE GRID */
-
-.profile-grid {
-    display: grid;
-
-    grid-template-columns: 320px 1fr;
-
-    gap: 42px;
-
-    align-items: stretch;
-}
-
-
-/* =========================================================
-   PROFILE CARD
-========================================================= */
-
-.profile-card {
-    background: #0b213b;
-
-    border: 1px solid #35516d;
-
-    border-radius: 8px;
-
-    padding: 20px;
+    background-size: 22px 22px;
 
     box-shadow:
-        0 15px 40px rgba(0,0,0,.16);
+        0 16px 35px rgba(0,0,0,.18);
 }
 
 
-/* PHOTO */
+/* top repository pill */
 
-.profile-photo {
-    width: 100%;
+.profile-repository {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 
-    aspect-ratio: 1 / 1.12;
+    padding: 6px 11px;
 
-    overflow: hidden;
+    border: 1px solid #3d607d;
 
-    border: 1px solid var(--gold);
-
-    border-radius: 6px;
-
-    background: #d9d9d9;
-
-    position: relative;
-}
-
-.profile-photo img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    object-position: center top;
-}
-
-
-/* photo corners */
-
-.photo-corner {
-    position: absolute;
-
-    width: 17px;
-    height: 17px;
-
-    border-color: var(--gold);
-    border-style: solid;
-}
-
-.photo-corner.tl {
-    top: 10px;
-    left: 10px;
-
-    border-width: 2px 0 0 2px;
-}
-
-.photo-corner.tr {
-    top: 10px;
-    right: 10px;
-
-    border-width: 2px 2px 0 0;
-}
-
-.photo-corner.bl {
-    bottom: 10px;
-    left: 10px;
-
-    border-width: 0 0 2px 2px;
-}
-
-.photo-corner.br {
-    bottom: 10px;
-    right: 10px;
-
-    border-width: 0 2px 2px 0;
-}
-
-
-/* PROFILE NAME */
-
-.profile-name {
-    margin-top: 17px;
-
-    font-size: 26px;
-    line-height: 1.1;
-}
-
-.profile-role {
-    margin-top: 5px;
+    border-radius: 15px;
 
     color: var(--gold);
 
     font-family: monospace;
-    font-size: 10px;
+    font-size: 7px;
     font-weight: 800;
+    letter-spacing: .8px;
+}
 
-    letter-spacing: 1.4px;
+.repository-dot {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--green);
 }
 
 
-/* PROFILE DETAILS */
+/* MAIN PROFILE */
 
-.profile-details {
-    margin-top: 17px;
+.profile-main-grid {
+    display: grid;
 
-    border-top: 1px solid #29435f;
+    grid-template-columns: 1fr 285px;
+
+    gap: 45px;
+
+    align-items: center;
+
+    margin-top: 28px;
 }
 
-.profile-detail {
+
+/* LEFT */
+
+.profile-kicker {
+    color: var(--gold);
+
+    font-family: monospace;
+
+    font-size: 7px;
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+}
+
+.profile-name {
+    color: #fff;
+
+    font-size: 46px;
+
+    line-height: 1;
+
+    letter-spacing: -1.8px;
+
+    margin-bottom: 10px;
+}
+
+.profile-title {
+    color: var(--gold);
+
+    font-family: Georgia, serif;
+
+    font-size: 19px;
+
+    line-height: 1.2;
+
+    margin-bottom: 23px;
+}
+
+.profile-quote {
+    max-width: 610px;
+
+    padding: 10px 14px;
+
+    border-left: 2px solid var(--gold);
+
+    color: #d2dce7;
+
+    font-family: Georgia, serif;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    margin-bottom: 19px;
+}
+
+
+/* SKILL PILLS */
+
+.profile-pills {
     display: flex;
-    justify-content: space-between;
-    gap: 15px;
 
-    padding: 9px 0;
+    flex-wrap: wrap;
 
-    border-bottom: 1px solid #203a56;
+    gap: 7px;
 
-    font-size: 9px;
+    max-width: 650px;
+
+    margin-bottom: 24px;
 }
 
-.profile-detail span:first-child {
-    color: #8097ad;
-}
+.profile-pill {
+    padding: 5px 9px;
 
-.profile-detail span:last-child {
-    color: #ffffff;
+    background: #102944;
 
-    text-align: right;
+    border: 1px solid #304e6b;
 
+    border-radius: 4px;
+
+    color: #d3dce6;
+
+    font-size: 7px;
     font-weight: 700;
 }
 
+.profile-pill::before {
+    content: "✓";
 
-/* AVAILABILITY */
+    color: var(--gold);
 
-.availability {
-    color: var(--green) !important;
+    margin-right: 5px;
 }
 
 
-/* PROFILE BUTTONS */
+/* BUTTONS */
 
-.profile-buttons {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 8px;
-
-    margin-top: 15px;
-}
-
-.profile-btn {
+.profile-actions {
     display: flex;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.profile-action {
+    display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
-    padding: 10px 7px;
+    gap: 10px;
+
+    padding: 11px 18px;
 
     border-radius: 3px;
 
@@ -518,559 +428,389 @@ img {
     letter-spacing: .3px;
 }
 
-.profile-btn.primary {
+.profile-action.primary {
     background: var(--gold);
-
-    color: #07182d;
+    color: #081a31;
 }
 
-.profile-btn.secondary {
-    background: #102b4a;
+.profile-action.secondary {
+    border: 1px solid #49627c;
+    color: #fff;
+}
 
-    border: 1px solid #34516e;
-
-    color: #ffffff;
+.profile-action.secondary:hover {
+    background: #102944;
 }
 
 
-/* =========================================================
-   PROFILE MAIN CONTENT
-========================================================= */
+/* MICRO METRICS */
 
-.profile-main {
+.profile-micro {
     display: flex;
+    flex-wrap: wrap;
 
-    flex-direction: column;
+    gap: 20px;
 
-    min-width: 0;
-}
-
-
-/* KICKER */
-
-.profile-kicker {
-    color: var(--gold);
+    color: #92a5b8;
 
     font-family: monospace;
-    font-size: 10px;
+
+    font-size: 7px;
+}
+
+.profile-micro strong {
+    color: #d6e0ea;
+}
+
+
+/* RIGHT PHOTO */
+
+.profile-photo-area {
+    text-align: center;
+}
+
+.profile-photo-frame {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: .86;
+
+    padding: 8px;
+
+    border: 2px solid var(--gold);
+
+    border-radius: 14px;
+
+    background: #0b2039;
+
+    box-shadow:
+        0 0 22px rgba(213,169,70,.22);
+}
+
+.profile-photo-frame img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+    border-radius: 5px;
+}
+
+.photo-label {
+    position: absolute;
+
+    left: 12px;
+    right: 12px;
+    bottom: 8px;
+
+    padding: 9px 7px;
+
+    background: rgba(6, 23, 43, .94);
+
+    border: 1px solid #304c68;
+
+    color: #fff;
+
+    font-size: 8px;
     font-weight: 800;
 
-    letter-spacing: 2px;
-
-    margin-bottom: 11px;
+    text-align: center;
 }
 
-
-/* HEADLINE */
-
-.profile-main h1 {
-    max-width: 850px;
-
-    font-size: clamp(38px, 5vw, 63px);
-
-    line-height: .98;
-
-    letter-spacing: -2.5px;
-
-    margin-bottom: 17px;
-}
-
-.profile-main h1 strong {
+.photo-label span {
     display: block;
 
-    color: var(--gold);
-
-    font-weight: 800;
-}
-
-
-/* DESCRIPTION */
-
-.profile-description {
-    max-width: 850px;
-
-    color: #bdccdc;
-
-    font-size: 13px;
-
-    line-height: 1.75;
-
-    margin-bottom: 20px;
-}
-
-
-/* QUOTE */
-
-.profile-quote {
-    max-width: 430px;
-
-    margin-left: auto;
-
-    margin-bottom: 22px;
-
-    padding: 15px 18px;
-
-    background: #0b213b;
-
-    border-left: 2px solid var(--gold);
-
-    color: #cbd6e1;
-
-    font-family: Georgia, serif;
-
-    font-size: 13px;
-
-    font-style: italic;
-
-    line-height: 1.65;
-}
-
-
-/* KEY COMPETENCIES */
-
-.competencies {
-    background: #0a2039;
-
-    border: 1px solid #294764;
-
-    border-radius: 6px;
-
-    padding: 14px 15px;
-}
-
-.competencies-heading {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-
-    margin-bottom: 11px;
+    margin-top: 2px;
 
     color: var(--gold);
 
     font-family: monospace;
-    font-size: 9px;
-    font-weight: 900;
+
+    font-size: 6px;
 
     letter-spacing: 1px;
 }
 
-.competency-list {
-    display: flex;
-    flex-wrap: wrap;
+.photo-status {
+    margin-top: 9px;
 
-    gap: 7px;
-}
+    color: var(--green);
 
-.competency {
-    padding: 7px 10px;
+    font-family: monospace;
 
-    background: #102b4a;
-
-    border: 1px solid #294b6c;
-
-    border-radius: 4px;
-
-    color: #d3dce6;
-
-    font-size: 9px;
-    font-weight: 700;
+    font-size: 7px;
 }
 
 
-/* PROFILE METRICS */
+/* PROFILE DIVIDER */
 
-.profile-metrics {
+.profile-divider {
+    margin-top: 27px;
+
+    border-top: 1px solid #203c58;
+}
+
+
+/* PROFILE STAT CARDS */
+
+.profile-stats {
     display: grid;
 
     grid-template-columns: repeat(4, 1fr);
 
-    margin-top: 12px;
+    gap: 10px;
 
-    border: 1px solid #294764;
-
-    border-radius: 6px;
-
-    background: #071a30;
+    margin-top: 24px;
 }
 
-.metric {
+.profile-stat {
+    min-height: 75px;
+
     padding: 13px;
 
-    text-align: center;
+    background: #102744;
 
-    border-right: 1px solid #294764;
+    border: 1px solid #294866;
+
+    border-radius: 5px;
 }
 
-.metric:last-child {
-    border-right: none;
-}
-
-.metric-value {
+.profile-stat-number {
     color: var(--gold);
 
     font-family: monospace;
 
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 900;
 
     line-height: 1;
 }
 
-.metric-label {
-    margin-top: 5px;
+.profile-stat-title {
+    margin-top: 6px;
 
-    color: #8da2b7;
+    color: #fff;
 
     font-size: 8px;
+    font-weight: 800;
+}
+
+.profile-stat-text {
+    margin-top: 2px;
+
+    color: #91a6ba;
+
+    font-size: 7px;
 }
 
 
 /* =========================================================
-   RESEARCH PHILOSOPHY
+   02 — RESEARCH PHILOSOPHY
 ========================================================= */
 
 .research-philosophy {
+    padding: 65px 0 34px;
+
     background: var(--cream);
 
-    color: var(--text);
-
-    padding: 60px 0 34px;
-
-    border-bottom: 1px solid #ddd9d0;
+    border-bottom: 1px solid #dedbd2;
 }
 
-
-/* HEADER */
-
-.research-philosophy-header {
+.section-topline {
     display: flex;
 
     align-items: center;
     justify-content: space-between;
 
-    margin-bottom: 34px;
+    margin-bottom: 32px;
 }
 
-.research-label {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    padding: 7px 13px;
-
-    border: 1px solid #c9b47c;
-
-    border-radius: 18px;
-
-    color: var(--text);
-
-    font-family: monospace;
-
-    font-size: 9px;
-
-    font-weight: 800;
-
-    letter-spacing: 1.5px;
-}
-
-.research-label span {
-    color: var(--gold-dark);
-
-    font-weight: 900;
-}
-
-.research-topline {
-    color: #7890a8;
+.section-label {
+    color: var(--gold2);
 
     font-family: monospace;
 
     font-size: 8px;
+    font-weight: 900;
 
-    font-weight: 700;
-
-    letter-spacing: 1.2px;
+    letter-spacing: 1.4px;
 }
 
-
-/* PHILOSOPHY LAYOUT */
-
-.research-philosophy-layout {
-    display: grid;
-
-    grid-template-columns: 310px 1fr;
-
-    gap: 34px;
-
-    align-items: start;
-}
-
-
-/* LEFT INTRO */
-
-.research-intro {
-    padding-right: 12px;
-}
-
-.intro-kicker {
-    margin-bottom: 10px;
-
-    color: var(--gold-dark);
+.section-flow {
+    color: #8293a6;
 
     font-family: monospace;
 
-    font-size: 9px;
+    font-size: 7px;
+    font-weight: 800;
 
+    letter-spacing: 1px;
+}
+
+.philosophy-grid {
+    display: grid;
+
+    grid-template-columns: 290px 1fr;
+
+    gap: 32px;
+}
+
+.philosophy-intro {
+    padding-right: 10px;
+}
+
+.philosophy-kicker {
+    color: var(--gold2);
+
+    font-family: monospace;
+
+    font-size: 8px;
     font-weight: 900;
 
-    letter-spacing: 1.7px;
+    letter-spacing: 1.4px;
+
+    margin-bottom: 10px;
 }
 
-.research-intro h2 {
-    margin-bottom: 17px;
+.philosophy-intro h2 {
+    color: var(--navy);
 
-    color: var(--text);
+    font-size: 32px;
 
-    font-size: 33px;
-
-    line-height: 1.08;
+    line-height: 1.05;
 
     letter-spacing: -1px;
+
+    margin-bottom: 17px;
 }
 
-.research-intro h2 strong {
+.philosophy-intro h2 strong {
     display: block;
 
     color: #c39435;
-
-    font-weight: 800;
 }
 
-.research-intro p {
-    max-width: 305px;
+.philosophy-intro p {
+    color: #697d92;
 
-    color: #63778e;
-
-    font-size: 12px;
+    font-size: 10px;
 
     line-height: 1.8;
 
-    margin-bottom: 21px;
+    margin-bottom: 19px;
 }
 
-
-/* RESEARCH BUTTON */
-
-.research-button {
+.explore-btn {
     display: inline-flex;
 
     align-items: center;
 
-    gap: 14px;
+    gap: 13px;
 
-    padding: 11px 15px;
+    padding: 10px 14px;
 
     background: var(--navy);
 
-    color: #ffffff;
+    color: #fff;
 
     border-radius: 3px;
 
-    font-size: 8px;
-
+    font-size: 7px;
     font-weight: 900;
-
-    letter-spacing: .6px;
 }
 
-.research-button span {
+.explore-btn span {
     color: var(--gold);
 
-    font-size: 14px;
+    font-size: 13px;
 }
 
 
-/* =========================================================
-   RESEARCH PROCESS
-========================================================= */
+/* PROCESS */
 
-.research-process {
+.philosophy-process {
     display: grid;
 
-    grid-template-columns:
-        1fr 22px
-        1fr 22px
-        1fr;
+    grid-template-columns: repeat(2, 1fr);
 
-    gap: 8px;
+    gap: 10px;
 }
 
+.philosophy-card {
+    min-height: 135px;
 
-/* STEP */
+    padding: 15px;
 
-.research-step {
-    min-height: 185px;
-
-    padding: 16px 14px;
-
-    background: #ffffff;
+    background: #fff;
 
     border: 1px solid #dedbd2;
 
-    border-radius: 7px;
+    border-radius: 6px;
 
-    position: relative;
-
-    transition:
-        transform .2s ease,
-        border-color .2s ease,
-        box-shadow .2s ease;
+    transition: .2s ease;
 }
 
-.research-step:hover {
-    transform: translateY(-3px);
+.philosophy-card:hover {
+    transform: translateY(-2px);
 
-    border-color: #c89b3c;
+    border-color: #c9a04a;
 
-    box-shadow:
-        0 10px 24px rgba(12,29,48,.08);
+    box-shadow: 0 8px 20px rgba(8,26,49,.07);
 }
 
-
-/* NUMBER */
-
-.step-number {
+.philosophy-number {
     color: #c39435;
 
     font-family: monospace;
 
-    font-size: 10px;
-
+    font-size: 8px;
     font-weight: 900;
 
-    margin-bottom: 10px;
+    margin-bottom: 9px;
 }
 
+.philosophy-card h3 {
+    color: var(--navy);
 
-/* ICON */
+    font-size: 11px;
 
-.step-icon {
-    width: 28px;
-
-    height: 28px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    margin-bottom: 12px;
-
-    color: #b6872d;
-
-    font-size: 20px;
-
-    border: 1px solid #d8c28d;
-
-    border-radius: 50%;
+    margin-bottom: 6px;
 }
 
+.philosophy-card p {
+    color: #738397;
 
-/* TITLE */
-
-.research-step h3 {
-    color: var(--text);
-
-    font-size: 12px;
-
-    line-height: 1.25;
-
-    margin-bottom: 8px;
-}
-
-
-/* DESCRIPTION */
-
-.research-step p {
-    color: #708197;
-
-    font-size: 9px;
+    font-size: 8px;
 
     line-height: 1.65;
 }
-
-
-/* ARROW */
-
-.step-arrow {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    color: #c39435;
-
-    font-size: 20px;
-
-    font-weight: 300;
-}
-
-
-/* =========================================================
-   COVERAGE STRIP
-========================================================= */
 
 .coverage-strip {
     display: flex;
 
     align-items: center;
 
-    margin-top: 38px;
+    gap: 12px;
 
-    padding: 15px 0;
+    margin-top: 34px;
 
-    border-top: 1px solid #dedbd2;
+    padding: 14px 0;
 
-    border-bottom: 1px solid #dedbd2;
-
-    gap: 13px;
+    border-top: 1px solid #ddd9d0;
+    border-bottom: 1px solid #ddd9d0;
 }
 
 .coverage-title {
-    display: flex;
-
-    align-items: center;
-
-    gap: 7px;
-
-    color: var(--text);
+    color: var(--navy);
 
     font-family: monospace;
 
-    font-size: 8px;
-
+    font-size: 7px;
     font-weight: 900;
 
-    letter-spacing: 1.1px;
-
     white-space: nowrap;
-}
-
-.coverage-title span {
-    color: var(--gold-dark);
-
-    font-size: 13px;
-}
-
-.coverage-divider {
-    width: 1px;
-
-    height: 18px;
-
-    background: #cfcac0;
 }
 
 .coverage-items {
@@ -1078,460 +818,707 @@ img {
 
     flex-wrap: wrap;
 
-    align-items: center;
-
-    gap: 7px 13px;
+    gap: 6px 14px;
 
     flex: 1;
 }
 
 .coverage-items span {
-    color: #687b90;
+    color: #6d7f92;
 
-    font-size: 8px;
-
-    white-space: nowrap;
+    font-size: 7px;
 }
 
 .coverage-items span:not(:last-child)::after {
     content: "|";
 
-    color: #b9b6ae;
+    margin-left: 14px;
 
-    margin-left: 13px;
+    color: #c3c0b9;
 }
 
 .coverage-end {
-    color: var(--gold-dark);
+    color: var(--gold2);
 
     font-family: monospace;
 
-    font-size: 7px;
-
-    font-weight: 800;
-
-    letter-spacing: .7px;
+    font-size: 6px;
+    font-weight: 900;
 
     white-space: nowrap;
 }
 
 
 /* =========================================================
-   RESEARCH PROJECTS
+   03 — SELECTED RESEARCH
 ========================================================= */
 
 .projects-section {
+    padding: 66px 0;
+
     background: #f7f6f2;
-
-    padding: 72px 0;
 }
 
-.section-label {
-    color: var(--gold-dark);
+.section-heading h2 {
+    margin-top: 8px;
 
-    font-family: monospace;
+    color: var(--navy);
 
-    font-size: 9px;
+    font-size: 31px;
 
-    font-weight: 900;
-
-    letter-spacing: 1.7px;
-
-    margin-bottom: 12px;
-}
-
-.section-title {
-    color: var(--text);
-
-    font-size: 35px;
-
-    line-height: 1.15;
+    line-height: 1.1;
 
     letter-spacing: -.7px;
-
-    margin-bottom: 12px;
 }
 
-.section-description {
-    max-width: 850px;
+.section-heading p {
+    max-width: 720px;
 
-    color: var(--muted);
+    margin-top: 9px;
 
-    font-size: 13px;
+    color: #738397;
 
-    line-height: 1.8;
+    font-size: 10px;
+
+    line-height: 1.7;
 }
-
-
-/* PROJECT GRID */
 
 .projects-grid {
     display: grid;
 
     grid-template-columns: repeat(2, 1fr);
 
-    gap: 17px;
+    gap: 12px;
 
-    margin-top: 30px;
+    margin-top: 27px;
 }
 
 .project {
-    display: block;
+    min-height: 150px;
 
-    min-height: 205px;
+    padding: 19px;
 
-    padding: 23px;
+    background: #fff;
 
-    background: #ffffff;
+    border: 1px solid #dcd9d2;
 
-    border: 1px solid #d9d7d1;
+    border-radius: 6px;
 
-    border-radius: 7px;
-
-    transition:
-        transform .2s ease,
-        border-color .2s ease,
-        box-shadow .2s ease;
+    transition: .2s ease;
 }
 
 .project:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 
-    border-color: #c89b3c;
+    border-color: #c8a04c;
 
-    box-shadow:
-        0 10px 25px rgba(12,29,48,.08);
+    box-shadow: 0 9px 22px rgba(8,26,49,.07);
 }
 
 .project-tag {
-    color: var(--gold-dark);
+    color: var(--gold2);
 
     font-family: monospace;
 
-    font-size: 8px;
-
+    font-size: 6px;
     font-weight: 900;
 
     letter-spacing: 1.2px;
 
-    margin-bottom: 12px;
-}
-
-.project h3 {
-    color: var(--text);
-
-    font-size: 19px;
-
-    line-height: 1.3;
-
     margin-bottom: 9px;
 }
 
-.project p {
-    color: var(--muted);
+.project h3 {
+    color: var(--navy);
 
-    font-size: 11px;
+    font-size: 15px;
+
+    margin-bottom: 6px;
+}
+
+.project p {
+    color: #718296;
+
+    font-size: 8px;
 
     line-height: 1.7;
+
+    margin-bottom: 10px;
+}
+
+.project-link {
+    color: #1766a9;
+
+    font-size: 7px;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   04 — AI + FINANCIAL TOOLKIT
+========================================================= */
+
+.toolkit-section {
+    padding: 66px 0;
+
+    background: #f7f6f2;
+}
+
+.toolkit-feature {
+    margin-top: 27px;
+
+    padding: 34px;
+
+    background:
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(53,84,116,.23),
+            transparent 28%
+        ),
+        #081a31;
+
+    border: 1px solid #435a71;
+
+    border-radius: 8px;
+
+    color: #fff;
+
+    box-shadow:
+        0 13px 28px rgba(8,26,49,.12);
+}
+
+.toolkit-feature-grid {
+    display: grid;
+
+    grid-template-columns: 1.25fr .9fr;
+
+    gap: 30px;
+
+    align-items: center;
+}
+
+.toolkit-kicker {
+    display: inline-flex;
+
+    padding: 5px 9px;
+
+    border: 1px solid #49657f;
+
+    border-radius: 3px;
+
+    color: var(--gold);
+
+    font-family: monospace;
+
+    font-size: 7px;
+    font-weight: 900;
+
+    letter-spacing: .8px;
 
     margin-bottom: 14px;
 }
 
-.project-link {
-    color: #075cae;
+.toolkit-feature h2 {
+    max-width: 570px;
+
+    font-size: 28px;
+
+    line-height: 1.12;
+
+    letter-spacing: -.7px;
+
+    margin-bottom: 13px;
+}
+
+.toolkit-feature h2 span {
+    color: var(--gold);
+}
+
+.toolkit-description {
+    max-width: 590px;
+
+    color: #bdcada;
 
     font-size: 9px;
 
-    font-weight: 900;
+    line-height: 1.75;
 }
 
+.toolkit-capabilities {
+    display: flex;
 
-/* =========================================================
-   METHODOLOGY
-========================================================= */
+    flex-wrap: wrap;
 
-.methodology-section {
-    background: var(--navy);
+    gap: 18px;
 
-    color: #ffffff;
-
-    padding: 72px 0;
+    margin-top: 19px;
 }
 
-.methodology-section .section-label {
-    color: var(--gold);
-}
-
-.methodology-section .section-title {
-    color: #ffffff;
-}
-
-.methodology-section .section-description {
-    color: #b9c8d8;
-}
-
-.methodology-grid {
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 14px;
-
-    margin-top: 30px;
-}
-
-.method-card {
-    min-height: 170px;
-
-    padding: 21px;
-
-    background: #102744;
-
-    border: 1px solid #294665;
-
-    border-radius: 7px;
-}
-
-.method-number {
-    color: var(--gold);
+.toolkit-capability {
+    color: #aebfce;
 
     font-family: monospace;
 
-    font-size: 9px;
-
-    font-weight: 900;
-
-    margin-bottom: 15px;
+    font-size: 7px;
 }
 
-.method-card h3 {
-    font-size: 15px;
+.toolkit-capability::before {
+    content: "✓";
 
-    margin-bottom: 8px;
-}
+    color: var(--green);
 
-.method-card p {
-    color: #b7c6d5;
-
-    font-size: 10px;
-
-    line-height: 1.7;
+    margin-right: 5px;
 }
 
 
-/* =========================================================
-   SKILLS
-========================================================= */
+/* TOOLKIT METRIC BOXES */
 
-.skills-section {
-    background: #f7f6f2;
-
-    padding: 72px 0;
-}
-
-.skills-grid {
+.toolkit-metrics {
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr;
 
-    gap: 14px;
-
-    margin-top: 30px;
+    gap: 9px;
 }
 
-.skill-card {
-    padding: 21px;
+.toolkit-metric {
+    min-height: 112px;
 
-    background: #ffffff;
-
-    border: 1px solid #d9d7d1;
-
-    border-radius: 7px;
-}
-
-.skill-card h3 {
-    color: var(--text);
-
-    font-size: 15px;
-
-    margin-bottom: 8px;
-}
-
-.skill-card p {
-    color: var(--muted);
-
-    font-size: 10px;
-
-    line-height: 1.7;
-}
-
-
-/* =========================================================
-   EXPERIENCE
-========================================================= */
-
-.experience-section {
-    background: #ffffff;
-
-    padding: 72px 0;
-}
-
-.experience-list {
-    margin-top: 30px;
-}
-
-.experience {
-    display: grid;
-
-    grid-template-columns: 170px 1fr;
-
-    gap: 30px;
-
-    padding: 23px 0;
-
-    border-top: 1px solid #dedbd2;
-}
-
-.experience-date {
-    color: var(--gold-dark);
-
-    font-family: monospace;
-
-    font-size: 9px;
-
-    font-weight: 900;
-}
-
-.experience h3 {
-    color: var(--text);
-
-    font-size: 18px;
-
-    margin-bottom: 3px;
-}
-
-.experience-company {
-    color: #708197;
-
-    font-size: 11px;
-
-    margin-bottom: 8px;
-}
-
-.experience p {
-    max-width: 850px;
-
-    color: var(--muted);
-
-    font-size: 11px;
-
-    line-height: 1.7;
-}
-
-
-/* =========================================================
-   EDUCATION
-========================================================= */
-
-.education-section {
-    background: var(--navy);
-
-    color: #ffffff;
-
-    padding: 72px 0;
-}
-
-.education-section .section-label {
-    color: var(--gold);
-}
-
-.education-section .section-title {
-    color: #ffffff;
-}
-
-.education-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 14px;
-
-    margin-top: 30px;
-}
-
-.education-card {
-    padding: 20px;
+    padding: 14px;
 
     background: #102744;
 
-    border: 1px solid #294665;
-
-    border-radius: 7px;
-}
-
-.education-card h3 {
-    font-size: 15px;
-
-    margin-bottom: 7px;
-}
-
-.education-card p {
-    color: #b7c6d5;
-
-    font-size: 10px;
-
-    line-height: 1.65;
-}
-
-
-/* =========================================================
-   CONTACT
-========================================================= */
-
-.contact-section {
-    background: #f7f6f2;
-
-    padding: 72px 0;
-}
-
-.contact-grid {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 14px;
-
-    margin-top: 30px;
-}
-
-.contact-box {
-    padding: 19px;
-
-    background: #ffffff;
-
-    border: 1px solid #d9d7d1;
+    border: 1px solid #294866;
 
     border-radius: 6px;
 }
 
-.contact-box span {
-    display: block;
-
-    color: #7b8da0;
+.toolkit-metric-number {
+    color: var(--gold);
 
     font-family: monospace;
 
+    font-size: 20px;
+    font-weight: 900;
+
+    line-height: 1;
+
+    margin-bottom: 7px;
+}
+
+.toolkit-metric:nth-child(2) .toolkit-metric-number {
+    color: var(--green);
+}
+
+.toolkit-metric:nth-child(3) .toolkit-metric-number {
+    color: #fff;
+}
+
+.toolkit-metric h3 {
+    color: #fff;
+
     font-size: 8px;
+
+    margin-bottom: 4px;
+}
+
+.toolkit-metric p {
+    color: #8fa5b9;
+
+    font-size: 7px;
+
+    line-height: 1.55;
+}
+
+
+/* TOOLKIT LOWER CARDS */
+
+.toolkit-cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 13px;
+}
+
+.toolkit-card {
+    min-height: 135px;
+
+    padding: 18px;
+
+    background: #fff;
+
+    border: 1px solid #dcd9d2;
+
+    border-radius: 6px;
+}
+
+.toolkit-card-icon {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 13px;
+
+    background: var(--navy);
+
+    border-radius: 5px;
+
+    color: var(--gold);
+
+    font-size: 14px;
+}
+
+.toolkit-card-tag {
+    color: var(--gold2);
+
+    font-family: monospace;
+
+    font-size: 6px;
+    font-weight: 900;
 
     letter-spacing: 1px;
 
     margin-bottom: 5px;
 }
 
-.contact-box strong {
-    color: var(--text);
+.toolkit-card h3 {
+    color: var(--navy);
 
+    font-size: 13px;
+
+    margin-bottom: 6px;
+}
+
+.toolkit-card p {
+    color: #738397;
+
+    font-size: 8px;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   05 — CAREER & EDUCATION
+========================================================= */
+
+.career-section {
+    padding: 66px 0;
+
+    background: #081a31;
+
+    color: #fff;
+}
+
+.career-heading {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 27px;
+}
+
+.career-heading h2 {
+    margin-top: 8px;
+
+    font-size: 31px;
+
+    line-height: 1.1;
+}
+
+.career-period {
+    color: var(--gold);
+
+    font-family: monospace;
+
+    font-size: 8px;
+}
+
+
+/* COMBINED BOX */
+
+.career-box {
+    display: grid;
+
+    grid-template-columns: 1.25fr .75fr;
+
+    border: 1px solid #304b66;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    background: #0b2039;
+}
+
+
+/* EXPERIENCE */
+
+.experience-column {
+    padding: 24px;
+
+    border-right: 1px solid #304b66;
+}
+
+.column-label {
+    color: var(--gold);
+
+    font-family: monospace;
+
+    font-size: 7px;
+    font-weight: 900;
+
+    letter-spacing: 1.3px;
+
+    margin-bottom: 18px;
+}
+
+.timeline {
+    position: relative;
+
+    padding-left: 22px;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 4px;
+    top: 3px;
+    bottom: 3px;
+
+    width: 1px;
+
+    background: #3a5975;
+}
+
+.timeline-item {
+    position: relative;
+
+    padding-bottom: 18px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+
+    left: -22px;
+    top: 3px;
+
+    width: 9px;
+    height: 9px;
+
+    border: 2px solid var(--gold);
+
+    border-radius: 50%;
+
+    background: var(--navy);
+}
+
+.timeline-date {
+    color: var(--gold);
+
+    font-family: monospace;
+
+    font-size: 6px;
+
+    margin-bottom: 4px;
+}
+
+.timeline-item h3 {
     font-size: 12px;
+
+    margin-bottom: 2px;
+}
+
+.timeline-company {
+    color: #9eb0c1;
+
+    font-size: 7px;
+
+    margin-bottom: 5px;
+}
+
+.timeline-item p {
+    color: #8298ad;
+
+    font-size: 7px;
+
+    line-height: 1.6;
+
+    max-width: 590px;
+}
+
+
+/* EDUCATION */
+
+.education-column {
+    padding: 24px;
+}
+
+.education-item {
+    padding: 13px 0;
+
+    border-bottom: 1px solid #29435e;
+}
+
+.education-item:first-of-type {
+    padding-top: 0;
+}
+
+.education-item:last-child {
+    border-bottom: none;
+}
+
+.education-type {
+    color: var(--gold);
+
+    font-family: monospace;
+
+    font-size: 6px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 4px;
+}
+
+.education-item h3 {
+    font-size: 12px;
+
+    margin-bottom: 2px;
+}
+
+.education-item p {
+    color: #8fa4b8;
+
+    font-size: 7px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   06 — DIRECT CONNECT
+========================================================= */
+
+.contact-section {
+    padding: 66px 0;
+
+    background: #f7f6f2;
+}
+
+.contact-box-main {
+    margin-top: 28px;
+
+    display: grid;
+
+    grid-template-columns: 1fr .65fr;
+
+    gap: 35px;
+
+    padding: 30px;
+
+    background: #fff;
+
+    border: 1px solid #dcd9d2;
+
+    border-radius: 7px;
+}
+
+.contact-title {
+    color: var(--navy);
+
+    font-size: 31px;
+
+    line-height: 1.1;
+
+    margin-bottom: 12px;
+}
+
+.contact-description {
+    max-width: 550px;
+
+    color: #718296;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+}
+
+.contact-focus {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-top: 16px;
+}
+
+.contact-focus span {
+    padding: 6px 9px;
+
+    background: #f1efe9;
+
+    border: 1px solid #dedbd2;
+
+    border-radius: 3px;
+
+    color: #62768b;
+
+    font-size: 7px;
+}
+
+.contact-details {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 9px;
+}
+
+.contact-detail {
+    padding: 12px;
+
+    background: #f7f6f2;
+
+    border: 1px solid #dedbd2;
+
+    border-radius: 5px;
+}
+
+.contact-detail span {
+    display: block;
+
+    color: #8997a5;
+
+    font-family: monospace;
+
+    font-size: 6px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 4px;
+}
+
+.contact-detail strong {
+    color: var(--navy);
+
+    font-size: 8px;
 }
 
 
@@ -1540,316 +1527,202 @@ img {
 ========================================================= */
 
 footer {
+    padding: 20px;
+
     background: #051428;
 
-    color: #7f93a8;
-
-    padding: 22px;
+    color: #8295a8;
 
     text-align: center;
 
     font-family: monospace;
 
-    font-size: 8px;
-
-    letter-spacing: .7px;
+    font-size: 7px;
 }
 
 
 /* =========================================================
-   RESPONSIVE — TABLET
-========================================================= */
-
-@media (max-width: 1150px) {
-
-    .profile-grid {
-        grid-template-columns: 280px 1fr;
-
-        gap: 28px;
-    }
-
-    .profile-main h1 {
-        font-size: 48px;
-    }
-
-    .research-philosophy-layout {
-        grid-template-columns: 250px 1fr;
-
-        gap: 25px;
-    }
-
-    .research-process {
-        grid-template-columns:
-            1fr 16px
-            1fr 16px
-            1fr;
-    }
-
-    .research-step:nth-of-type(n+4) {
-        margin-top: 10px;
-    }
-
-    .step-arrow:nth-of-type(n+4) {
-        display: none;
-    }
-
-    .methodology-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-
-/* =========================================================
-   RESPONSIVE — 900
+   RESPONSIVE
 ========================================================= */
 
 @media (max-width: 900px) {
 
+    .profile-shell {
+        padding: 25px;
+    }
+
+    .profile-main-grid {
+        grid-template-columns: 1fr 230px;
+
+        gap: 25px;
+    }
+
+    .profile-name {
+        font-size: 38px;
+    }
+
+    .profile-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .philosophy-intro p {
+        max-width: 650px;
+    }
+
+    .toolkit-feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .career-box {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-column {
+        border-right: none;
+
+        border-bottom: 1px solid #304b66;
+    }
+
+    .contact-box-main {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
     .nav-inner {
-        min-height: auto;
+        padding: 12px 0;
 
-        padding: 14px 0;
-
-        align-items: flex-start;
-
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .nav-links {
         width: 100%;
 
+        justify-content: flex-start;
+
         flex-wrap: wrap;
 
-        gap: 10px 18px;
+        gap: 10px 16px;
     }
 
-    .profile-grid {
-        grid-template-columns: 1fr;
-
-        gap: 30px;
-    }
-
-    .profile-card {
-        max-width: 350px;
-
-        margin: 0 auto;
-    }
-
-    .profile-main h1 {
-        font-size: 46px;
-    }
-
-    .profile-quote {
-        margin-left: 0;
-
-        max-width: 600px;
-    }
-
-    .research-philosophy-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .research-intro p {
-        max-width: 700px;
-    }
-
-    .research-process {
-        grid-template-columns: repeat(3, 1fr);
-
-        gap: 10px;
-    }
-
-    .step-arrow {
+    .nav-resume {
         display: none;
+    }
+
+    .profile-main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-photo-area {
+        max-width: 260px;
+
+        margin: auto;
+
+        order: -1;
+    }
+
+    .profile-name {
+        font-size: 39px;
+    }
+
+    .profile-title {
+        font-size: 17px;
+    }
+
+    .profile-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-actions {
+        flex-wrap: wrap;
+    }
+
+    .philosophy-process {
+        grid-template-columns: 1fr;
     }
 
     .coverage-strip {
         align-items: flex-start;
 
-        flex-wrap: wrap;
-    }
-
-    .coverage-end {
-        width: 100%;
-
-        margin-top: 5px;
-    }
-
-}
-
-
-/* =========================================================
-   RESPONSIVE — 650
-========================================================= */
-
-@media (max-width: 650px) {
-
-    .container {
-        width: 91%;
-    }
-
-    .market-pulse .pulse-item {
-        padding: 8px 16px;
-    }
-
-    .brand-subtitle {
-        display: none;
-    }
-
-    .nav-cv {
-        display: none;
-    }
-
-    .profile-section {
-        padding: 30px 0 38px;
-    }
-
-    .profile-header {
-        align-items: flex-start;
-
         flex-direction: column;
-
-        gap: 12px;
-    }
-
-    .profile-status {
-        display: none;
-    }
-
-    .profile-main h1 {
-        font-size: 39px;
-
-        letter-spacing: -1.7px;
-    }
-
-    .profile-description {
-        font-size: 12px;
-    }
-
-    .profile-metrics {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .metric:nth-child(2) {
-        border-right: none;
-    }
-
-    .metric:nth-child(-n+2) {
-        border-bottom: 1px solid #294764;
-    }
-
-    .research-philosophy {
-        padding: 48px 0 25px;
-    }
-
-    .research-philosophy-header {
-        align-items: flex-start;
-
-        flex-direction: column;
-
-        gap: 12px;
-    }
-
-    .research-topline {
-        font-size: 7px;
-    }
-
-    .research-intro h2 {
-        font-size: 31px;
-    }
-
-    .research-process {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .research-step {
-        min-height: 180px;
-    }
-
-    .coverage-items {
-        gap: 6px 10px;
-    }
-
-    .coverage-items span:not(:last-child)::after {
-        margin-left: 10px;
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
     }
 
-    .methodology-grid {
+    .toolkit-metrics {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .toolkit-cards {
         grid-template-columns: 1fr;
     }
 
-    .skills-grid {
-        grid-template-columns: 1fr;
+    .career-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
     }
 
-    .education-grid {
+    .contact-details {
         grid-template-columns: 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .experience {
-        grid-template-columns: 1fr;
-
-        gap: 7px;
     }
 
 }
 
 
-/* =========================================================
-   RESPONSIVE — 430
-========================================================= */
+@media (max-width: 450px) {
 
-@media (max-width: 430px) {
-
-    .profile-card {
-        padding: 15px;
+    .container,
+    .profile-shell {
+        width: 94%;
     }
 
-    .profile-buttons {
+    .profile-shell {
+        padding: 18px;
+    }
+
+    .profile-name {
+        font-size: 33px;
+    }
+
+    .profile-title {
+        font-size: 15px;
+    }
+
+    .profile-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .profile-stat {
+        min-height: 65px;
+    }
+
+    .toolkit-feature {
+        padding: 22px;
+    }
+
+    .toolkit-feature h2 {
+        font-size: 23px;
+    }
+
+    .toolkit-metrics {
         grid-template-columns: 1fr;
-    }
-
-    .profile-main h1 {
-        font-size: 34px;
-    }
-
-    .profile-role {
-        font-size: 8px;
-    }
-
-    .research-process {
-        grid-template-columns: 1fr;
-    }
-
-    .research-step {
-        min-height: auto;
-    }
-
-    .coverage-title {
-        width: 100%;
-    }
-
-    .coverage-divider {
-        display: none;
     }
 
 }
 
 </style>
-
 </head>
 
 
@@ -1870,6 +1743,24 @@ footer {
         </div>
 
         <div class="pulse-item">
+            <span class="pulse-name">BRENT CRUDE</span>
+            <span class="pulse-price">$73.85</span>
+            <span class="positive">↗ +0.75%</span>
+        </div>
+
+        <div class="pulse-item">
+            <span class="pulse-name">NIFTY 50</span>
+            <span class="pulse-price">25,320.10</span>
+            <span class="positive">↗ +0.45%</span>
+        </div>
+
+        <div class="pulse-item">
+            <span class="pulse-name">S&amp;P 500</span>
+            <span class="pulse-price">5,626.02</span>
+            <span class="positive">↗ +0.22%</span>
+        </div>
+
+        <div class="pulse-item">
             <span class="pulse-name">ITC</span>
             <span class="pulse-price">₹414.80</span>
             <span class="positive">↗ +0.85%</span>
@@ -1893,38 +1784,6 @@ footer {
             <span class="positive">↗ +1.15%</span>
         </div>
 
-        <div class="pulse-item">
-            <span class="pulse-name">SUNPHARMA</span>
-            <span class="pulse-price">₹1,845.20</span>
-            <span class="positive">↗ +0.40%</span>
-        </div>
-
-        <div class="pulse-item">
-            <span class="pulse-name">TCS</span>
-            <span class="pulse-price">₹4,295.00</span>
-            <span class="negative">↘ -0.15%</span>
-        </div>
-
-        <div class="pulse-item">
-            <span class="pulse-name">ULTRACEMCO</span>
-            <span class="pulse-price">₹11,450.00</span>
-            <span class="positive">↗ +0.72%</span>
-        </div>
-
-        <div class="pulse-item">
-            <span class="pulse-name">US 10Y</span>
-            <span class="pulse-price">3.71%</span>
-            <span class="negative">↘ -0.06%</span>
-        </div>
-
-        <div class="pulse-item">
-            <span class="pulse-name">BRENT</span>
-            <span class="pulse-price">$73.85</span>
-            <span class="positive">↗ +0.75%</span>
-        </div>
-
-
-        <!-- duplicate for continuous ticker -->
 
         <div class="pulse-item">
             <span class="pulse-name">MARKET PULSE</span>
@@ -1932,6 +1791,24 @@ footer {
         </div>
 
         <div class="pulse-item">
+            <span class="pulse-name">BRENT CRUDE</span>
+            <span class="pulse-price">$73.85</span>
+            <span class="positive">↗ +0.75%</span>
+        </div>
+
+        <div class="pulse-item">
+            <span class="pulse-name">NIFTY 50</span>
+            <span class="pulse-price">25,320.10</span>
+            <span class="positive">↗ +0.45%</span>
+        </div>
+
+        <div class="pulse-item">
+            <span class="pulse-name">S&amp;P 500</span>
+            <span class="pulse-price">5,626.02</span>
+            <span class="positive">↗ +0.22%</span>
+        </div>
+
+        <div class="pulse-item">
             <span class="pulse-name">ITC</span>
             <span class="pulse-price">₹414.80</span>
             <span class="positive">↗ +0.85%</span>
@@ -1953,36 +1830,6 @@ footer {
             <span class="pulse-name">M&amp;M</span>
             <span class="pulse-price">₹2,910.40</span>
             <span class="positive">↗ +1.15%</span>
-        </div>
-
-        <div class="pulse-item">
-            <span class="pulse-name">SUNPHARMA</span>
-            <span class="pulse-price">₹1,845.20</span>
-            <span class="positive">↗ +0.40%</span>
-        </div>
-
-        <div class="pulse-item">
-            <span class="pulse-name">TCS</span>
-            <span class="pulse-price">₹4,295.00</span>
-            <span class="negative">↘ -0.15%</span>
-        </div>
-
-        <div class="pulse-item">
-            <span class="pulse-name">ULTRACEMCO</span>
-            <span class="pulse-price">₹11,450.00</span>
-            <span class="positive">↗ +0.72%</span>
-        </div>
-
-        <div class="pulse-item">
-            <span class="pulse-name">US 10Y</span>
-            <span class="pulse-price">3.71%</span>
-            <span class="negative">↘ -0.06%</span>
-        </div>
-
-        <div class="pulse-item">
-            <span class="pulse-name">BRENT</span>
-            <span class="pulse-price">$73.85</span>
-            <span class="positive">↗ +0.75%</span>
         </div>
 
     </div>
@@ -2005,11 +1852,15 @@ footer {
             </span>
 
             <span>
-                Supriya Rai
 
-                <span class="brand-subtitle">
-                    Finance &amp; Equity Research
+                <span class="brand-name">
+                    Supriya Rai
                 </span>
+
+                <span class="brand-role">
+                    FINANCE &amp; EQUITY RESEARCH
+                </span>
+
             </span>
 
         </a>
@@ -2018,19 +1869,15 @@ footer {
         <div class="nav-links">
 
             <a href="#research">
-                RESEARCH PHILOSOPHY
-            </a>
-
-            <a href="#projects">
                 RESEARCH
             </a>
 
-            <a href="#methodology">
-                METHODOLOGY
+            <a href="#toolkit">
+                AI &amp; FINANCE
             </a>
 
-            <a href="#experience">
-                EXPERIENCE
+            <a href="#career">
+                CAREER
             </a>
 
             <a href="#contact">
@@ -2040,7 +1887,7 @@ footer {
             <a
                 href="Supriya%20Rai_Resume.pdf"
                 download
-                class="nav-cv"
+                class="nav-resume"
             >
                 ↓ RESUME (.PDF)
             </a>
@@ -2056,132 +1903,144 @@ footer {
      01 — PROFESSIONAL PROFILE
 ========================================================= -->
 
-<section class="profile-section" id="about">
+<section class="profile-section">
 
-    <div class="container profile-inner">
-
-
-        <div class="profile-header">
-
-            <div class="profile-label">
-
-                <span class="profile-label-number">
-                    01
-                </span>
-
-                PROFESSIONAL PROFILE
-
-            </div>
+    <div class="profile-shell">
 
 
-            <div class="profile-status">
+        <div class="profile-repository">
 
-                DISCIPLINED
-                &nbsp; | &nbsp;
-                RESEARCH-LED
-                &nbsp; | &nbsp;
-                LONG-TERM PERSPECTIVE
+            <span class="repository-dot"></span>
 
-            </div>
+            INSTITUTIONAL RESEARCH REPOSITORY
+            &nbsp; | &nbsp;
+            SEP 2026
 
         </div>
 
 
-        <div class="profile-grid">
+        <div class="profile-main-grid">
 
 
-            <!-- =================================================
-                 PROFILE CARD
-            ================================================== -->
+            <!-- LEFT -->
 
-            <div class="profile-card">
+            <div>
 
-                <div class="profile-photo">
+                <div class="profile-kicker">
+                    FINANCE · RESEARCH · VALUATION
+                </div>
+
+
+                <h1 class="profile-name">
+                    Supriya Rai
+                </h1>
+
+
+                <div class="profile-title">
+                    FINANCE &amp; EQUITY RESEARCH PROFESSIONAL
+                </div>
+
+
+                <div class="profile-quote">
+
+                    "Combining 9+ years of financial-services
+                    experience with equity research, financial
+                    modelling, valuation and AI-enabled financial
+                    analysis."
+
+                </div>
+
+
+                <div class="profile-pills">
+
+                    <span class="profile-pill">
+                        Equity Research
+                    </span>
+
+                    <span class="profile-pill">
+                        Financial Modelling
+                    </span>
+
+                    <span class="profile-pill">
+                        DCF &amp; Valuation
+                    </span>
+
+                    <span class="profile-pill">
+                        Indian Equities
+                    </span>
+
+                    <span class="profile-pill">
+                        Singapore Markets
+                    </span>
+
+                    <span class="profile-pill">
+                        HNI / UHNI Coverage
+                    </span>
+
+                    <span class="profile-pill">
+                        AI in Finance
+                    </span>
+
+                </div>
+
+
+                <div class="profile-actions">
+
+                    <a
+                        href="#research"
+                        class="profile-action primary"
+                    >
+                        EXPLORE MY RESEARCH
+                        <span>→</span>
+                    </a>
+
+                    <a
+                        href="Supriya%20Rai_Resume.pdf"
+                        download
+                        class="profile-action secondary"
+                    >
+                        ↓ DOWNLOAD RESUME (.PDF)
+                    </a>
+
+                </div>
+
+
+                <div class="profile-micro">
+
+                    <span>
+                        ◇ <strong>9+ Years</strong> Financial Services
+                    </span>
+
+                    <span>
+                        ◇ <strong>FMVA</strong> Certified
+                    </span>
+
+                    <span>
+                        ◇ <strong>India + Singapore</strong>
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT PHOTO -->
+
+            <div class="profile-photo-area">
+
+                <div class="profile-photo-frame">
 
                     <img
                         src="supriya-rai-profile.jpg"
                         alt="Supriya Rai"
                     >
 
-                    <div class="photo-corner tl"></div>
-                    <div class="photo-corner tr"></div>
-                    <div class="photo-corner bl"></div>
-                    <div class="photo-corner br"></div>
+                    <div class="photo-label">
 
-                </div>
-
-
-                <div class="profile-name">
-                    Supriya Rai
-                </div>
-
-                <div class="profile-role">
-                    FINANCE &amp; EQUITY RESEARCH
-                </div>
-
-
-                <div class="profile-details">
-
-                    <div class="profile-detail">
+                        Supriya Rai
 
                         <span>
-                            Specialization
-                        </span>
-
-                        <span>
-                            Equity Research &amp; Valuation
-                        </span>
-
-                    </div>
-
-
-                    <div class="profile-detail">
-
-                        <span>
-                            Markets
-                        </span>
-
-                        <span>
-                            India · Singapore
-                        </span>
-
-                    </div>
-
-
-                    <div class="profile-detail">
-
-                        <span>
-                            Modelling
-                        </span>
-
-                        <span>
-                            Excel · DCF · Financial Modelling
-                        </span>
-
-                    </div>
-
-
-                    <div class="profile-detail">
-
-                        <span>
-                            Certifications
-                        </span>
-
-                        <span>
-                            FMVA · NISM RA · NISM IA
-                        </span>
-
-                    </div>
-
-
-                    <div class="profile-detail">
-
-                        <span>
-                            Availability
-                        </span>
-
-                        <span class="availability">
-                            Singapore / Relocation Open
+                            FINANCE &amp; EQUITY RESEARCH
                         </span>
 
                     </div>
@@ -2189,186 +2048,90 @@ footer {
                 </div>
 
 
-                <div class="profile-buttons">
+                <div class="photo-status">
 
-                    <a
-                        href="Supriya%20Rai_Resume.pdf"
-                        download
-                        class="profile-btn primary"
-                    >
-                        ↓ DOWNLOAD CV
-                    </a>
-
-                    <a
-                        href="https://www.linkedin.com/in/rai-supriya"
-                        target="_blank"
-                        rel="noopener"
-                        class="profile-btn secondary"
-                    >
-                        LINKEDIN
-                    </a>
+                    ● Available for Finance / Equity Research Opportunities
 
                 </div>
 
             </div>
 
+        </div>
 
-            <!-- =================================================
-                 MAIN PROFILE
-            ================================================== -->
 
-            <div class="profile-main">
+        <div class="profile-divider"></div>
 
-                <div class="profile-kicker">
-                    FINANCE · RESEARCH · IMPACT
+
+        <div class="profile-stats">
+
+
+            <div class="profile-stat">
+
+                <div class="profile-stat-number">
+                    9+
                 </div>
 
-
-                <h1>
-
-                    Finance professional with a
-
-                    <strong>
-                        research-led approach.
-                    </strong>
-
-                </h1>
-
-
-                <p class="profile-description">
-
-                    I am a finance professional with 9+ years of
-                    experience across Indian equities, investment
-                    advisory, wealth management, HNI/UHNI client
-                    coverage and financial services.
-
-                    <br><br>
-
-                    My current focus is equity research, financial
-                    modelling, valuation and investment analysis,
-                    supported by practical market experience and
-                    structured financial analysis.
-
-                </p>
-
-
-                <div class="profile-quote">
-
-                    "Combining practical market experience with
-                    structured financial research to understand
-                    businesses, valuation and long-term value."
-
+                <div class="profile-stat-title">
+                    Years Experience
                 </div>
 
-
-                <!-- COMPETENCIES -->
-
-                <div class="competencies">
-
-                    <div class="competencies-heading">
-
-                        <span>
-                            ◢
-                        </span>
-
-                        KEY COMPETENCIES
-
-                    </div>
-
-
-                    <div class="competency-list">
-
-                        <span class="competency">
-                            Equity Research
-                        </span>
-
-                        <span class="competency">
-                            Financial Modelling
-                        </span>
-
-                        <span class="competency">
-                            DCF &amp; Valuation
-                        </span>
-
-                        <span class="competency">
-                            Comparables
-                        </span>
-
-                        <span class="competency">
-                            Indian Equities
-                        </span>
-
-                        <span class="competency">
-                            Singapore Markets
-                        </span>
-
-                        <span class="competency">
-                            AI in Finance
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- METRICS -->
-
-                <div class="profile-metrics">
-
-                    <div class="metric">
-
-                        <div class="metric-value">
-                            9+
-                        </div>
-
-                        <div class="metric-label">
-                            Years Experience
-                        </div>
-
-                    </div>
-
-
-                    <div class="metric">
-
-                        <div class="metric-value">
-                            150+
-                        </div>
-
-                        <div class="metric-label">
-                            HNI/UHNI Clients
-                        </div>
-
-                    </div>
-
-
-                    <div class="metric">
-
-                        <div class="metric-value">
-                            FMVA
-                        </div>
-
-                        <div class="metric-label">
-                            Certified
-                        </div>
-
-                    </div>
-
-
-                    <div class="metric">
-
-                        <div class="metric-value">
-                            2
-                        </div>
-
-                        <div class="metric-label">
-                            Core Markets
-                        </div>
-
-                    </div>
-
+                <div class="profile-stat-text">
+                    Financial Services
                 </div>
 
             </div>
+
+
+            <div class="profile-stat">
+
+                <div class="profile-stat-number">
+                    150+
+                </div>
+
+                <div class="profile-stat-title">
+                    HNI / UHNI Clients
+                </div>
+
+                <div class="profile-stat-text">
+                    Client Coverage
+                </div>
+
+            </div>
+
+
+            <div class="profile-stat">
+
+                <div class="profile-stat-number">
+                    FMVA
+                </div>
+
+                <div class="profile-stat-title">
+                    Financial Modelling
+                </div>
+
+                <div class="profile-stat-text">
+                    Certified
+                </div>
+
+            </div>
+
+
+            <div class="profile-stat">
+
+                <div class="profile-stat-number">
+                    2
+                </div>
+
+                <div class="profile-stat-title">
+                    Core Markets
+                </div>
+
+                <div class="profile-stat-text">
+                    India · Singapore
+                </div>
+
+            </div>
+
 
         </div>
 
@@ -2386,45 +2149,27 @@ footer {
     <div class="container">
 
 
-        <div class="research-philosophy-header">
+        <div class="section-topline">
 
-            <div class="research-label">
-
-                <span>
-                    02
-                </span>
-
-                RESEARCH PHILOSOPHY
-
+            <div class="section-label">
+                02 — RESEARCH PHILOSOPHY
             </div>
 
-
-            <div class="research-topline">
-
-                IDEAS
-                →
-                ANALYSIS
-                →
-                INSIGHTS
-                →
-                LONG-TERM VALUE
-
+            <div class="section-flow">
+                IDEAS → ANALYSIS → INSIGHTS → LONG-TERM VALUE
             </div>
 
         </div>
 
 
-        <div class="research-philosophy-layout">
+        <div class="philosophy-grid">
 
 
-            <!-- LEFT -->
+            <div class="philosophy-intro">
 
-            <div class="research-intro">
-
-                <div class="intro-kicker">
+                <div class="philosophy-kicker">
                     MY APPROACH
                 </div>
-
 
                 <h2>
 
@@ -2436,48 +2181,33 @@ footer {
 
                 </h2>
 
-
                 <p>
 
                     I follow a fundamental, bottom-up approach
-                    to identify high-quality businesses, understand
-                    their long-term potential and construct
-                    well-reasoned investment views.
+                    to understand businesses, analyse financial
+                    performance, assess valuation and develop
+                    structured investment views.
 
                 </p>
 
-
                 <a
                     href="#projects"
-                    class="research-button"
+                    class="explore-btn"
                 >
-
                     EXPLORE MY RESEARCH
-
-                    <span>
-                        →
-                    </span>
-
+                    <span>→</span>
                 </a>
 
             </div>
 
 
-            <!-- RIGHT PROCESS -->
-
-            <div class="research-process">
+            <div class="philosophy-process">
 
 
-                <!-- 01 -->
+                <div class="philosophy-card">
 
-                <div class="research-step">
-
-                    <div class="step-number">
+                    <div class="philosophy-number">
                         01
-                    </div>
-
-                    <div class="step-icon">
-                        ⌕
                     </div>
 
                     <h3>
@@ -2485,31 +2215,18 @@ footer {
                     </h3>
 
                     <p>
-
-                        Understand the business model,
+                        Understand business model,
                         competitive position, industry structure
                         and management quality.
-
                     </p>
 
                 </div>
 
 
-                <div class="step-arrow">
-                    →
-                </div>
+                <div class="philosophy-card">
 
-
-                <!-- 02 -->
-
-                <div class="research-step">
-
-                    <div class="step-number">
+                    <div class="philosophy-number">
                         02
-                    </div>
-
-                    <div class="step-icon">
-                        ▤
                     </div>
 
                     <h3>
@@ -2517,31 +2234,17 @@ footer {
                     </h3>
 
                     <p>
-
                         Analyse revenue, margins, profitability,
-                        cash flow, balance sheet strength
-                        and return metrics.
-
+                        cash flow, balance sheet and returns.
                     </p>
 
                 </div>
 
 
-                <div class="step-arrow">
-                    →
-                </div>
+                <div class="philosophy-card">
 
-
-                <!-- 03 -->
-
-                <div class="research-step">
-
-                    <div class="step-number">
+                    <div class="philosophy-number">
                         03
-                    </div>
-
-                    <div class="step-icon">
-                        ◉
                     </div>
 
                     <h3>
@@ -2549,26 +2252,17 @@ footer {
                     </h3>
 
                     <p>
-
                         Apply DCF, trading comparables,
-                        earnings multiples, book value
-                        and scenario analysis.
-
+                        multiples and scenario analysis.
                     </p>
 
                 </div>
 
 
-                <!-- second row -->
+                <div class="philosophy-card">
 
-                <div class="research-step">
-
-                    <div class="step-number">
+                    <div class="philosophy-number">
                         04
-                    </div>
-
-                    <div class="step-icon">
-                        ↗
                     </div>
 
                     <h3>
@@ -2576,29 +2270,17 @@ footer {
                     </h3>
 
                     <p>
-
                         Identify operational, financial,
-                        industry and macroeconomic developments
-                        that could change the outlook.
-
+                        industry and macro developments.
                     </p>
 
                 </div>
 
 
-                <div class="step-arrow">
-                    →
-                </div>
+                <div class="philosophy-card">
 
-
-                <div class="research-step">
-
-                    <div class="step-number">
+                    <div class="philosophy-number">
                         05
-                    </div>
-
-                    <div class="step-icon">
-                        ◇
                     </div>
 
                     <h3>
@@ -2606,29 +2288,17 @@ footer {
                     </h3>
 
                     <p>
-
-                        Assess execution risk, balance-sheet
-                        risk, valuation risk and broader
-                        industry risks.
-
+                        Assess execution, balance-sheet,
+                        valuation and industry risks.
                     </p>
 
                 </div>
 
 
-                <div class="step-arrow">
-                    →
-                </div>
+                <div class="philosophy-card">
 
-
-                <div class="research-step">
-
-                    <div class="step-number">
+                    <div class="philosophy-number">
                         06
-                    </div>
-
-                    <div class="step-icon">
-                        ◎
                     </div>
 
                     <h3>
@@ -2636,11 +2306,8 @@ footer {
                     </h3>
 
                     <p>
-
-                        Track key operating and financial
-                        metrics and reassess the investment
-                        thesis over time.
-
+                        Track operating and financial metrics
+                        and reassess the thesis over time.
                     </p>
 
                 </div>
@@ -2651,66 +2318,27 @@ footer {
         </div>
 
 
-        <!-- COVERAGE -->
-
         <div class="coverage-strip">
 
             <div class="coverage-title">
-
-                <span>
-                    ◉
-                </span>
-
                 COVERAGE AREAS
-
             </div>
-
-
-            <div class="coverage-divider"></div>
-
 
             <div class="coverage-items">
 
-                <span>
-                    Indian Equities
-                </span>
-
-                <span>
-                    Singapore Markets
-                </span>
-
-                <span>
-                    Financial Institutions
-                </span>
-
-                <span>
-                    REITs
-                </span>
-
-                <span>
-                    BFSI
-                </span>
-
-                <span>
-                    Consumer
-                </span>
-
-                <span>
-                    Industrials
-                </span>
-
-                <span>
-                    AI in Finance
-                </span>
+                <span>Indian Equities</span>
+                <span>Singapore Markets</span>
+                <span>Financial Institutions</span>
+                <span>REITs</span>
+                <span>BFSI</span>
+                <span>Consumer</span>
+                <span>Industrials</span>
+                <span>AI in Finance</span>
 
             </div>
 
-
             <div class="coverage-end">
-
-                DISCIPLINED RESEARCH.
-                BETTER INVESTMENT DECISIONS.
-
+                DISCIPLINED RESEARCH
             </div>
 
         </div>
@@ -2721,29 +2349,29 @@ footer {
 
 
 <!-- =========================================================
-     03 — RESEARCH PROJECTS
+     03 — SELECTED RESEARCH
 ========================================================= -->
 
 <section id="projects" class="projects-section">
 
     <div class="container">
 
-        <div class="section-label">
-            03 — EQUITY RESEARCH REPOSITORY
+        <div class="section-heading">
+
+            <div class="section-label">
+                03 — EQUITY RESEARCH REPOSITORY
+            </div>
+
+            <h2>
+                Selected Research
+            </h2>
+
+            <p>
+                Company and sector research covering Indian equities,
+                Singapore banking, Singapore REITs and valuation frameworks.
+            </p>
+
         </div>
-
-
-        <h2 class="section-title">
-            Selected Research
-        </h2>
-
-
-        <p class="section-description">
-
-            Company and sector research covering Indian equities,
-            Singapore banks, Singapore REITs and valuation frameworks.
-
-        </p>
 
 
         <div class="projects-grid">
@@ -2763,11 +2391,9 @@ footer {
                 </h3>
 
                 <p>
-
                     Fundamental analysis covering earnings drivers,
                     NIM, ROE, asset quality, capital, valuation,
                     catalysts and risks.
-
                 </p>
 
                 <span class="project-link">
@@ -2791,12 +2417,9 @@ footer {
                 </h3>
 
                 <p>
-
-                    DBS vs OCBC vs UOB — comparative analysis
-                    of financial performance, profitability,
-                    balance sheet, capital, valuation,
-                    catalysts and risks.
-
+                    DBS vs OCBC vs UOB — comparative analysis of
+                    financial performance, profitability, capital,
+                    balance sheet and valuation.
                 </p>
 
                 <span class="project-link">
@@ -2820,11 +2443,9 @@ footer {
                 </h3>
 
                 <p>
-
                     Diversified analysis across energy,
                     digital services, retail, media and
                     emerging growth platforms.
-
                 </p>
 
                 <span class="project-link">
@@ -2848,11 +2469,9 @@ footer {
                 </h3>
 
                 <p>
-
-                    Research framework covering occupancy,
-                    rental income, gearing, distributions,
-                    interest rates, NAV and valuation.
-
+                    Research covering occupancy, rental income,
+                    gearing, distributions, interest rates,
+                    NAV and valuation.
                 </p>
 
                 <span class="project-link">
@@ -2876,12 +2495,10 @@ footer {
                 </h3>
 
                 <p>
-
                     Fundamental analysis covering order book,
                     infrastructure, energy businesses,
                     financial performance, valuation,
                     catalysts and risks.
-
                 </p>
 
                 <span class="project-link">
@@ -2899,111 +2516,238 @@ footer {
 
 
 <!-- =========================================================
-     04 — METHODOLOGY
+     04 — AI + FINANCIAL TOOLKIT
 ========================================================= -->
 
-<section id="methodology" class="methodology-section">
+<section id="toolkit" class="toolkit-section">
 
     <div class="container">
 
-        <div class="section-label">
-            04 — RESEARCH METHODOLOGY
+        <div class="section-heading">
+
+            <div class="section-label">
+                04 — RESEARCH &amp; FINANCIAL TOOLKIT
+            </div>
+
+            <h2>
+                Finance + AI Analytics
+            </h2>
+
+            <p>
+                Financial research, modelling, valuation and
+                AI-enabled analytical workflows.
+            </p>
+
         </div>
 
 
-        <h2 class="section-title">
-            From financial statements to investment thesis.
-        </h2>
+        <!-- FEATURED WORKSPACE -->
+
+        <div class="toolkit-feature">
+
+            <div class="toolkit-feature-grid">
 
 
-        <p class="section-description">
+                <div>
 
-            Research built from company filings, annual reports,
-            financial statements, industry analysis, financial
-            modelling, valuation and scenario analysis.
-
-        </p>
+                    <div class="toolkit-kicker">
+                        ⚡ AI-POWERED FINANCIAL RESEARCH
+                    </div>
 
 
-        <div class="methodology-grid">
+                    <h2>
+
+                        Turning Financial Data into
+
+                        <span>
+                            Research-Ready Insights
+                        </span>
+
+                    </h2>
 
 
-            <div class="method-card">
+                    <p class="toolkit-description">
 
-                <div class="method-number">
-                    01
+                        I combine equity research, financial
+                        modelling, valuation and AI-enabled
+                        workflows to structure financial
+                        information, accelerate analysis and
+                        develop investment insights.
+
+                    </p>
+
+
+                    <div class="toolkit-capabilities">
+
+                        <span class="toolkit-capability">
+                            Equity Research
+                        </span>
+
+                        <span class="toolkit-capability">
+                            Financial Modelling
+                        </span>
+
+                        <span class="toolkit-capability">
+                            Valuation
+                        </span>
+
+                        <span class="toolkit-capability">
+                            AI in Finance
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="toolkit-metrics">
+
+
+                    <div class="toolkit-metric">
+
+                        <div class="toolkit-metric-number">
+                            AI
+                        </div>
+
+                        <h3>
+                            AI Research
+                        </h3>
+
+                        <p>
+                            GenAI-assisted research,
+                            reporting and analytical workflows.
+                        </p>
+
+                    </div>
+
+
+                    <div class="toolkit-metric">
+
+                        <div class="toolkit-metric-number">
+                            3-STMT
+                        </div>
+
+                        <h3>
+                            Financial Modelling
+                        </h3>
+
+                        <p>
+                            Forecasting, statements,
+                            working capital and scenarios.
+                        </p>
+
+                    </div>
+
+
+                    <div class="toolkit-metric">
+
+                        <div class="toolkit-metric-number">
+                            DCF
+                        </div>
+
+                        <h3>
+                            Valuation
+                        </h3>
+
+                        <p>
+                            DCF, trading comparables,
+                            multiples and sensitivity analysis.
+                        </p>
+
+                    </div>
+
+
+                    <div class="toolkit-metric">
+
+                        <div class="toolkit-metric-number">
+                            DATA
+                        </div>
+
+                        <h3>
+                            Financial Analytics
+                        </h3>
+
+                        <p>
+                            Financial data interpretation,
+                            research inputs and insights.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- THREE SUPPORTING CARDS -->
+
+        <div class="toolkit-cards">
+
+
+            <div class="toolkit-card">
+
+                <div class="toolkit-card-icon">
+                    ▤
+                </div>
+
+                <div class="toolkit-card-tag">
+                    EQUITY RESEARCH
                 </div>
 
                 <h3>
-                    Source
+                    Fundamental Company Analysis
                 </h3>
 
                 <p>
-
-                    Annual reports, financial statements,
-                    investor presentations, exchange disclosures
-                    and company filings.
-
+                    Business models, industry structure,
+                    earnings drivers, catalysts and risks.
                 </p>
 
             </div>
 
 
-            <div class="method-card">
+            <div class="toolkit-card">
 
-                <div class="method-number">
-                    02
+                <div class="toolkit-card-icon">
+                    ⌕
+                </div>
+
+                <div class="toolkit-card-tag">
+                    FINANCIAL DATA
                 </div>
 
                 <h3>
-                    Analyse
+                    Research &amp; Modelling Inputs
                 </h3>
 
                 <p>
-
-                    Revenue, margins, earnings, cash flow,
-                    balance sheet, segments and operating indicators.
-
+                    Financial statements, historical trends,
+                    forecasting assumptions and analytical inputs.
                 </p>
 
             </div>
 
 
-            <div class="method-card">
+            <div class="toolkit-card">
 
-                <div class="method-number">
-                    03
+                <div class="toolkit-card-icon">
+                    ↗
+                </div>
+
+                <div class="toolkit-card-tag">
+                    AI &amp; ANALYTICS
                 </div>
 
                 <h3>
-                    Model
+                    AI-Enabled Financial Research
                 </h3>
 
                 <p>
-
-                    Forecast assumptions, financial models,
-                    DCF, comparables and sensitivity analysis.
-
-                </p>
-
-            </div>
-
-
-            <div class="method-card">
-
-                <div class="method-number">
-                    04
-                </div>
-
-                <h3>
-                    Conclude
-                </h3>
-
-                <p>
-
-                    Investment thesis, catalysts, risks,
-                    valuation framework and monitoring indicators.
-
+                    GenAI-assisted research, financial analysis,
+                    reporting workflows and structured insights.
                 </p>
 
             </div>
@@ -3017,90 +2761,249 @@ footer {
 
 
 <!-- =========================================================
-     05 — SKILLS
+     05 — CAREER & EDUCATION
 ========================================================= -->
 
-<section id="skills" class="skills-section">
+<section id="career" class="career-section">
 
     <div class="container">
 
-        <div class="section-label">
-            05 — CORE SKILLS
+
+        <div class="career-heading">
+
+            <div>
+
+                <div class="section-label">
+                    05 — CAREER &amp; EDUCATION
+                </div>
+
+                <h2>
+                    Professional Journey
+                </h2>
+
+            </div>
+
+            <div class="career-period">
+                2016 → 2026
+            </div>
+
         </div>
 
 
-        <h2 class="section-title">
-            Research &amp; Financial Toolkit
-        </h2>
+        <div class="career-box">
 
 
-        <div class="skills-grid">
+            <!-- EXPERIENCE -->
+
+            <div class="experience-column">
+
+                <div class="column-label">
+                    PROFESSIONAL EXPERIENCE
+                </div>
 
 
-            <div class="skill-card">
+                <div class="timeline">
 
-                <h3>
-                    Equity Research
-                </h3>
 
-                <p>
+                    <div class="timeline-item">
 
-                    Fundamental analysis, company research,
-                    industry analysis, earnings drivers,
-                    catalysts and risk assessment.
+                        <div class="timeline-dot"></div>
 
-                </p>
+                        <div class="timeline-date">
+                            MAY 2025 — DEC 2025
+                        </div>
+
+                        <h3>
+                            Senior Business Head
+                        </h3>
+
+                        <div class="timeline-company">
+                            Wise Global Research Services
+                        </div>
+
+                        <p>
+                            Led advisory teams serving HNI clients
+                            across equity analysis, portfolio strategy,
+                            mutual funds, derivatives and compliance.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-date">
+                            JAN 2020 — MAY 2025
+                        </div>
+
+                        <h3>
+                            Business Head
+                        </h3>
+
+                        <div class="timeline-company">
+                            ResearchMart Services / Capital Ways
+                        </div>
+
+                        <p>
+                            Managed 150+ HNI/UHNI relationships across
+                            market research, financial analysis,
+                            client acquisition and portfolio growth.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-date">
+                            JAN 2017 — DEC 2019
+                        </div>
+
+                        <h3>
+                            Team Lead
+                        </h3>
+
+                        <div class="timeline-company">
+                            Dezire Research
+                        </div>
+
+                        <p>
+                            Managed advisory teams and supported
+                            technical and fundamental analysis,
+                            client relationships and revenue growth.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-date">
+                            MAY 2016 — DEC 2016
+                        </div>
+
+                        <h3>
+                            Business Analyst
+                        </h3>
+
+                        <div class="timeline-company">
+                            CapitalVia
+                        </div>
+
+                        <p>
+                            Performed market analysis and investment
+                            research across equity and commodities.
+                        </p>
+
+                    </div>
+
+
+                </div>
 
             </div>
 
 
-            <div class="skill-card">
+            <!-- EDUCATION -->
 
-                <h3>
-                    Financial Modelling
-                </h3>
+            <div class="education-column">
 
-                <p>
+                <div class="column-label">
+                    EDUCATION &amp; CERTIFICATIONS
+                </div>
 
-                    Three-statement modelling, forecasting,
-                    DCF, working capital and scenario analysis.
 
-                </p>
+                <div class="education-item">
+
+                    <div class="education-type">
+                        MBA — FINANCE
+                    </div>
+
+                    <h3>
+                        Nanyang Institute of Management
+                    </h3>
+
+                    <p>
+                        Singapore · University of West Scotland affiliation · 2026
+                    </p>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <div class="education-type">
+                        MBA — MARKETING
+                    </div>
+
+                    <h3>
+                        Banasthali Vidyapith
+                    </h3>
+
+                    <p>
+                        India
+                    </p>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <div class="education-type">
+                        FMVA
+                    </div>
+
+                    <h3>
+                        Financial Modeling &amp; Valuation Analyst
+                    </h3>
+
+                    <p>
+                        Corporate Finance Institute
+                    </p>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <div class="education-type">
+                        NISM
+                    </div>
+
+                    <h3>
+                        Research Analyst &amp; Investment Adviser
+                    </h3>
+
+                    <p>
+                        NISM professional certifications
+                    </p>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <div class="education-type">
+                        B.COM
+                    </div>
+
+                    <h3>
+                        Bachelor of Commerce
+                    </h3>
+
+                    <p>
+                        SHIATS Allahabad
+                    </p>
+
+                </div>
+
 
             </div>
-
-
-            <div class="skill-card">
-
-                <h3>
-                    Valuation
-                </h3>
-
-                <p>
-
-                    DCF, trading comparables, financial ratios,
-                    earnings multiples and valuation frameworks.
-
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <h3>
-                    Investment Advisory
-                </h3>
-
-                <p>
-
-                    Indian equities, portfolio analysis,
-                    HNI/UHNI client coverage and investment strategy.
-
-                </p>
-
-            </div>
-
 
         </div>
 
@@ -3110,348 +3013,135 @@ footer {
 
 
 <!-- =========================================================
-     06 — EXPERIENCE
-========================================================= -->
-
-<section id="experience" class="experience-section">
-
-    <div class="container">
-
-        <div class="section-label">
-            06 — PROFESSIONAL EXPERIENCE
-        </div>
-
-
-        <h2 class="section-title">
-            9+ years across financial services.
-        </h2>
-
-
-        <div class="experience-list">
-
-
-            <div class="experience">
-
-                <div class="experience-date">
-                    MAY 2025 — DEC 2025
-                </div>
-
-                <div>
-
-                    <h3>
-                        Senior Business Head
-                    </h3>
-
-                    <div class="experience-company">
-                        Wise Global Research Services
-                    </div>
-
-                    <p>
-
-                        Led advisory teams serving HNI clients
-                        across equity analysis, mutual funds,
-                        derivatives, portfolio strategy and
-                        regulatory processes.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="experience">
-
-                <div class="experience-date">
-                    JAN 2020 — MAY 2025
-                </div>
-
-                <div>
-
-                    <h3>
-                        Business Head
-                    </h3>
-
-                    <div class="experience-company">
-                        ResearchMart Services Pvt Ltd / Capital Ways
-                    </div>
-
-                    <p>
-
-                        Managed 150+ HNI/UHNI relationships and
-                        worked across market research, financial
-                        analysis, client acquisition, portfolio
-                        growth and investment advisory.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="experience">
-
-                <div class="experience-date">
-                    JAN 2017 — DEC 2019
-                </div>
-
-                <div>
-
-                    <h3>
-                        Team Lead
-                    </h3>
-
-                    <div class="experience-company">
-                        Dezire Research
-                    </div>
-
-                    <p>
-
-                        Managed an advisory team, supported
-                        technical and fundamental analysis,
-                        developed client relationships and
-                        contributed to revenue growth.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="experience">
-
-                <div class="experience-date">
-                    MAY 2016 — DEC 2016
-                </div>
-
-                <div>
-
-                    <h3>
-                        Business Analyst
-                    </h3>
-
-                    <div class="experience-company">
-                        CapitalVia
-                    </div>
-
-                    <p>
-
-                        Performed market analysis and investment
-                        research across equity and commodities
-                        and supported preparation of research reports.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     07 — EDUCATION
-========================================================= -->
-
-<section class="education-section">
-
-    <div class="container">
-
-        <div class="section-label">
-            07 — EDUCATION &amp; CERTIFICATIONS
-        </div>
-
-
-        <h2 class="section-title">
-            Academic &amp; Professional Development
-        </h2>
-
-
-        <div class="education-grid">
-
-
-            <div class="education-card">
-
-                <h3>
-                    MBA Finance
-                </h3>
-
-                <p>
-
-                    Nanyang Institute of Management, Singapore —
-                    in affiliation with University of West Scotland.
-
-                </p>
-
-            </div>
-
-
-            <div class="education-card">
-
-                <h3>
-                    MBA Marketing
-                </h3>
-
-                <p>
-                    Banasthali Vidyapith, India.
-                </p>
-
-            </div>
-
-
-            <div class="education-card">
-
-                <h3>
-                    FMVA
-                </h3>
-
-                <p>
-                    Financial Modeling &amp; Valuation Analyst.
-                </p>
-
-            </div>
-
-
-            <div class="education-card">
-
-                <h3>
-                    NISM
-                </h3>
-
-                <p>
-
-                    Research Analyst and Investment Adviser
-                    certifications.
-
-                </p>
-
-            </div>
-
-
-            <div class="education-card">
-
-                <h3>
-                    AI in Finance
-                </h3>
-
-                <p>
-
-                    Applied AI and GenAI concepts for financial
-                    analysis, research and productivity.
-
-                </p>
-
-            </div>
-
-
-            <div class="education-card">
-
-                <h3>
-                    B.Com
-                </h3>
-
-                <p>
-                    Bachelor of Commerce — SHIATS Allahabad.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     08 — CONTACT
+     06 — DIRECT CONNECT
 ========================================================= -->
 
 <section id="contact" class="contact-section">
 
     <div class="container">
 
+
         <div class="section-label">
-            08 — DIRECT CONNECT
+            06 — DIRECT CONNECT
         </div>
 
 
-        <h2 class="section-title">
-            Open to finance &amp; investment opportunities.
-        </h2>
+        <div class="contact-box-main">
 
 
-        <p class="section-description">
+            <div>
 
-            Interested in opportunities across equity research,
-            investment research, financial analysis, wealth
-            management, corporate finance and related roles.
-
-        </p>
+                <h2 class="contact-title">
+                    Let's talk finance.
+                </h2>
 
 
-        <div class="contact-grid">
+                <p class="contact-description">
+
+                    Open to opportunities across equity research,
+                    investment research, financial analysis,
+                    wealth management, corporate finance and
+                    related finance roles.
+
+                </p>
 
 
-            <div class="contact-box">
+                <div class="contact-focus">
 
-                <span>
-                    Email
-                </span>
+                    <span>
+                        Equity Research
+                    </span>
 
-                <strong>
-                    supriyasrai135@gmail.com
-                </strong>
+                    <span>
+                        Investment Research
+                    </span>
 
-            </div>
+                    <span>
+                        Financial Analysis
+                    </span>
 
+                    <span>
+                        Wealth Management
+                    </span>
 
-            <div class="contact-box">
+                    <span>
+                        Valuation
+                    </span>
 
-                <span>
-                    LinkedIn
-                </span>
+                    <span>
+                        AI in Finance
+                    </span>
 
-                <strong>
-                    linkedin.com/in/rai-supriya
-                </strong>
-
-            </div>
-
-
-            <div class="contact-box">
-
-                <span>
-                    Location
-                </span>
-
-                <strong>
-                    Singapore
-                </strong>
+                </div>
 
             </div>
 
 
-            <div class="contact-box">
+            <div class="contact-details">
 
-                <span>
-                    Focus
-                </span>
 
-                <strong>
-                    Equity Research · Finance · Valuation
-                </strong>
+                <div class="contact-detail">
+
+                    <span>
+                        EMAIL
+                    </span>
+
+                    <strong>
+                        supriyasrai135@gmail.com
+                    </strong>
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <span>
+                        LINKEDIN
+                    </span>
+
+                    <strong>
+                        /rai-supriya
+                    </strong>
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <span>
+                        LOCATION
+                    </span>
+
+                    <strong>
+                        Singapore
+                    </strong>
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <span>
+                        FOCUS
+                    </span>
+
+                    <strong>
+                        Research · Finance · Valuation
+                    </strong>
+
+                </div>
+
+
+                <a
+                    href="Supriya%20Rai_Resume.pdf"
+                    download
+                    class="profile-action primary"
+                    style="grid-column:1/-1;"
+                >
+                    ↓ DOWNLOAD CV
+                </a>
 
             </div>
-
 
         </div>
 
@@ -3468,7 +3158,9 @@ footer {
 
     © 2026 Supriya Rai
     ·
-    Finance &amp; Investment Research
+    Finance &amp; Equity Research
+    ·
+    Singapore
 
 </footer>
 
