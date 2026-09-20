@@ -288,6 +288,51 @@
 @media(prefers-reduced-motion:reduce){.detail-reveal{opacity:1;transform:none;transition:none}}
 
 </style>
+<style>
+.peer-benchmark{background:#f3f5f7;padding:24px 0 56px;border-bottom:1px solid #d9e0e7}
+.benchmark-shell{background:#fff;border:1px solid #d8e0e7;border-radius:0 0 12px 12px;overflow:hidden;box-shadow:0 10px 30px rgba(16,28,45,.08)}
+.benchmark-tabs{display:flex;align-items:stretch;border-bottom:1px solid #d7e0e8;background:#f7f9fb;padding:0 10px;overflow-x:auto}
+.benchmark-tab{border:0;background:transparent;color:#33516f;padding:15px 18px;font-size:13px;font-weight:700;white-space:nowrap;cursor:pointer;border-top:2px solid transparent}
+.benchmark-tab:hover{color:#10233b;background:#eef3f7}
+.benchmark-tab.active{background:#0b1b33;color:#d7a94a;border-top-color:#d7a94a;margin-top:0}
+.benchmark-panel{display:none;padding:0 14px 24px}
+.benchmark-panel.active{display:block}
+.benchmark-panel-head{display:flex;justify-content:space-between;gap:25px;align-items:flex-start;padding:27px 14px 20px;border-bottom:1px solid #e3e8ed}
+.benchmark-kicker{font-family:monospace;font-size:10px;letter-spacing:1.4px;color:#1769a9;font-weight:800;text-transform:uppercase;margin-bottom:6px}
+.benchmark-panel-head h2{font-size:22px;color:#0b1b33;margin:0 0 2px}
+.benchmark-panel-head p{font-size:12px;color:#687c91;margin:0}
+.benchmark-universe{font-family:monospace;font-size:10px;color:#6c7e91;white-space:nowrap;padding-top:3px}.benchmark-universe strong{color:#0b1b33}
+.benchmark-table-wrap{overflow-x:auto;margin-top:24px}
+.benchmark-table{width:100%;min-width:760px;border-collapse:collapse;background:#fff;border:1px solid #d9e1e8}
+.benchmark-table th{background:#0b1b33;color:#f0f4f8;padding:13px 12px;text-align:right;font:700 10px monospace;letter-spacing:.4px;border-bottom:2px solid #d7a94a}
+.benchmark-table th:first-child,.benchmark-table td:first-child{text-align:left}
+.benchmark-table td{padding:13px 12px;border-bottom:1px solid #dfe5eb;color:#18304a;font-size:11px;text-align:right}
+.benchmark-table tbody tr:nth-child(even){background:#f8fafc}
+.benchmark-table .dbv{color:#c92a35;font-weight:800}.benchmark-table .ocv{color:#1976a8;font-weight:800}.benchmark-table .uov{color:#a86f00;font-weight:800}
+.benchmark-table .target-row{background:#fbf6ea!important;border-top:1px solid #d7a94a;border-bottom:1px solid #d7a94a;font-weight:700}
+.benchmark-table .target-row td{font-weight:700}
+.benchmark-note{margin-top:18px;padding:14px 16px;background:#f0f4f7;border-left:3px solid #7fa7d8;color:#61758a;font-size:10px;line-height:1.65}
+.benchmark-metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+.benchmark-metric{padding:20px;background:#f8fafc;border:1px solid #dce4eb;border-radius:6px}
+.benchmark-metric span{display:block;font:700 9px monospace;letter-spacing:.7px;color:#6f8195;text-transform:uppercase}
+.benchmark-metric strong{display:block;font-size:25px;color:#0b1b33;margin:7px 0 2px}
+.benchmark-metric small{font-size:9px;color:#7d8da0}
+@media(max-width:800px){.benchmark-panel-head{flex-direction:column}.benchmark-metric-grid{grid-template-columns:1fr 1fr}.benchmark-tab{padding:13px 12px;font-size:11px}}
+@media(max-width:500px){.benchmark-metric-grid{grid-template-columns:1fr}.benchmark-panel{padding-left:8px;padding-right:8px}}
+</style>
+<script>
+(function(){
+const tabs=document.querySelectorAll('.benchmark-tab');
+const panels=document.querySelectorAll('.benchmark-panel');
+tabs.forEach(tab=>tab.addEventListener('click',()=>{
+tabs.forEach(t=>t.classList.remove('active'));
+panels.forEach(p=>p.classList.remove('active'));
+tab.classList.add('active');
+const panel=document.getElementById('tab-'+tab.dataset.tab);
+if(panel) panel.classList.add('active');
+}));
+})();
+</script>
 
 </head>
 
@@ -325,63 +370,28 @@
 </header>
 
 
-<section class="peer-dashboard" id="peer-dashboard">
+<section class="peer-benchmark" id="peer-dashboard">
 <div class="container">
-<div class="peer-shell">
-<div class="peer-head">
-<div class="peer-kicker">01A · 1H FY2026 Peer Dashboard</div>
-<h2>DBS · OCBC · UOB — operating comparison</h2>
-<p>Latest first-half 2026 operating snapshot across profitability, margin, asset quality and efficiency. The detailed FY2025 tables below are retained as the historical base for the research model.</p>
-</div>
-<div class="peer-body">
-<div class="peer-cards">
-<div class="peer-card db"><div class="bank">DBS Group</div><div class="ticker">SGX: D05</div><div class="profit">S$6.01B</div><small>1H26 net profit</small><div class="chips"><span class="peer-chip">ROE 17.5%</span><span class="peer-chip">NIM 1.88%</span><span class="peer-chip">NPL 1.0%</span></div></div>
-<div class="peer-card oc"><div class="bank">OCBC</div><div class="ticker">SGX: O39</div><div class="profit">S$4.19B</div><small>1H26 net profit</small><div class="chips"><span class="peer-chip">ROE 13.7%</span><span class="peer-chip">NIM 1.73%</span><span class="peer-chip">NPL 0.9%</span></div></div>
-<div class="peer-card uo"><div class="bank">UOB</div><div class="ticker">SGX: U11</div><div class="profit">S$2.90B</div><small>1H26 net profit</small><div class="chips"><span class="peer-chip">ROE 11.6%</span><span class="peer-chip">NIM 1.78%</span><span class="peer-chip">NPL 1.6%</span></div></div>
+<div class="benchmark-shell">
+
+<div class="benchmark-tabs" role="tablist">
+<button class="benchmark-tab active" data-tab="scorecard">▱ &nbsp; Tab 1: 1H26 Peer Scorecard</button>
+<button class="benchmark-tab" data-tab="valuation">% &nbsp; Tab 2: Bank Valuation Framework</button>
+<button class="benchmark-tab" data-tab="capital">⚙ &nbsp; Tab 3: Capital &amp; Risk Dashboard</button>
+<button class="benchmark-tab" data-tab="comps">↗ &nbsp; Tab 4: Trading Comps Benchmarking</button>
 </div>
 
-<div class="peer-grid">
-<div class="chart-card">
-<div class="chart-title">Return on equity</div><div class="chart-sub">1H26 annualised ROE · %</div>
-<div class="peer-bars">
-<div class="bar-group"><span class="bar-label">DBS</span><div class="bar-track"><div class="bar-fill db" style="width:87.5%"></div></div><span class="bar-value">17.5%</span></div>
-<div class="bar-group"><span class="bar-label">OCBC</span><div class="bar-track"><div class="bar-fill oc" style="width:68.5%"></div></div><span class="bar-value">13.7%</span></div>
-<div class="bar-group"><span class="bar-label">UOB</span><div class="bar-track"><div class="bar-fill uo" style="width:58%"></div></div><span class="bar-value">11.6%</span></div>
+<div class="benchmark-panel active" id="tab-scorecard">
+<div class="benchmark-panel-head">
+<div>
+<div class="benchmark-kicker">Singapore Banking · Peer Universe</div>
+<h2>DBS · OCBC · UOB — 1H26 operating scorecard</h2>
+<p>Comparable operating metrics across profitability, margin, asset quality and efficiency.</p>
 </div>
+<div class="benchmark-universe">Sector Peer Universe: <strong>Singapore Banking</strong></div>
 </div>
-
-<div class="chart-card">
-<div class="chart-title">Net interest margin</div><div class="chart-sub">1H26 reported NIM · %</div>
-<div class="peer-bars">
-<div class="bar-group"><span class="bar-label">DBS</span><div class="bar-track"><div class="bar-fill db" style="width:94%"></div></div><span class="bar-value">1.88%</span></div>
-<div class="bar-group"><span class="bar-label">OCBC</span><div class="bar-track"><div class="bar-fill oc" style="width:86.5%"></div></div><span class="bar-value">1.73%</span></div>
-<div class="bar-group"><span class="bar-label">UOB</span><div class="bar-track"><div class="bar-fill uo" style="width:89%"></div></div><span class="bar-value">1.78%</span></div>
-</div>
-</div>
-
-<div class="chart-card">
-<div class="chart-title">Asset quality</div><div class="chart-sub">1H26 NPL ratio · lower ratio indicates fewer loans classified as non-performing</div>
-<div class="peer-bars">
-<div class="bar-group"><span class="bar-label">DBS</span><div class="bar-track"><div class="bar-fill db" style="width:62.5%"></div></div><span class="bar-value">1.0%</span></div>
-<div class="bar-group"><span class="bar-label">OCBC</span><div class="bar-track"><div class="bar-fill oc" style="width:56.25%"></div></div><span class="bar-value">0.9%</span></div>
-<div class="bar-group"><span class="bar-label">UOB</span><div class="bar-track"><div class="bar-fill uo" style="width:100%"></div></div><span class="bar-value">1.6%</span></div>
-</div>
-</div>
-
-<div class="chart-card">
-<div class="chart-title">Operating efficiency</div><div class="chart-sub">1H26 cost-to-income ratio · %</div>
-<div class="peer-bars">
-<div class="bar-group"><span class="bar-label">DBS</span><div class="bar-track"><div class="bar-fill db" style="width:86.7%"></div></div><span class="bar-value">39.0%</span></div>
-<div class="bar-group"><span class="bar-label">OCBC</span><div class="bar-track"><div class="bar-fill oc" style="width:85.6%"></div></div><span class="bar-value">38.5%</span></div>
-<div class="bar-group"><span class="bar-label">UOB</span><div class="bar-track"><div class="bar-fill uo" style="width:99.8%"></div></div><span class="bar-value">44.9%</span></div>
-</div>
-</div>
-</div>
-
-<div class="chart-card" style="margin-top:16px">
-<div class="chart-title">1H26 peer scorecard</div><div class="chart-sub">Comparable operating metrics; figures are bank-reported and should be read with each bank's accounting definitions.</div>
-<div style="overflow-x:auto">
-<table class="peer-table">
+<div class="benchmark-table-wrap">
+<table class="benchmark-table">
 <thead><tr><th>Metric</th><th>DBS</th><th>OCBC</th><th>UOB</th></tr></thead>
 <tbody>
 <tr><td>Net profit</td><td class="dbv">S$6.01B</td><td class="ocv">S$4.19B</td><td class="uov">S$2.90B</td></tr>
@@ -393,15 +403,77 @@
 </tbody>
 </table>
 </div>
+<div class="benchmark-note"><strong>Research note:</strong> Figures are bank-reported 1H26 metrics and should be read with each bank's accounting definitions.</div>
 </div>
 
-<div class="peer-foot"><strong>Research note:</strong> DBS reported 1H26 net profit of S$6.01B, ROE of 17.5%, NIM of 1.88%, NPL of 1.0% and cost-income ratio of 39%. OCBC reported S$4.19B net profit, ROE 13.7%, NIM 1.73%, NPL 0.9% and CIR 38.5%. UOB reported S$2.9B net profit, ROE 11.6%, NIM 1.78%, NPL 1.6% and CIR 44.9%. Sources: respective 1H26 results disclosures.</div>
-<div class="peer-tagline"><span>PROFITABILITY</span><span>MARGIN</span><span>ASSET QUALITY</span><span>EFFICIENCY</span><span>CAPITAL</span><span>VALUATION</span></div>
+<div class="benchmark-panel" id="tab-valuation">
+<div class="benchmark-panel-head">
+<div>
+<div class="benchmark-kicker">Relative Valuation · Banks</div>
+<h2>Bank valuation benchmarking</h2>
+<p>P/B, P/E and dividend yield provide the primary relative valuation lenses for bank equity research.</p>
 </div>
+<div class="benchmark-universe">Valuation Universe: <strong>DBS / OCBC / UOB</strong></div>
+</div>
+<div class="benchmark-table-wrap">
+<table class="benchmark-table">
+<thead><tr><th>Valuation Metric</th><th>DBS</th><th>OCBC</th><th>UOB</th></tr></thead>
+<tbody>
+<tr><td>FY2025 P/E</td><td class="dbv">12.4x</td><td class="ocv">10.45x</td><td class="uov">10.8x*</td></tr>
+<tr><td>FY2025 P/B / P-NAV</td><td class="dbv">2.0x</td><td class="ocv">1.27x</td><td class="uov">~1.1x*</td></tr>
+<tr><td>FY2025 ROE</td><td class="dbv">16.2%</td><td class="ocv">12.6%</td><td class="uov">9.6%</td></tr>
+<tr><td>FY2025 dividend / share</td><td class="dbv">S$3.06</td><td class="ocv">S$0.99</td><td class="uov">S$1.56</td></tr>
+</tbody>
+</table>
+</div>
+<div class="benchmark-note"><strong>Valuation framework:</strong> P/B should be interpreted alongside sustainable ROE, P/E and dividend yield. Multiples are historical reference figures, not live market data.</div>
+</div>
+
+<div class="benchmark-panel" id="tab-capital">
+<div class="benchmark-panel-head">
+<div>
+<div class="benchmark-kicker">Balance Sheet · Risk</div>
+<h2>Capital &amp; asset-quality dashboard</h2>
+<p>Core banking risk indicators used alongside earnings and valuation.</p>
+</div>
+<div class="benchmark-universe">Risk Lens: <strong>CET1 · NPL · Funding</strong></div>
+</div>
+<div class="benchmark-metric-grid">
+<div class="benchmark-metric"><span>DBS · CET1</span><strong>17.0%</strong><small>FY2025 reported</small></div>
+<div class="benchmark-metric"><span>OCBC · CET1</span><strong>16.9%</strong><small>FY2025 reported</small></div>
+<div class="benchmark-metric"><span>UOB · CET1</span><strong>15.1%</strong><small>FY2025 reported</small></div>
+<div class="benchmark-metric"><span>DBS · NPL</span><strong>1.0%</strong><small>1H26</small></div>
+<div class="benchmark-metric"><span>OCBC · NPL</span><strong>0.9%</strong><small>1H26</small></div>
+<div class="benchmark-metric"><span>UOB · NPL</span><strong>1.6%</strong><small>1H26</small></div>
+</div>
+<div class="benchmark-note"><strong>Analyst lens:</strong> Capital buffers, credit quality, funding mix and provision trends should be monitored together rather than using a single balance-sheet metric.</div>
+</div>
+
+<div class="benchmark-panel" id="tab-comps">
+<div class="benchmark-panel-head">
+<div>
+<div class="benchmark-kicker">Public Market Comparable Benchmarking</div>
+<h2>Singapore banking trading comps</h2>
+<p>Relative peer valuation and operating metrics across the three listed Singapore banks.</p>
+</div>
+<div class="benchmark-universe">Sector Peer Universe: <strong>DBS / OCBC / UOB</strong></div>
+</div>
+<div class="benchmark-table-wrap">
+<table class="benchmark-table">
+<thead><tr><th>Company / Peer</th><th>Ticker</th><th>P / E</th><th>P / B</th><th>ROE</th><th>NPL</th><th>Dividend / Share</th></tr></thead>
+<tbody>
+<tr class="target-row"><td>DBS Group</td><td>SGX: D05</td><td>12.4x</td><td>2.0x</td><td>16.2%</td><td>1.0%</td><td>S$3.06</td></tr>
+<tr><td>OCBC</td><td>SGX: O39</td><td>10.45x</td><td>1.27x</td><td>12.6%</td><td>0.9%</td><td>S$0.99</td></tr>
+<tr><td>UOB</td><td>SGX: U11</td><td>10.8x*</td><td>~1.1x*</td><td>9.6%</td><td>1.5%</td><td>S$1.56</td></tr>
+</tbody>
+</table>
+</div>
+<div class="benchmark-note"><strong>Relative multiples analysis:</strong> DBS's FY2025 valuation reference is shown alongside OCBC and UOB to frame differences in market valuation, profitability and asset quality. *Approximate reference figures.</div>
+</div>
+
 </div>
 </div>
 </section>
-
 
 <!-- 01 — SECTOR OVERVIEW -->
 
