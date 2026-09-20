@@ -1432,8 +1432,228 @@ img {
 
 
 /* =========================================================
+   AI WORKBENCH — TOOLS & WORKFLOW
+========================================================= */
+
+.ai-workbench {
+    overflow: hidden;
+}
+
+.ai-workbench-top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(520px, 1.15fr);
+    gap: 34px;
+    align-items: center;
+}
+
+.ai-tools-panel {
+    padding-left: 8px;
+}
+
+.ai-tools-heading,
+.ai-workflow-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 13px;
+}
+
+.ai-tools-heading span,
+.ai-workflow-heading span {
+    color: var(--gold);
+    font-family: monospace;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.3px;
+}
+
+.ai-tools-heading small,
+.ai-workflow-heading small {
+    color: #7591aa;
+    font-family: monospace;
+    font-size: 8px;
+    letter-spacing: .8px;
+}
+
+.ai-tools-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.ai-tool-card {
+    min-height: 166px;
+    padding: 14px 12px;
+    background: rgba(16,39,68,.78);
+    border: 1px solid #294866;
+    border-radius: 7px;
+    transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+
+.ai-tool-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--gold);
+    background: #142f50;
+}
+
+.ai-tool-logo {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    background: #071a31;
+    border: 1px solid #385570;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.ai-tool-logo img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.claude-logo {
+    background: #201b19;
+}
+
+.excel-logo {
+    background: #123b2b;
+}
+
+.powerbi-logo {
+    background: #3a2f08;
+}
+
+.tatagen-logo {
+    color: #ffffff;
+    letter-spacing: -1px;
+}
+
+.ai-tool-card strong {
+    display: block;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1.25;
+    margin-bottom: 6px;
+}
+
+.ai-tool-card span {
+    display: block;
+    color: #8fa7bb;
+    font-size: 9px;
+    line-height: 1.55;
+}
+
+.ai-workflow {
+    margin-top: 30px;
+    padding-top: 23px;
+    border-top: 1px solid #294866;
+}
+
+.ai-workflow-steps {
+    display: grid;
+    grid-template-columns: 1fr 24px 1fr 24px 1fr 24px 1.15fr 24px 1fr;
+    align-items: center;
+    gap: 8px;
+}
+
+.ai-workflow-step {
+    min-height: 84px;
+    padding: 12px;
+    text-align: center;
+    background: #0d2440;
+    border: 1px solid #294866;
+    border-radius: 7px;
+}
+
+.ai-workflow-step b {
+    display: block;
+    color: #7591aa;
+    font-family: monospace;
+    font-size: 8px;
+    margin-bottom: 4px;
+}
+
+.ai-workflow-step strong {
+    display: block;
+    color: var(--gold);
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: .5px;
+}
+
+.ai-workflow-step span {
+    display: block;
+    margin-top: 5px;
+    color: #9db1c3;
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+.ai-workflow-arrow {
+    color: var(--gold);
+    font-size: 18px;
+    text-align: center;
+}
+
+@media (max-width: 1050px) {
+    .ai-workbench-top {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-tools-panel {
+        padding-left: 0;
+    }
+
+    .ai-tools-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .ai-workflow-steps {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .ai-workflow-arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .ai-tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ai-workflow-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-workflow-step {
+        text-align: left;
+    }
+
+    .ai-tools-heading,
+    .ai-workflow-heading {
+        display: block;
+    }
+
+    .ai-tools-heading small,
+    .ai-workflow-heading small {
+        display: block;
+        margin-top: 5px;
+    }
+}
+
+
+/* =========================================================
    AI LOWER CARDS
 ========================================================= */
+
 
 .toolkit-cards {
     display: grid;
@@ -3368,10 +3588,9 @@ footer {
         </div>
 
 
-        <div class="toolkit-feature">
+        <div class="toolkit-feature ai-workbench">
 
-            <div class="toolkit-feature-grid">
-
+            <div class="ai-workbench-top">
 
                 <div class="toolkit-feature-left">
 
@@ -3379,132 +3598,131 @@ footer {
                         ⚡ AI-POWERED FINANCIAL RESEARCH
                     </div>
 
-
                     <h2>
-
                         Turning Financial Data into
-                        <span>
-                            Research-Ready Insights
-                        </span>
-
+                        <span>Research-Ready Insights</span>
                     </h2>
 
-
                     <p class="toolkit-description">
-
-                        I combine equity research, financial
-                        modelling, valuation and AI-enabled
-                        workflows to structure financial
-                        information, accelerate analysis and
-                        develop investment insights.
-
+                        I combine financial expertise with AI tools to analyse
+                        companies, structure research, build valuation models,
+                        test assumptions and accelerate analytical workflows.
                     </p>
 
-
                     <div class="toolkit-capabilities">
+                        <span class="toolkit-capability">Equity Research</span>
+                        <span class="toolkit-capability">Financial Modelling</span>
+                        <span class="toolkit-capability">Valuation</span>
+                        <span class="toolkit-capability">AI in Finance</span>
+                    </div>
 
-                        <span class="toolkit-capability">
-                            Equity Research
-                        </span>
+                </div>
 
-                        <span class="toolkit-capability">
-                            Financial Modelling
-                        </span>
+                <div class="ai-tools-panel">
 
-                        <span class="toolkit-capability">
-                            Valuation
-                        </span>
+                    <div class="ai-tools-heading">
+                        <span>AI TOOLS I USE</span>
+                        <small>RESEARCH · ANALYSIS · MODELLING</small>
+                    </div>
 
-                        <span class="toolkit-capability">
-                            AI in Finance
-                        </span>
+                    <div class="ai-tools-grid">
+
+                        <div class="ai-tool-card">
+                            <div class="ai-tool-logo openai-logo">
+                                <img src="https://cdn.simpleicons.org/openai/ffffff" alt="OpenAI logo">
+                            </div>
+                            <strong>ChatGPT</strong>
+                            <span>Research synthesis, idea generation and analysis support.</span>
+                        </div>
+
+                        <div class="ai-tool-card">
+                            <div class="ai-tool-logo claude-logo">
+                                <img src="https://cdn.simpleicons.org/anthropic/ffffff" alt="Anthropic logo">
+                            </div>
+                            <strong>Claude</strong>
+                            <span>Document analysis, financial reports and comparative research.</span>
+                        </div>
+
+                        <div class="ai-tool-card">
+                            <div class="ai-tool-logo excel-logo">
+                                <img src="https://cdn.simpleicons.org/microsoftexcel/ffffff" alt="Microsoft Excel logo">
+                            </div>
+                            <strong>Excel + VBA</strong>
+                            <span>Financial modelling, scenarios and sensitivity analysis.</span>
+                        </div>
+
+                        <div class="ai-tool-card">
+                            <div class="ai-tool-logo tatagen-logo">TA</div>
+                            <strong>Tatagen AI</strong>
+                            <span>AI workflows for finance research and productivity.</span>
+                        </div>
+
+                        <div class="ai-tool-card">
+                            <div class="ai-tool-logo powerbi-logo">
+                                <img src="https://cdn.simpleicons.org/powerbi/ffffff" alt="Microsoft Power BI logo">
+                            </div>
+                            <strong>Power BI</strong>
+                            <span>Financial data visualisation, dashboards and insights.</span>
+                        </div>
 
                     </div>
 
                 </div>
 
+            </div>
 
-                <div class="toolkit-metrics">
+            <div class="ai-workflow">
 
+                <div class="ai-workflow-heading">
+                    <span>FROM DATA TO INSIGHTS</span>
+                    <small>AI ASSISTS · HUMAN JUDGEMENT VALIDATES</small>
+                </div>
 
-                    <div class="toolkit-metric">
+                <div class="ai-workflow-steps">
 
-                        <div class="toolkit-metric-number">
-                            AI
-                        </div>
-
-                        <h3>
-                            AI Research
-                        </h3>
-
-                        <p>
-                            GenAI-assisted research,
-                            reporting and analytical workflows.
-                        </p>
-
+                    <div class="ai-workflow-step">
+                        <b>01</b>
+                        <strong>DATA</strong>
+                        <span>Reports, filings &amp; market data</span>
                     </div>
 
+                    <div class="ai-workflow-arrow">→</div>
 
-                    <div class="toolkit-metric">
-
-                        <div class="toolkit-metric-number">
-                            3-STMT
-                        </div>
-
-                        <h3>
-                            Financial Modelling
-                        </h3>
-
-                        <p>
-                            Forecasting, statements,
-                            working capital and scenarios.
-                        </p>
-
+                    <div class="ai-workflow-step">
+                        <b>02</b>
+                        <strong>AI ASSIST</strong>
+                        <span>Extract, compare &amp; synthesise</span>
                     </div>
 
+                    <div class="ai-workflow-arrow">→</div>
 
-                    <div class="toolkit-metric">
-
-                        <div class="toolkit-metric-number">
-                            DCF
-                        </div>
-
-                        <h3>
-                            Valuation
-                        </h3>
-
-                        <p>
-                            DCF, trading comparables,
-                            multiples and sensitivity analysis.
-                        </p>
-
+                    <div class="ai-workflow-step">
+                        <b>03</b>
+                        <strong>MODEL</strong>
+                        <span>Forecast, value &amp; test scenarios</span>
                     </div>
 
+                    <div class="ai-workflow-arrow">→</div>
 
-                    <div class="toolkit-metric">
-
-                        <div class="toolkit-metric-number">
-                            DATA
-                        </div>
-
-                        <h3>
-                            Financial Analytics
-                        </h3>
-
-                        <p>
-                            Financial data interpretation,
-                            research inputs and insights.
-                        </p>
-
+                    <div class="ai-workflow-step">
+                        <b>04</b>
+                        <strong>HUMAN REVIEW</strong>
+                        <span>Validate assumptions &amp; judgement</span>
                     </div>
 
+                    <div class="ai-workflow-arrow">→</div>
+
+                    <div class="ai-workflow-step">
+                        <b>05</b>
+                        <strong>INSIGHTS</strong>
+                        <span>Research view &amp; communication</span>
+                    </div>
 
                 </div>
 
             </div>
 
         </div>
-
 
         <div class="toolkit-cards">
 
