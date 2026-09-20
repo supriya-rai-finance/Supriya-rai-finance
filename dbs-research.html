@@ -397,7 +397,75 @@ footer {
     }
 
 }
+/* =========================
+   RESEARCH THESIS FRAMEWORK
+========================= */
 
+.thesis-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.thesis-card {
+    min-height: 225px;
+    padding: 27px;
+    background: #0b192b;
+    border: 1px solid #243b54;
+    border-radius: 9px;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.thesis-card:hover {
+    transform: translateY(-3px);
+    border-color: #5279a7;
+    background: #0d1e32;
+}
+
+.thesis-number {
+    color: #8fb8ff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    margin-bottom: 22px;
+}
+
+.thesis-card h3 {
+    font-size: 18px;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+
+.thesis-card p {
+    color: #91a4ba;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   THESIS RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    .thesis-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .thesis-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
 </style>
 </head>
 
@@ -519,6 +587,150 @@ footer {
             while fee income and treasury customer sales supported non-interest
             income growth. Wealth management was a notable contributor to the
             increase in fee income.
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     RESEARCH THESIS FRAMEWORK
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            02 — Research Thesis Framework
+        </div>
+
+        <h2>
+            How I assess DBS
+        </h2>
+
+        <p>
+            The DBS research framework focuses on the underlying earnings
+            drivers, franchise strength, valuation variables and risks that
+            can influence the company's financial performance over time.
+        </p>
+
+        <div class="thesis-grid">
+
+            <div class="thesis-card">
+
+                <div class="thesis-number">
+                    01
+                </div>
+
+                <h3>
+                    Business Quality
+                </h3>
+
+                <p>
+                    Assess the strength of DBS's Singapore franchise,
+                    regional presence, wealth-management platform,
+                    institutional banking relationships and digital
+                    capabilities.
+                </p>
+
+            </div>
+
+
+            <div class="thesis-card">
+
+                <div class="thesis-number">
+                    02
+                </div>
+
+                <h3>
+                    Earnings Drivers
+                </h3>
+
+                <p>
+                    Track net interest income, NIM, fee income, wealth
+                    management activity, loan growth, treasury income
+                    and operating efficiency.
+                </p>
+
+            </div>
+
+
+            <div class="thesis-card">
+
+                <div class="thesis-number">
+                    03
+                </div>
+
+                <h3>
+                    Valuation
+                </h3>
+
+                <p>
+                    Evaluate valuation using profitability, book value,
+                    return on equity, earnings expectations, dividend
+                    capacity and relevant banking-sector multiples.
+                </p>
+
+            </div>
+
+
+            <div class="thesis-card">
+
+                <div class="thesis-number">
+                    04
+                </div>
+
+                <h3>
+                    Catalysts
+                </h3>
+
+                <p>
+                    Monitor stronger fee income, wealth-management
+                    inflows, loan growth, operating efficiency, capital
+                    deployment and changes in the interest-rate environment.
+                </p>
+
+            </div>
+
+
+            <div class="thesis-card">
+
+                <div class="thesis-number">
+                    05
+                </div>
+
+                <h3>
+                    Key Risks
+                </h3>
+
+                <p>
+                    Monitor NIM compression, weaker loan demand, credit
+                    deterioration, market volatility, regional economic
+                    conditions and regulatory developments.
+                </p>
+
+            </div>
+
+
+            <div class="thesis-card">
+
+                <div class="thesis-number">
+                    06
+                </div>
+
+                <h3>
+                    Monitoring Indicators
+                </h3>
+
+                <p>
+                    Follow NIM, ROE, NPL ratio, CET1 capital, loan growth,
+                    fee income, net new money, cost-to-income ratio and
+                    dividend trends.
+                </p>
+
+            </div>
 
         </div>
 
