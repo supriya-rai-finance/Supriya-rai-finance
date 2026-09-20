@@ -989,7 +989,6 @@ img {
 
 /* =========================================================
    04 — RESEARCH & FINANCIAL TOOLKIT
-   REFERENCE-STYLE WORKSPACE
 ========================================================= */
 
 .toolkit-section {
@@ -997,9 +996,6 @@ img {
 
     background: #f7f6f2;
 }
-
-
-/* TOP HEADING */
 
 .toolkit-heading {
     padding-bottom: 18px;
@@ -1076,9 +1072,6 @@ img {
     align-items: center;
 }
 
-
-/* FEATURE LEFT */
-
 .toolkit-feature-left {
     padding-right: 12px;
 }
@@ -1136,9 +1129,6 @@ img {
 
     line-height: 1.8;
 }
-
-
-/* FEATURE CHECKS */
 
 .toolkit-capabilities {
     display: flex;
@@ -1219,18 +1209,15 @@ img {
     margin-bottom: 9px;
 }
 
-.toolkit-metric:nth-child(2)
-.toolkit-metric-number {
+.toolkit-metric:nth-child(2) .toolkit-metric-number {
     color: var(--green);
 }
 
-.toolkit-metric:nth-child(3)
-.toolkit-metric-number {
+.toolkit-metric:nth-child(3) .toolkit-metric-number {
     color: #ffffff;
 }
 
-.toolkit-metric:nth-child(4)
-.toolkit-metric-number {
+.toolkit-metric:nth-child(4) .toolkit-metric-number {
     color: var(--gold);
 }
 
@@ -1670,6 +1657,54 @@ img {
     font-size: 10px;
 
     line-height: 1.4;
+}
+
+
+/* =========================================================
+   LINKEDIN CARD
+========================================================= */
+
+.linkedin-card {
+    display: block;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+}
+
+.linkedin-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #c89b3c;
+
+    background: #f3f0e8;
+
+    box-shadow:
+        0 8px 18px rgba(8,26,49,.06);
+}
+
+.linkedin-card strong {
+    display: block;
+}
+
+.linkedin-card small {
+    display: block;
+
+    margin-top: 9px;
+
+    color: #1766a9;
+
+    font-family: monospace;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: .5px;
 }
 
 
@@ -2753,17 +2788,10 @@ footer {
         </div>
 
 
-        <!-- =================================================
-             FEATURED ANALYST WORKSPACE
-        ================================================= -->
-
         <div class="toolkit-feature">
-
 
             <div class="toolkit-feature-grid">
 
-
-                <!-- LEFT -->
 
                 <div class="toolkit-feature-left">
 
@@ -2819,8 +2847,6 @@ footer {
 
                 </div>
 
-
-                <!-- RIGHT METRICS -->
 
                 <div class="toolkit-metrics">
 
@@ -2903,10 +2929,6 @@ footer {
 
         </div>
 
-
-        <!-- =================================================
-             THREE CAPABILITY CARDS
-        ================================================= -->
 
         <div class="toolkit-cards">
 
@@ -3316,7 +3338,14 @@ footer {
                 </div>
 
 
-                <div class="contact-detail">
+                <!-- CLICKABLE LINKEDIN -->
+
+                <a
+                    href="https://www.linkedin.com/in/rai-supriya/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-detail linkedin-card"
+                >
 
                     <span>
                         LINKEDIN
@@ -3326,7 +3355,11 @@ footer {
                         /rai-supriya
                     </strong>
 
-                </div>
+                    <small>
+                        VIEW LINKEDIN PROFILE →
+                    </small>
+
+                </a>
 
 
                 <div class="contact-detail">
