@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Reliance Industries | Investment Research Pitchbook | Supriya Rai</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#e9edf1;color:#172235;font-family:Arial,Helvetica,sans-serif}
+.deck{max-width:1180px;margin:auto;padding:28px 0}
+.slide{position:relative;min-height:760px;margin:0 0 24px;background:#fff;padding:52px 62px 48px;box-shadow:0 10px 30px rgba(12,25,42,.12);overflow:hidden}
+.slide.dark{background:#0c1b2e;color:#fff}
+.topline{height:4px;background:#c99b3b;position:absolute;left:0;top:0;width:100%}
+.kicker{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:#6c7b8f;margin-bottom:12px}
+.dark .kicker{color:#a9bfd6}
+h1{font-size:52px;line-height:1.04;margin:0 0 18px}
+h2{font-size:30px;line-height:1.15;margin:0 0 12px}
+h3{font-size:16px;margin:0 0 8px}
+.sub{color:#66758a;font-size:14px;line-height:1.65;max-width:800px}
+.dark .sub{color:#aebdd0}
+.header{display:flex;justify-content:space-between;gap:30px;align-items:flex-start;margin-bottom:30px}
+.logo{font-size:15px;font-weight:800;letter-spacing:1.5px}.logo span{color:#c99b3b}
+.date{font-size:10px;color:#78869a;text-align:right}.dark .date{color:#8fa4bc}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.metric{padding:19px;background:#f5f7f9;border:1px solid #dfe5eb}
+.metric strong{display:block;font-size:24px;color:#172235;margin-bottom:5px}.metric span{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:#718097;font-weight:700}
+.dark .metric{background:#12243a;border-color:#263c55}.dark .metric strong{color:#fff}.dark .metric span{color:#8fa4bc}
+.card{padding:23px;border:1px solid #dce2e9;background:#fff}.dark .card{background:#12243a;border-color:#263c55}
+.card p,.card li{font-size:12px;line-height:1.65;color:#64748a}.dark .card p,.dark .card li{color:#aebdd0}
+.card ul{padding-left:18px}.card li{margin-bottom:7px}
+.tag{display:inline-block;padding:6px 9px;border:1px solid #d8dfe7;color:#526277;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.gold{color:#a77a22}.blue{color:#24639a}.green{color:#16806b}
+.hero-layout{display:grid;grid-template-columns:1.25fr .75fr;gap:45px;align-items:end;height:480px}
+.hero-title{border-left:5px solid #c99b3b;padding-left:25px}.hero-title h1{font-size:66px}
+.hero-box{background:#f5f7f9;border:1px solid #dce2e9;padding:25px}.hero-box strong{font-size:34px;display:block;margin:6px 0}.hero-box small{font-size:10px;color:#718097}
+.section-number{font-size:10px;color:#8795a8;letter-spacing:2px;font-weight:700;margin-bottom:20px}
+.slide-footer{position:absolute;bottom:20px;left:62px;right:62px;border-top:1px solid #e3e7ec;padding-top:9px;display:flex;justify-content:space-between;font-size:8px;color:#8794a6}
+.dark .slide-footer{border-color:#293d54;color:#748aa2}
+.table{width:100%;border-collapse:collapse;margin-top:18px}.table th,.table td{padding:11px 10px;border-bottom:1px solid #e1e6eb;text-align:right;font-size:11px}.table th:first-child,.table td:first-child{text-align:left}
+.table th{background:#f2f5f8;color:#506077;font-size:9px;text-transform:uppercase;letter-spacing:.7px}
+.callout{padding:17px 19px;border-left:4px solid #c99b3b;background:#f7f8fa;font-size:11px;line-height:1.6;color:#5f6e82}
+.football{margin-top:18px}.frow{display:grid;grid-template-columns:130px 1fr 120px;gap:14px;align-items:center;margin:18px 0}
+.fmethod{font-size:11px;font-weight:700}.track{height:22px;background:#edf1f5;border:1px solid #dbe1e7;position:relative}
+.range{position:absolute;height:14px;top:3px;border-radius:3px;background:#6d95bf}.range.green{background:#8eb2a5}
+.marker{position:absolute;top:-5px;width:2px;height:32px;background:#c99b3b}.marker:after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:#c99b3b;left:-2.5px;top:-5px}
+.fvalues{text-align:right;font-size:9px;color:#617087}.scale{display:flex;justify-content:space-between;margin-left:144px;color:#8b97a7;font-size:8px}
+.note{font-size:9px;color:#7b899b;line-height:1.55;margin-top:16px}.sources{font-size:10px;line-height:1.8;color:#64748a}.sources div{border-bottom:1px solid #e3e7ec;padding:7px 0}
+@media(max-width:800px){.deck{padding:0}.slide{min-height:720px;padding:38px 30px 45px}.hero-layout,.grid4,.grid3,.grid2{grid-template-columns:1fr}.hero-layout{height:auto;gap:25px}.hero-title h1{font-size:46px}.slide-footer{left:30px;right:30px}.frow{grid-template-columns:90px 1fr}.fvalues{font-size:8px}.scale{margin-left:104px}}
+@media print{body{background:#fff}.deck{padding:0}.slide{box-shadow:none;margin:0;page-break-after:always;width:100%;min-height:100vh}.slide:last-child{page-break-after:auto}}
+</style>
+</head>
+<body><div class="deck">
+
+<section class="slide dark">
+<div class="topline"></div>
+<div class="header"><div class="logo">SUPRIYA <span>RAI</span></div><div class="date">RELIANCE INDUSTRIES · NSE: RELIANCE<br>INSTITUTIONAL RESEARCH PITCHBOOK</div></div>
+<div class="hero-layout">
+<div class="hero-title"><div class="kicker">Equity Research / Indian Equities</div><h1>Reliance<br><span class="gold">Industries</span></h1><p class="sub">Institutional-style company overview, segment analysis, financial performance and multi-method valuation framework.</p></div>
+<div class="hero-box"><span class="kicker">Research reference</span><strong>₹1,226.40</strong><small>18 Sep 2026 NSE close · market reference only</small><hr style="margin:20px 0;border:0;border-top:1px solid #dce2e9"><span class="kicker">Prepared by</span><p style="font-size:13px;color:#66758a">Supriya Rai<br>Finance & Equity Research Portfolio</p></div>
+</div>
+<div class="slide-footer"><span>Educational portfolio research · Not investment advice</span><span>01</span></div>
+</section>
+
+<section class="slide">
+<div class="topline"></div><div class="section-number">02 · CONTENTS</div><h2>Reliance Research Pitchbook</h2><p class="sub">A compact investment-banking-style presentation adapted for diversified-company equity research and valuation work.</p>
+<div class="grid2" style="margin-top:30px">
+<div class="card"><h3>01 · Executive Summary</h3><p>Company snapshot, FY2026 financial base and Q1 FY2027 update.</p></div>
+<div class="card"><h3>02 · Company Overview</h3><p>Business portfolio, segment economics and strategic analytical lens.</p></div>
+<div class="card"><h3>03 · Financial Performance</h3><p>Five-year trend, profitability, capital expenditure and balance-sheet indicators.</p></div>
+<div class="card"><h3>04 · Business Segments</h3><p>Jio, Retail, O2C, Oil & Gas, New Energy and Media & Entertainment.</p></div>
+<div class="card"><h3>05 · Forecast & DCF</h3><p>Illustrative operating forecast, FCFF, WACC and terminal-value framework.</p></div>
+<div class="card"><h3>06 · Valuation</h3><p>Trading comparables, SOTP, DCF sensitivity and football field.</p></div>
+</div>
+<div class="callout" style="margin-top:26px"><strong>Pitchbook structure:</strong> The presentation uses common investment-banking building blocks—company overview, business/industry context and valuation—adapted to an equity-research portfolio rather than a transaction pitch.</div>
+<div class="slide-footer"><span>Reliance Industries · Research Pitchbook</span><span>02</span></div>
+</section>
+
+<section class="slide">
+<div class="topline"></div><div class="section-number">03 · EXECUTIVE SUMMARY</div><h2>Reliance is a diversified earnings and capital-allocation story</h2><p class="sub">FY2026 establishes the financial base; Q1 FY2027 provides the latest reported operating update.</p>
+<div class="grid4" style="margin-top:30px">
+<div class="metric"><strong>₹11.76L Cr</strong><span>FY2026 gross revenue</span></div>
+<div class="metric"><strong>₹2.08L Cr</strong><span>FY2026 EBITDA</span></div>
+<div class="metric"><strong>₹95,754 Cr</strong><span>FY2026 PAT</span></div>
+<div class="metric"><strong>₹1.44L Cr</strong><span>FY2026 capex</span></div>
+</div>
+<div class="grid3" style="margin-top:18px">
+<div class="card"><h3>Consumer engines</h3><p>Digital Services and Retail are important growth businesses and together contributed more than 55% of consolidated EBITDA in FY2026 according to Reliance's analyst presentation.</p></div>
+<div class="card"><h3>Energy platform</h3><p>O2C and Oil & Gas remain important earnings contributors with exposure to commodity prices, spreads, production and global demand.</p></div>
+<div class="card"><h3>Capital allocation</h3><p>FY2026 net debt was ₹1,24,717 Cr and net debt / EBITDA was 0.60x; capex was ₹1,44,271 Cr.</p></div>
+</div>
+<div class="callout" style="margin-top:22px">Q1 FY2027 reported gross revenue of ₹3,40,257 Cr, EBITDA of ₹54,067 Cr, PAT of ₹23,196 Cr and capex of ₹38,682 Cr.</div>
+<div class="slide-footer"><span>Source: Reliance FY2025-26 results and Q1 FY2027 financial reporting</span><span>03</span></div>
+</section>
+
+<section class="slide">
+<div class="topline"></div><div class="section-number">04 · COMPANY OVERVIEW</div><h2>Six analytical business engines</h2><p class="sub">Reliance's diversified portfolio requires segment-level analysis because the businesses have different growth, capital intensity, cyclicality and valuation characteristics.</p>
+<div class="grid3" style="margin-top:30px">
+<div class="card"><div class="tag gold">Digital</div><h3 style="margin-top:16px">Jio / Digital Services</h3><p>Track subscribers, ARPU, tariff changes, network investment, EBITDA growth and operating leverage.</p></div>
+<div class="card"><div class="tag blue">Consumer</div><h3 style="margin-top:16px">Reliance Retail</h3><p>Track revenue, store productivity, transaction growth, margins, quick commerce and digital commerce.</p></div>
+<div class="card"><div class="tag">Energy</div><h3 style="margin-top:16px">Oil-to-Chemicals</h3><p>Track refining margins, petrochemical spreads, utilization, crude exposure and global demand.</p></div>
+<div class="card"><div class="tag">Upstream</div><h3 style="margin-top:16px">Oil & Gas</h3><p>Track production, gas prices, development expenditure and resource productivity.</p></div>
+<div class="card"><div class="tag green">New Energy</div><h3 style="margin-top:16px">New Energy</h3><p>Track manufacturing capacity, commercialization, technology execution and returns on invested capital.</p></div>
+<div class="card"><div class="tag">Media</div><h3 style="margin-top:16px">Media & Entertainment</h3><p>Track advertising, subscriptions, content economics and platform integration.</p></div>
+</div>
+<div class="slide-footer"><span>Reliance Industries · Business portfolio</span><span>04</span></div>
+</section>
+
+<section class="slide">
+<div class="topline"></div><div class="section-number">05 · FINANCIAL PERFORMANCE</div><h2>Five-year financial trend + latest update</h2>
+<table class="table">
+<tr><th>₹ Crore</th><th>FY2022</th><th>FY2023</th><th>FY2024</th><th>FY2025</th><th>FY2026</th></tr>
+<tr><td>Revenue</td><td>7,92,756</td><td>9,74,864</td><td>9,00,091</td><td>10,71,174</td><td>11,75,919</td></tr>
+<tr><td>EBITDA</td><td>1,18,050</td><td>1,50,187</td><td>1,78,677</td><td>1,83,422</td><td>2,07,911</td></tr>
+<tr><td>PAT</td><td>67,845</td><td>74,088</td><td>79,020</td><td>81,309</td><td>95,754</td></tr>
+<tr><td>Capex</td><td>99,472</td><td>1,41,809</td><td>1,31,769</td><td>1,31,107</td><td>1,44,271</td></tr>
+</table>
+<div class="grid3" style="margin-top:24px">
+<div class="metric"><strong>17.7%</strong><span>FY2026 EBITDA margin</span></div>
+<div class="metric"><strong>0.60x</strong><span>FY2026 net debt / EBITDA</span></div>
+<div class="metric"><strong>₹3.40L Cr</strong><span>Q1 FY2027 revenue</span></div>
+</div>
+<div class="callout" style="margin-top:22px">The financial profile combines expanding earnings with high reinvestment. The analytical bridge is therefore not only revenue and EBITDA growth, but also capex intensity, balance-sheet capacity and returns on invested capital.</div>
+<div class="slide-footer"><span>Source: Reliance FY2025-26 financial reporting</span><span>05</span></div>
+</section>
+
+<section class="slide">
+<div class="topline"></div><div class="section-number">06 · FORECAST FRAMEWORK</div><h2>Illustrative operating forecast</h2>
+<table class="table" style="margin-top:28px">
+<tr><th>₹ Crore</th><th>FY2026A</th><th>FY2027E</th><th>FY2028E</th><th>FY2029E</th><th>FY2030E</th><th>FY2031E</th></tr>
+<tr><td>Revenue</td><td>11,75,919</td><td>12,58,234</td><td>13,58,893</td><td>14,67,605</td><td>15,70,337</td><td>16,64,557</td></tr>
+<tr><td>Growth</td><td>—</td><td>7%</td><td>8%</td><td>8%</td><td>7%</td><td>6%</td></tr>
+<tr><td>EBITDA margin</td><td>17.7%</td><td>18.0%</td><td>18.3%</td><td>18.5%</td><td>18.7%</td><td>18.8%</td></tr>
+<tr><td>EBITDA</td><td>2,07,911</td><td>2,26,482</td><td>2,48,577</td><td>2,71,507</td><td>2,93,953</td><td>3,12,936</td></tr>
+</table>
+<div class="grid2" style="margin-top:25px">
+<div class="card"><h3>Forecast lens</h3><p>Revenue growth and margin progression are illustrative assumptions carried from the portfolio model. They should be refreshed with company guidance and new segment data.</p></div>
+<div class="card"><h3>Key sensitivities</h3><p>Consumer growth, O2C margins, capex intensity, financing costs, new-energy execution and the pace of digital and retail monetisation.</p></div>
+</div>
+<div class="note">Forecast assumptions are illustrative portfolio-model inputs, not management guidance or analyst consensus.</div>
+<div class="slide-footer"><span>Reliance Industries · Illustrative forecast framework</span><span>06</span></div>
+</section>
+
+<section class="slide">
+<div class="topline"></div><div class="section-number">07 · DCF VALUATION</div><h2>FCFF, WACC and terminal value</h2>
+<div class="grid2" style="margin-top:25px">
+<div class="card"><h3>Illustrative DCF outputs</h3><table class="table"><tr><th>₹ Crore</th><th>FY2027E</th><th>FY2028E</th><th>FY2029E</th></tr><tr><td>EBITDA</td><td>2,26,482</td><td>2,48,577</td><td>2,71,507</td></tr><tr><td>NOPAT</td><td>1,28,611</td><td>1,42,933</td><td>1,57,880</td></tr><tr><td>FCFF</td><td>1,28,611</td><td>1,44,933</td><td>1,66,880</td></tr></table></div>
+<div class="card"><h3>Core assumptions</h3><table class="table"><tr><td>Risk-free rate</td><td>6.5%</td></tr><tr><td>Equity risk premium</td><td>6.0%</td></tr><tr><td>Beta</td><td>0.95</td></tr><tr><td>Illustrative WACC</td><td>10.5%</td></tr><tr><td>Terminal growth</td><td>4.5%</td></tr><tr><td>Terminal value</td><td>₹34.61L Cr</td></tr></table></div>
+</div>
+<div class="callout" style="margin-top:24px"><strong>Valuation discipline:</strong> the DCF is highly sensitive to WACC, terminal growth and capex assumptions. The model therefore uses a sensitivity grid rather than relying on one output.</div>
+<div class="slide-footer"><span>Reliance DCF · Illustrative portfolio model</span><span>07</span></div>
+</section>
+
+<section class="slide">
+<div class="topline"></div><div class="section-number">08 · TRADING COMPARABLES & SOTP</div><h2>Multi-method valuation framework</h2>
+<div class="grid2" style="margin-top:25px">
+<div class="card"><h3>Trading comparables</h3><table class="table"><tr><th>Company</th><th>EV/EBITDA</th><th>P/E</th></tr><tr><td>Reliance</td><td>~9.5–10.5x</td><td>~22–23x</td></tr><tr><td>Bharti Airtel</td><td>~10x</td><td>~40x</td></tr><tr><td>ONGC</td><td>~4x</td><td>~7x</td></tr><tr><td>Coal India</td><td>~6x</td><td>~8x</td></tr></table></div>
+<div class="card"><h3>SOTP methodology</h3><ul><li><strong>Jio:</strong> EV/EBITDA</li><li><strong>Retail:</strong> EV/EBITDA / P/E</li><li><strong>O2C:</strong> EV/EBITDA</li><li><strong>Oil & Gas:</strong> EV/EBITDA</li><li><strong>New Energy:</strong> scenario valuation</li></ul><p style="margin-top:15px">The methodology reflects differences in growth, cyclicality and capital intensity across businesses.</p></div>
+</div>
+<div class="callout" style="margin-top:25px">Comparables are indicative market-reference figures in the underlying portfolio project and should be refreshed to a common measurement date before external use.</div>
+<div class="slide-footer"><span>Reliance Industries · Trading comps + SOTP</span><span>08</span></div>
+</section>
+
+<section class="slide">
+<div class="topline"></div><div class="section-number">09 · DCF SENSITIVITY</div><h2>WACC versus terminal growth</h2>
+<table class="table" style="margin-top:30px">
+<tr><th>Illustrative value / share</th><th>g = 3.5%</th><th>g = 4.0%</th><th>g = 4.5%</th><th>g = 5.0%</th></tr>
+<tr><td>WACC 9.5%</td><td>₹1,520</td><td>₹1,610</td><td>₹1,720</td><td>₹1,850</td></tr>
+<tr><td>WACC 10.0%</td><td>₹1,390</td><td>₹1,470</td><td>₹1,560</td><td>₹1,670</td></tr>
+<tr><td><strong>WACC 10.5%</strong></td><td><strong>₹1,280</strong></td><td><strong>₹1,350</strong></td><td><strong>₹1,430</strong></td><td><strong>₹1,520</strong></td></tr>
+<tr><td>WACC 11.0%</td><td>₹1,190</td><td>₹1,250</td><td>₹1,320</td><td>₹1,390</td></tr>
+<tr><td>WACC 11.5%</td><td>₹1,110</td><td>₹1,170</td><td>₹1,230</td><td>₹1,290</td></tr>
+</table>
+<div class="callout" style="margin-top:25px">These values are illustrative modelling outputs carried from the portfolio project. They demonstrate DCF mechanics and sensitivity; they are not analyst targets or recommendations.</div>
+<div class="slide-footer"><span>Reliance DCF sensitivity · Illustrative only</span><span>09</span></div>
+</section>
+
+<section class="slide">
+<div class="topline"></div><div class="section-number">10 · VALUATION FOOTBALL FIELD / CATALYSTS & RISKS</div><h2>Valuation triangulation and monitoring variables</h2>
+<div class="football">
+<div class="scale"><span>₹1,000</span><span>₹1,250</span><span>₹1,500</span><span>₹1,750</span><span>₹2,000</span></div>
+<div class="frow"><div class="fmethod">DCF</div><div class="track"><div class="range" style="left:28%;width:57%"></div><div class="marker" style="left:45.1%"></div></div><div class="fvalues">₹1,280–₹1,850</div></div>
+<div class="frow"><div class="fmethod">Trading Comps</div><div class="track"><div class="range" style="left:35%;width:45%"></div><div class="marker" style="left:45.1%"></div></div><div class="fvalues">₹1,350–₹1,800</div></div>
+<div class="frow"><div class="fmethod">SOTP</div><div class="track"><div class="range green" style="left:40%;width:42%"></div><div class="marker" style="left:45.1%"></div></div><div class="fvalues">₹1,400–₹1,820</div></div>
+</div>
+<div class="grid2" style="margin-top:25px">
+<div class="card"><h3 class="green">Catalysts to monitor</h3><ul><li>Jio subscriber / ARPU growth</li><li>Retail revenue and margin expansion</li><li>New-energy scale-up</li><li>O2C margin improvement</li><li>Lower leverage relative to earnings</li></ul></div>
+<div class="card"><h3 class="blue">Risks / sensitivities</h3><ul><li>High capex requirements</li><li>Commodity-price volatility</li><li>Telecom regulation</li><li>New-energy execution</li><li>Retail margin pressure</li></ul></div>
+</div>
+<div class="slide-footer"><span>Football field · Catalysts & risks</span><span>10</span></div>
+</section>
+
+<section class="slide dark">
+<div class="topline"></div><div class="section-number">11 · ANALYST FRAMEWORK & SOURCES</div><h2>Research process</h2>
+<div class="grid4" style="margin-top:30px">
+<div class="card"><div class="section-number">01</div><h3>Business Quality</h3><p>Segment economics, competitive position and growth engines.</p></div>
+<div class="card"><div class="section-number">02</div><h3>Financial Analysis</h3><p>Revenue, EBITDA, margins, capex, debt and cash generation.</p></div>
+<div class="card"><div class="section-number">03</div><h3>Valuation</h3><p>DCF, trading comparables, SOTP and sensitivity analysis.</p></div>
+<div class="card"><div class="section-number">04</div><h3>Monitoring</h3><p>Update the model as quarterly results and market inputs change.</p></div>
+</div>
+<div style="margin-top:30px;padding:24px;background:#12243a">
+<div class="kicker">Primary sources</div>
+<p class="sub">Reliance Industries FY2025-26 financial reporting; FY2025-26 analyst meeting; Q1 FY2027 financial reporting; Reliance investor-relations materials; dated market-price reference from public historical market data.</p>
+</div>
+<div class="callout" style="margin-top:24px"><strong>Portfolio disclaimer:</strong> This pitchbook demonstrates equity research, financial analysis and valuation presentation skills. It is educational and does not constitute investment advice, a recommendation, solicitation or forecast.</div>
+<div class="slide-footer"><span>Supriya Rai · Finance & Equity Research Portfolio</span><span>11</span></div>
+</section>
+
+</div></body></html>
