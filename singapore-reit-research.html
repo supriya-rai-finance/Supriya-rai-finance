@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Singapore REIT Research | Supriya Rai</title>
+
+<meta name="description"
+content="Singapore REIT equity research framework covering CICT, REIT fundamentals, DPU, NAV, gearing, interest rates, valuation, catalysts and risks.">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #07111f;
+    color: #e8eef7;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    width: min(1120px, 92%);
+    margin: auto;
+}
+
+/* NAV */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(7,17,31,0.96);
+    border-bottom: 1px solid #1e334b;
+    backdrop-filter: blur(10px);
+}
+
+.nav-inner {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #8fb8ff;
+}
+
+.back {
+    text-decoration: none;
+    color: #9eb1c7;
+    font-size: 13px;
+}
+
+.back:hover {
+    color: #ffffff;
+}
+
+/* HERO */
+
+.hero {
+    padding: 95px 0 80px;
+    border-bottom: 1px solid #1a2d43;
+}
+
+.eyebrow {
+    color: #8fb8ff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    max-width: 900px;
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #8fb8ff;
+}
+
+.hero-description {
+    max-width: 820px;
+    color: #a5b7ca;
+    font-size: 17px;
+}
+
+.disclaimer {
+    margin-top: 28px;
+    max-width: 850px;
+    padding: 15px 18px;
+    border-left: 2px solid #5279a7;
+    background: #0b192b;
+    color: #8297ad;
+    font-size: 12px;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 80px 0;
+    border-bottom: 1px solid #15283d;
+}
+
+.section-number {
+    color: #66809d;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 34px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.section-intro {
+    max-width: 800px;
+    color: #96aabe;
+    margin-bottom: 35px;
+}
+
+/* CARDS */
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 20px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 18px;
+}
+
+.card {
+    background: #0b192b;
+    border: 1px solid #243b54;
+    border-radius: 9px;
+    padding: 27px;
+}
+
+.card h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #94a8bd;
+    font-size: 14px;
+}
+
+.label {
+    color: #8fb8ff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+/* METRICS */
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.metric {
+    background: #0b192b;
+    border: 1px solid #243b54;
+    border-radius: 8px;
+    padding: 22px;
+}
+
+.metric strong {
+    display: block;
+    font-size: 27px;
+    color: #edf4ff;
+    margin-bottom: 5px;
+}
+
+.metric span {
+    color: #8296ad;
+    font-size: 11px;
+}
+
+/* TABLE */
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+    background: #0b192b;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 15px 17px;
+    border-bottom: 1px solid #21364e;
+    font-size: 13px;
+}
+
+th {
+    color: #8fb8ff;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+td {
+    color: #b0bfd0;
+}
+
+td strong {
+    color: #edf4ff;
+}
+
+/* FORMULA */
+
+.formula {
+    background: #081526;
+    border: 1px solid #2a425d;
+    padding: 22px;
+    border-radius: 8px;
+    margin-top: 18px;
+    font-family: "Courier New", monospace;
+    color: #c2d5ed;
+    font-size: 14px;
+}
+
+/* VALUATION */
+
+.valuation-box {
+    border: 1px solid #35516f;
+    background: #0a182a;
+    border-radius: 10px;
+    padding: 32px;
+}
+
+.valuation-box h3 {
+    margin-bottom: 12px;
+}
+
+.range {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.range-item {
+    border: 1px solid #2a425d;
+    padding: 18px;
+    border-radius: 7px;
+}
+
+.range-item strong {
+    display: block;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.range-item span {
+    color: #8196ad;
+    font-size: 11px;
+}
+
+/* RISKS */
+
+.risk {
+    border-left: 2px solid #536f8d;
+    padding: 17px 20px;
+    background: #0b192b;
+}
+
+.risk h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.risk p {
+    color: #91a5ba;
+    font-size: 13px;
+}
+
+/* SOURCES */
+
+.sources {
+    display: grid;
+    gap: 10px;
+}
+
+.source {
+    padding: 16px 18px;
+    border: 1px solid #233b54;
+    background: #0b192b;
+    border-radius: 7px;
+}
+
+.source a {
+    color: #9fc2f5;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.source a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 35px 0;
+    color: #667d96;
+    font-size: 12px;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .metrics {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .range {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .metrics {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<div class="container nav-inner">
+
+<a href="index.html" class="logo">
+    Supriya <span>Rai</span>
+</a>
+
+<a href="index.html#projects" class="back">
+    ← Back to Research Portfolio
+</a>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="container">
+
+<div class="eyebrow">
+    Singapore REITs · Equity Research
+</div>
+
+<h1>
+    Singapore REIT <span>Research Framework</span>
+</h1>
+
+<p class="hero-description">
+    Fundamental research framework using CapitaLand Integrated
+    Commercial Trust (CICT) as a primary case study, with emphasis
+    on property fundamentals, distributions, leverage, interest-rate
+    sensitivity, NAV and REIT-specific valuation.
+</p>
+
+<div class="disclaimer">
+    Educational portfolio research only. Valuation assumptions shown
+    in this report are illustrative analytical assumptions and are
+    not company guidance or investment advice.
+</div>
+
+</div>
+
+</header>
+
+
+<!-- 01 -->
+
+<section>
+
+<div class="container">
+
+<div class="section-number">
+    01 — SECTOR OVERVIEW
+</div>
+
+<h2>
+    Singapore REIT investment framework
+</h2>
+
+<p class="section-intro">
+    REIT analysis requires a different framework from conventional
+    operating-company equity research. Distribution sustainability,
+    property values, occupancy, lease structure, leverage and funding
+    costs are central to the analysis.
+</p>
+
+
+<div class="grid-3">
+
+<div class="card">
+
+<div class="label">
+    Income
+</div>
+
+<h3>
+    Distribution Profile
+</h3>
+
+<p>
+    Analyse distributable income, DPU growth, payout sustainability,
+    distribution yield and the quality of recurring rental income.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="label">
+    Property
+</div>
+
+<h3>
+    Asset Quality
+</h3>
+
+<p>
+    Assess occupancy, rental reversions, tenant concentration,
+    WALE, location, asset type and portfolio diversification.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="label">
+    Capital
+</div>
+
+<h3>
+    Balance Sheet
+</h3>
+
+<p>
+    Monitor aggregate leverage, interest coverage, debt maturity,
+    fixed-rate debt, cost of debt and refinancing requirements.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 02 -->
+
+<section>
+
+<div class="container">
+
+<div class="section-number">
+    02 — CICT CASE STUDY
+</div>
+
+<h2>
+    CapitaLand Integrated Commercial Trust
+</h2>
+
+<p class="section-intro">
+    CICT is used as the primary case study because its portfolio
+    provides exposure to Singapore retail and office real estate,
+    together with selected overseas assets.
+</p>
+
+
+<div class="metrics">
+
+<div class="metric">
+    <strong>S$27.4B</strong>
+    <span>Portfolio property value</span>
+</div>
+
+<div class="metric">
+    <strong>11.58¢</strong>
+    <span>FY2025 DPU</span>
+</div>
+
+<div class="metric">
+    <strong>96.9%</strong>
+    <span>Committed occupancy</span>
+</div>
+
+<div class="metric">
+    <strong>38.6%</strong>
+    <span>Aggregate leverage</span>
+</div>
+
+</div>
+
+<br>
+
+<div class="card">
+
+<h3>
+    FY2025 operating snapshot
+</h3>
+
+<p>
+    CICT reported FY2025 distributable income of approximately
+    S$860.9 million and DPU of 11.58 Singapore cents. Portfolio
+    property value was approximately S$27.4 billion and committed
+    occupancy was 96.9%. Aggregate leverage was 38.6% and average
+    cost of debt was 3.2%.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 03 -->
+
+<section>
+
+<div class="container">
+
+<div class="section-number">
+    03 — PROPERTY PORTFOLIO
+</div>
+
+<h2>
+    Portfolio quality and diversification
+</h2>
+
+<div class="grid-2">
+
+<div class="card">
+
+<div class="label">
+    Singapore
+</div>
+
+<h3>
+    Retail & Office
+</h3>
+
+<p>
+    CICT's portfolio includes Singapore retail and office properties
+    alongside selected overseas commercial assets. The portfolio
+    includes assets such as Raffles City, Plaza Singapura,
+    CapitaSpring, Capital Tower and other major commercial properties.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="label">
+    Portfolio
+</div>
+
+<h3>
+    Diversification
+</h3>
+
+<p>
+    The research framework evaluates geographic exposure, tenant
+    concentration, asset type, lease expiry profile and recurring
+    rental income rather than relying solely on headline distribution
+    yield.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 04 -->
+
+<section>
+
+<div class="container">
+
+<div class="section-number">
+    04 — OPERATING PERFORMANCE
+</div>
+
+<h2>
+    Revenue, occupancy and rental growth
+</h2>
+
+<div class="grid-2">
+
+<div class="card">
+
+<div class="label">
+    Income
+</div>
+
+<h3>
+    Net Property Income
+</h3>
+
+<p>
+    NPI growth should be decomposed into rental reversions,
+    occupancy changes, acquisitions, divestments, asset enhancement
+    initiatives and property operating expenses.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="label">
+    Leasing
+</div>
+
+<h3>
+    Occupancy & WALE
+</h3>
+
+<p>
+    High occupancy can support income visibility, while WALE and
+    lease expiry concentration provide insight into future leasing
+    risk and potential rental resets.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="formula">
+
+NPI Growth ≈ Rental Growth + Occupancy Change
++ Portfolio Growth + Asset Enhancement Effects
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 05 -->
+
+<section>
+
+<div class="container">
+
+<div class="section-number">
+    05 — DISTRIBUTION ANALYSIS
+</div>
+
+<h2>
+    DPU and income sustainability
+</h2>
+
+<p class="section-intro">
+    Distribution per Unit is one of the key earnings measures for
+    REIT investors, but the quality and sustainability of the
+    underlying distributable income also matter.
+</p>
+
+
+<div class="grid-3">
+
+<div class="card">
+
+<div class="label">
+    DPU
+</div>
+
+<h3>
+    Distribution Growth
+</h3>
+
+<p>
+    Track DPU over multiple reporting periods and separate organic
+    rental growth from acquisitions, disposals and capital-market
+    activity.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="label">
+    Income
+</div>
+
+<h3>
+    Distributable Income
+</h3>
+
+<p>
+    Analyse the bridge from property income to distributable income
+    and identify recurring versus non-recurring items.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="label">
+    Yield
+</div>
+
+<h3>
+    Distribution Yield
+</h3>
+
+<p>
+    Compare distribution yield with relevant REIT peers, Singapore
+    government bond yields and the broader cost of capital environment.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 06 -->
+
+<section>
+
+<div class="container">
+
+<div class="section-number">
+    06 — BALANCE SHEET
+</div>
+
+<h2>
+    Gearing and financing risk
+</h2>
+
+
+<table>
+
+<thead>
+
+<tr>
+<th>Metric</th>
+<th>Research Question</th>
+<th>Why It Matters</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td><strong>Aggregate leverage</strong></td>
+<td>How much debt supports the property portfolio?</td>
+<td>Higher leverage increases financial sensitivity.</td>
+</tr>
+
+<tr>
+<td><strong>Cost of debt</strong></td>
+<td>How expensive is current funding?</td>
+<td>Directly affects distributable income.</td>
+</tr>
+
+<tr>
+<td><strong>Debt maturity</strong></td>
+<td>When does debt need refinancing?</td>
+<td>Highlights refinancing concentration.</td>
+</tr>
+
+<tr>
+<td><strong>Fixed-rate debt</strong></td>
+<td>How much debt is protected from rate changes?</td>
+<td>Provides visibility over funding costs.</td>
+</tr>
+
+<tr>
+<td><strong>Interest coverage</strong></td>
+<td>How comfortably does operating income cover interest?</td>
+<td>Important credit-risk indicator.</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- 07 -->
+
+<section>
+
+<div class="container">
+
+<div class="section-number">
+    07 — INTEREST RATE SENSITIVITY
+</div>
+
+<h2>
+    Interest rates and REIT valuations
+</h2>
+
+<div class="grid-2">
+
+<div class="card">
+
+<h3>
+    Higher-rate environment
+</h3>
+
+<p>
+    Higher borrowing costs can reduce distributable income and
+    increase refinancing expenses. Higher risk-free yields can also
+    change the relative attractiveness of REIT distributions.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+    Lower-rate environment
+</h3>
+
+<p>
+    Lower funding costs can support distribution growth and improve
+    valuation support, although property fundamentals and market
+    expectations remain important.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="formula">
+
+Estimated DPU Impact ≈ Change in Interest Expense
+÷ Units Outstanding
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 08 -->
+
+<section>
+
+<div class="container">
+
+<div class="section-number">
+    08 — PEER FRAMEWORK
+</div>
+
+<h2>
+    Singapore REIT comparable analysis
+</h2>
+
+<p class="section-intro">
+    Peer analysis should compare REITs with similar asset exposure,
+    geography, leverage and income characteristics rather than
+    relying only on headline yield.
+</p>
+
+
+<div class="table-wrap">
+
+<table>
+
+<thead>
+
+<tr>
+<th>REIT</th>
+<th>Primary Focus</th>
+<th>Research Variables</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td><strong>CICT</strong></td>
+<td>Retail & Office</td>
+<td>DPU, occupancy, NAV, leverage, rental growth</td>
+</tr>
+
+<tr>
+<td><strong>CLAR</strong></td>
+<td>Business Space & Industrial</td>
+<td>Occupancy, WALE, leverage, rental reversion</td>
+</tr>
+
+<tr>
+<td><strong>MLT</strong></td>
+<td>Logistics</td>
+<td>Occupancy, logistics rents, leverage, geographic mix</td>
+</tr>
+
+<tr>
+<td><strong>MPACT</strong></td>
+<td>Commercial & Retail</td>
+<td>Retail performance, office exposure, NAV, DPU</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 09 -->
+
+<section>
+
+<div class="container">
+
+<div class="section-number">
+    09 — VALUATION
+</div>
+
+<h2>
+    REIT valuation framework
+</h2>
+
+<p class="section-intro">
+    REIT valuation combines income-based and asset-based approaches.
+    No single multiple should be interpreted independently from
+    property quality, financing structure and interest rates.
+</p>
+
+
+<div class="grid-3">
+
+<div class="card">
+
+<div class="label">
+    Income
+</div>
+
+<h3>
+    Dividend / DPU Model
+</h3>
+
+<p>
+    A DPU-based model can estimate equity value by discounting
+    expected distributions and applying an appropriate terminal
+    growth assumption.
+</p>
+
+<div class="formula">
+Value = DPU₁ / (Ke − g)
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="label">
+    Asset
+</div>
+
+<h3>
+    Price / NAV
+</h3>
+
+<p>
+    Compare the market price with adjusted net asset value and
+    investigate the reasons for any premium or discount.
+</p>
+
+<div class="formula">
+P/NAV = Market Price / NAV per Unit
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="label">
+    Income
+</div>
+
+<h3>
+    Distribution Yield
+</h3>
+
+<p>
+    Compare forward DPU yield with peers and relevant Singapore
+    government bond yields.
+</p>
+
+<div class="formula">
+Yield = Forward DPU / Unit Price
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 10 -->
+
+<section>
+
+<div class="container">
+
+<div class="section-number">
+    10 — ILLUSTRATIVE VALUATION
+</div>
+
+<h2>
+    Scenario-based valuation framework
+</h2>
+
+<p class="section-intro">
+    The following framework is intentionally illustrative. It is
+    designed to demonstrate how an analyst can structure valuation
+    sensitivity rather than present a live target price.
+</p>
+
+
+<div class="valuation-box">
+
+<h3>
+    DPU sensitivity
+</h3>
+
+<p>
+    A research model can test different combinations of forward DPU,
+    required return and long-term growth.
+</p>
+
+
+<div class="range">
+
+<div class="range-item">
+
+<strong>Bear</strong>
+
+<span>
+Lower DPU growth · Higher required return
+</span>
+
+</div>
+
+
+<div class="range-item">
+
+<strong>Base</strong>
+
+<span>
+Moderate DPU growth · Normalised funding environment
+</span>
+
+</div>
+
+
+<div class="range-item">
+
+<strong>Bull</strong>
+
+<span>
+Higher DPU growth · Lower funding pressure
+</span>
+
+</div>
+
+</div>
+
+
+<div class="formula">
+
+Illustrative Value = Forward DPU / (Required Return − Growth)
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 11 -->
+
+<section>
+
+<div class="container">
+
+<div class="section-number">
+    11 — NAV ANALYSIS
+</div>
+
+<h2>
+    Net asset value framework
+</h2>
+
+<p class="section-intro">
+    NAV provides an asset-based valuation perspective. The key
+    analytical question is whether property valuations adequately
+    reflect rental income, capitalisation rates and current market
+    conditions.
+</p>
+
+
+<div class="grid-2">
+
+<div class="card">
+
+<h3>
+    Property Valuation
+</h3>
+
+<p>
+    Review independent property valuations, capitalisation rates,
+    comparable transactions and changes in fair value.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+    NAV Sensitivity
+</h3>
+
+<p>
+    Stress-test NAV for changes in property values and assess how
+    leverage affects NAV per unit.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="formula">
+
+NAV per Unit =
+(Net Property Assets − Liabilities) / Units Outstanding
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 12 -->
+
+<section>
+
+<div class="container">
+
+<div class="section-number">
+    12 — FOOTBALL FIELD
+</div>
+
+<h2>
+    Valuation triangulation
+</h2>
+
+<p class="section-intro">
+    A professional REIT valuation can present several independent
+    frameworks side by side rather than depending on a single
+    valuation method.
+</p>
+
+
+<div class="grid-3">
+
+<div class="card">
+
+<div class="label">
+    Method 1
+</div>
+
+<h3>
+    DPU / DDM
+</h3>
+
+<p>
+    Distribution-based valuation under bear, base and bull
+    assumptions.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="label">
+    Method 2
+</div>
+
+<h3>
+    P/NAV
+</h3>
+
+<p>
+    Market price relative to adjusted net asset value and peer
+    historical ranges.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="label">
+    Method 3
+</div>
+
+<h3>
+    Distribution Yield
+</h3>
+
+<p>
+    Forward yield comparison against peers and the interest-rate
+    environment.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="disclaimer">
+
+The football-field framework is presented as an analytical
+methodology. No live target price is assigned on this page.
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 13 -->
+
+<section>
+
+<div class="container">
+
+<div class="section-number">
+    13 — CATALYSTS & RISKS
+</div>
+
+<h2>
+    Key research variables
+</h2>
+
+
+<div class="grid-2">
+
+<div class="risk">
+
+<h3>
+    Potential Catalysts
+</h3>
+
+<p>
+    Rental reversions, occupancy improvement, asset enhancement
+    initiatives, acquisitions, capital recycling, lower funding
+    costs and stronger property valuations.
+</p>
+
+</div>
+
+
+<div class="risk">
+
+<h3>
+    Key Risks
+</h3>
+
+<p>
+    Higher interest rates, refinancing costs, falling property
+    valuations, tenant weakness, vacancy, dilution from equity
+    raising and weaker rental demand.
+</p>
+
+</div>
+
+
+<div class="risk">
+
+<h3>
+    Macro Variables
+</h3>
+
+<p>
+    Singapore interest rates, government bond yields, economic
+    growth, office demand, retail spending and property-market
+    conditions.
+</p>
+
+</div>
+
+
+<div class="risk">
+
+<h3>
+    Balance Sheet Variables
+</h3>
+
+<p>
+    Leverage, debt maturity, fixed-rate debt, interest coverage,
+    cost of debt and available liquidity.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 14 -->
+
+<section>
+
+<div class="container">
+
+<div class="section-number">
+    14 — ANALYST FRAMEWORK
+</div>
+
+<h2>
+    How I would analyse a Singapore REIT
+</h2>
+
+<div class="grid-2">
+
+<div class="card">
+
+<h3>
+    Step 01
+</h3>
+
+<p>
+    Understand the portfolio, asset classes, geography and tenant
+    concentration.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+    Step 02
+</h3>
+
+<p>
+    Analyse occupancy, rental reversions, WALE and leasing pipeline.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+    Step 03
+</h3>
+
+<p>
+    Build a DPU and distributable-income forecast.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+    Step 04
+</h3>
+
+<p>
+    Stress-test leverage, refinancing and interest-rate assumptions.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+    Step 05
+</h3>
+
+<p>
+    Calculate NAV and compare market price with NAV.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+    Step 06
+</h3>
+
+<p>
+    Compare valuation with relevant Singapore REIT peers.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 15 -->
+
+<section>
+
+<div class="container">
+
+<div class="section-number">
+    15 — RESEARCH CONCLUSION
+</div>
+
+<h2>
+    Key takeaways
+</h2>
+
+<div class="card">
+
+<p>
+    Singapore REIT analysis requires a combination of property-level
+    research, income forecasting, balance-sheet analysis and
+    valuation. CICT provides a useful case study because its
+    diversified commercial portfolio allows analysis across retail,
+    office, occupancy, rental income, leverage and capital management.
+</p>
+
+<br>
+
+<p>
+    The research process should ultimately connect three areas:
+    <strong>property fundamentals → distributable income → valuation.</strong>
+</p>
+
+<br>
+
+<p>
+    For portfolio construction or investment decisions, the model
+    should be refreshed with the latest unit price, DPU guidance,
+    interest rates, property valuations and company disclosures.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SOURCES -->
+
+<section>
+
+<div class="container">
+
+<div class="section-number">
+    16 — SOURCES
+</div>
+
+<h2>
+    Official research sources
+</h2>
+
+<div class="sources">
+
+<div class="source">
+
+<a href="https://investor.cict.com.sg/misc/ar2025/"
+target="_blank">
+
+CapitaLand Integrated Commercial Trust —
+Annual Report 2025
+
+</a>
+
+</div>
+
+
+<div class="source">
+
+<a href="https://www.capitaland.com/content/dam/capitaland-newsroom/International/2026/february/cict-fy-2025-results/CICT%202025%20Full%20Year%20Unaudited%20Financial%20Statement.pdf"
+target="_blank">
+
+CICT FY2025 Full-Year Financial Statements
+
+</a>
+
+</div>
+
+
+<div class="source">
+
+<a href="https://investor.capitaland-ascendasreit.com/misc/ar2025/"
+target="_blank">
+
+CapitaLand Ascendas REIT —
+Annual Report 2025
+
+</a>
+
+</div>
+
+
+<div class="source">
+
+<a href="https://investor.mapletreelogisticstrust.com/investor-resources.html"
+target="_blank">
+
+Mapletree Logistics Trust —
+Investor Resources & Annual Reports
+
+</a>
+
+</div>
+
+
+<div class="source">
+
+<a href="https://investor.mapletreepact.com/investor-resources.html"
+target="_blank">
+
+Mapletree Pan Asia Commercial Trust —
+Investor Resources
+
+</a>
+
+</div>
+
+
+<div class="source">
+
+<a href="https://links.sgx.com/"
+target="_blank">
+
+Singapore Exchange —
+Corporate Announcements
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-inner">
+
+<span>
+© 2026 Supriya Rai
+</span>
+
+<span>
+Singapore REIT Research · Equity Valuation · Financial Analysis
+</span>
+
+</div>
+
+</footer>
+
+
+</body>
+</html>
