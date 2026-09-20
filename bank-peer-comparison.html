@@ -1915,6 +1915,16 @@
 </footer>
 
 
+<script>
+(function(){
+ const bar=document.getElementById('projectProgress');
+ const update=()=>{const h=document.documentElement.scrollHeight-innerHeight;bar.style.width=(h>0?(scrollY/h)*100:0)+'%';};
+ addEventListener('scroll',update,{passive:true});update();
+ const els=document.querySelectorAll('section,.card,.metric,.valuation-box,.snapshot-panel,.dashboard,.pitch-card');
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:.08});
+ els.forEach(e=>io.observe(e));
+})();
+</script>
 </body>
 
 </html>
