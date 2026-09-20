@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Larsen & Toubro Equity Research | Supriya Rai</title>
+<title>Larsen &amp; Toubro Equity Research | Supriya Rai</title>
 
 <meta name="description"
-content="Larsen & Toubro equity research covering order book, financial performance, segment analysis, balance sheet, valuation framework, catalysts and risks.">
+content="Larsen & Toubro equity research covering FY2026 performance, Q1 FY2027 results, order book, segment analysis, profitability, balance sheet, valuation framework, catalysts and risks.">
 
 <style>
 
@@ -21,13 +22,21 @@ content="Larsen & Toubro equity research covering order book, financial performa
     --bg: #06111f;
     --panel: #0b1b2f;
     --panel2: #0f2239;
+    --panel3: #09182a;
     --border: #1d3858;
+    --border2: #17304d;
     --text: #e8f0fb;
     --muted: #8ca6c2;
+    --muted2: #718ba8;
     --blue: #7fb0ff;
-    --blue2: #9bc0ff;
+    --blue2: #a7c6ff;
     --green: #69d3a3;
     --amber: #f0c674;
+    --red: #d98f8f;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -43,19 +52,22 @@ a {
 }
 
 .container {
-    width: min(1100px, 90%);
+    width: min(1120px, 90%);
     margin: auto;
 }
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
     border-bottom: 1px solid #14283f;
     padding: 22px 0;
+    background: #06111f;
 }
 
 .nav-inner {
-    width: min(1100px, 90%);
+    width: min(1120px, 90%);
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -80,11 +92,19 @@ nav {
     color: var(--blue);
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
-    padding: 72px 0 65px;
+    padding: 78px 0 68px;
     border-bottom: 1px solid #14283f;
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(58, 103, 160, 0.12),
+            transparent 35%
+        );
 }
 
 .kicker {
@@ -96,36 +116,39 @@ nav {
 }
 
 .hero h1 {
-    font-size: clamp(42px, 6vw, 72px);
+    font-size: clamp(42px, 6vw, 76px);
     line-height: 1.02;
-    max-width: 850px;
+    max-width: 900px;
     margin-bottom: 24px;
 }
 
 .hero h1 span {
     color: var(--blue);
+    display: block;
 }
 
 .hero p {
-    max-width: 760px;
+    max-width: 820px;
     color: var(--muted);
     font-size: 15px;
 }
 
 .disclaimer {
     margin-top: 26px;
-    max-width: 760px;
-    padding: 15px 18px;
+    max-width: 850px;
+    padding: 16px 18px;
     border-left: 2px solid var(--blue);
     background: #091a2e;
     color: #7892af;
     font-size: 10px;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
 section {
-    padding: 65px 0;
+    padding: 68px 0;
     border-bottom: 1px solid #14283f;
 }
 
@@ -138,7 +161,7 @@ section {
 }
 
 section h2 {
-    font-size: 28px;
+    font-size: 29px;
     line-height: 1.25;
     margin-bottom: 18px;
 }
@@ -146,11 +169,13 @@ section h2 {
 .section-intro {
     color: var(--muted);
     font-size: 13px;
-    max-width: 820px;
-    margin-bottom: 28px;
+    max-width: 850px;
+    margin-bottom: 30px;
 }
 
-/* CARDS */
+/* =========================
+   GRIDS
+========================= */
 
 .grid-2 {
     display: grid;
@@ -164,6 +189,10 @@ section h2 {
     gap: 16px;
 }
 
+/* =========================
+   CARDS
+========================= */
+
 .card {
     background: var(--panel);
     border: 1px solid var(--border);
@@ -171,12 +200,16 @@ section h2 {
     padding: 24px;
 }
 
+.card:hover {
+    border-color: #31557c;
+}
+
 .card-label {
     color: var(--blue);
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 1.5px;
-    margin-bottom: 8px;
+    margin-bottom: 9px;
 }
 
 .card h3 {
@@ -189,7 +222,9 @@ section h2 {
     font-size: 12px;
 }
 
-/* SNAPSHOT */
+/* =========================
+   SNAPSHOT
+========================= */
 
 .snapshot {
     display: grid;
@@ -203,6 +238,7 @@ section h2 {
     border: 1px solid var(--border);
     border-radius: 9px;
     padding: 20px;
+    min-height: 100px;
 }
 
 .metric span {
@@ -217,11 +253,29 @@ section h2 {
 .metric strong {
     display: block;
     color: var(--text);
-    font-size: 22px;
+    font-size: 21px;
     line-height: 1.2;
 }
 
-/* TABLES */
+/* =========================
+   UPDATE BADGE
+========================= */
+
+.update-badge {
+    display: inline-block;
+    padding: 7px 12px;
+    border: 1px solid #31557c;
+    border-radius: 20px;
+    color: var(--blue2);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   TABLES
+========================= */
 
 .table-wrap {
     overflow-x: auto;
@@ -232,7 +286,7 @@ section h2 {
 table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 650px;
+    min-width: 700px;
 }
 
 th {
@@ -246,29 +300,28 @@ th {
 
 td {
     background: #09192c;
-    border-top: 1px solid #17304d;
+    border-top: 1px solid var(--border2);
     color: var(--muted);
     font-size: 11px;
     padding: 14px;
+    vertical-align: top;
 }
 
 td strong {
     color: var(--text);
 }
 
-/* HIGHLIGHT */
+/* =========================
+   HIGHLIGHT
+========================= */
 
 .highlight {
     background: var(--panel);
     border: 1px solid var(--border);
     border-left: 3px solid var(--blue);
-    padding: 24px;
+    padding: 23px;
     border-radius: 8px;
     margin-top: 24px;
-}
-
-.highlight strong {
-    color: var(--text);
 }
 
 .highlight p {
@@ -276,13 +329,19 @@ td strong {
     font-size: 12px;
 }
 
-/* ORDER BOOK */
+.highlight strong {
+    color: var(--text);
+}
+
+/* =========================
+   LARGE NUMBERS
+========================= */
 
 .big-number {
     font-size: 38px;
     font-weight: 700;
     color: var(--blue2);
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .subtext {
@@ -290,8 +349,12 @@ td strong {
     font-size: 11px;
 }
 
+/* =========================
+   BARS
+========================= */
+
 .bar-row {
-    margin: 18px 0;
+    margin: 20px 0;
 }
 
 .bar-header {
@@ -315,13 +378,15 @@ td strong {
     border-radius: 10px;
 }
 
-/* VALUATION */
+/* =========================
+   VALUATION
+========================= */
 
 .valuation-box {
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 9px;
-    padding: 28px;
+    padding: 27px;
 }
 
 .formula {
@@ -336,29 +401,34 @@ td strong {
 }
 
 .note {
-    color: #728ba7;
+    color: var(--muted2);
     font-size: 10px;
     margin-top: 12px;
 }
 
-/* RISK */
-
-.risk {
-    border-left: 2px solid #d88c8c;
-}
+/* =========================
+   CATALYST / RISK
+========================= */
 
 .catalyst {
     border-left: 2px solid var(--green);
 }
 
-/* CONCLUSION */
+.risk {
+    border-left: 2px solid var(--red);
+}
+
+/* =========================
+   CONCLUSION
+========================= */
 
 .conclusion {
-    background: linear-gradient(
-        135deg,
-        #0b1b2f,
-        #0a1829
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #0b1b2f,
+            #0a1829
+        );
     border: 1px solid var(--border);
     padding: 32px;
     border-radius: 10px;
@@ -369,10 +439,28 @@ td strong {
     font-size: 13px;
 }
 
-/* SOURCES */
+/* =========================
+   SOURCE LINKS
+========================= */
+
+.source-link {
+    color: var(--blue);
+}
+
+.source-link:hover {
+    color: var(--blue2);
+}
+
+.sources {
+    list-style: none;
+}
 
 .sources li {
-    margin-bottom: 10px;
+    margin-bottom: 14px;
+    padding: 14px 16px;
+    background: var(--panel3);
+    border: 1px solid var(--border2);
+    border-radius: 7px;
     color: var(--muted);
     font-size: 11px;
 }
@@ -381,17 +469,21 @@ td strong {
     color: var(--text);
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-    padding: 35px 0;
+    padding: 38px 0;
     color: #627b96;
     font-size: 10px;
 }
 
-/* RESPONSIVE */
+/* =========================
+   MOBILE
+========================= */
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
 
     .snapshot {
         grid-template-columns: repeat(2, 1fr);
@@ -403,14 +495,14 @@ footer {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 620px) {
 
     .hero {
-        padding: 50px 0;
+        padding: 52px 0;
     }
 
     .hero h1 {
-        font-size: 42px;
+        font-size: 43px;
     }
 
     .grid-2 {
@@ -422,19 +514,29 @@ footer {
     }
 
     section {
-        padding: 50px 0;
+        padding: 52px 0;
+    }
+
+    .nav-inner {
+        gap: 15px;
     }
 
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
+
     <div class="nav-inner">
 
         <a href="index.html" class="logo">
@@ -446,17 +548,20 @@ footer {
         </a>
 
     </div>
+
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <header class="hero">
 
     <div class="container">
 
         <div class="kicker">
-            INDIAN EQUITIES · EQUITY RESEARCH
+            INDIAN EQUITIES · FUNDAMENTAL RESEARCH
         </div>
 
         <h1>
@@ -465,17 +570,18 @@ footer {
         </h1>
 
         <p>
-            Fundamental research framework covering order-book visibility,
-            infrastructure and energy execution, segment economics,
-            profitability, balance-sheet strength, cash generation and
-            valuation.
+            Fundamental research covering order-book visibility,
+            infrastructure and energy execution, financial performance,
+            profitability, working capital, balance sheet, valuation
+            framework, catalysts and risks.
         </p>
 
         <div class="disclaimer">
-            Educational portfolio research only. Historical financial figures
-            are based primarily on L&amp;T's official FY2025–26 disclosures.
-            Valuation sections are analytical frameworks and illustrative
-            assumptions, not investment advice or company guidance.
+            Educational portfolio research only. Historical and quarterly
+            financial figures are based primarily on Larsen &amp; Toubro's
+            official investor disclosures. Valuation sections are analytical
+            frameworks and illustrative assumptions, not investment advice
+            or company guidance.
         </div>
 
     </div>
@@ -483,24 +589,32 @@ footer {
 </header>
 
 
-<!-- 01 EXECUTIVE SNAPSHOT -->
+<!-- =========================
+     01 — EXECUTIVE SNAPSHOT
+========================= -->
 
 <section>
 
 <div class="container">
 
-    <div class="section-number">01 — EXECUTIVE SNAPSHOT</div>
+    <div class="section-number">
+        01 — EXECUTIVE SNAPSHOT
+    </div>
 
     <h2>
-        FY2025–26 research snapshot
+        FY2025–26 base + latest Q1 FY2027 update
     </h2>
 
+    <div class="update-badge">
+        UPDATED: Q1 FY2027 · JUNE 2026
+    </div>
+
     <p class="section-intro">
-        L&amp;T reported record order-book levels alongside double-digit
-        consolidated revenue growth. The research focus is on how order
-        inflows convert into revenue, how execution affects profitability,
-        and how the diversified business mix influences capital intensity
-        and risk.
+        L&amp;T entered FY2026–27 with a record order book and continued
+        order inflow growth. Q1 FY2027 revenue increased 7% year on year,
+        while Group PAT increased 14%. The research focus is on order-book
+        conversion, execution, margins, international exposure and cash
+        generation.
     </p>
 
     <div class="snapshot">
@@ -511,18 +625,33 @@ footer {
         </div>
 
         <div class="metric">
-            <span>RECURRING PAT</span>
+            <span>FY2026 RECURRING PAT</span>
             <strong>₹17,238 Cr</strong>
         </div>
 
         <div class="metric">
-            <span>ORDER BOOK</span>
-            <strong>₹7.40 Lakh Cr</strong>
+            <span>FY2026 ORDER BOOK</span>
+            <strong>₹7.40L Cr</strong>
         </div>
 
         <div class="metric">
-            <span>ORDER BOOK GROWTH</span>
+            <span>FY2026 ORDER BOOK GROWTH</span>
             <strong>27.8%</strong>
+        </div>
+
+        <div class="metric">
+            <span>Q1 FY2027 REVENUE</span>
+            <strong>₹67,942 Cr</strong>
+        </div>
+
+        <div class="metric">
+            <span>Q1 FY2027 PAT</span>
+            <strong>₹4,100 Cr</strong>
+        </div>
+
+        <div class="metric">
+            <span>JUNE 2026 ORDER BOOK</span>
+            <strong>₹7.79L Cr</strong>
         </div>
 
         <div class="metric">
@@ -530,21 +659,6 @@ footer {
             <strong>52%</strong>
         </div>
 
-        <div class="metric">
-            <span>GROUP NET DEBT / EQUITY</span>
-            <strong>0.35x</strong>
-        </div>
-
-        <div class="metric">
-            <span>FY2026 EPS</span>
-            <strong>₹116.93</strong>
-        </div>
-
-        <div class="metric">
-            <span>FY2026 DIVIDEND</span>
-            <strong>₹38</strong>
-        </div>
-
     </div>
 
 </div>
@@ -552,54 +666,140 @@ footer {
 </section>
 
 
-<!-- 02 COMPANY OVERVIEW -->
+<!-- =========================
+     02 — COMPANY OVERVIEW
+========================= -->
 
 <section>
 
 <div class="container">
 
-    <div class="section-number">02 — COMPANY OVERVIEW</div>
+    <div class="section-number">
+        02 — COMPANY OVERVIEW
+    </div>
 
     <h2>
-        Diversified engineering and infrastructure platform
+        Diversified engineering, infrastructure and technology platform
     </h2>
 
     <p class="section-intro">
-        L&amp;T operates across infrastructure projects, energy projects,
-        hi-tech manufacturing, technology services, financial services,
-        development projects and other businesses. The portfolio creates
-        multiple sources of revenue while also introducing different
-        capital, execution and cyclical characteristics.
+        L&amp;T operates across infrastructure, energy, manufacturing,
+        technology services, financial services, realty and other
+        businesses. From FY2026–27, the Group changed its reporting
+        structure under its Lakshya 2031 strategic plan.
     </p>
 
     <div class="grid-3">
 
         <div class="card">
-            <div class="card-label">CORE</div>
-            <h3>Infrastructure Projects</h3>
+
+            <div class="card-label">
+                INFRASTRUCTURE
+            </div>
+
+            <h3>
+                Infrastructure &amp; Utilities
+            </h3>
+
             <p>
-                Engineering, construction and infrastructure execution
-                across transportation, buildings, water, power transmission
-                and related activities.
+                Transportation, heavy civil infrastructure, power
+                transmission and distribution, buildings and factories,
+                water and metals and minerals.
             </p>
+
         </div>
 
-        <div class="card">
-            <div class="card-label">ENERGY</div>
-            <h3>Energy Projects</h3>
-            <p>
-                Hydrocarbon, power, renewables and related engineering
-                businesses supported by domestic and international projects.
-            </p>
-        </div>
 
         <div class="card">
-            <div class="card-label">SERVICES</div>
-            <h3>Technology &amp; Financial Services</h3>
+
+            <div class="card-label">
+                ENERGY
+            </div>
+
+            <h3>
+                Energy — Conventional
+            </h3>
+
             <p>
-                IT and technology services, engineering services and
-                financial services provide additional diversification.
+                Hydrocarbon and CarbonLite Solutions businesses serving
+                domestic and international energy-related projects.
             </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-label">
+                ENERGY TRANSITION
+            </div>
+
+            <h3>
+                Energy — Green
+            </h3>
+
+            <p>
+                Solar, offshore wind and onshore wind businesses,
+                including large renewable transmission projects.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-label">
+                MANUFACTURING
+            </div>
+
+            <h3>
+                Manufacturing &amp; Products
+            </h3>
+
+            <p>
+                Precision engineering, heavy engineering, electronics,
+                electrolysers, construction equipment and related
+                industrial businesses.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-label">
+                TECHNOLOGY
+            </div>
+
+            <h3>
+                Technology, Platforms &amp; Services
+            </h3>
+
+            <p>
+                Technology and engineering services together with
+                newer digital platforms, data centres and semiconductor
+                design initiatives.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-label">
+                REALTY
+            </div>
+
+            <h3>
+                L&amp;T Realty
+            </h3>
+
+            <p>
+                Realty is now reported as a separate segment following
+                its segregation from the earlier Projects and Manufacturing
+                portfolio.
+            </p>
+
         </div>
 
     </div>
@@ -609,26 +809,79 @@ footer {
 </section>
 
 
-<!-- 03 ORDER BOOK -->
+<!-- =========================
+     03 — Q1 FY2027 UPDATE
+========================= -->
 
 <section>
 
 <div class="container">
 
-    <div class="section-number">03 — ORDER BOOK ANALYSIS</div>
+    <div class="section-number">
+        03 — Q1 FY2027 UPDATE
+    </div>
 
     <h2>
-        Record order book provides multi-year execution visibility
+        Latest quarterly read-through
     </h2>
 
+    <div class="update-badge">
+        QUARTER ENDED JUNE 30, 2026
+    </div>
+
     <p class="section-intro">
-        As of March 31, 2026, L&amp;T's consolidated order book stood at
-        ₹7,40,327 crore, up 27.8% year over year. Infrastructure Projects
-        represented 57% of the order book and Energy Projects represented
-        35%.
+        Q1 FY2027 showed continued order-book expansion and double-digit
+        order-inflow growth. Revenue growth was more moderate, while
+        management highlighted supply-chain and logistics constraints
+        affecting selected Middle East projects.
     </p>
 
-    <div class="grid-2">
+    <div class="snapshot">
+
+        <div class="metric">
+            <span>Q1 REVENUE FROM OPERATIONS</span>
+            <strong>₹67,942 Cr</strong>
+        </div>
+
+        <div class="metric">
+            <span>REVENUE GROWTH</span>
+            <strong>7%</strong>
+        </div>
+
+        <div class="metric">
+            <span>Q1 GROUP PAT</span>
+            <strong>₹4,100 Cr</strong>
+        </div>
+
+        <div class="metric">
+            <span>PAT GROWTH</span>
+            <strong>14%</strong>
+        </div>
+
+        <div class="metric">
+            <span>ORDER INFLOWS</span>
+            <strong>₹1.08L Cr</strong>
+        </div>
+
+        <div class="metric">
+            <span>ORDER INFLOW GROWTH</span>
+            <strong>14%</strong>
+        </div>
+
+        <div class="metric">
+            <span>JUNE 2026 ORDER BOOK</span>
+            <strong>₹7.79L Cr</strong>
+        </div>
+
+        <div class="metric">
+            <span>NWC / SALES</span>
+            <strong>4.9%</strong>
+        </div>
+
+    </div>
+
+
+    <div class="grid-2" style="margin-top:20px;">
 
         <div class="card">
 
@@ -636,12 +889,133 @@ footer {
                 ORDER BOOK
             </div>
 
+            <h3>
+                International exposure remains significant
+            </h3>
+
+            <p>
+                International orders represented 52% of the June 2026
+                order book. The international order book was approximately
+                ₹4.07 lakh crore.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-label">
+                CASH CONVERSION
+            </div>
+
+            <h3>
+                Working-capital efficiency improved
+            </h3>
+
+            <p>
+                Net working capital to sales improved to 4.9% in June 2026
+                from 10.1% in June 2025. Operating cash flow excluding
+                Financial Services was ₹4,300 crore during Q1.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-label">
+                EBITDA MARGIN
+            </div>
+
+            <h3>
+                Group margin at 9.0%
+            </h3>
+
+            <p>
+                Group EBITDA margin excluding other income was 9.0% in
+                Q1 FY2027 versus 9.9% in Q1 FY2026. Management attributed
+                the movement to lower PPM execution, forex variation in
+                IT subsidiaries and higher credit provisions.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-label">
+                RETURN METRICS
+            </div>
+
+            <h3>
+                Trailing 12-month ROE at 16.1%
+            </h3>
+
+            <p>
+                Q1 FY2027 trailing 12-month ROE was 16.1%. Management noted
+                that the reported comparison continues to reflect the
+                one-time Labor Code provision recognised in the prior year.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="highlight">
+
+        <p>
+            <strong>Analyst observation:</strong>
+            The latest quarter shifts the research focus toward the pace
+            of order-book conversion, international project execution,
+            segment margins and the sustainability of working-capital
+            improvement.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     04 — ORDER BOOK
+========================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="section-number">
+        04 — ORDER BOOK ANALYSIS
+    </div>
+
+    <h2>
+        Record order book provides multi-year execution visibility
+    </h2>
+
+    <p class="section-intro">
+        The consolidated order book reached ₹7,40,327 crore at March 31,
+        2026 and increased further to ₹7.79 lakh crore by June 2026.
+        The June order book was 27% higher year on year.
+    </p>
+
+
+    <div class="grid-2">
+
+        <div class="card">
+
+            <div class="card-label">
+                MARCH 2026
+            </div>
+
             <div class="big-number">
                 ₹7.40L Cr
             </div>
 
             <div class="subtext">
-                March 31, 2026
+                FY2026 year-end order book
             </div>
 
             <div class="bar-row">
@@ -657,6 +1031,7 @@ footer {
 
             </div>
 
+
             <div class="bar-row">
 
                 <div class="bar-header">
@@ -669,6 +1044,7 @@ footer {
                 </div>
 
             </div>
+
 
             <div class="bar-row">
 
@@ -689,32 +1065,71 @@ footer {
         <div class="card">
 
             <div class="card-label">
-                GEOGRAPHIC MIX
+                JUNE 2026
             </div>
 
-            <h3>
-                International exposure increased
-            </h3>
+            <div class="big-number">
+                ₹7.79L Cr
+            </div>
 
-            <p>
-                International orders represented 52% of the consolidated
-                order book at March 31, 2026, compared with 46% a year
-                earlier.
-            </p>
+            <div class="subtext">
+                Q1 FY2027 closing order book
+            </div>
 
-            <div class="highlight">
+            <div class="bar-row">
 
-                <p>
-                    <strong>Domestic:</strong> ₹3,57,918 crore
-                </p>
+                <div class="bar-header">
+                    <span>Infrastructure &amp; Utilities</span>
+                    <span>45%</span>
+                </div>
 
-                <p>
-                    <strong>International:</strong> ₹3,82,409 crore
-                </p>
+                <div class="bar">
+                    <div class="bar-fill" style="width:45%"></div>
+                </div>
+
+            </div>
+
+
+            <div class="bar-row">
+
+                <div class="bar-header">
+                    <span>Energy — Conventional</span>
+                    <span>28%</span>
+                </div>
+
+                <div class="bar">
+                    <div class="bar-fill" style="width:28%"></div>
+                </div>
+
+            </div>
+
+
+            <div class="bar-row">
+
+                <div class="bar-header">
+                    <span>Energy — Green</span>
+                    <span>19%</span>
+                </div>
+
+                <div class="bar">
+                    <div class="bar-fill" style="width:19%"></div>
+                </div>
 
             </div>
 
         </div>
+
+    </div>
+
+
+    <div class="highlight">
+
+        <p>
+            <strong>Order-book / FY2026 revenue ≈ 2.6x.</strong>
+            This is a calculated analytical ratio using the March 2026
+            order book of ₹7,40,327 crore and FY2026 revenue of ₹2,85,874
+            crore. It is not a company-reported backlog coverage metric.
+        </p>
 
     </div>
 
@@ -723,23 +1138,124 @@ footer {
 </section>
 
 
-<!-- 04 FINANCIAL PERFORMANCE -->
+<!-- =========================
+     05 — GEOGRAPHIC MIX
+========================= -->
 
 <section>
 
 <div class="container">
 
-    <div class="section-number">04 — FINANCIAL PERFORMANCE</div>
+    <div class="section-number">
+        05 — GEOGRAPHIC MIX
+    </div>
 
     <h2>
-        Revenue growth and improving recurring profitability
+        International orders have become a major component
     </h2>
 
     <p class="section-intro">
-        Consolidated revenue increased from ₹2,55,734 crore in FY2024–25
-        to ₹2,85,874 crore in FY2025–26. Recurring profit attributable to
-        owners increased from ₹14,562 crore to ₹17,238 crore.
+        International orders represented 52% of the March 2026 order book.
+        The same 52% share was reported for the June 2026 order book.
     </p>
+
+
+    <div class="grid-3">
+
+        <div class="card">
+
+            <div class="card-label">
+                MARCH 2026
+            </div>
+
+            <h3>
+                52% International
+            </h3>
+
+            <p>
+                International order book was ₹3,82,409 crore versus
+                ₹3,57,918 crore domestic.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-label">
+                JUNE 2026
+            </div>
+
+            <h3>
+                ₹4.07L Cr International
+            </h3>
+
+            <p>
+                The June international order book represented approximately
+                52% of the Group total.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-label">
+                REGIONAL MIX
+            </div>
+
+            <h3>
+                Middle East 71%
+            </h3>
+
+            <p>
+                Of the June 2026 international order book, 71% was from the
+                Middle East and 14% from Europe.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="highlight">
+
+        <p>
+            <strong>Research consideration:</strong>
+            Greater international exposure can diversify the customer base,
+            while also increasing sensitivity to regional execution,
+            logistics, currency and geopolitical conditions.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     06 — HISTORICAL FINANCIALS
+========================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="section-number">
+        06 — HISTORICAL FINANCIAL PERFORMANCE
+    </div>
+
+    <h2>
+        Five-year financial progression
+    </h2>
+
+    <p class="section-intro">
+        L&amp;T's consolidated revenue increased from ₹1,56,521 crore in
+        FY2021–22 to ₹2,85,874 crore in FY2025–26. Recurring profit
+        attributable to owners increased from ₹8,572 crore to ₹17,238 crore.
+    </p>
+
 
     <div class="table-wrap">
 
@@ -761,39 +1277,62 @@ footer {
             <tbody>
 
                 <tr>
-                    <td><strong>Revenue</strong></td>
+
+                    <td>
+                        <strong>Revenue</strong>
+                    </td>
+
                     <td>156,521</td>
                     <td>183,341</td>
                     <td>221,113</td>
                     <td>255,734</td>
                     <td>285,874</td>
+
                 </tr>
 
+
                 <tr>
-                    <td><strong>PBDIT</strong></td>
+
+                    <td>
+                        <strong>PBDIT</strong>
+                    </td>
+
                     <td>18,205</td>
                     <td>20,753</td>
                     <td>23,494</td>
                     <td>26,435</td>
                     <td>29,151</td>
+
                 </tr>
 
+
                 <tr>
-                    <td><strong>Recurring PAT to Owners</strong></td>
+
+                    <td>
+                        <strong>Recurring PAT to Owners</strong>
+                    </td>
+
                     <td>8,572</td>
                     <td>10,374</td>
                     <td>12,966</td>
                     <td>14,562</td>
                     <td>17,238</td>
+
                 </tr>
 
+
                 <tr>
-                    <td><strong>EPS ₹</strong></td>
-                    <td>61.71</td>
-                    <td>74.51</td>
-                    <td>93.96</td>
-                    <td>109.36</td>
-                    <td>116.93</td>
+
+                    <td>
+                        <strong>PAT including exceptional items</strong>
+                    </td>
+
+                    <td>8,669</td>
+                    <td>10,471</td>
+                    <td>13,059</td>
+                    <td>15,037</td>
+                    <td>16,084</td>
+
                 </tr>
 
             </tbody>
@@ -802,34 +1341,40 @@ footer {
 
     </div>
 
+
     <div class="grid-2" style="margin-top:20px;">
 
         <div class="card">
 
             <div class="card-label">
-                FIVE-YEAR REVENUE CAGR
+                FY2022 → FY2026
             </div>
 
-            <h3>~12.8%</h3>
+            <h3>
+                Revenue CAGR ≈ 16.2%
+            </h3>
 
             <p>
-                FY2021–22 to FY2025–26 consolidated revenue increased from
-                ₹1,56,521 crore to ₹2,85,874 crore.
+                Calculated from official consolidated revenue of
+                ₹1,56,521 crore in FY2022 and ₹2,85,874 crore in FY2026.
             </p>
 
         </div>
 
+
         <div class="card">
 
             <div class="card-label">
-                FIVE-YEAR RECURRING PAT CAGR
+                FY2022 → FY2026
             </div>
 
-            <h3>~15.0%</h3>
+            <h3>
+                Recurring PAT CAGR ≈ 19.1%
+            </h3>
 
             <p>
-                Recurring profit attributable to owners increased from
-                ₹8,572 crore to ₹17,238 crore over the same period.
+                Calculated from recurring profit attributable to owners
+                of ₹8,572 crore in FY2022 and ₹17,238 crore in FY2026.
             </p>
 
         </div>
@@ -841,23 +1386,28 @@ footer {
 </section>
 
 
-<!-- 05 SEGMENT ANALYSIS -->
+<!-- =========================
+     07 — Q1 SEGMENT ANALYSIS
+========================= -->
 
 <section>
 
 <div class="container">
 
-    <div class="section-number">05 — SEGMENT ANALYSIS</div>
+    <div class="section-number">
+        07 — Q1 FY2027 SEGMENT ANALYSIS
+    </div>
 
     <h2>
-        Revenue mix reflects both EPC scale and diversification
+        New reporting structure and quarterly performance
     </h2>
 
     <p class="section-intro">
-        FY2025–26 revenue growth was driven particularly by Energy Projects,
-        IT &amp; Technology Services and Hi-Tech Manufacturing, while
-        Infrastructure Projects remained the largest revenue contributor.
+        From April 1, 2026, L&amp;T realigned its reporting structure under
+        its Lakshya 2031 strategic plan. The following figures therefore
+        use the new segment definitions for Q1 FY2027.
     </p>
+
 
     <div class="table-wrap">
 
@@ -867,9 +1417,9 @@ footer {
 
                 <tr>
                     <th>SEGMENT</th>
-                    <th>FY2025 REVENUE</th>
-                    <th>FY2026 REVENUE</th>
-                    <th>FY2026 MIX</th>
+                    <th>Q1 ORDER BOOK</th>
+                    <th>Q1 REVENUE</th>
+                    <th>KEY OBSERVATION</th>
                 </tr>
 
             </thead>
@@ -877,45 +1427,130 @@ footer {
             <tbody>
 
                 <tr>
-                    <td><strong>Infrastructure Projects</strong></td>
-                    <td>₹131,315 Cr</td>
-                    <td>₹135,345 Cr</td>
-                    <td>47.3%</td>
+
+                    <td>
+                        <strong>Infrastructure &amp; Utilities</strong>
+                    </td>
+
+                    <td>
+                        ₹3.51L Cr
+                    </td>
+
+                    <td>
+                        Q1 revenue declined 3% YoY
+                    </td>
+
+                    <td>
+                        Strong order inflows; early-stage execution of
+                        certain large projects.
+                    </td>
+
                 </tr>
 
-                <tr>
-                    <td><strong>Energy Projects</strong></td>
-                    <td>₹40,677 Cr</td>
-                    <td>₹54,889 Cr</td>
-                    <td>19.2%</td>
-                </tr>
 
                 <tr>
-                    <td><strong>Hi-Tech Manufacturing</strong></td>
-                    <td>₹10,181 Cr</td>
-                    <td>₹14,489 Cr</td>
-                    <td>5.1%</td>
+
+                    <td>
+                        <strong>Energy — Conventional</strong>
+                    </td>
+
+                    <td>
+                        ₹2.22L Cr
+                    </td>
+
+                    <td>
+                        ₹14,200 Cr
+                    </td>
+
+                    <td>
+                        Revenue increased 14% YoY; margin broadly stable.
+                    </td>
+
                 </tr>
 
-                <tr>
-                    <td><strong>IT &amp; Technology Services</strong></td>
-                    <td>₹48,453 Cr</td>
-                    <td>₹53,947 Cr</td>
-                    <td>18.9%</td>
-                </tr>
 
                 <tr>
-                    <td><strong>Financial Services</strong></td>
-                    <td>₹15,194 Cr</td>
-                    <td>₹17,283 Cr</td>
-                    <td>6.0%</td>
+
+                    <td>
+                        <strong>Energy — Green</strong>
+                    </td>
+
+                    <td>
+                        ₹1.47L Cr
+                    </td>
+
+                    <td>
+                        ₹5,600 Cr
+                    </td>
+
+                    <td>
+                        Strong order inflow; revenue affected by GCC
+                        supply-chain disruptions.
+                    </td>
+
                 </tr>
 
+
                 <tr>
-                    <td><strong>Development Projects</strong></td>
-                    <td>₹5,389 Cr</td>
-                    <td>₹5,119 Cr</td>
-                    <td>1.8%</td>
+
+                    <td>
+                        <strong>Manufacturing &amp; Products</strong>
+                    </td>
+
+                    <td>
+                        ₹42,400 Cr
+                    </td>
+
+                    <td>
+                        ₹4,500 Cr
+                    </td>
+
+                    <td>
+                        Revenue increased 9% YoY.
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Technology, Platforms &amp; Services</strong>
+                    </td>
+
+                    <td>
+                        — 
+                    </td>
+
+                    <td>
+                        ₹14,600 Cr
+                    </td>
+
+                    <td>
+                        Revenue increased 15% YoY.
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Realty</strong>
+                    </td>
+
+                    <td>
+                        ₹17,300 Cr
+                    </td>
+
+                    <td>
+                        ₹1,010 Cr
+                    </td>
+
+                    <td>
+                        Q1 order inflows increased 32% YoY.
+                    </td>
+
                 </tr>
 
             </tbody>
@@ -924,67 +1559,14 @@ footer {
 
     </div>
 
-</div>
-
-</section>
-
-
-<!-- 06 ORDER CONVERSION -->
-
-<section>
-
-<div class="container">
-
-    <div class="section-number">06 — ORDER CONVERSION</div>
-
-    <h2>
-        The key research question: order book → revenue → cash
-    </h2>
-
-    <p class="section-intro">
-        For an EPC-heavy business, headline order-book growth needs to be
-        assessed alongside execution capability, project margins, working
-        capital and cash conversion.
-    </p>
-
-    <div class="grid-3">
-
-        <div class="card">
-            <div class="card-label">01</div>
-            <h3>Order Intake</h3>
-            <p>
-                Monitor size, sector, geography, customer concentration and
-                order quality.
-            </p>
-        </div>
-
-        <div class="card">
-            <div class="card-label">02</div>
-            <h3>Execution</h3>
-            <p>
-                Track revenue conversion, project progress, margins and
-                execution milestones.
-            </p>
-        </div>
-
-        <div class="card">
-            <div class="card-label">03</div>
-            <h3>Cash Conversion</h3>
-            <p>
-                Analyse receivables, advances, working capital and operating
-                cash flow against accounting profit.
-            </p>
-        </div>
-
-    </div>
 
     <div class="highlight">
 
         <p>
-            <strong>Analytical framework:</strong>
-            A growing order book is most useful when accompanied by healthy
-            project execution, sustainable margins and improving cash
-            conversion.
+            <strong>Important:</strong>
+            Q1 FY2027 uses L&amp;T's new segment definitions, so direct
+            comparisons with FY2026 segment categories should be made
+            carefully.
         </p>
 
     </div>
@@ -994,24 +1576,277 @@ footer {
 </section>
 
 
-<!-- 07 BALANCE SHEET -->
+<!-- =========================
+     08 — ORDER INFLOW
+========================= -->
 
 <section>
 
 <div class="container">
 
-    <div class="section-number">07 — BALANCE SHEET</div>
+    <div class="section-number">
+        08 — ORDER INFLOW &amp; PIPELINE
+    </div>
 
     <h2>
-        Balance-sheet analysis
+        Opportunity pipeline remains substantial
     </h2>
 
     <p class="section-intro">
-        L&amp;T reported improvement in its Group net debt-to-equity ratio,
-        from 0.60x in FY2024–25 to 0.35x in FY2025–26. The Group has also
-        highlighted that consolidated debt largely comprises borrowings at
+        Q1 FY2027 order inflows were ₹1.08 trillion, up 14% year on year.
+        L&amp;T reported an opportunity pipeline of approximately ₹15 trillion
+        for the remaining nine months of FY2027.
+    </p>
+
+
+    <div class="grid-3">
+
+        <div class="card">
+
+            <div class="card-label">
+                Q1 FY2027
+            </div>
+
+            <h3>
+                ₹1.08T Order Inflows
+            </h3>
+
+            <p>
+                Group order inflows increased 14% year on year.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-label">
+                PIPELINE
+            </div>
+
+            <h3>
+                ₹15T Prospects
+            </h3>
+
+            <p>
+                Management reported approximately ₹15 trillion of
+                opportunities for the remaining nine months.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-label">
+                PRIVATE CAPEX
+            </div>
+
+            <h3>
+                Infrastructure &amp; Utilities
+            </h3>
+
+            <p>
+                Private-sector orders represented nearly 77% of domestic
+                Infrastructure &amp; Utilities order inflows during Q1.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="grid-2" style="margin-top:20px;">
+
+        <div class="card">
+
+            <div class="card-label">
+                FY2027 PIPELINE
+            </div>
+
+            <h3>
+                Infrastructure &amp; Utilities
+            </h3>
+
+            <p>
+                Approximately ₹7.82 trillion of prospects for the remaining
+                nine months.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-label">
+                FY2027 PIPELINE
+            </div>
+
+            <h3>
+                Energy — Conventional
+            </h3>
+
+            <p>
+                Approximately ₹4.37 trillion of prospects for the remaining
+                nine months.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-label">
+                FY2027 PIPELINE
+            </div>
+
+            <h3>
+                Energy — Green
+            </h3>
+
+            <p>
+                Approximately ₹2.43 trillion of prospects.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-label">
+                FY2027 PIPELINE
+            </div>
+
+            <h3>
+                Manufacturing &amp; Products
+            </h3>
+
+            <p>
+                Approximately ₹0.46 trillion of prospects.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     09 — PROFITABILITY
+========================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="section-number">
+        09 — PROFITABILITY &amp; CASH FLOW
+    </div>
+
+    <h2>
+        Execution quality matters as much as headline growth
+    </h2>
+
+    <div class="grid-3">
+
+        <div class="card">
+
+            <div class="card-label">
+                FY2026
+            </div>
+
+            <h3>
+                PBDIT ₹29,151 Cr
+            </h3>
+
+            <p>
+                Consolidated PBDIT increased from ₹26,435 crore in FY2025
+                to ₹29,151 crore in FY2026.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-label">
+                Q1 FY2027
+            </div>
+
+            <h3>
+                EBITDA Margin 9.0%
+            </h3>
+
+            <p>
+                Group EBITDA margin excluding other income was 9.0%,
+                compared with 9.9% in Q1 FY2026.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-label">
+                Q1 FY2027
+            </div>
+
+            <h3>
+                CFO ₹4,300 Cr
+            </h3>
+
+            <p>
+                Cash flow from operations excluding Financial Services
+                was ₹4,300 crore during Q1.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="highlight">
+
+        <p>
+            <strong>Research focus:</strong>
+            Revenue growth should be analysed together with project
+            profitability, working-capital movements and operating cash
+            flow to assess earnings quality.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     10 — BALANCE SHEET
+========================= -->
+
+<section>
+
+<div class="container">
+
+    <div class="section-number">
+        10 — BALANCE SHEET
+    </div>
+
+    <h2>
+        Leverage and capital structure
+    </h2>
+
+    <p class="section-intro">
+        L&amp;T reported an improvement in its Group net debt-to-equity
+        ratio from 0.60:1 in FY2025 to 0.35:1 in FY2026. Management has
+        stated that consolidated debt largely comprises borrowings at
         L&amp;T Finance.
     </p>
+
 
     <div class="table-wrap">
 
@@ -1023,7 +1858,7 @@ footer {
                     <th>METRIC</th>
                     <th>FY2025</th>
                     <th>FY2026</th>
-                    <th>RESEARCH QUESTION</th>
+                    <th>ANALYTICAL QUESTION</th>
                 </tr>
 
             </thead>
@@ -1031,31 +1866,86 @@ footer {
             <tbody>
 
                 <tr>
-                    <td><strong>Net Debt / Equity</strong></td>
-                    <td>0.60x</td>
-                    <td>0.35x</td>
-                    <td>Has leverage risk reduced?</td>
+
+                    <td>
+                        <strong>Group Net Debt / Equity</strong>
+                    </td>
+
+                    <td>
+                        0.60x
+                    </td>
+
+                    <td>
+                        0.35x
+                    </td>
+
+                    <td>
+                        Is leverage continuing to moderate?
+                    </td>
+
                 </tr>
 
-                <tr>
-                    <td><strong>Borrowings</strong></td>
-                    <td>₹129,559 Cr</td>
-                    <td>₹121,683 Cr</td>
-                    <td>How is debt evolving?</td>
-                </tr>
 
                 <tr>
-                    <td><strong>Net Worth to Owners</strong></td>
-                    <td>₹97,656 Cr</td>
-                    <td>₹109,290 Cr</td>
-                    <td>Is equity compounding?</td>
+
+                    <td>
+                        <strong>Borrowings</strong>
+                    </td>
+
+                    <td>
+                        ₹1,29,559 Cr
+                    </td>
+
+                    <td>
+                        ₹1,21,683 Cr
+                    </td>
+
+                    <td>
+                        How is consolidated debt evolving?
+                    </td>
+
                 </tr>
 
+
                 <tr>
-                    <td><strong>Book Value / Share</strong></td>
-                    <td>₹710.12</td>
-                    <td>₹794.47</td>
-                    <td>How is book value developing?</td>
+
+                    <td>
+                        <strong>Net Worth to Owners</strong>
+                    </td>
+
+                    <td>
+                        ₹97,656 Cr
+                    </td>
+
+                    <td>
+                        ₹1,09,290 Cr
+                    </td>
+
+                    <td>
+                        Is book value compounding?
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Book Value / Share</strong>
+                    </td>
+
+                    <td>
+                        ₹710.12
+                    </td>
+
+                    <td>
+                        ₹794.47
+                    </td>
+
+                    <td>
+                        How does valuation compare with book value?
+                    </td>
+
                 </tr>
 
             </tbody>
@@ -1069,16 +1959,20 @@ footer {
 </section>
 
 
-<!-- 08 PROFITABILITY -->
+<!-- =========================
+     11 — WORKING CAPITAL
+========================= -->
 
 <section>
 
 <div class="container">
 
-    <div class="section-number">08 — PROFITABILITY</div>
+    <div class="section-number">
+        11 — WORKING CAPITAL
+    </div>
 
     <h2>
-        Margin and return analysis
+        Cash conversion is a core research variable
     </h2>
 
     <div class="grid-3">
@@ -1086,56 +1980,65 @@ footer {
         <div class="card">
 
             <div class="card-label">
-                PBDIT MARGIN
+                NWC / SALES
             </div>
 
-            <h3>10.20%</h3>
+            <h3>
+                4.9%
+            </h3>
 
             <p>
-                FY2025–26 consolidated PBDIT as a percentage of net revenue
-                from operations.
+                June 2026 compared with 10.1% in June 2025.
             </p>
 
         </div>
 
+
         <div class="card">
 
             <div class="card-label">
-                PAT MARGIN
+                GWC / SALES
             </div>
 
-            <h3>6.63%</h3>
+            <h3>
+                51.1%
+            </h3>
 
             <p>
-                FY2025–26 consolidated PAT as a percentage of net revenue
-                from operations.
+                Improved from 53.9% in March 2026.
             </p>
 
         </div>
 
+
         <div class="card">
 
             <div class="card-label">
-                RONW
+                COLLECTIONS
             </div>
 
-            <h3>15.54%</h3>
+            <h3>
+                ₹65,800 Cr
+            </h3>
 
             <p>
-                Return on net worth attributable to owners for FY2025–26.
+                Group collections excluding Financial Services during
+                Q1 FY2027.
             </p>
 
         </div>
 
     </div>
 
+
     <div class="highlight">
 
         <p>
-            <strong>Research focus:</strong>
-            For L&amp;T, margin analysis should be performed at the segment
-            and project level rather than relying only on consolidated
-            margins.
+            <strong>Why it matters:</strong>
+            EPC businesses can report strong accounting growth while
+            absorbing working capital. Monitoring receivables, advances,
+            vendor payments and operating cash flow helps evaluate whether
+            reported earnings are translating into cash.
         </p>
 
     </div>
@@ -1145,53 +2048,62 @@ footer {
 </section>
 
 
-<!-- 09 VALUATION FRAMEWORK -->
+<!-- =========================
+     12 — VALUATION FRAMEWORK
+========================= -->
 
 <section>
 
 <div class="container">
 
-    <div class="section-number">09 — VALUATION FRAMEWORK</div>
+    <div class="section-number">
+        12 — VALUATION FRAMEWORK
+    </div>
 
     <h2>
-        Multi-method valuation framework
+        Multi-method valuation approach
     </h2>
 
     <p class="section-intro">
-        Because L&amp;T combines EPC, manufacturing, technology services,
-        financial services and other businesses, a single valuation method
-        can obscure differences in capital intensity and earnings quality.
+        L&amp;T's diversified business model means that valuation can be
+        approached through several complementary methods rather than
+        relying on a single multiple.
     </p>
+
 
     <div class="grid-2">
 
         <div class="valuation-box">
 
-            <div class="card-label">DCF</div>
+            <div class="card-label">
+                METHOD 01
+            </div>
 
             <h3>
                 Discounted Cash Flow
             </h3>
 
             <div class="formula">
-                Enterprise Value =
-                Σ FCF / (1 + WACC)^t
+                EV = Σ FCF / (1 + WACC)^t
                 + Terminal Value
             </div>
 
             <p class="note">
-                Key assumptions: revenue growth, operating margin,
-                working capital, capex, WACC and terminal growth.
+                Key assumptions: revenue growth, EBITDA margin, tax rate,
+                capex, working capital, WACC and terminal growth.
             </p>
 
         </div>
 
+
         <div class="valuation-box">
 
-            <div class="card-label">RELATIVE VALUATION</div>
+            <div class="card-label">
+                METHOD 02
+            </div>
 
             <h3>
-                P/E and EV/EBITDA
+                P/E
             </h3>
 
             <div class="formula">
@@ -1199,61 +2111,69 @@ footer {
             </div>
 
             <p class="note">
-                Peer selection should account for business mix, cyclicality,
-                leverage, international exposure and earnings quality.
+                Peer selection should reflect business mix, growth,
+                return ratios, leverage and earnings quality.
             </p>
 
         </div>
 
+
         <div class="valuation-box">
 
-            <div class="card-label">SOTP</div>
+            <div class="card-label">
+                METHOD 03
+            </div>
+
+            <h3>
+                EV / EBITDA
+            </h3>
+
+            <div class="formula">
+                EV = EBITDA × Selected EV / EBITDA
+            </div>
+
+            <p class="note">
+                Useful for comparing capital-intensive operating businesses
+                with different financing structures.
+            </p>
+
+        </div>
+
+
+        <div class="valuation-box">
+
+            <div class="card-label">
+                METHOD 04
+            </div>
 
             <h3>
                 Sum-of-the-Parts
             </h3>
 
             <div class="formula">
-                SOTP = EPC + Energy + Hi-Tech
-                + IT/TS + Financial Services
+                SOTP =
+                Core EPC + Energy + Technology
+                + Financial Services + Realty
             </div>
 
             <p class="note">
-                A segment-based approach can help separate mature cash
-                generators from higher-growth or separately valued businesses.
-            </p>
-
-        </div>
-
-        <div class="valuation-box">
-
-            <div class="card-label">CROSS-CHECK</div>
-
-            <h3>
-                Book Value / ROE
-            </h3>
-
-            <div class="formula">
-                P/B = Market Price / Book Value
-            </div>
-
-            <p class="note">
-                Useful as a cross-check alongside return on equity and
-                sustainable earnings growth.
+                A segment-based approach can distinguish businesses with
+                different growth, capital intensity and valuation profiles.
             </p>
 
         </div>
 
     </div>
 
+
     <div class="highlight">
 
         <p>
-            <strong>Important:</strong>
-            This portfolio page intentionally does not publish a fabricated
-            target price. A live valuation should be populated using a
-            clearly dated share price, explicit forecast assumptions and
-            documented peer inputs.
+            <strong>No fabricated target price:</strong>
+            This portfolio report deliberately does not publish an
+            unsupported target price. A live target-price model should use
+            a clearly dated market price, explicit forecast assumptions,
+            peer multiples and a documented sensitivity analysis.
         </p>
 
     </div>
@@ -1263,17 +2183,22 @@ footer {
 </section>
 
 
-<!-- 10 SCENARIO ANALYSIS -->
+<!-- =========================
+     13 — SCENARIO FRAMEWORK
+========================= -->
 
 <section>
 
 <div class="container">
 
-    <div class="section-number">10 — SCENARIO ANALYSIS</div>
+    <div class="section-number">
+        13 — SCENARIO FRAMEWORK
+    </div>
 
     <h2>
-        Key variables to stress-test
+        Variables to stress-test
     </h2>
+
 
     <div class="table-wrap">
 
@@ -1283,8 +2208,8 @@ footer {
 
                 <tr>
                     <th>VARIABLE</th>
-                    <th>UPSIDE DRIVER</th>
-                    <th>DOWNSIDE DRIVER</th>
+                    <th>POSITIVE SENSITIVITY</th>
+                    <th>NEGATIVE SENSITIVITY</th>
                     <th>MONITOR</th>
                 </tr>
 
@@ -1293,45 +2218,128 @@ footer {
             <tbody>
 
                 <tr>
-                    <td><strong>Order Intake</strong></td>
-                    <td>Higher project wins</td>
-                    <td>Order delays</td>
-                    <td>Quarterly inflows</td>
+
+                    <td>
+                        <strong>Order Inflows</strong>
+                    </td>
+
+                    <td>
+                        Higher project awards
+                    </td>
+
+                    <td>
+                        Award delays
+                    </td>
+
+                    <td>
+                        Quarterly order intake
+                    </td>
+
                 </tr>
 
-                <tr>
-                    <td><strong>Execution</strong></td>
-                    <td>Faster conversion</td>
-                    <td>Project delays</td>
-                    <td>Revenue growth</td>
-                </tr>
 
                 <tr>
-                    <td><strong>Margins</strong></td>
-                    <td>Better project mix</td>
-                    <td>Cost escalation</td>
-                    <td>Segment margins</td>
+
+                    <td>
+                        <strong>Execution</strong>
+                    </td>
+
+                    <td>
+                        Faster conversion
+                    </td>
+
+                    <td>
+                        Project delays
+                    </td>
+
+                    <td>
+                        Revenue growth
+                    </td>
+
                 </tr>
 
-                <tr>
-                    <td><strong>Working Capital</strong></td>
-                    <td>Improved collections</td>
-                    <td>Receivable build-up</td>
-                    <td>Cash conversion</td>
-                </tr>
 
                 <tr>
-                    <td><strong>International</strong></td>
-                    <td>Higher overseas execution</td>
-                    <td>Geopolitical disruption</td>
-                    <td>International order share</td>
+
+                    <td>
+                        <strong>Margins</strong>
+                    </td>
+
+                    <td>
+                        Better project mix
+                    </td>
+
+                    <td>
+                        Cost escalation
+                    </td>
+
+                    <td>
+                        Segment EBITDA
+                    </td>
+
                 </tr>
 
+
                 <tr>
-                    <td><strong>Financial Services</strong></td>
-                    <td>Credit growth</td>
-                    <td>Asset-quality pressure</td>
-                    <td>Loan book / credit costs</td>
+
+                    <td>
+                        <strong>Working Capital</strong>
+                    </td>
+
+                    <td>
+                        Better collections
+                    </td>
+
+                    <td>
+                        Receivable build-up
+                    </td>
+
+                    <td>
+                        NWC / Sales
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>International</strong>
+                    </td>
+
+                    <td>
+                        Higher overseas execution
+                    </td>
+
+                    <td>
+                        Regional disruption
+                    </td>
+
+                    <td>
+                        International order share
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Technology</strong>
+                    </td>
+
+                    <td>
+                        Faster scaling
+                    </td>
+
+                    <td>
+                        Margin pressure
+                    </td>
+
+                    <td>
+                        Revenue / margins
+                    </td>
+
                 </tr>
 
             </tbody>
@@ -1345,68 +2353,92 @@ footer {
 </section>
 
 
-<!-- 11 CATALYSTS -->
+<!-- =========================
+     14 — POTENTIAL CATALYSTS
+========================= -->
 
 <section>
 
 <div class="container">
 
-    <div class="section-number">11 — POTENTIAL CATALYSTS</div>
+    <div class="section-number">
+        14 — POTENTIAL CATALYSTS
+    </div>
 
     <h2>
-        Operating factors to monitor
+        Operating developments to monitor
     </h2>
+
 
     <div class="grid-2">
 
         <div class="card catalyst">
 
-            <div class="card-label">ORDER BOOK</div>
+            <div class="card-label">
+                ORDER INTAKE
+            </div>
 
-            <h3>Continued order inflows</h3>
+            <h3>
+                Sustained project awards
+            </h3>
 
             <p>
-                Sustained order intake can support future revenue visibility
-                if projects convert into execution at expected margins.
+                Continued order inflows can support future revenue visibility
+                if projects convert into execution at expected economics.
             </p>
 
         </div>
 
+
         <div class="card catalyst">
 
-            <div class="card-label">EXECUTION</div>
+            <div class="card-label">
+                ENERGY TRANSITION
+            </div>
 
-            <h3>Improved project conversion</h3>
+            <h3>
+                Offshore wind and renewable infrastructure
+            </h3>
 
             <p>
-                Faster execution and milestone completion can support
-                revenue growth and working-capital efficiency.
+                Q1 FY2027 included significant offshore wind awards and
+                strong Energy — Green order inflows.
             </p>
 
         </div>
 
+
         <div class="card catalyst">
 
-            <div class="card-label">CAPITAL ALLOCATION</div>
+            <div class="card-label">
+                CASH FLOW
+            </div>
 
-            <h3>Balance-sheet discipline</h3>
+            <h3>
+                Continued working-capital discipline
+            </h3>
 
             <p>
-                Continued focus on cash generation, asset monetisation and
-                debt management can affect return metrics.
+                Further improvement in working-capital efficiency can
+                influence cash generation and return metrics.
             </p>
 
         </div>
 
+
         <div class="card catalyst">
 
-            <div class="card-label">NEW BUSINESSES</div>
+            <div class="card-label">
+                NEW-AGE BUSINESSES
+            </div>
 
-            <h3>Technology-led growth</h3>
+            <h3>
+                Technology, data centres and semiconductors
+            </h3>
 
             <p>
-                Data centres, semiconductors, digital businesses and other
-                new-age initiatives may alter the Group's future mix.
+                New technology-led businesses could gradually influence
+                the Group's long-term business mix.
             </p>
 
         </div>
@@ -1418,70 +2450,94 @@ footer {
 </section>
 
 
-<!-- 12 RISKS -->
+<!-- =========================
+     15 — KEY RISKS
+========================= -->
 
 <section>
 
 <div class="container">
 
-    <div class="section-number">12 — KEY RISKS</div>
+    <div class="section-number">
+        15 — KEY RISKS
+    </div>
 
     <h2>
         Risks requiring ongoing monitoring
     </h2>
 
+
     <div class="grid-2">
 
         <div class="card risk">
 
-            <div class="card-label">EXECUTION RISK</div>
+            <div class="card-label">
+                EXECUTION
+            </div>
 
-            <h3>Project delays and cost escalation</h3>
+            <h3>
+                Project delays and cost pressure
+            </h3>
 
             <p>
-                Large EPC projects can face execution delays, cost pressure,
-                claims and working-capital requirements.
+                Large EPC projects can face delays, cost escalation,
+                claims and changes in project execution schedules.
             </p>
 
         </div>
 
+
         <div class="card risk">
 
-            <div class="card-label">GEOPOLITICAL</div>
+            <div class="card-label">
+                GEOGRAPHIC
+            </div>
 
-            <h3>International exposure</h3>
+            <h3>
+                Middle East concentration
+            </h3>
 
             <p>
-                With 52% of the order book international at March 2026,
-                geopolitical and regional developments can affect execution
-                and new order intake.
+                The Middle East represented 71% of the June 2026
+                international order book, creating meaningful regional
+                execution exposure.
             </p>
 
         </div>
 
+
         <div class="card risk">
 
-            <div class="card-label">WORKING CAPITAL</div>
+            <div class="card-label">
+                MARGIN
+            </div>
 
-            <h3>Cash conversion</h3>
+            <h3>
+                Project-mix sensitivity
+            </h3>
 
             <p>
-                Growth in accounting revenue does not automatically imply
-                equivalent operating cash flow.
+                Changes in project mix, execution stage, provisions and
+                foreign-exchange movements can affect consolidated margins.
             </p>
 
         </div>
 
+
         <div class="card risk">
 
-            <div class="card-label">FINANCIAL SERVICES</div>
+            <div class="card-label">
+                CASH FLOW
+            </div>
 
-            <h3>Credit-cycle exposure</h3>
+            <h3>
+                Working-capital reversal
+            </h3>
 
             <p>
-                The financial-services business introduces asset-quality,
-                funding and credit-cycle considerations into consolidated
-                results.
+                Improvements in working capital need to be sustained through
+                collections, customer advances and disciplined project cash
+                management.
             </p>
 
         </div>
@@ -1493,17 +2549,22 @@ footer {
 </section>
 
 
-<!-- 13 ANALYST FRAMEWORK -->
+<!-- =========================
+     16 — ANALYST CHECKLIST
+========================= -->
 
 <section>
 
 <div class="container">
 
-    <div class="section-number">13 — ANALYST FRAMEWORK</div>
+    <div class="section-number">
+        16 — ANALYST CHECKLIST
+    </div>
 
     <h2>
-        Questions I would track each quarter
+        Quarterly research checklist
     </h2>
+
 
     <div class="table-wrap">
 
@@ -1522,45 +2583,121 @@ footer {
             <tbody>
 
                 <tr>
-                    <td><strong>Orders</strong></td>
-                    <td>Is order intake accelerating or slowing?</td>
-                    <td>Order inflow / book</td>
+
+                    <td>
+                        <strong>Orders</strong>
+                    </td>
+
+                    <td>
+                        Is order intake maintaining momentum?
+                    </td>
+
+                    <td>
+                        Order inflows
+                    </td>
+
                 </tr>
 
-                <tr>
-                    <td><strong>Execution</strong></td>
-                    <td>Is the order book converting into revenue?</td>
-                    <td>Revenue growth</td>
-                </tr>
 
                 <tr>
-                    <td><strong>Margins</strong></td>
-                    <td>Are project economics improving?</td>
-                    <td>Segment margins</td>
+
+                    <td>
+                        <strong>Backlog</strong>
+                    </td>
+
+                    <td>
+                        Is the order book expanding and diversifying?
+                    </td>
+
+                    <td>
+                        Order book / mix
+                    </td>
+
                 </tr>
 
-                <tr>
-                    <td><strong>Cash</strong></td>
-                    <td>Is profit translating into cash?</td>
-                    <td>Operating cash flow</td>
-                </tr>
 
                 <tr>
-                    <td><strong>Leverage</strong></td>
-                    <td>Is balance-sheet risk changing?</td>
-                    <td>Net debt / equity</td>
+
+                    <td>
+                        <strong>Execution</strong>
+                    </td>
+
+                    <td>
+                        Is backlog converting into revenue?
+                    </td>
+
+                    <td>
+                        Revenue growth
+                    </td>
+
                 </tr>
 
-                <tr>
-                    <td><strong>Mix</strong></td>
-                    <td>Is the Group becoming more diversified?</td>
-                    <td>Segment revenue</td>
-                </tr>
 
                 <tr>
-                    <td><strong>Valuation</strong></td>
-                    <td>Does market valuation reflect earnings?</td>
-                    <td>P/E / EV-EBITDA / DCF</td>
+
+                    <td>
+                        <strong>Margins</strong>
+                    </td>
+
+                    <td>
+                        Are project economics stable?
+                    </td>
+
+                    <td>
+                        Segment EBITDA
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Cash</strong>
+                    </td>
+
+                    <td>
+                        Is accounting profit converting into cash?
+                    </td>
+
+                    <td>
+                        CFO / FCF
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Leverage</strong>
+                    </td>
+
+                    <td>
+                        Is balance-sheet risk changing?
+                    </td>
+
+                    <td>
+                        Net debt / equity
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>Valuation</strong>
+                    </td>
+
+                    <td>
+                        Does the market valuation reflect expected earnings?
+                    </td>
+
+                    <td>
+                        P/E / EV-EBITDA / DCF
+                    </td>
+
                 </tr>
 
             </tbody>
@@ -1574,45 +2711,58 @@ footer {
 </section>
 
 
-<!-- 14 RESEARCH CONCLUSION -->
+<!-- =========================
+     17 — RESEARCH CONCLUSION
+========================= -->
 
 <section>
 
 <div class="container">
 
-    <div class="section-number">14 — RESEARCH CONCLUSION</div>
+    <div class="section-number">
+        17 — RESEARCH CONCLUSION
+    </div>
 
     <h2>
         Analytical conclusion
     </h2>
 
+
     <div class="conclusion">
 
         <p>
-            L&amp;T's FY2025–26 results provide a useful case study in
-            analysing a diversified engineering and infrastructure group.
-            The combination of a ₹7.40 lakh crore order book, ₹2.86 lakh
-            crore consolidated revenue and ₹17,238 crore recurring PAT
-            creates a framework for studying the relationship between order
-            visibility, project execution and profitability.
+            L&amp;T provides a useful equity-research case study because
+            its financial profile combines a large engineering and
+            infrastructure order book with energy, manufacturing,
+            technology services, financial services and realty businesses.
         </p>
 
         <br>
 
         <p>
-            The next layer of analysis should focus on conversion of the
-            order book into revenue and cash, segment-level profitability,
-            working-capital discipline, international exposure and the
-            valuation assigned to different business segments.
+            FY2026 ended with a ₹7.40 lakh crore order book, ₹2.86 lakh
+            crore consolidated revenue and ₹17,238 crore recurring profit
+            attributable to owners. The June 2026 order book increased
+            further to ₹7.79 lakh crore, while Q1 FY2027 order inflows
+            increased 14% year on year.
         </p>
 
         <br>
 
         <p>
-            For an equity-research model, the principal objective is not
-            simply to identify revenue growth, but to determine how much of
-            that growth converts into sustainable earnings, cash flow and
-            incremental return on capital.
+            The principal research question going forward is the quality
+            of conversion: how effectively L&amp;T converts its order
+            visibility into revenue, sustainable margins, operating cash
+            flow and incremental returns on capital.
+        </p>
+
+        <br>
+
+        <p>
+            The valuation framework should therefore combine earnings
+            multiples, cash-flow analysis and a sum-of-the-parts approach,
+            with explicit sensitivity to execution, working capital,
+            international exposure and segment economics.
         </p>
 
     </div>
@@ -1622,53 +2772,173 @@ footer {
 </section>
 
 
-<!-- 15 SOURCES -->
+<!-- =========================
+     18 — SOURCES
+========================= -->
 
 <section>
 
 <div class="container">
 
-    <div class="section-number">15 — SOURCES</div>
+    <div class="section-number">
+        18 — PRIMARY SOURCES
+    </div>
 
     <h2>
-        Primary research sources
+        Research sources
     </h2>
+
 
     <ul class="sources">
 
         <li>
-            <strong>Larsen &amp; Toubro — Integrated Annual Report 2025–26</strong>
-            — Management Discussion &amp; Analysis and financial review.
+
+            <strong>
+                L&amp;T — Q1 FY2027 Earnings Call Transcript
+            </strong>
+
+            <br>
+
+            July 28, 2026 · Q1 FY2027 order inflows, order book,
+            revenue, margins, working capital and segment commentary.
+
+            <br><br>
+
+            <a
+                class="source-link"
+                href="https://investors.larsentoubro.com/upload/Analysttrans/FY2027AnalysttransL%26T%20Q1%20FY27%20Earnings%20Call%20Transcript.pdf"
+                target="_blank"
+            >
+                Official L&amp;T source →
+            </a>
+
         </li>
 
-        <li>
-            <strong>Larsen &amp; Toubro — Financials</strong>
-            — Consolidated 10-year financial trends.
-        </li>
 
         <li>
-            <strong>Larsen &amp; Toubro — FY2025–26 Financial Results</strong>
-            — Consolidated and segment financial information.
+
+            <strong>
+                L&amp;T — Q1 FY2027 Consolidated Financial Results
+            </strong>
+
+            <br>
+
+            Quarter ended June 30, 2026.
+
+            <br><br>
+
+            <a
+                class="source-link"
+                href="https://investors.larsentoubro.com/upload/Quarterly/FY2027QuarterlyLTJune2026-website.pdf"
+                target="_blank"
+            >
+                Official L&amp;T source →
+            </a>
+
         </li>
 
-        <li>
-            <strong>Larsen &amp; Toubro — Annual Report Highlights</strong>
-            — Board Report and Chairman &amp; Managing Director statement.
-        </li>
 
         <li>
-            <strong>Larsen &amp; Toubro — Investor Downloads</strong>
-            — Annual reports, analyst presentations and quarterly results.
+
+            <strong>
+                L&amp;T — FY2025–26 Overall Financial Review
+            </strong>
+
+            <br>
+
+            Order book, revenue, geographic mix and business performance.
+
+            <br><br>
+
+            <a
+                class="source-link"
+                href="https://investors.larsentoubro.com/pdf/2026/Overall%20Financial%20Review%202025-26.pdf"
+                target="_blank"
+            >
+                Official L&amp;T source →
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <strong>
+                L&amp;T — Consolidated Financials
+            </strong>
+
+            <br>
+
+            Ten-year consolidated financial trend data.
+
+            <br><br>
+
+            <a
+                class="source-link"
+                href="https://investors.larsentoubro.com/Financials.aspx"
+                target="_blank"
+            >
+                Official L&amp;T source →
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <strong>
+                L&amp;T — Annual Report 2025–26
+            </strong>
+
+            <br>
+
+            Integrated Annual Report and management commentary.
+
+            <br><br>
+
+            <a
+                class="source-link"
+                href="https://investors.larsentoubro.com/Annual-Reports-Archives.aspx"
+                target="_blank"
+            >
+                Official L&amp;T source →
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <strong>
+                L&amp;T — Investor Downloads
+            </strong>
+
+            <br>
+
+            Analyst presentations, quarterly results and investor materials.
+
+            <br><br>
+
+            <a
+                class="source-link"
+                href="https://investors.larsentoubro.com/Download.aspx"
+                target="_blank"
+            >
+                Official L&amp;T source →
+            </a>
+
         </li>
 
     </ul>
 
+
     <div class="disclaimer">
 
-        Data shown is primarily based on L&amp;T's official FY2025–26
-        disclosures. Historical figures are presented for educational
-        research purposes. Valuation assumptions are illustrative and
-        should be independently verified before use.
+        Data shown is primarily based on Larsen &amp; Toubro's official
+        investor disclosures available through FY2025–26 and Q1 FY2027.
+        Historical calculations are derived from reported figures.
+        Valuation assumptions are illustrative. This page is an educational
+        equity-research portfolio project and not investment advice.
 
     </div>
 
@@ -1676,6 +2946,10 @@ footer {
 
 </section>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1686,6 +2960,7 @@ footer {
 </div>
 
 </footer>
+
 
 </body>
 </html>
