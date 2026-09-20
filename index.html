@@ -2984,6 +2984,29 @@ footer {
 .ocbc-mini{cursor:pointer}
 .ocbc-mini .vlab-mini-link{pointer-events:none}
 </style>
+<style id="company-theme-cards">
+/* Company-native valuation card themes */
+.vlab-mini.company-ocbc{background:linear-gradient(145deg,#fff7f7 0%,#fff 78%);border-color:#d52b2b}
+.company-ocbc .vlab-mini-head strong,.company-ocbc .vlab-mini-link{color:#c62828!important}
+.company-ocbc .vlab-mini-head span{color:#c62828!important}
+.vlab-mini.company-uob{background:linear-gradient(145deg,#f4f7ff 0%,#fff 78%);border-color:#174a9c}
+.company-uob strong,.company-uob>b{color:#174a9c!important}
+.company-uob span{color:#174a9c!important}
+.vlab-mini.company-reliance{background:linear-gradient(145deg,#f2f7fc 0%,#fff 78%);border-color:#1769aa}
+.company-reliance strong,.company-reliance>b{color:#1769aa!important}
+.company-reliance span{color:#1769aa!important}
+.vlab-mini.company-lnt{background:linear-gradient(145deg,#f3f7fb 0%,#fff 78%);border-color:#005baa}
+.company-lnt strong,.company-lnt>b{color:#005baa!important}
+.company-lnt span{color:#005baa!important}
+.vlab-card.company-dbs{border-color:#d71920}
+.company-dbs .vlab-kicker,.company-dbs .vlab-link{color:#ffcfcc}
+.company-dbs .vlab-tags span{border-color:#a94348;color:#ffd7d7}
+.company-dbs .vlab-metric{border-left-color:#d71920}
+.vlab-mini.company-ocbc:hover{box-shadow:0 12px 26px rgba(213,43,43,.12);border-color:#c62828}
+.vlab-mini.company-uob:hover{box-shadow:0 12px 26px rgba(23,74,156,.12);border-color:#174a9c}
+.vlab-mini.company-reliance:hover{box-shadow:0 12px 26px rgba(23,105,170,.12);border-color:#1769aa}
+.vlab-mini.company-lnt:hover{box-shadow:0 12px 26px rgba(0,91,170,.12);border-color:#005baa}
+</style>
 </head>
 
 
@@ -3826,7 +3849,7 @@ footer {
 <div class="container">
 <div class="vlab-head"><div><div class="section-label">VALUATION LAB · FINANCIAL MODELLING</div><h2>Where research becomes a model.</h2></div><p>Company-level valuation workbooks translated into recruiter-friendly proof of work — with the full Excel model behind every case.</p></div>
 <div class="vlab-grid">
-<a href="dbs-valuation.html" class="vlab-card featured">
+<a href="dbs-valuation.html" class="vlab-card featured company-dbs">
 <div class="vlab-kicker">FEATURED MODEL · SINGAPORE BANKING · SGX: D05</div>
 <h3>DBS Group Valuation</h3>
 <p>Bank-specific FCFE DCF with Bear / Base / Bull scenarios, P/B cross-checks and sensitivity analysis.</p>
@@ -3835,15 +3858,15 @@ footer {
 <span class="vlab-link">VIEW FULL VALUATION →</span>
 </a>
 <div class="vlab-mini-grid">
-<a class="vlab-mini ocbc-mini" href="ocbc-valuation.html">
+<a class="vlab-mini ocbc-mini company-ocbc" href="ocbc-valuation.html">
 <div class="vlab-mini-head"><strong>OCBC</strong><span>SGX: O39 · BANKING</span></div>
 <div class="vlab-mini-desc">Bank-specific DDM / FCFE-proxy valuation with ROE, payout and sensitivity analysis.</div>
 <div class="vlab-mini-data"><div><small>CURRENT</small><b>S$26.90</b></div><div><small>INTRINSIC</small><b>S$15.31</b></div><div><small>MODEL OUTPUT</small><b class="down">−43.1%</b></div></div>
 <div class="vlab-mini-meta"><span>Ke 9.30%</span><span>g 3.00%</span><span>P/B 1.84×</span></div><span class="vlab-mini-link">VIEW VALUATION →</span>
 </a>
-<a class="vlab-mini valuation-mini" href="uob-valuation.html"><strong>UOB</strong><span>SGX: U11 · BANKING</span><em>DDM · FCFE PROXY · SENSITIVITY</em><div class="vlab-mini-data" style="margin-top:12px"><div><small>CURRENT</small><b>S$36.65</b></div><div><small>INTRINSIC</small><b>S$28.52</b></div><div><small>MODEL OUTPUT</small><b class="down">−22.18%</b></div></div><b>OPEN VALUATION →</b></a>
-<a class="vlab-mini valuation-mini" href="reliance-valuation.html"><strong>RELIANCE</strong><span>NSE: RELIANCE · DIVERSIFIED</span><em>10-YEAR FCFF DCF · SENSITIVITY</em><div class="vlab-mini-data" style="margin-top:12px"><div><small>CURRENT</small><b>₹1,226.40</b></div><div><small>DCF VALUE</small><b>₹868.00</b></div><div><small>MODEL OUTPUT</small><b class="down">−29.22%</b></div></div><b>OPEN VALUATION →</b></a>
-<a class="vlab-mini valuation-mini" href="lnt-valuation.html"><strong>L&amp;T</strong><span>NSE: LT · INDUSTRIALS</span><em>FCFF DCF · WACC 15.92% · g 5%</em><div class="vlab-mini-data" style="margin-top:12px"><div><small>CURRENT</small><b>₹3,848.70</b></div><div><small>INTRINSIC</small><b>₹1,737.39</b></div><div><small>MODEL OUTPUT</small><b class="down">−54.86%</b></div></div><b>OPEN VALUATION →</b></a>
+<a class="vlab-mini valuation-mini company-uob" href="uob-valuation.html"><strong>UOB</strong><span>SGX: U11 · BANKING</span><em>DDM · FCFE PROXY · SENSITIVITY</em><div class="vlab-mini-data" style="margin-top:12px"><div><small>CURRENT</small><b>S$36.65</b></div><div><small>INTRINSIC</small><b>S$28.52</b></div><div><small>MODEL OUTPUT</small><b class="down">−22.18%</b></div></div><b>OPEN VALUATION →</b></a>
+<a class="vlab-mini valuation-mini company-reliance" href="reliance-valuation.html"><strong>RELIANCE</strong><span>NSE: RELIANCE · DIVERSIFIED</span><em>10-YEAR FCFF DCF · SENSITIVITY</em><div class="vlab-mini-data" style="margin-top:12px"><div><small>CURRENT</small><b>₹1,226.40</b></div><div><small>DCF VALUE</small><b>₹868.00</b></div><div><small>MODEL OUTPUT</small><b class="down">−29.22%</b></div></div><b>OPEN VALUATION →</b></a>
+<a class="vlab-mini valuation-mini company-lnt" href="lnt-valuation.html"><strong>L&amp;T</strong><span>NSE: LT · INDUSTRIALS</span><em>FCFF DCF · WACC 15.92% · g 5%</em><div class="vlab-mini-data" style="margin-top:12px"><div><small>CURRENT</small><b>₹3,848.70</b></div><div><small>INTRINSIC</small><b>₹1,737.39</b></div><div><small>MODEL OUTPUT</small><b class="down">−54.86%</b></div></div><b>OPEN VALUATION →</b></a>
 </div>
 </div>
 </div>
