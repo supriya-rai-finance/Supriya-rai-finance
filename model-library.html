@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valuation & Model Library — Supriya Rai</title>
+<style>
+:root{--navy:#0b1b33;--navy2:#102944;--gold:#c99b3b;--ink:#10233d;--muted:#60758b;--bg:#f5f6f7;--line:#d9e0e7;--green:#16806b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Arial,Helvetica,sans-serif;color:var(--ink)}
+.top{height:4px;background:linear-gradient(90deg,var(--gold),#6ea8fe,#16c784)}
+header{background:var(--navy);color:#fff;padding:42px 7vw 38px;border-bottom:1px solid #29425e}
+header .eyebrow{font:800 10px monospace;letter-spacing:2px;color:#e4bd68}
+h1{font-size:38px;letter-spacing:-1px;margin:12px 0 10px}.lead{max-width:780px;color:#a9bacb;line-height:1.7;font-size:14px}
+.wrap{width:min(1180px,90%);margin:32px auto 70px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:20px}
+button,.link{border:1px solid var(--line);background:#fff;color:var(--navy);padding:10px 13px;border-radius:5px;font-size:10px;font-weight:800;letter-spacing:.4px;text-decoration:none;cursor:pointer}
+button.active,button:hover,.link:hover{background:var(--navy);border-color:var(--navy);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:9px;padding:24px;box-shadow:0 8px 25px rgba(11,27,51,.05)}
+.card.bank{border-top:4px solid #c92a35}.card.india{border-top:4px solid #1769aa}
+.tag{font:800 9px monospace;letter-spacing:1.5px;color:#7b8c9e}.card h2{font-size:23px;margin:10px 0 8px}.desc{font-size:12px;line-height:1.65;color:var(--muted);min-height:42px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:18px 0}.metric{padding:11px;background:#f6f8fa;border:1px solid #e4e9ee;border-radius:5px}.metric span{display:block;font:700 8px monospace;color:#8292a2}.metric strong{display:block;margin-top:4px;font-size:14px}
+.methods{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}.method{padding:6px 8px;background:#eef4fa;color:#2b608d;border-radius:3px;font-size:9px;font-weight:800}
+.actions{display:flex;gap:8px;flex-wrap:wrap}.primary{background:var(--gold);border-color:var(--gold);color:#071a30}.primary:hover{background:#e2bc62;border-color:#e2bc62;color:#071a30}
+.note{margin-top:25px;padding:15px 17px;border-left:3px solid var(--gold);background:#fffaf0;color:#68798a;font-size:11px;line-height:1.7}
+.section-title{margin:34px 0 12px;font-size:13px;letter-spacing:1px}.section-title span{color:var(--gold);font-family:monospace}
+@media(max-width:760px){.grid{grid-template-columns:1fr}h1{font-size:30px}.metrics{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="top"></div>
+<header>
+<div class="eyebrow">SUPRIYA RAI · FINANCE & EQUITY RESEARCH</div>
+<h1>Valuation & Model Library</h1>
+<div class="lead">A recruiter-facing library of company valuation frameworks, editable modelling worksheets and research pitchbooks. The structure follows common CFI-style modelling and pitchbook conventions: company context, historical/operating metrics, assumptions, valuation, sensitivity and analyst checks. CFI's pitchbook framework also emphasizes company overview, industry overview, valuation and supporting analysis.</div>
+</header>
+<main class="wrap">
+<div class="toolbar">
+<button class="active" data-filter="all">ALL</button><button data-filter="bank">BANKS</button><button data-filter="india">INDIAN EQUITIES</button>
+<a class="link" href="index.html">← BACK TO PORTFOLIO</a>
+</div>
+<div class="section-title"><span>01</span> MODEL WORKBOOKS</div>
+<div class="grid" id="library">
+<article class="card bank"><div class="tag">Singapore Banking</div><h2>DBS — Valuation Model</h2><div class="desc">undefined</div><div class="metrics"><div class="metric"><span>KEY REFERENCE</span><strong>1H26 ROE 17.5%</strong></div><div class="metric"><span>FRAMEWORK</span><strong>P/B · P/E · Dividend Yield</strong></div><div class="metric"><span>FORMAT</span><strong>Editable</strong></div></div><div class="methods"><span class="method">P/B</span><span class="method">P/E</span><span class="method">Dividend Yield</span></div><div class="actions"><a class="link primary" href="#dbs">OPEN WORKSHEET ↓</a><button onclick="downloadModel('DBS')">DOWNLOAD CSV</button><button onclick="window.print()">PRINT / SAVE PDF</button></div></article><article class="card bank"><div class="tag">Singapore Banking</div><h2>OCBC — Valuation Model</h2><div class="desc">undefined</div><div class="metrics"><div class="metric"><span>KEY REFERENCE</span><strong>1H26 ROE 13.7%</strong></div><div class="metric"><span>FRAMEWORK</span><strong>P/B · P/E · Dividend Yield</strong></div><div class="metric"><span>FORMAT</span><strong>Editable</strong></div></div><div class="methods"><span class="method">P/B</span><span class="method">P/E</span><span class="method">Dividend Yield</span></div><div class="actions"><a class="link primary" href="#ocbc">OPEN WORKSHEET ↓</a><button onclick="downloadModel('OCBC')">DOWNLOAD CSV</button><button onclick="window.print()">PRINT / SAVE PDF</button></div></article><article class="card bank"><div class="tag">Singapore Banking</div><h2>UOB — Valuation Model</h2><div class="desc">undefined</div><div class="metrics"><div class="metric"><span>KEY REFERENCE</span><strong>1H26 ROE 11.6%</strong></div><div class="metric"><span>FRAMEWORK</span><strong>P/B · P/E · Dividend Yield</strong></div><div class="metric"><span>FORMAT</span><strong>Editable</strong></div></div><div class="methods"><span class="method">P/B</span><span class="method">P/E</span><span class="method">Dividend Yield</span></div><div class="actions"><a class="link primary" href="#uob">OPEN WORKSHEET ↓</a><button onclick="downloadModel('UOB')">DOWNLOAD CSV</button><button onclick="window.print()">PRINT / SAVE PDF</button></div></article><article class="card india"><div class="tag">Indian Equities</div><h2>Reliance — Valuation Model</h2><div class="desc">undefined</div><div class="metrics"><div class="metric"><span>KEY REFERENCE</span><strong>FY26 EBITDA ₹2.08L Cr</strong></div><div class="metric"><span>FRAMEWORK</span><strong>DCF · Trading Comps · SOTP</strong></div><div class="metric"><span>FORMAT</span><strong>Editable</strong></div></div><div class="methods"><span class="method">DCF</span><span class="method">Trading Comps</span><span class="method">SOTP</span></div><div class="actions"><a class="link primary" href="#reliance">OPEN WORKSHEET ↓</a><button onclick="downloadModel('Reliance')">DOWNLOAD CSV</button><button onclick="window.print()">PRINT / SAVE PDF</button></div></article><article class="card india"><div class="tag">Indian Equities</div><h2>L&T — Valuation Model</h2><div class="desc">undefined</div><div class="metrics"><div class="metric"><span>KEY REFERENCE</span><strong>FY26 Order Book ₹7.40L Cr</strong></div><div class="metric"><span>FRAMEWORK</span><strong>DCF · P/E · P/B · Dividend Yield</strong></div><div class="metric"><span>FORMAT</span><strong>Editable</strong></div></div><div class="methods"><span class="method">DCF</span><span class="method">P/E</span><span class="method">P/B</span><span class="method">Dividend Yield</span></div><div class="actions"><a class="link primary" href="#l&t">OPEN WORKSHEET ↓</a><button onclick="downloadModel('L&T')">DOWNLOAD CSV</button><button onclick="window.print()">PRINT / SAVE PDF</button></div></article>
+</div>
+<div class="section-title"><span>02</span> PITCHBOOKS</div>
+<div class="grid">
+<article class="card"><div class="tag">INSTITUTIONAL RESEARCH DECK</div><h2>DBS Pitchbook</h2><div class="desc">Equity research pitchbook — company overview, financials, peer framework and valuation.</div><div class="actions"><a class="link primary" href="dbs-pitchbook.html">OPEN PITCHBOOK ↗</a><button onclick="window.print()">PRINT / SAVE PDF</button></div></article><article class="card"><div class="tag">INSTITUTIONAL RESEARCH DECK</div><h2>Reliance Pitchbook</h2><div class="desc">Equity research pitchbook — business segments, forecasts, DCF, comps and SOTP.</div><div class="actions"><a class="link primary" href="reliance-pitchbook.html">OPEN PITCHBOOK ↗</a><button onclick="window.print()">PRINT / SAVE PDF</button></div></article><article class="card"><div class="tag">INSTITUTIONAL RESEARCH DECK</div><h2>L&T Pitchbook</h2><div class="desc">Equity research pitchbook — order book, financial performance and valuation.</div><div class="actions"><a class="link primary" href="larsen-toubro-pitchbook.html">OPEN PITCHBOOK ↗</a><button onclick="window.print()">PRINT / SAVE PDF</button></div></article>
+</div>
+<div class="note"><strong>Modeling note:</strong> bank models use sector-appropriate equity valuation methods rather than forcing an industrial FCFF DCF onto a bank. The downloadable CSV is a transparent worksheet export; the research pages contain the fuller assumptions, valuation sensitivities and source framework. All portfolio valuation outputs are illustrative and not investment recommendations.</div>
+</main>
+<script>
+const buttons=[...document.querySelectorAll('[data-filter]')],cards=[...document.querySelectorAll('.card.bank,.card.india')];
+buttons.forEach(b=>b.onclick=()=>{buttons.forEach(x=>x.classList.remove('active'));b.classList.add('active');const f=b.dataset.filter;cards.forEach(c=>c.style.display=f==='all'||c.classList.contains(f)?'block':'none')});
+const models={
+DBS:[['Section','Value'],['Model Type','Bank valuation'],['1H26 Net Profit','S$6.01B'],['1H26 ROE','17.5%'],['1H26 NIM','1.88%'],['NPL','1.0%'],['CET1','16.9%'],['P/B Low','1.8x'],['P/B Base','2.8x'],['P/B High','3.6x'],['P/E Low','11x'],['P/E Base','16x'],['P/E High','20x'],['Dividend Yield Low','4.5%'],['Dividend Yield Base','5.0%'],['Dividend Yield High','5.5%']],
+OCBC:[['Section','Value'],['Model Type','Bank valuation'],['1H26 Net Profit','S$4.19B'],['1H26 ROE','13.7%'],['1H26 NIM','1.73%'],['NPL','0.9%'],['CET1','15.7%'],['P/B Low','1.8x'],['P/B Base','2.8x'],['P/B High','3.6x'],['P/E Low','11x'],['P/E Base','16x'],['P/E High','20x']],
+UOB:[['Section','Value'],['Model Type','Bank valuation'],['1H26 Net Profit','S$2.90B'],['1H26 ROE','11.6%'],['1H26 NIM','1.78%'],['NPL','1.6%'],['CET1','15.4%'],['P/B Low','1.8x'],['P/B Base','2.8x'],['P/B High','3.6x'],['P/E Low','11x'],['P/E Base','16x'],['P/E High','20x']],
+Reliance:[['Section','Value'],['Model Type','FCFF DCF'],['FY26 Revenue','₹11.76L Cr'],['FY26 EBITDA','₹2.08L Cr'],['FY26 PAT','₹95,754 Cr'],['FY26 Capex','₹1.44L Cr'],['Net Debt / EBITDA','0.60x'],['WACC','10.0% illustrative'],['Terminal Growth','3.0% illustrative'],['Methods','DCF; Trading Comps; SOTP']],
+'L&T':[['Section','Value'],['Model Type','FCFF DCF'],['FY26 Revenue','₹285,874 Cr'],['FY26 Recurring PAT','₹17,238 Cr'],['FY26 Order Book','₹7.40L Cr'],['Q1 FY27 Revenue','₹67,942 Cr'],['TTM ROE','16.1%'],['WACC','10.0% illustrative'],['Terminal Growth','3.0% illustrative'],['Methods','DCF; P/E; P/B; Dividend Yield']]
+};
+function downloadModel(name){const rows=models[name];const csv=rows.map(r=>r.map(v=>'"'+String(v).replaceAll('"','""')+'"').join(',')).join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download=name.toLowerCase().replaceAll(' ','-')+'-valuation-worksheet.csv';a.click();URL.revokeObjectURL(a.href)}
+</script>
+</body>
+</html>
