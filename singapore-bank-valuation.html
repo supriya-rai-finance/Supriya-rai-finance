@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Singapore Banks | ROE &amp; P/B Valuation Dashboard — Supriya Rai</title>
+<meta name="description" content="Singapore bank peer valuation dashboard comparing OCBC, UOB and DBS using ROE, justified P/B, CAPM cost of equity and peer regression.">
+<meta property="og:title" content="Singapore Banks | ROE & P/B Valuation Dashboard — Supriya Rai">
+<meta property="og:description" content="OCBC, UOB and DBS peer valuation using ROE, justified P/B and indicative peer regression.">
+<style>
+:root{--navy:#071a31;--navy2:#0d2947;--gold:#d5a946;--cream:#f7f6f2;--muted:#718296;--line:#dcd9d2;--green:#16c784;--red:#d95d55}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:#18324d;font-family:Arial,Helvetica,sans-serif}.wrap{max-width:1180px;margin:auto;padding:0 28px}
+.nav{position:sticky;top:0;z-index:10;background:rgba(7,26,49,.97);border-bottom:1px solid #294965;padding:13px 0}.navin{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.nav a{color:#dbe4ec;text-decoration:none;font:800 9px monospace;letter-spacing:1px}.nav .gold{color:var(--gold)}
+.hero{padding:58px 0 35px;background:linear-gradient(135deg,#071a31,#0d2947);color:#fff}.eyebrow{color:#e1b95c;font:900 10px monospace;letter-spacing:2px;margin-bottom:12px}.hero h1{font:700 clamp(38px,5.5vw,64px)/.98 Georgia,serif;margin:0;letter-spacing:-2px}.hero h1 span{color:var(--gold)}.hero p{max-width:800px;color:#b9c9d9;font-size:13px;line-height:1.75;margin:16px 0 0}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tag{padding:7px 10px;border:1px solid #3d5872;border-radius:20px;background:#102d4b;color:#d7e1ea;font:800 8px monospace;letter-spacing:.6px}
+.section{padding:36px 0}.label{color:#a77b20;font:900 8px monospace;letter-spacing:1.6px;margin-bottom:9px}.section h2{margin:0 0 16px;color:var(--navy);font-size:25px}.panel{background:#fff;border:1px solid var(--line);border-radius:8px;padding:23px;margin-bottom:18px}.panel.dark{background:linear-gradient(145deg,#071a31,#0d2947);border-color:#294b68;color:#fff}.dark h2{color:#fff}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.bank{background:#fbfaf7;border:1px solid #ddd9d0;border-radius:7px;padding:18px;border-top:4px solid var(--gold)}.bank.oc{border-top-color:#1976a8}.bank.uob{border-top-color:#c58a21}.bank.dbs{border-top-color:#c92a35}.bank .ticker{color:#7d8da0;font:900 8px monospace;letter-spacing:1px}.bank h3{margin:6px 0 14px;color:var(--navy);font-size:20px}.bank .value{font-size:26px;font-weight:800;color:var(--navy)}.bank small{display:block;color:#8391a0;font-size:9px;margin-top:4px}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:16px}.metric{background:#fff;border:1px solid var(--line);border-radius:6px;padding:14px}.metric label{display:block;color:#8997a5;font:900 8px monospace;letter-spacing:.8px;margin-bottom:6px}.metric strong{font-size:20px;color:var(--navy)}.metric small{display:block;color:#8492a0;font-size:8px;margin-top:4px}
+table{width:100%;border-collapse:collapse;font-size:10px}th{text-align:left;color:#8997a5;font:900 8px monospace;letter-spacing:.8px;padding:9px;border-bottom:1px solid #ddd9d0}td{padding:10px 9px;border-bottom:1px solid #eeeae3;color:#415b72}td strong{color:var(--navy)}
+.formula{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding:22px;background:#fbfaf7;border:1px solid #e1ddd4;border-radius:7px;color:var(--navy);font:800 13px monospace}.formula span{padding:9px 12px;background:#fff;border:1px solid #ddd9d0;border-radius:5px}.formula b{color:var(--gold-dark,#a77b20)}
+.note{color:#8b98a4;font-size:8px;line-height:1.65;margin-top:11px}.two{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}
+.cta{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 24px;background:var(--navy);border-radius:8px;color:#fff;margin:22px 0 55px}.cta h3{margin:0 0 4px;font-size:18px}.cta p{margin:0;color:#9fb0bf;font-size:10px}.btn{display:inline-flex;padding:12px 16px;background:var(--gold);color:var(--navy);text-decoration:none;border-radius:4px;font:900 9px monospace;letter-spacing:.5px;white-space:nowrap}
+@media(max-width:850px){.cards,.two{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}.cta{align-items:flex-start;flex-direction:column}}@media(max-width:500px){.wrap{padding:0 18px}.metrics{grid-template-columns:1fr}.hero{padding-top:42px}}
+</style>
+</head>
+<body>
+<div class="nav"><div class="wrap navin"><a href="index.html">← PORTFOLIO</a><a href="dbs-valuation.html">DBS VALUATION</a><a href="ocbc-valuation.html">OCBC VALUATION</a><a href="model-library.html">MODEL LIBRARY</a><a class="gold" href="index.html#contact">DIRECT CONNECT →</a></div></div>
+<header class="hero"><div class="wrap">
+<div class="eyebrow">SINGAPORE BANKING · PEER VALUATION · 20 SEP 2026</div>
+<h1>ROE × P/B <span>Bank Dashboard</span></h1>
+<p>A three-bank peer framework comparing OCBC, UOB and DBS through return on equity, market P/B, justified P/B and an indicative peer regression. The workbook separates fundamental valuation from the cross-sectional peer lens.</p>
+<div class="tags"><span class="tag">OCBC · O39</span><span class="tag">UOB · U11</span><span class="tag">DBS · D05</span><span class="tag">JUSTIFIED P/B</span><span class="tag">PEER REGRESSION</span></div>
+</div></header>
+<main class="wrap section">
+<section class="panel"><div class="label">01 · PEER SNAPSHOT</div><h2>Market price, ROE and P/B</h2>
+<div class="cards">
+<div class="bank oc"><div class="ticker">SGX · O39</div><h3>OCBC</h3><div class="value">S$26.90</div><small>ROE 12.5% · Market P/B 1.84x</small></div>
+<div class="bank uob"><div class="ticker">SGX · U11</div><h3>UOB</h3><div class="value">S$36.65</div><small>ROE 11.0% · Market P/B 0.94x</small></div>
+<div class="bank dbs"><div class="ticker">SGX · D05</div><h3>DBS</h3><div class="value">S$64.67</div><small>ROE 16.2% · Market P/B 2.36x</small></div>
+</div>
+<div class="metrics">
+<div class="metric"><label>OCBC JUSTIFIED P/B</label><strong>2.05x</strong><small>Fair value S$29.90</small></div>
+<div class="metric"><label>UOB JUSTIFIED P/B</label><strong>1.18x</strong><small>Fair value S$46.37</small></div>
+<div class="metric"><label>DBS JUSTIFIED P/B</label><strong>2.18x</strong><small>Fair value S$59.71</small></div>
+<div class="metric"><label>PEER R²</label><strong>0.851</strong><small>3 observations · indicative</small></div>
+</div></section>
+
+<section class="panel dark"><div class="label">02 · FUNDAMENTAL FRAMEWORK</div><h2>Justified P/B from bank economics</h2>
+<div class="formula"><span>P/B</span><b>=</b><span>(ROE − g)</span><b>÷</b><span>(Ke − g)</span></div>
+<p class="note">Sustainable growth is modelled as ROE × (1 − payout). Cost of equity is CAPM: risk-free rate + beta × equity risk premium. The workbook applies this framework independently to each bank.</p>
+</section>
+
+<section class="panel"><div class="label">03 · FUNDAMENTAL VALUATION</div><h2>Justified P/B fair-value bridge</h2>
+<table><tr><th>BANK</th><th>ROE</th><th>PAYOUT</th><th>KE</th><th>G</th><th>MARKET P/B</th><th>JUSTIFIED P/B</th><th>FAIR VALUE</th></tr>
+<tr><td>OCBC</td><td>12.5%</td><td>50.0%</td><td>9.30%</td><td>6.25%</td><td>1.84x</td><td><strong>2.05x</strong></td><td><strong>S$29.90</strong></td></tr>
+<tr><td>UOB</td><td>11.0%</td><td>50.0%</td><td>10.15%</td><td>5.50%</td><td>0.94x</td><td><strong>1.18x</strong></td><td><strong>S$46.37</strong></td></tr>
+<tr><td>DBS</td><td>16.2%</td><td>75.0%</td><td>9.63%</td><td>4.05%</td><td>2.36x</td><td><strong>2.18x</strong></td><td><strong>S$59.71</strong></td></tr>
+</table>
+<p class="note">Fair value here is the workbook's justified-P/B output, not a recommendation. Inputs are approximate and should be refreshed against the latest annual reports and market data.</p>
+</section>
+
+<section class="two">
+<div class="panel"><div class="label">04 · PEER REGRESSION</div><h2>P/B versus ROE</h2>
+<table><tr><th>BANK</th><th>ROE</th><th>ACTUAL P/B</th><th>REGRESSION P/B</th><th>FAIR VALUE</th></tr>
+<tr><td>OCBC</td><td>12.5%</td><td>1.84x</td><td>1.53x</td><td>S$22.34</td></tr>
+<tr><td>UOB</td><td>11.0%</td><td>0.94x</td><td>1.16x</td><td>S$45.36</td></tr>
+<tr><td>DBS</td><td>16.2%</td><td>2.36x</td><td>2.45x</td><td>S$67.14</td></tr>
+</table>
+<p class="note">Regression: P/B = −1.575 + 24.847 × ROE. With only three observations, the workbook explicitly treats this as illustrative rather than statistically robust.</p>
+</div>
+<div class="panel"><div class="label">05 · MODEL INPUTS</div><h2>Common market assumptions</h2>
+<table><tr><th>INPUT</th><th>OCBC</th><th>UOB</th><th>DBS</th></tr>
+<tr><td>Risk-free rate</td><td>2.80%</td><td>2.80%</td><td>2.80%</td></tr>
+<tr><td>ERP</td><td>6.50%</td><td>6.50%</td><td>6.50%</td></tr>
+<tr><td>Beta</td><td>1.00</td><td>1.13</td><td>1.05</td></tr>
+<tr><td>Book value/share</td><td>S$14.59</td><td>S$39.16</td><td>S$27.40</td></tr>
+</table>
+<p class="note">Source/assumption notes are preserved in the Excel workbook, including the dated market-price inputs and source references used by the model author.</p>
+</div>
+</section>
+
+<section class="panel"><div class="label">06 · HOW TO READ THE MODEL</div><h2>Two lenses, one peer set</h2>
+<table><tr><th>LENS</th><th>QUESTION IT ANSWERS</th><th>OUTPUT</th></tr>
+<tr><td><strong>Fundamental</strong></td><td>What P/B is implied by ROE, growth and cost of equity?</td><td>Justified P/B / fair value</td></tr>
+<tr><td><strong>Relative</strong></td><td>How does each bank's P/B compare with the observed peer ROE relationship?</td><td>Regression-implied P/B / fair value</td></tr>
+<tr><td><strong>Cross-check</strong></td><td>Do the two lenses tell the same story?</td><td>Range of model outputs</td></tr>
+</table>
+</section>
+<div class="cta"><div><h3>Review the underlying peer workbook</h3><p>Inputs · justified P/B · CAPM · ROE / payout · three-bank regression</p></div><a class="btn" href="ROE_Valuation_OCBC_UOB_DBS.xlsx" download>DOWNLOAD PEER MODEL ↓</a></div>
+</main>
+</body>
+</html>
