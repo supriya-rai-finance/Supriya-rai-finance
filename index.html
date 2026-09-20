@@ -67,6 +67,11 @@ img {
     --dark-border: #304b67;
 }
 
+
+/* =========================================================
+   GLOBAL CONTAINER
+========================================================= */
+
 .container {
     width: min(1200px, 92%);
     margin: 0 auto;
@@ -80,8 +85,10 @@ img {
 .market-pulse {
     height: 36px;
     overflow: hidden;
+
     background: #06162a;
     color: #ffffff;
+
     border-bottom: 1px solid #20374f;
 }
 
@@ -98,9 +105,11 @@ img {
 .pulse-item {
     display: flex;
     align-items: center;
+
     gap: 9px;
 
     height: 36px;
+
     padding: 0 21px;
 
     border-right: 1px solid #20364e;
@@ -148,6 +157,7 @@ img {
 .navbar {
     background: #13253d;
     color: #ffffff;
+
     border-bottom: 1px solid #2a4058;
 }
 
@@ -164,6 +174,7 @@ img {
 .brand {
     display: flex;
     align-items: center;
+
     gap: 13px;
 }
 
@@ -180,34 +191,44 @@ img {
     color: var(--gold);
 
     font-family: Georgia, serif;
+
     font-size: 14px;
     font-weight: bold;
 }
 
 .brand-name {
     display: block;
+
     color: #ffffff;
+
     font-size: 19px;
     font-weight: 800;
 }
 
 .brand-role {
     display: block;
+
     margin-top: 1px;
+
     color: var(--gold);
+
     font-family: monospace;
+
     font-size: 9px;
+
     letter-spacing: 1px;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
+
     gap: 27px;
 
     color: #bdc8d5;
 
     font-size: 12px;
+
     font-weight: 800;
 }
 
@@ -274,17 +295,21 @@ img {
 .profile-repository {
     display: inline-flex;
     align-items: center;
+
     gap: 9px;
 
     padding: 8px 14px;
 
     border: 1px solid #46627d;
+
     border-radius: 18px;
 
     color: var(--gold);
 
     font-family: monospace;
+
     font-size: 10px;
+
     font-weight: 800;
 
     letter-spacing: 1px;
@@ -295,13 +320,16 @@ img {
     height: 7px;
 
     background: var(--green);
+
     border-radius: 50%;
 }
 
 .profile-main-grid {
     display: grid;
 
-    grid-template-columns: minmax(0, 1fr) 310px;
+    grid-template-columns:
+        minmax(0, 1fr)
+        310px;
 
     gap: 52px;
 
@@ -318,6 +346,7 @@ img {
     font-family: monospace;
 
     font-size: 11px;
+
     font-weight: 900;
 
     letter-spacing: 2px;
@@ -367,6 +396,7 @@ img {
 
 .profile-pills {
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 8px;
@@ -388,6 +418,7 @@ img {
     color: #d8e0e8;
 
     font-size: 11px;
+
     font-weight: 700;
 }
 
@@ -401,6 +432,7 @@ img {
 
 .profile-actions {
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 12px;
@@ -421,6 +453,7 @@ img {
     border-radius: 3px;
 
     font-size: 11px;
+
     font-weight: 900;
 
     letter-spacing: .3px;
@@ -428,11 +461,13 @@ img {
 
 .profile-action.primary {
     background: var(--gold);
+
     color: #081a31;
 }
 
 .profile-action.secondary {
     border: 1px solid #4d6782;
+
     color: #ffffff;
 }
 
@@ -442,6 +477,7 @@ img {
 
 .profile-micro {
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 25px;
@@ -485,6 +521,7 @@ img {
     height: 100%;
 
     object-fit: cover;
+
     object-position: center top;
 
     border-radius: 5px;
@@ -506,6 +543,7 @@ img {
     color: #ffffff;
 
     font-size: 11px;
+
     font-weight: 800;
 
     text-align: center;
@@ -595,7 +633,7 @@ img {
 
 
 /* =========================================================
-   COMMON SECTION STYLES
+   COMMON SECTION
 ========================================================= */
 
 .section-label {
@@ -708,6 +746,7 @@ img {
 
 .philosophy-intro h2 strong {
     display: block;
+
     color: #c39435;
 }
 
@@ -972,7 +1011,156 @@ img {
 
 
 /* =========================================================
-   04 — RESEARCH & FINANCIAL TOOLKIT
+   COMPANY / SECTOR COLOUR VARIANTS
+========================================================= */
+
+/* DBS — subtle DBS red */
+
+.project-dbs {
+    background:
+        linear-gradient(
+            135deg,
+            #fff7f6 0%,
+            #ffffff 72%
+        );
+
+    border-color: #e8c9c6;
+}
+
+.project-dbs .project-tag {
+    color: #c82026;
+}
+
+.project-dbs .project-link {
+    color: #b51f25;
+}
+
+.project-dbs:hover {
+    border-color: #c82026;
+
+    box-shadow:
+        0 10px 25px rgba(200,32,38,.10);
+}
+
+
+/* Singapore Banking Peer Comparison — banking blue */
+
+.project-banking {
+    background:
+        linear-gradient(
+            135deg,
+            #f3f8fc 0%,
+            #ffffff 72%
+        );
+
+    border-color: #cbd9e5;
+}
+
+.project-banking .project-tag {
+    color: #1769a9;
+}
+
+.project-banking .project-link {
+    color: #1769a9;
+}
+
+.project-banking:hover {
+    border-color: #1769a9;
+
+    box-shadow:
+        0 10px 25px rgba(23,105,169,.10);
+}
+
+
+/* Reliance — subtle blue */
+
+.project-reliance {
+    background:
+        linear-gradient(
+            135deg,
+            #f4f9ff 0%,
+            #ffffff 72%
+        );
+
+    border-color: #cadcec;
+}
+
+.project-reliance .project-tag {
+    color: #1769aa;
+}
+
+.project-reliance .project-link {
+    color: #1769aa;
+}
+
+.project-reliance:hover {
+    border-color: #1769aa;
+
+    box-shadow:
+        0 10px 25px rgba(23,105,170,.10);
+}
+
+
+/* Singapore REIT — subtle teal */
+
+.project-reit {
+    background:
+        linear-gradient(
+            135deg,
+            #f2faf7 0%,
+            #ffffff 72%
+        );
+
+    border-color: #c9e1d8;
+}
+
+.project-reit .project-tag {
+    color: #16806b;
+}
+
+.project-reit .project-link {
+    color: #16806b;
+}
+
+.project-reit:hover {
+    border-color: #16806b;
+
+    box-shadow:
+        0 10px 25px rgba(22,128,107,.10);
+}
+
+
+/* Larsen & Toubro — subtle blue / warm accent */
+
+.project-lt {
+    background:
+        linear-gradient(
+            135deg,
+            #f4f8fc 0%,
+            #fffdf8 100%
+        );
+
+    border-color: #d4dce3;
+}
+
+.project-lt .project-tag {
+    color: #1b659b;
+}
+
+.project-lt .project-link {
+    color: #1b659b;
+}
+
+.project-lt:hover {
+    border-color: #1b659b;
+
+    box-shadow:
+        0 10px 25px rgba(27,101,155,.10);
+}
+
+
+/* =========================================================
+   04 — AI-ASSISTED FINANCIAL RESEARCH
 ========================================================= */
 
 .toolkit-section {
@@ -1013,7 +1201,7 @@ img {
 
 
 /* =========================================================
-   MAIN DARK FEATURE
+   MAIN AI FEATURE
 ========================================================= */
 
 .toolkit-feature {
@@ -1049,7 +1237,9 @@ img {
 .toolkit-feature-grid {
     display: grid;
 
-    grid-template-columns: minmax(0, 1fr) 390px;
+    grid-template-columns:
+        minmax(0, 1fr)
+        390px;
 
     gap: 42px;
 
@@ -1146,7 +1336,7 @@ img {
 
 
 /* =========================================================
-   RIGHT METRIC GRID
+   AI METRICS
 ========================================================= */
 
 .toolkit-metrics {
@@ -1193,15 +1383,18 @@ img {
     margin-bottom: 10px;
 }
 
-.toolkit-metric:nth-child(2) .toolkit-metric-number {
+.toolkit-metric:nth-child(2)
+.toolkit-metric-number {
     color: var(--green);
 }
 
-.toolkit-metric:nth-child(3) .toolkit-metric-number {
+.toolkit-metric:nth-child(3)
+.toolkit-metric-number {
     color: #ffffff;
 }
 
-.toolkit-metric:nth-child(4) .toolkit-metric-number {
+.toolkit-metric:nth-child(4)
+.toolkit-metric-number {
     color: var(--gold);
 }
 
@@ -1225,7 +1418,7 @@ img {
 
 
 /* =========================================================
-   LOWER THREE CARDS
+   AI LOWER CARDS
 ========================================================= */
 
 .toolkit-cards {
@@ -1645,7 +1838,7 @@ img {
 
 
 /* =========================================================
-   LINKEDIN CARD
+   LINKEDIN
 ========================================================= */
 
 .linkedin-card {
@@ -1720,7 +1913,10 @@ footer {
 @media (max-width: 1050px) {
 
     .profile-main-grid {
-        grid-template-columns: minmax(0, 1fr) 270px;
+        grid-template-columns:
+            minmax(0, 1fr)
+            270px;
+
         gap: 32px;
     }
 
@@ -1734,6 +1930,7 @@ footer {
 
     .philosophy-grid {
         grid-template-columns: 280px 1fr;
+
         gap: 28px;
     }
 
@@ -1747,6 +1944,7 @@ footer {
 
     .experience-column {
         border-right: none;
+
         border-bottom: 1px solid #304b66;
     }
 
@@ -1825,6 +2023,7 @@ footer {
 
     .toolkit-feature-grid {
         grid-template-columns: 1fr;
+
         gap: 29px;
     }
 
@@ -1886,6 +2085,7 @@ footer {
 
     .profile-pill {
         font-size: 9px;
+
         padding: 7px 9px;
     }
 
@@ -1896,6 +2096,7 @@ footer {
 
     .profile-stat {
         padding: 13px;
+
         min-height: 80px;
     }
 
@@ -1938,6 +2139,7 @@ footer {
 
     .coverage-strip {
         align-items: flex-start;
+
         flex-direction: column;
     }
 
@@ -2619,9 +2821,11 @@ footer {
         <div class="projects-grid">
 
 
+            <!-- DBS -->
+
             <a
                 href="dbs-research.html"
-                class="project"
+                class="project project-dbs"
             >
 
                 <div class="project-tag">
@@ -2645,9 +2849,11 @@ footer {
             </a>
 
 
+            <!-- BANKING PEER -->
+
             <a
                 href="bank-peer-comparison.html"
-                class="project"
+                class="project project-banking"
             >
 
                 <div class="project-tag">
@@ -2671,9 +2877,11 @@ footer {
             </a>
 
 
+            <!-- RELIANCE -->
+
             <a
                 href="reliance-equity-research.html"
-                class="project"
+                class="project project-reliance"
             >
 
                 <div class="project-tag">
@@ -2697,9 +2905,11 @@ footer {
             </a>
 
 
+            <!-- REIT -->
+
             <a
                 href="singapore-reit-research.html"
-                class="project"
+                class="project project-reit"
             >
 
                 <div class="project-tag">
@@ -2723,9 +2933,11 @@ footer {
             </a>
 
 
+            <!-- L&T -->
+
             <a
                 href="larsen-toubro-equity-research.html"
-                class="project"
+                class="project project-lt"
             >
 
                 <div class="project-tag">
@@ -2791,7 +3003,6 @@ footer {
 
                 <div class="toolkit-feature-left">
 
-
                     <div class="toolkit-kicker">
                         ⚡ AI-POWERED FINANCIAL RESEARCH
                     </div>
@@ -2837,7 +3048,6 @@ footer {
                         </span>
 
                     </div>
-
 
                 </div>
 
@@ -3329,8 +3539,6 @@ footer {
                 </div>
 
 
-                <!-- CLICKABLE LINKEDIN -->
-
                 <a
                     href="https://www.linkedin.com/in/rai-supriya/"
                     target="_blank"
@@ -3343,8 +3551,7 @@ footer {
                     </span>
 
                     <strong>
-                        www.linkedin.com/in/rai-supriya
-
+                        /rai-supriya
                     </strong>
 
                     <small>
