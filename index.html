@@ -1772,213 +1772,112 @@ img {
 ========================================================= */
 
 .career-section {
-    padding: 74px 0;
-
-    background: var(--navy);
-
+    position: relative;
+    padding: 82px 0 88px;
+    background:
+        radial-gradient(circle at 8% 15%, rgba(213,169,70,.08), transparent 26%),
+        radial-gradient(circle at 92% 80%, rgba(55,92,128,.18), transparent 30%),
+        var(--navy);
     color: #ffffff;
+    overflow: hidden;
 }
-
+.career-section::before {
+    content: "CAREER / CREDENTIALS";
+    position: absolute; top: 28px; right: 4%;
+    color: rgba(255,255,255,.045);
+    font-family: monospace; font-size: 64px; font-weight: 900;
+    letter-spacing: -3px; pointer-events: none;
+}
 .career-heading {
-    display: flex;
-
-    align-items: flex-end;
-
-    justify-content: space-between;
-
-    margin-bottom: 32px;
+    position: relative; display: flex; align-items: flex-end;
+    justify-content: space-between; gap: 30px; margin-bottom: 34px;
 }
-
 .career-heading h2 {
-    margin-top: 10px;
-
-    color: #ffffff;
-
-    font-size: 44px;
-
-    line-height: 1.08;
-
-    letter-spacing: -1px;
+    margin-top: 9px; color: #fff; font-size: 46px;
+    line-height: 1.03; letter-spacing: -1.6px;
 }
-
+.career-heading .section-label { color: var(--gold); }
 .career-period {
-    color: var(--gold);
-
-    font-family: monospace;
-
-    font-size: 11px;
+    display: flex; align-items: center; gap: 12px;
+    padding: 11px 15px; border: 1px solid #385572; border-radius: 4px;
+    color: #b9c8d7; background: rgba(255,255,255,.025);
+    font-family: monospace; font-size: 10px; font-weight: 800; letter-spacing: 1px;
 }
-
+.career-period::before { content: "●"; color: var(--green); font-size: 8px; }
 .career-box {
     display: grid;
-
-    grid-template-columns: 1.25fr .75fr;
-
-    overflow: hidden;
-
-    background: #0b2039;
-
-    border: 1px solid #304b66;
-
-    border-radius: 8px;
+    grid-template-columns: minmax(0, 1.35fr) minmax(360px, .75fr);
+    overflow: hidden; background: rgba(11,32,57,.92);
+    border: 1px solid #35526e; border-radius: 10px;
+    box-shadow: 0 22px 55px rgba(0,0,0,.20);
 }
-
-.experience-column {
-    padding: 31px;
-
-    border-right: 1px solid #304b66;
-}
-
+.experience-column, .education-column { padding: 30px; }
+.experience-column { border-right: 1px solid #304b66; }
 .column-label {
-    color: var(--gold);
-
-    font-family: monospace;
-
-    font-size: 10px;
-
-    font-weight: 900;
-
-    letter-spacing: 1.5px;
-
-    margin-bottom: 23px;
+    display: flex; align-items: center; gap: 11px; color: var(--gold);
+    font-family: monospace; font-size: 10px; font-weight: 900;
+    letter-spacing: 1.5px; margin-bottom: 21px;
 }
-
-.timeline {
-    position: relative;
-
-    padding-left: 28px;
-}
-
+.column-label::after { content: ""; width: 42px; height: 1px; background: #3b5873; }
+.timeline { position: relative; display: grid; gap: 11px; padding-left: 26px; }
 .timeline::before {
-    content: "";
-
-    position: absolute;
-
-    left: 5px;
-
-    top: 4px;
-
-    bottom: 4px;
-
-    width: 1px;
-
-    background: #3a5975;
+    content: ""; position: absolute; left: 5px; top: 13px; bottom: 13px;
+    width: 1px; background: linear-gradient(#d5a946,#385672 25%,#385672 75%,#d5a946);
 }
-
 .timeline-item {
-    position: relative;
-
-    padding-bottom: 24px;
+    position: relative; padding: 15px 17px 16px;
+    background: #0d2643; border: 1px solid #294b69; border-radius: 6px;
+    transition: transform .2s ease,border-color .2s ease,background .2s ease;
 }
-
-.timeline-item:last-child {
-    padding-bottom: 0;
-}
-
+.timeline-item:hover { transform: translateX(4px); border-color:#c89b3c; background:#102b4a; }
 .timeline-dot {
-    position: absolute;
-
-    left: -28px;
-
-    top: 4px;
-
-    width: 12px;
-    height: 12px;
-
-    border: 2px solid var(--gold);
-
-    border-radius: 50%;
-
-    background: var(--navy);
+    position: absolute; left: -32px; top: 21px; width: 12px; height: 12px;
+    border: 2px solid var(--gold); border-radius: 50%; background: var(--navy);
+    box-shadow: 0 0 0 4px var(--navy);
 }
-
 .timeline-date {
-    color: var(--gold);
-
-    font-family: monospace;
-
-    font-size: 9px;
-
-    margin-bottom: 6px;
+    display: inline-block; padding: 4px 7px; margin-bottom: 8px;
+    color:#dcb75f; background:rgba(213,169,70,.08);
+    border:1px solid rgba(213,169,70,.22); border-radius:3px;
+    font-family:monospace; font-size:8px; font-weight:900; letter-spacing:.7px;
 }
-
-.timeline-item h3 {
-    color: #ffffff;
-
-    font-size: 18px;
-
-    margin-bottom: 2px;
-}
-
-.timeline-company {
-    color: #9eb0c1;
-
-    font-size: 11px;
-
-    margin-bottom: 7px;
-}
-
-.timeline-item p {
-    max-width: 650px;
-
-    color: #8298ad;
-
-    font-size: 11px;
-
-    line-height: 1.7;
-}
-
-.education-column {
-    padding: 31px;
-}
-
+.timeline-item h3 { color:#fff; font-size:18px; line-height:1.25; margin-bottom:3px; }
+.timeline-company { color:#a9bed0; font-size:11px; font-weight:700; margin-bottom:7px; }
+.timeline-item p { max-width:720px; color:#849db4; font-size:10.5px; line-height:1.65; }
+.education-column { background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.01)); }
+.education-grid { display:grid; gap:9px; }
 .education-item {
-    padding: 16px 0;
-
-    border-bottom: 1px solid #29435e;
+    position:relative; min-height:82px; padding:13px 14px 12px;
+    background:#0d2643; border:1px solid #294b69; border-radius:6px;
+    transition:transform .2s ease,border-color .2s ease;
 }
-
-.education-item:first-of-type {
-    padding-top: 0;
-}
-
-.education-item:last-child {
-    border-bottom: none;
-}
-
+.education-item:hover { transform:translateY(-2px); border-color:#c89b3c; }
 .education-type {
-    color: var(--gold);
-
-    font-family: monospace;
-
-    font-size: 9px;
-
-    font-weight: 900;
-
-    letter-spacing: 1.2px;
-
-    margin-bottom: 6px;
+    color:var(--gold); font-family:monospace; font-size:8px; font-weight:900;
+    letter-spacing:1.1px; margin-bottom:5px;
 }
-
-.education-item h3 {
-    color: #ffffff;
-
-    font-size: 17px;
-
-    line-height: 1.35;
-
-    margin-bottom: 4px;
+.education-item h3 { color:#fff; font-size:14px; line-height:1.3; margin-bottom:4px; }
+.education-item p { color:#8fa8bc; font-size:9.5px; line-height:1.5; }
+.education-highlight {
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+    margin-bottom:11px; padding:11px 13px; border:1px solid #385572;
+    background:#0a2039; border-radius:5px;
 }
-
-.education-item p {
-    color: #8fa4b8;
-
-    font-size: 10px;
-
-    line-height: 1.6;
+.education-highlight strong { color:#fff; font-size:11px; }
+.education-highlight span { color:#91a8bb; font-family:monospace; font-size:8px; letter-spacing:.8px; }
+@media (max-width:900px) {
+    .career-box { grid-template-columns:1fr; }
+    .experience-column { border-right:none; border-bottom:1px solid #304b66; }
+    .career-section::before { display:none; }
 }
-
-
+@media (max-width:600px) {
+    .career-section { padding:60px 0; }
+    .career-heading { align-items:flex-start; flex-direction:column; }
+    .career-heading h2 { font-size:36px; }
+    .experience-column,.education-column { padding:22px; }
+    .timeline { padding-left:21px; }
+    .timeline-dot { left:-27px; }
+}
 /* =========================================================
    06 — DIRECT CONNECT
 ========================================================= */
@@ -3589,258 +3488,112 @@ footer {
 ========================================================= -->
 
 <section id="career" class="career-section">
+<div class="container">
+
+<div class="career-heading">
+<div>
+<div class="section-label">05 — CAREER &amp; EDUCATION</div>
+<h2>Professional Journey</h2>
+</div>
+<div class="career-period">2016 → 2026 · FINANCE · RESEARCH</div>
+</div>
+
+<div class="career-box">
+
+<div class="experience-column">
+<div class="column-label">PROFESSIONAL EXPERIENCE</div>
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-date">MAY 2025 — DEC 2025</div>
+<h3>Senior Business Head</h3>
+<div class="timeline-company">Wise Global Research Services</div>
+<p>Led advisory teams serving HNI clients across equity analysis, portfolio strategy, mutual funds, derivatives and compliance.</p>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-date">JAN 2020 — MAY 2025</div>
+<h3>Business Head</h3>
+<div class="timeline-company">ResearchMart Services / Capital Ways</div>
+<p>Managed 150+ HNI/UHNI relationships across market research, financial analysis, client acquisition and portfolio growth.</p>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-date">JAN 2017 — DEC 2019</div>
+<h3>Team Lead</h3>
+<div class="timeline-company">Dezire Research</div>
+<p>Managed advisory teams and supported technical and fundamental analysis, client relationships and revenue growth.</p>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-date">MAY 2016 — DEC 2016</div>
+<h3>Business Analyst</h3>
+<div class="timeline-company">CapitalVia</div>
+<p>Performed market analysis and investment research across equity and commodities.</p>
+</div>
+
+</div>
+</div>
+
+<div class="education-column">
+<div class="column-label">EDUCATION &amp; CREDENTIALS</div>
+<div class="education-highlight">
+<strong>Academic + Professional Development</strong>
+<span>7 CREDENTIALS</span>
+</div>
+<div class="education-grid">
+
+<div class="education-item">
+<div class="education-type">MBA — FINANCE · 2026</div>
+<h3>Nanyang Institute of Management</h3>
+<p>Singapore · University of West Scotland affiliation</p>
+</div>
+
+<div class="education-item">
+<div class="education-type">MBA — MARKETING</div>
+<h3>Banasthali Vidyapith</h3>
+<p>India</p>
+</div>
+
+<div class="education-item">
+<div class="education-type">FMVA</div>
+<h3>Financial Modeling &amp; Valuation Analyst</h3>
+<p>Corporate Finance Institute</p>
+</div>
+
+<div class="education-item">
+<div class="education-type">AI IN FINANCE</div>
+<h3>AI in Finance</h3>
+<p>Corporate Finance Institute (CFI)</p>
+</div>
+
+<div class="education-item">
+<div class="education-type">AI</div>
+<h3>Tatagen AI</h3>
+<p>AI / finance professional training</p>
+</div>
+
+<div class="education-item">
+<div class="education-type">NISM</div>
+<h3>Research Analyst &amp; Investment Adviser</h3>
+<p>NISM professional certifications</p>
+</div>
+
+<div class="education-item">
+<div class="education-type">B.COM</div>
+<h3>Bachelor of Commerce</h3>
+<p>SHIATS Allahabad</p>
+</div>
+
+</div>
+</div>
 
-    <div class="container">
-
-
-        <div class="career-heading">
-
-            <div>
-
-                <div class="section-label">
-                    05 — CAREER &amp; EDUCATION
-                </div>
-
-                <h2>
-                    Professional Journey
-                </h2>
-
-            </div>
-
-            <div class="career-period">
-                2016 → 2026
-            </div>
-
-        </div>
-
-
-        <div class="career-box">
-
-
-            <div class="experience-column">
-
-                <div class="column-label">
-                    PROFESSIONAL EXPERIENCE
-                </div>
-
-
-                <div class="timeline">
-
-
-                    <div class="timeline-item">
-
-                        <div class="timeline-dot"></div>
-
-                        <div class="timeline-date">
-                            MAY 2025 — DEC 2025
-                        </div>
-
-                        <h3>
-                            Senior Business Head
-                        </h3>
-
-                        <div class="timeline-company">
-                            Wise Global Research Services
-                        </div>
-
-                        <p>
-                            Led advisory teams serving HNI clients
-                            across equity analysis, portfolio strategy,
-                            mutual funds, derivatives and compliance.
-                        </p>
-
-                    </div>
-
-
-                    <div class="timeline-item">
-
-                        <div class="timeline-dot"></div>
-
-                        <div class="timeline-date">
-                            JAN 2020 — MAY 2025
-                        </div>
-
-                        <h3>
-                            Business Head
-                        </h3>
-
-                        <div class="timeline-company">
-                            ResearchMart Services / Capital Ways
-                        </div>
-
-                        <p>
-                            Managed 150+ HNI/UHNI relationships across
-                            market research, financial analysis,
-                            client acquisition and portfolio growth.
-                        </p>
-
-                    </div>
-
-
-                    <div class="timeline-item">
-
-                        <div class="timeline-dot"></div>
-
-                        <div class="timeline-date">
-                            JAN 2017 — DEC 2019
-                        </div>
-
-                        <h3>
-                            Team Lead
-                        </h3>
-
-                        <div class="timeline-company">
-                            Dezire Research
-                        </div>
-
-                        <p>
-                            Managed advisory teams and supported
-                            technical and fundamental analysis,
-                            client relationships and revenue growth.
-                        </p>
-
-                    </div>
-
-
-                    <div class="timeline-item">
-
-                        <div class="timeline-dot"></div>
-
-                        <div class="timeline-date">
-                            MAY 2016 — DEC 2016
-                        </div>
-
-                        <h3>
-                            Business Analyst
-                        </h3>
-
-                        <div class="timeline-company">
-                            CapitalVia
-                        </div>
-
-                        <p>
-                            Performed market analysis and investment
-                            research across equity and commodities.
-                        </p>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-
-            <div class="education-column">
-
-                <div class="column-label">
-                    EDUCATION &amp; CERTIFICATIONS
-                </div>
-
-
-                <div class="education-item">
-
-                    <div class="education-type">
-                        MBA — FINANCE
-                    </div>
-
-                    <h3>
-                        Nanyang Institute of Management
-                    </h3>
-
-                    <p>
-                        Singapore · University of West Scotland affiliation · 2026
-                    </p>
-
-                </div>
-
-
-                <div class="education-item">
-
-                    <div class="education-type">
-                        MBA — MARKETING
-                    </div>
-
-                    <h3>
-                        Banasthali Vidyapith
-                    </h3>
-
-                    <p>
-                        India
-                    </p>
-
-                </div>
-
-
-                <div class="education-item">
-
-                    <div class="education-type">
-                        FMVA
-                    </div>
-
-                    <h3>
-                        Financial Modeling &amp; Valuation Analyst
-                    </h3>
-
-                    <p>
-                        Corporate Finance Institute
-                    </p>
-
-                </div>
-
-
-                <div class="education-item">
-                    <div class="education-type">AI IN FINANCE</div>
-                    <h3>AI in Finance</h3>
-                    <p>Corporate Finance Institute (CFI)</p>
-                </div>
-
-                <div class="education-item">
-                    <div class="education-type">AI</div>
-                    <h3>Tatagen AI</h3>
-                    <p>AI / finance professional training</p>
-                </div>
-
-                <div class="education-item">
-
-                    <div class="education-type">
-                        NISM
-                    </div>
-
-                    <h3>
-                        Research Analyst &amp; Investment Adviser
-                    </h3>
-
-                    <p>
-                        NISM professional certifications
-                    </p>
-
-                </div>
-
-
-                <div class="education-item">
-
-                    <div class="education-type">
-                        B.COM
-                    </div>
-
-                    <h3>
-                        Bachelor of Commerce
-                    </h3>
-
-                    <p>
-                        SHIATS Allahabad
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
 </section>
 
 
