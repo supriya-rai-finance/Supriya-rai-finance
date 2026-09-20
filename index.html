@@ -2408,6 +2408,55 @@ footer {
 
 
 .project-model-library{background:linear-gradient(135deg,#0b1b33 0%,#102944 100%);border-color:#294b69;color:#fff;position:relative;overflow:hidden}.project-model-library:before{content:"";position:absolute;right:-70px;top:-70px;width:180px;height:180px;border:1px solid rgba(201,155,59,.25);border-radius:50%}.project-model-library .project-tag{color:#e0b85e}.project-model-library h3{color:#fff}.project-model-library p{color:#a8bacb}.project-model-library .project-link{color:#e2b95e}.project-model-library .model-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:16px 0}.project-model-library .model-chip{padding:9px 7px;background:#173552;border:1px solid #2b4d6b;border-radius:4px;text-align:center}.project-model-library .model-chip strong{display:block;color:#fff;font-size:11px}.project-model-library .model-chip span{display:block;color:#8fa7bd;font:700 8px monospace;margin-top:3px}@media(max-width:600px){.project-model-library .model-strip{grid-template-columns:1fr 1fr}}
+
+
+/* Valuation & Model Library — aligned with portfolio palette */
+.project-model-library{
+    background:linear-gradient(135deg,#0b1b33 0%,#112a46 58%,#173b56 100%);
+    border:1px solid #294b69;
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 10px 28px rgba(11,27,51,.12);
+}
+.project-model-library:before{
+    content:"";position:absolute;right:-82px;top:-96px;width:230px;height:230px;
+    border:1px solid rgba(201,155,59,.34);border-radius:50%;
+}
+.project-model-library:after{
+    content:"";position:absolute;right:34px;top:36px;width:72px;height:72px;
+    border:1px solid rgba(22,199,132,.16);border-radius:50%;
+}
+.project-model-library .project-model-head{
+    display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;position:relative;z-index:1;
+}
+.project-model-library .project-tag{color:#e0b85e;letter-spacing:1.5px}
+.project-model-library .project-model-index{color:#6f8aa3;font:700 10px/1 monospace;letter-spacing:1px}
+.project-model-library h3{color:#fff;position:relative;z-index:1}
+.project-model-library p{color:#b6c6d6;position:relative;z-index:1}
+.project-model-library .model-strip{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:18px 0;position:relative;z-index:1;
+}
+.project-model-library .model-chip{
+    min-height:58px;padding:10px 8px;border-radius:6px;text-align:center;
+    background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);
+    display:flex;flex-direction:column;justify-content:center;transition:transform .2s ease,background .2s ease;
+}
+.project-model-library .model-chip strong{display:block;color:#fff;font-size:12px;letter-spacing:.2px}
+.project-model-library .model-chip span{display:block;color:#91a9be;font:700 8px/1.2 monospace;margin-top:5px;letter-spacing:.7px}
+.project-model-library .model-chip-gold{border-color:rgba(201,155,59,.42);background:rgba(201,155,59,.09)}
+.project-model-library .model-chip-gold strong{color:#e4bc61}
+.project-model-library .model-chip-blue{border-color:rgba(83,157,210,.36);background:rgba(83,157,210,.08)}
+.project-model-library .model-chip-blue strong{color:#83bde3}
+.project-model-library .model-chip-teal{border-color:rgba(22,199,132,.32);background:rgba(22,199,132,.07)}
+.project-model-library .model-chip-teal strong{color:#6ed9b2}
+.project-model-library .model-library-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:4px;position:relative;z-index:1}
+.project-model-library .project-link{color:#e2b95e;letter-spacing:1px;font-weight:800}
+.project-model-library .model-arrow{color:#e2b95e;font-size:20px;transition:transform .2s ease}
+.project-model-library:hover .model-arrow{transform:translate(3px,-3px)}
+.project-model-library:hover .model-chip{background:rgba(255,255,255,.08);transform:translateY(-1px)}
+@media(max-width:600px){.project-model-library .model-strip{grid-template-columns:1fr 1fr}.project-model-library .model-chip:last-child{grid-column:1/-1}}
+
 </style>
 
 </head>
@@ -3210,15 +3259,21 @@ footer {
 
             <!-- VALUATION & MODEL LIBRARY -->
             <a href="model-library.html" class="project project-model-library" data-category="models">
-                <div class="project-tag">VALUATION &amp; MODEL LIBRARY</div>
-                <h3>DCF Models &amp; Pitchbooks</h3>
-                <p>Interactive valuation worksheets, sector-appropriate bank valuation frameworks and institutional-style pitchbooks across the research portfolio.</p>
-                <div class="model-strip">
-                    <div class="model-chip"><strong>DCF</strong><span>FCFF MODELS</span></div>
-                    <div class="model-chip"><strong>P/B · P/E</strong><span>BANK VALUATION</span></div>
-                    <div class="model-chip"><strong>PDF</strong><span>PITCHBOOKS</span></div>
+                <div class="project-model-head">
+                    <div class="project-tag">VALUATION &amp; MODEL LIBRARY</div>
+                    <span class="project-model-index">06</span>
                 </div>
-                <span class="project-link">OPEN MODEL LIBRARY →</span>
+                <h3>DCF Models &amp; Pitchbooks</h3>
+                <p>Structured valuation workbooks, bank-specific frameworks and institutional-style pitchbooks built across the research portfolio.</p>
+                <div class="model-strip">
+                    <div class="model-chip model-chip-gold"><strong>DCF</strong><span>FCFF · FCFE</span></div>
+                    <div class="model-chip model-chip-blue"><strong>P/B · P/E</strong><span>BANKS</span></div>
+                    <div class="model-chip model-chip-teal"><strong>PDF</strong><span>PITCHBOOKS</span></div>
+                </div>
+                <div class="model-library-bottom">
+                    <span class="project-link">EXPLORE MODEL LIBRARY</span>
+                    <span class="model-arrow">↗</span>
+                </div>
             </a>
 
             <!-- L&T -->
