@@ -3,260 +3,303 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Reliance Industries | Equity Research</title>
 
 <style>
+*{box-sizing:border-box}
 
-* {
-    box-sizing: border-box;
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#07111f;
+    color:#e8eef7;
+    line-height:1.7;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #07111f;
-    color: #e8eef7;
-    line-height: 1.7;
+.container{
+    width:min(1120px,92%);
+    margin:auto;
 }
 
-.container {
-    width: min(1120px, 92%);
-    margin: auto;
+header{
+    padding:80px 0 55px;
+    border-bottom:1px solid #203047;
 }
 
-header {
-    padding: 80px 0 55px;
-    border-bottom: 1px solid #203047;
+.label,.section-label{
+    color:#8fb4dc;
+    font-size:12px;
+    letter-spacing:2px;
+    font-weight:700;
+    text-transform:uppercase;
 }
 
-.label,
-.section-label {
-    color: #8fb4dc;
-    font-size: 12px;
-    letter-spacing: 2px;
-    font-weight: 700;
-    text-transform: uppercase;
+h1{
+    font-size:clamp(42px,7vw,78px);
+    margin:15px 0;
+    line-height:1;
 }
 
-h1 {
-    font-size: clamp(42px, 7vw, 78px);
-    margin: 15px 0;
-    line-height: 1;
+h2{
+    font-size:32px;
+    margin:12px 0 25px;
 }
 
-h2 {
-    font-size: 32px;
-    margin: 12px 0 25px;
+h3{
+    margin-top:0;
 }
 
-h3 {
-    margin-top: 0;
+.subtitle{
+    max-width:800px;
+    color:#aebdce;
+    font-size:18px;
 }
 
-.subtitle {
-    max-width: 800px;
-    color: #aebdce;
-    font-size: 18px;
+section{
+    padding:65px 0;
+    border-bottom:1px solid #17263a;
 }
 
-section {
-    padding: 65px 0;
-    border-bottom: 1px solid #17263a;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.two-col{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
 }
 
-.two-col {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
+.card{
+    background:#0c1929;
+    border:1px solid #203047;
+    padding:25px;
+    border-radius:10px;
 }
 
-.card {
-    background: #0c1929;
-    border: 1px solid #203047;
-    padding: 25px;
-    border-radius: 10px;
+.metric{
+    font-size:30px;
+    font-weight:700;
+    margin-top:12px;
 }
 
-.metric {
-    font-size: 30px;
-    font-weight: 700;
-    margin-top: 12px;
+.metric-label{
+    color:#91a2b6;
+    font-size:13px;
 }
 
-.metric-label {
-    color: #91a2b6;
-    font-size: 13px;
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:25px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 25px;
+th,td{
+    text-align:left;
+    padding:15px;
+    border-bottom:1px solid #203047;
 }
 
-th,
-td {
-    text-align: left;
-    padding: 15px;
-    border-bottom: 1px solid #203047;
+th{
+    color:#8fb4dc;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:1px;
 }
 
-th {
-    color: #8fb4dc;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+td{
+    color:#d9e2ed;
 }
 
-td {
-    color: #d9e2ed;
+.highlight{
+    font-weight:700;
 }
 
-.highlight {
-    font-weight: 700;
+.note{
+    color:#8495a9;
+    font-size:13px;
+    margin-top:15px;
 }
 
-.note {
-    color: #8495a9;
-    font-size: 13px;
-    margin-top: 15px;
+.insight{
+    margin-top:25px;
+    padding:22px;
+    background:#0c1929;
+    border-left:3px solid #7fa7d8;
 }
 
-.insight {
-    margin-top: 25px;
-    padding: 22px;
-    background: #0c1929;
-    border-left: 3px solid #7fa7d8;
+.assumption{
+    display:grid;
+    grid-template-columns:1fr 160px;
+    gap:15px;
+    padding:13px 0;
+    border-bottom:1px solid #203047;
 }
 
-.assumption {
-    display: grid;
-    grid-template-columns: 1fr 160px;
-    gap: 15px;
-    padding: 13px 0;
-    border-bottom: 1px solid #203047;
+.assumption span:last-child{
+    text-align:right;
+    font-weight:700;
 }
 
-.assumption span:last-child {
-    text-align: right;
-    font-weight: 700;
+.bar{
+    height:12px;
+    background:#17263a;
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:12px;
 }
 
-.bar {
-    height: 12px;
-    background: #17263a;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-top: 12px;
+.bar-fill{
+    height:100%;
+    background:#7fa7d8;
 }
 
-.bar-fill {
-    height: 100%;
-    background: #7fa7d8;
+.football-field{
+    background:#0c1929;
+    border:1px solid #203047;
+    padding:30px;
+    border-radius:10px;
+    margin-top:30px;
 }
 
-.football-field {
-    background: #0c1929;
-    border: 1px solid #203047;
-    padding: 30px;
-    border-radius: 10px;
-    margin-top: 30px;
+.range-row{
+    display:grid;
+    grid-template-columns:150px 1fr 150px;
+    align-items:center;
+    gap:20px;
+    margin:28px 0;
 }
 
-.range-row {
-    display: grid;
-    grid-template-columns: 150px 1fr 150px;
-    align-items: center;
-    gap: 20px;
-    margin: 28px 0;
+.range-track{
+    height:14px;
+    background:#17263a;
+    border-radius:20px;
+    position:relative;
 }
 
-.range-track {
-    height: 14px;
-    background: #17263a;
-    border-radius: 20px;
-    position: relative;
+.range{
+    position:absolute;
+    height:14px;
+    background:#7fa7d8;
+    border-radius:20px;
 }
 
-.range {
-    position: absolute;
-    height: 14px;
-    background: #7fa7d8;
-    border-radius: 20px;
+.marker{
+    position:absolute;
+    width:3px;
+    height:30px;
+    top:-8px;
+    background:#f2f6fb;
 }
 
-.marker {
-    position: absolute;
-    width: 3px;
-    height: 30px;
-    top: -8px;
-    background: #f2f6fb;
+.range-values{
+    display:flex;
+    justify-content:space-between;
+    color:#aebdce;
+    font-size:13px;
 }
 
-.range-values {
-    display: flex;
-    justify-content: space-between;
-    color: #aebdce;
-    font-size: 13px;
+/* RESEARCH THESIS FRAMEWORK */
+
+.thesis-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:30px;
 }
 
-footer {
-    padding: 40px 0;
-    color: #718298;
-    font-size: 13px;
+.thesis-card{
+    min-height:225px;
+    padding:27px;
+    background:#0b192b;
+    border:1px solid #243b54;
+    border-radius:9px;
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background .2s ease;
 }
 
-@media (max-width: 800px) {
+.thesis-card:hover{
+    transform:translateY(-3px);
+    border-color:#5279a7;
+    background:#0d1e32;
+}
+
+.thesis-number{
+    color:#8fb8ff;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1.8px;
+    margin-bottom:22px;
+}
+
+.thesis-card h3{
+    font-size:18px;
+    line-height:1.35;
+    margin-bottom:12px;
+}
+
+.thesis-card p{
+    color:#91a4ba;
+    font-size:13px;
+    line-height:1.7;
+}
+
+footer{
+    padding:40px 0;
+    color:#718298;
+    font-size:13px;
+}
+
+@media(max-width:800px){
 
     .grid,
-    .two-col {
-        grid-template-columns: 1fr;
+    .two-col,
+    .thesis-grid{
+        grid-template-columns:1fr;
     }
 
-    .range-row {
-        grid-template-columns: 1fr;
-        gap: 10px;
+    .range-row{
+        grid-template-columns:1fr;
+        gap:10px;
     }
 
-    .assumption {
-        grid-template-columns: 1fr;
+    .assumption{
+        grid-template-columns:1fr;
     }
 
-    .assumption span:last-child {
-        text-align: left;
+    .assumption span:last-child{
+        text-align:left;
     }
-
 }
 
+@media(min-width:801px) and (max-width:1000px){
+
+    .thesis-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
 </style>
 </head>
-
 
 <body>
 
 <header>
-
 <div class="container">
 
 <div class="label">
 EQUITY RESEARCH • INDIAN EQUITIES
 </div>
 
-<h1>
-Reliance Industries
-</h1>
+<h1>Reliance Industries</h1>
 
 <p class="subtitle">
-Fundamental equity research covering business segments,
-financial performance, forecasting, DCF valuation,
-trading comparables, SOTP methodology, catalysts and risks.
+Fundamental equity research covering business segments, financial performance,
+forecasting, DCF valuation, trading comparables, SOTP methodology,
+catalysts and risks.
 </p>
 
 <div class="grid" style="margin-top:35px;">
@@ -277,159 +320,241 @@ trading comparables, SOTP methodology, catalysts and risks.
 </div>
 
 </div>
-
 </div>
-
 </header>
 
 
-<!-- 01 -->
+<!-- 01 COMPANY OVERVIEW -->
 
 <section>
-
 <div class="container">
 
 <div class="section-label">
 01 — Company Overview
 </div>
 
-<h2>
-A diversified Indian conglomerate
-</h2>
+<h2>A diversified Indian conglomerate</h2>
 
 <p>
-Reliance Industries operates across multiple businesses including
-Digital Services, Retail, Oil-to-Chemicals, Oil & Gas and
-Media & Entertainment. The diversified structure means consolidated
-earnings should be analysed alongside segment-level economics.
+Reliance Industries operates across multiple businesses including Digital
+Services, Retail, Oil-to-Chemicals, Oil &amp; Gas and Media &amp; Entertainment.
+The diversified structure means consolidated earnings should be analysed
+alongside segment-level economics.
 </p>
 
 <div class="two-col">
 
 <div class="card">
-
 <h3>Core analytical question</h3>
 
 <p>
-How much of Reliance's earnings and valuation is supported by
-established cash-generating businesses versus businesses with
-higher future growth expectations?
+How much of Reliance's earnings and valuation is supported by established
+cash-generating businesses versus businesses with higher future growth
+expectations?
 </p>
-
 </div>
 
 <div class="card">
-
 <h3>Valuation implication</h3>
 
 <p>
-A combination of DCF, trading multiples and Sum-of-the-Parts
-analysis can provide a more complete valuation framework than
-a single consolidated P/E multiple.
+A combination of DCF, trading multiples and Sum-of-the-Parts analysis can
+provide a more complete valuation framework than a single consolidated
+P/E multiple.
 </p>
-
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
-<!-- 02 -->
+<!-- 02 RESEARCH THESIS FRAMEWORK -->
 
 <section>
 
 <div class="container">
 
 <div class="section-label">
-02 — Business Segment Analysis
+02 — Research Thesis Framework
 </div>
 
 <h2>
-Understanding the earnings engine
+How I assess Reliance Industries
 </h2>
+
+<p>
+The Reliance research framework focuses on the quality and scalability of
+its major business engines, earnings drivers, capital allocation, valuation
+variables and key risks across the Group's diversified portfolio.
+</p>
+
+<div class="thesis-grid">
+
+<div class="thesis-card">
+<div class="thesis-number">01</div>
+
+<h3>Business Portfolio</h3>
+
+<p>
+Assess the contribution and strategic position of Retail, Digital Services,
+Media &amp; Entertainment, Oil-to-Chemicals and Oil &amp; Gas within the broader
+Reliance portfolio.
+</p>
+</div>
+
+
+<div class="thesis-card">
+<div class="thesis-number">02</div>
+
+<h3>Earnings Drivers</h3>
+
+<p>
+Track segment revenue, EBITDA, margins, subscriber and retail trends,
+refining and petrochemical conditions, upstream production and new-business
+ramp-up.
+</p>
+</div>
+
+
+<div class="thesis-card">
+<div class="thesis-number">03</div>
+
+<h3>Valuation</h3>
+
+<p>
+Assess the Group using a sum-of-the-parts framework, supported by segment
+earnings, business quality, growth expectations, capital intensity and
+relevant sector valuation multiples.
+</p>
+</div>
+
+
+<div class="thesis-card">
+<div class="thesis-number">04</div>
+
+<h3>Growth Catalysts</h3>
+
+<p>
+Monitor retail expansion, digital monetisation, new energy development,
+media integration, upstream performance and further scaling of consumer
+businesses.
+</p>
+</div>
+
+
+<div class="thesis-card">
+<div class="thesis-number">05</div>
+
+<h3>Key Risks</h3>
+
+<p>
+Monitor commodity-cycle volatility, margin pressure, regulatory
+developments, capital expenditure requirements, execution risk and
+competitive intensity.
+</p>
+</div>
+
+
+<div class="thesis-card">
+<div class="thesis-number">06</div>
+
+<h3>Monitoring Indicators</h3>
+
+<p>
+Follow segment EBITDA, retail growth, digital subscriber trends, ARPU,
+refining margins, petrochemical spreads, net debt, capex and returns on
+invested capital.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- 03 BUSINESS SEGMENT ANALYSIS -->
+
+<section>
+<div class="container">
+
+<div class="section-label">
+03 — Business Segment Analysis
+</div>
+
+<h2>Understanding the earnings engine</h2>
 
 <div class="grid">
 
 <div class="card">
 <h3>Digital Services</h3>
 <p>
-Jio provides telecommunications and digital services.
-Key variables include subscriber growth, ARPU, tariff
-changes, network investment and operating leverage.
+Jio provides telecommunications and digital services. Key variables include
+subscriber growth, ARPU, tariff changes, network investment and operating
+leverage.
 </p>
 </div>
 
 <div class="card">
 <h3>Retail</h3>
 <p>
-Reliance Retail operates across grocery, consumer electronics,
-fashion and other retail categories. Key variables include
-store productivity, same-store growth, margins and digital
-commerce.
+Reliance Retail operates across grocery, consumer electronics, fashion and
+other retail categories. Key variables include store productivity,
+same-store growth, margins and digital commerce.
 </p>
 </div>
 
 <div class="card">
 <h3>Oil-to-Chemicals</h3>
 <p>
-The O2C business remains exposed to crude prices, refining
-margins, petrochemical spreads, utilization and global demand.
+The O2C business remains exposed to crude prices, refining margins,
+petrochemical spreads, utilization and global demand.
 </p>
 </div>
 
 <div class="card">
-<h3>Oil & Gas</h3>
+<h3>Oil &amp; Gas</h3>
 <p>
-Production growth, gas prices, development expenditure and
-resource productivity influence this segment.
+Production growth, gas prices, development expenditure and resource
+productivity influence this segment.
 </p>
 </div>
 
 <div class="card">
 <h3>New Energy</h3>
 <p>
-Battery manufacturing, solar manufacturing, hydrogen and
-associated investments represent longer-duration growth
-opportunities.
+Battery manufacturing, solar manufacturing, hydrogen and associated
+investments represent longer-duration growth opportunities.
 </p>
 </div>
 
 <div class="card">
-<h3>Media & Entertainment</h3>
+<h3>Media &amp; Entertainment</h3>
 <p>
-Advertising, subscriptions, content economics and the
-integration of digital platforms are important variables.
+Advertising, subscriptions, content economics and the integration of
+digital platforms are important variables.
 </p>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
-<!-- 03 -->
+<!-- 04 HISTORICAL FINANCIAL PERFORMANCE -->
 
 <section>
-
 <div class="container">
 
 <div class="section-label">
-03 — Historical Financial Performance
+04 — Historical Financial Performance
 </div>
 
-<h2>
-Five-year financial trend
-</h2>
+<h2>Five-year financial trend</h2>
 
 <table>
 
 <thead>
-
 <tr>
 <th>₹ Crore</th>
 <th>FY2022</th>
@@ -438,7 +563,6 @@ Five-year financial trend
 <th>FY2025</th>
 <th>FY2026</th>
 </tr>
-
 </thead>
 
 <tbody>
@@ -480,38 +604,32 @@ Five-year financial trend
 </tr>
 
 </tbody>
-
 </table>
 
 <div class="insight">
 
 <strong>Research observation:</strong>
-
-The financial profile shows a substantial expansion in the
-earnings base over the period, while capital expenditure remains
-high because Reliance continues investing across consumer,
-digital and new-energy businesses.
+The financial profile shows a substantial expansion in the earnings base
+over the period, while capital expenditure remains high because Reliance
+continues investing across consumer, digital and new-energy businesses.
 
 </div>
 
 </div>
-
 </section>
 
 
-<!-- 04 -->
+<!-- 05 PROFITABILITY -->
 
 <section>
 
 <div class="container">
 
 <div class="section-label">
-04 — Profitability & Cash Flow
+05 — Profitability &amp; Cash Flow
 </div>
 
-<h2>
-Operating leverage and reinvestment
-</h2>
+<h2>Operating leverage and reinvestment</h2>
 
 <div class="grid">
 
@@ -519,45 +637,41 @@ Operating leverage and reinvestment
 
 <h3>EBITDA margin</h3>
 
-<div class="metric">
-~17.7%
-</div>
+<div class="metric">~17.7%</div>
 
 <div class="metric-label">
 FY2026 EBITDA / Revenue
 </div>
 
 <div class="bar">
-<div class="bar-fill" style="width:70%;"></div>
+<div class="bar-fill" style="width:70%"></div>
 </div>
 
 </div>
+
 
 <div class="card">
 
 <h3>Net debt / EBITDA</h3>
 
-<div class="metric">
-~0.64x
-</div>
+<div class="metric">~0.64x</div>
 
 <div class="metric-label">
 FY2026 reported measure
 </div>
 
 <div class="bar">
-<div class="bar-fill" style="width:32%;"></div>
+<div class="bar-fill" style="width:32%"></div>
 </div>
 
 </div>
+
 
 <div class="card">
 
 <h3>FY2026 capex</h3>
 
-<div class="metric">
-₹1.44L Cr
-</div>
+<div class="metric">₹1.44L Cr</div>
 
 <div class="metric-label">
 Capital expenditure
@@ -570,42 +684,30 @@ Capital expenditure
 <div class="insight">
 
 <strong>Balance-sheet observation:</strong>
-
-RIL's FY2026 net debt was ₹1.25 lakh crore and net debt/EBITDA
-remained below 1x, providing balance-sheet flexibility while the
-company continued substantial investment.
+The scale of capital expenditure remains an important variable for assessing
+free cash flow conversion and future returns on invested capital.
 
 </div>
 
 </div>
-
 </section>
 
 
-<!-- 05 -->
+<!-- 06 FORECAST -->
 
 <section>
 
 <div class="container">
 
 <div class="section-label">
-05 — Forecast Framework
+06 — Forecast Framework
 </div>
 
-<h2>
-Five-year operating forecast
-</h2>
-
-<p>
-The forecast below is a portfolio modelling framework rather than
-management guidance. The objective is to demonstrate how an analyst
-would translate business drivers into a consolidated FCFF model.
-</p>
+<h2>Illustrative operating forecast</h2>
 
 <table>
 
 <thead>
-
 <tr>
 <th>₹ Crore</th>
 <th>FY2026A</th>
@@ -615,7 +717,6 @@ would translate business drivers into a consolidated FCFF model.
 <th>FY2030E</th>
 <th>FY2031E</th>
 </tr>
-
 </thead>
 
 <tbody>
@@ -633,15 +734,15 @@ would translate business drivers into a consolidated FCFF model.
 <tr>
 <td>Growth</td>
 <td>—</td>
-<td>7.0%</td>
-<td>8.0%</td>
-<td>8.0%</td>
-<td>7.0%</td>
-<td>6.0%</td>
+<td>7%</td>
+<td>8%</td>
+<td>8%</td>
+<td>7%</td>
+<td>6%</td>
 </tr>
 
 <tr>
-<td>EBITDA margin</td>
+<td>EBITDA Margin</td>
 <td>17.7%</td>
 <td>18.0%</td>
 <td>18.3%</td>
@@ -661,42 +762,32 @@ would translate business drivers into a consolidated FCFF model.
 </tr>
 
 </tbody>
-
 </table>
 
-<div class="insight">
-
-<strong>Forecast philosophy:</strong>
-
-The model gradually reduces revenue growth while allowing moderate
-margin expansion. This prevents the valuation from relying entirely
-on perpetual high-growth assumptions.
+<p class="note">
+Forecast assumptions are illustrative and should be refreshed as new company
+guidance and financial information become available.
+</p>
 
 </div>
-
-</div>
-
 </section>
 
 
-<!-- 06 -->
+<!-- 07 DCF -->
 
 <section>
 
 <div class="container">
 
 <div class="section-label">
-06 — DCF Valuation
+07 — DCF Valuation
 </div>
 
-<h2>
-FCFF-based DCF framework
-</h2>
+<h2>Discounted Cash Flow Framework</h2>
 
 <table>
 
 <thead>
-
 <tr>
 <th>₹ Crore</th>
 <th>FY2027E</th>
@@ -705,7 +796,6 @@ FCFF-based DCF framework
 <th>FY2030E</th>
 <th>FY2031E</th>
 </tr>
-
 </thead>
 
 <tbody>
@@ -720,7 +810,7 @@ FCFF-based DCF framework
 </tr>
 
 <tr>
-<td>D&A assumption</td>
+<td>D&amp;A</td>
 <td>55,000</td>
 <td>58,000</td>
 <td>61,000</td>
@@ -756,15 +846,6 @@ FCFF-based DCF framework
 </tr>
 
 <tr>
-<td>D&A</td>
-<td>55,000</td>
-<td>58,000</td>
-<td>61,000</td>
-<td>64,000</td>
-<td>67,000</td>
-</tr>
-
-<tr>
 <td>Capex</td>
 <td>(1,45,000)</td>
 <td>(1,45,000)</td>
@@ -792,33 +873,28 @@ FCFF-based DCF framework
 </tr>
 
 </tbody>
-
 </table>
 
 <p class="note">
-All forecast assumptions are illustrative portfolio-model assumptions
-and should be updated as new company guidance and financial data become
-available.
+All forecast assumptions are illustrative portfolio-model assumptions and
+should be updated as new company guidance and financial data become available.
 </p>
 
 </div>
-
 </section>
 
 
-<!-- 07 -->
+<!-- 08 WACC -->
 
 <section>
 
 <div class="container">
 
 <div class="section-label">
-07 — WACC & Terminal Value
+08 — WACC &amp; Terminal Value
 </div>
 
-<h2>
-Discount rate and terminal assumptions
-</h2>
+<h2>Discount rate and terminal assumptions</h2>
 
 <div class="two-col">
 
@@ -887,29 +963,25 @@ rather than a single output.
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
-<!-- 08 -->
+<!-- 09 TRADING COMPARABLES -->
 
 <section>
 
 <div class="container">
 
 <div class="section-label">
-08 — Trading Comparables Benchmark
+09 — Trading Comparables Benchmark
 </div>
 
-<h2>
-Market-based valuation benchmark
-</h2>
+<h2>Market-based valuation benchmark</h2>
 
 <p>
-Trading comparables provide a market-implied reference point for
-how investors value companies with related operating characteristics.
+Trading comparables provide a market-implied reference point for how
+investors value companies with related operating characteristics.
 Because Reliance is diversified, the peer set should be interpreted
 carefully rather than treated as a perfect like-for-like comparison.
 </p>
@@ -917,7 +989,6 @@ carefully rather than treated as a perfect like-for-like comparison.
 <table>
 
 <thead>
-
 <tr>
 <th>Company</th>
 <th>Business relevance</th>
@@ -925,7 +996,6 @@ carefully rather than treated as a perfect like-for-like comparison.
 <th>P/E</th>
 <th>P/B</th>
 </tr>
-
 </thead>
 
 <tbody>
@@ -948,7 +1018,7 @@ carefully rather than treated as a perfect like-for-like comparison.
 
 <tr>
 <td>ONGC</td>
-<td>Energy / Oil & Gas</td>
+<td>Energy / Oil &amp; Gas</td>
 <td>~4x</td>
 <td>~7x</td>
 <td>~0.7x</td>
@@ -963,17 +1033,15 @@ carefully rather than treated as a perfect like-for-like comparison.
 </tr>
 
 </tbody>
-
 </table>
 
 <div class="insight">
 
 <strong>Trading-comps observation:</strong>
-
-The peer benchmark demonstrates why a single multiple can be
-misleading for Reliance. Telecom, upstream energy and resource
-companies can trade at materially different multiples because their
-growth, capital intensity, cyclicality and return profiles differ.
+The peer benchmark demonstrates why a single multiple can be misleading
+for Reliance. Telecom, upstream energy and resource companies can trade
+at materially different multiples because their growth, capital intensity,
+cyclicality and return profiles differ.
 
 </div>
 
@@ -984,40 +1052,35 @@ measurement date. Current third-party sources show RIL EV/EBITDA around
 </p>
 
 </div>
-
 </section>
 
 
-<!-- 09 -->
+<!-- 10 SOTP -->
 
 <section>
 
 <div class="container">
 
 <div class="section-label">
-09 — SOTP Valuation
+10 — SOTP Valuation
 </div>
 
-<h2>
-Sum-of-the-Parts framework
-</h2>
+<h2>Sum-of-the-Parts framework</h2>
 
 <p>
 A SOTP approach separates Reliance's major businesses and assigns
 business-specific valuation methodologies. This is particularly useful
-because Jio, Retail, O2C and Oil & Gas have different economics.
+because Jio, Retail, O2C and Oil &amp; Gas have different economics.
 </p>
 
 <table>
 
 <thead>
-
 <tr>
 <th>Segment</th>
 <th>Primary valuation method</th>
 <th>Key driver</th>
 </tr>
-
 </thead>
 
 <tbody>
@@ -1041,7 +1104,7 @@ because Jio, Retail, O2C and Oil & Gas have different economics.
 </tr>
 
 <tr>
-<td>Oil & Gas</td>
+<td>Oil &amp; Gas</td>
 <td>EV/EBITDA</td>
 <td>Production and gas economics</td>
 </tr>
@@ -1053,42 +1116,36 @@ because Jio, Retail, O2C and Oil & Gas have different economics.
 </tr>
 
 </tbody>
-
 </table>
 
 <div class="insight">
 
 <strong>Why SOTP matters:</strong>
-
 The market may assign different valuation multiples to mature
-cash-generating businesses and higher-growth businesses. SOTP
-therefore provides a useful cross-check against the consolidated DCF.
+cash-generating businesses and higher-growth businesses. SOTP therefore
+provides a useful cross-check against the consolidated DCF.
 
 </div>
 
 </div>
-
 </section>
 
 
-<!-- 10 -->
+<!-- 11 DCF SENSITIVITY -->
 
 <section>
 
 <div class="container">
 
 <div class="section-label">
-10 — DCF Sensitivity
+11 — DCF Sensitivity
 </div>
 
-<h2>
-WACC versus terminal growth
-</h2>
+<h2>WACC versus terminal growth</h2>
 
 <table>
 
 <thead>
-
 <tr>
 <th>Illustrative value / share</th>
 <th>g = 3.5%</th>
@@ -1096,7 +1153,6 @@ WACC versus terminal growth
 <th>g = 4.5%</th>
 <th>g = 5.0%</th>
 </tr>
-
 </thead>
 
 <tbody>
@@ -1142,7 +1198,6 @@ WACC versus terminal growth
 </tr>
 
 </tbody>
-
 </table>
 
 <p class="note">
@@ -1152,28 +1207,25 @@ capital structure and market inputs are updated.
 </p>
 
 </div>
-
 </section>
 
 
-<!-- 11 -->
+<!-- 12 FOOTBALL FIELD -->
 
 <section>
 
 <div class="container">
 
 <div class="section-label">
-11 — Football Field Valuation
+12 — Football Field Valuation
 </div>
 
-<h2>
-Valuation triangulation
-</h2>
+<h2>Valuation triangulation</h2>
 
 <p>
-The football field compares the ranges produced by different
-valuation methodologies. It is designed to demonstrate the range
-of outcomes rather than establish a single target price.
+The football field compares the ranges produced by different valuation
+methodologies. It is designed to demonstrate the range of outcomes rather
+than establish a single target price.
 </p>
 
 <div class="football-field">
@@ -1185,8 +1237,7 @@ of outcomes rather than establish a single target price.
 <div>
 
 <div class="range-track">
-<div class="range"
-style="left:25%; width:50%;"></div>
+<div class="range" style="left:25%;width:50%"></div>
 </div>
 
 <div class="range-values">
@@ -1206,8 +1257,7 @@ style="left:25%; width:50%;"></div>
 <div>
 
 <div class="range-track">
-<div class="range"
-style="left:30%; width:42%;"></div>
+<div class="range" style="left:30%;width:42%"></div>
 </div>
 
 <div class="range-values">
@@ -1227,8 +1277,7 @@ style="left:30%; width:42%;"></div>
 <div>
 
 <div class="range-track">
-<div class="range"
-style="left:35%; width:38%;"></div>
+<div class="range" style="left:35%;width:38%"></div>
 </div>
 
 <div class="range-values">
@@ -1248,10 +1297,7 @@ style="left:35%; width:38%;"></div>
 <div>
 
 <div class="range-track">
-
-<div class="marker"
-style="left:50%;"></div>
-
+<div class="marker" style="left:50%"></div>
 </div>
 
 <div class="range-values">
@@ -1265,36 +1311,32 @@ style="left:50%;"></div>
 
 </div>
 
+
 <div class="insight">
 
 <strong>Analyst interpretation framework:</strong>
-
-The purpose of the football field is to compare methodology
-dispersion. If DCF, trading comps and SOTP converge within a
-relatively narrow range, the valuation framework has greater
-cross-method consistency. A wide dispersion indicates that the
-investment case is highly sensitive to assumptions.
+The purpose of the football field is to compare methodology dispersion.
+If DCF, trading comps and SOTP converge within a relatively narrow range,
+the valuation framework has greater cross-method consistency. A wide
+dispersion indicates that the valuation is highly sensitive to assumptions.
 
 </div>
 
 </div>
-
 </section>
 
 
-<!-- 12 -->
+<!-- 13 CATALYSTS & RISKS -->
 
 <section>
 
 <div class="container">
 
 <div class="section-label">
-12 — Catalysts & Risks
+13 — Catalysts &amp; Risks
 </div>
 
-<h2>
-Key variables to monitor
-</h2>
+<h2>Key variables to monitor</h2>
 
 <div class="two-col">
 
@@ -1303,19 +1345,12 @@ Key variables to monitor
 <h3>Catalysts</h3>
 
 <ul>
-
 <li>Jio subscriber and ARPU growth</li>
-
 <li>Potential monetisation of digital assets</li>
-
 <li>Retail revenue and margin expansion</li>
-
 <li>New-energy manufacturing scale-up</li>
-
 <li>Improvement in O2C margins</li>
-
 <li>Lower leverage relative to earnings</li>
-
 </ul>
 
 </div>
@@ -1326,56 +1361,44 @@ Key variables to monitor
 <h3>Risks</h3>
 
 <ul>
-
 <li>High capital expenditure requirements</li>
-
 <li>Commodity-price volatility</li>
-
 <li>Regulatory changes in telecom</li>
-
 <li>Execution risk in new energy</li>
-
 <li>Retail margin pressure</li>
-
 <li>Higher-than-expected financing costs</li>
-
 </ul>
 
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
-<!-- 13 -->
+<!-- 14 RESEARCH CONCLUSION -->
 
 <section>
 
 <div class="container">
 
 <div class="section-label">
-13 — Research Conclusion
+14 — Research Conclusion
 </div>
 
-<h2>
-What the model tells us
-</h2>
+<h2>What the model tells us</h2>
 
 <div class="card">
 
 <p>
-Reliance requires a multi-method valuation framework because its
-businesses have different growth rates, capital requirements and
-economic characteristics.
+Reliance requires a multi-method valuation framework because its businesses
+have different growth rates, capital requirements and economic characteristics.
 </p>
 
 <p>
 The DCF captures the value of future consolidated cash generation.
-Trading comparables provide a market-based benchmark, while SOTP
-helps separate the economics of individual businesses.
+Trading comparables provide a market-based benchmark, while SOTP helps
+separate the economics of individual businesses.
 </p>
 
 <p>
@@ -1386,10 +1409,10 @@ O2C spreads and the pace of new-energy investment.
 
 </div>
 
+
 <div class="insight">
 
 <strong>Portfolio research note:</strong>
-
 This project demonstrates financial statement analysis, forecasting,
 FCFF modelling, WACC, terminal value, sensitivity analysis, trading
 comparables and SOTP valuation. It is an educational equity-research
@@ -1398,23 +1421,20 @@ case study and does not constitute investment advice.
 </div>
 
 </div>
-
 </section>
 
 
-<!-- 14 -->
+<!-- 15 SOURCES -->
 
 <section>
 
 <div class="container">
 
 <div class="section-label">
-14 — Sources
+15 — Sources
 </div>
 
-<h2>
-Primary research sources
-</h2>
+<h2>Primary research sources</h2>
 
 <div class="card">
 
@@ -1425,21 +1445,18 @@ Annual report, financial results and investor materials.
 
 <p>
 <strong>Reliance Industries — FY2025-26 Analyst Meeting</strong><br>
-Financial performance, net debt, EBITDA, capex and cash-flow
-information.
+Financial performance, net debt, EBITDA, capex and cash-flow information.
 </p>
 
 <p>
 <strong>Market valuation references</strong><br>
 Trading multiples are benchmarked using publicly available market-data
-sources and should be refreshed before publication or use in an
-interview.
+sources and should be refreshed before publication or use in an interview.
 </p>
 
 </div>
 
 </div>
-
 </section>
 
 
@@ -1448,11 +1465,9 @@ interview.
 <div class="container">
 
 Reliance Industries — Equity Research Portfolio Project
-
 <br><br>
 
-Prepared by Supriya Rai · Finance & Investment Research
-
+Prepared by Supriya Rai · Finance &amp; Investment Research
 <br><br>
 
 Educational research project. Not investment advice.
@@ -1460,7 +1475,6 @@ Educational research project. Not investment advice.
 </div>
 
 </footer>
-
 
 </body>
 </html>
