@@ -2979,6 +2979,11 @@ footer {
 @media(max-width:800px){.vlab-mini-data{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:500px){.vlab-mini-data{grid-template-columns:1fr 1fr 1fr}.vlab-mini-head{display:block}.vlab-mini-head span{display:block!important;margin-top:4px!important}}
 </style>
+<style>
+.valuation-mini{display:block;text-decoration:none;transition:.2s ease}.valuation-mini:hover{transform:translateY(-3px);border-color:#d5a946;box-shadow:0 10px 22px rgba(8,26,49,.08)}.valuation-mini strong{font-size:18px!important}.valuation-mini span{font-size:7px!important;color:#a77b20!important}.valuation-mini em{display:block;margin-top:14px;color:#687b90;font-style:normal;font-size:9px;line-height:1.5}.valuation-mini b{display:block;margin-top:12px;color:#a77b20;font:900 8px monospace;letter-spacing:.5px}
+.ocbc-mini{cursor:pointer}
+.ocbc-mini .vlab-mini-link{pointer-events:none}
+</style>
 </head>
 
 
@@ -3826,20 +3831,15 @@ footer {
 <span class="vlab-link">VIEW FULL VALUATION →</span>
 </a>
 <div class="vlab-mini-grid">
-<div class="vlab-mini ocbc-mini">
+<a class="vlab-mini ocbc-mini" href="ocbc-valuation.html">
 <div class="vlab-mini-head"><strong>OCBC</strong><span>SGX: O39 · BANKING</span></div>
 <div class="vlab-mini-desc">Bank-specific DDM / FCFE-proxy valuation with ROE, payout and sensitivity analysis.</div>
-<div class="vlab-mini-data">
-<div><small>CURRENT</small><b>S$26.90</b></div>
-<div><small>INTRINSIC</small><b>S$15.31</b></div>
-<div><small>UPSIDE / DOWN</small><b class="down">−43.1%</b></div>
-</div>
-<div class="vlab-mini-meta"><span>Ke 9.30%</span><span>g 3.00%</span><span>P/B 1.84×</span></div>
-<a class="vlab-mini-link" href="ocbc-valuation.html">VIEW OCBC VALUATION →</a>
-</div>
-<div class="vlab-mini"><strong>UOB</strong><span>DCF · P/B · BANKING</span></div>
-<div class="vlab-mini"><strong>RELIANCE</strong><span>DCF · FCFF · EQUITY</span></div>
-<div class="vlab-mini"><strong>L&amp;T</strong><span>DCF · FCFF · INDUSTRIALS</span></div>
+<div class="vlab-mini-data"><div><small>CURRENT</small><b>S$26.90</b></div><div><small>INTRINSIC</small><b>S$15.31</b></div><div><small>MODEL OUTPUT</small><b class="down">−43.1%</b></div></div>
+<div class="vlab-mini-meta"><span>Ke 9.30%</span><span>g 3.00%</span><span>P/B 1.84×</span></div><span class="vlab-mini-link">VIEW VALUATION →</span>
+</a>
+<a class="vlab-mini valuation-mini" href="uob-valuation.html"><strong>UOB</strong><span>SGX: U11 · BANKING</span><em>1H26 ROE 11.6% · NIM 1.78%</em><b>OPEN VALUATION →</b></a>
+<a class="vlab-mini valuation-mini" href="reliance-valuation.html"><strong>RELIANCE</strong><span>NSE: RELIANCE · DIVERSIFIED</span><em>FCFF DCF · WACC 10% · g 3%</em><b>OPEN VALUATION →</b></a>
+<a class="vlab-mini valuation-mini" href="lnt-valuation.html"><strong>L&amp;T</strong><span>NSE: LT · INDUSTRIALS</span><em>FCFF DCF · WACC 10% · g 3%</em><b>OPEN VALUATION →</b></a>
 </div>
 </div>
 </div>
