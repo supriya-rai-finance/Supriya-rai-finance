@@ -36,32 +36,39 @@ body {
 }
 
 a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
 img {
-    max-width: 100%;
     display: block;
+    max-width: 100%;
 }
 
 :root {
     --navy: #081a31;
-    --navy2: #0d2340;
-    --navy3: #112c4d;
+    --navy-2: #0d2340;
+    --navy-3: #112c4d;
+
     --gold: #d5a946;
-    --gold2: #b98729;
+    --gold-dark: #b98729;
+
     --cream: #f7f6f2;
     --white: #ffffff;
-    --muted: #728399;
+
+    --muted: #6d7f92;
+    --muted-dark: #50657b;
+
     --green: #16c784;
     --red: #e05670;
-    --border: #ddd9d0;
+
+    --border: #dcd9d2;
+    --dark-border: #304b67;
 }
 
 .container {
-    width: min(1045px, 92%);
-    margin: auto;
+    width: min(1200px, 92%);
+    margin: 0 auto;
 }
 
 
@@ -70,56 +77,62 @@ img {
 ========================================================= */
 
 .market-pulse {
-    height: 30px;
+    height: 34px;
     overflow: hidden;
+
     background: #06162a;
-    color: #fff;
-    border-bottom: 1px solid #20364f;
+    color: #ffffff;
+
+    border-bottom: 1px solid #213951;
 }
 
 .pulse-track {
     width: max-content;
-    height: 30px;
+    height: 34px;
 
     display: flex;
     align-items: center;
 
-    animation: ticker 42s linear infinite;
+    animation: ticker 45s linear infinite;
 }
 
 .pulse-item {
     display: flex;
     align-items: center;
-    gap: 7px;
+    gap: 8px;
 
-    height: 30px;
-    padding: 0 18px;
+    height: 34px;
+    padding: 0 20px;
 
-    border-right: 1px solid #20364f;
+    border-right: 1px solid #20364e;
 
     white-space: nowrap;
 
     font-family: monospace;
-    font-size: 8px;
+    font-size: 10px;
 }
 
 .pulse-name {
+    color: #ffffff;
     font-weight: 800;
 }
 
 .pulse-price {
-    color: #b9c6d4;
+    color: #b8c6d4;
 }
 
 .positive {
     color: var(--green);
+    font-weight: 800;
 }
 
 .negative {
     color: var(--red);
+    font-weight: 800;
 }
 
 @keyframes ticker {
+
     from {
         transform: translateX(0);
     }
@@ -127,37 +140,42 @@ img {
     to {
         transform: translateX(-50%);
     }
+
 }
 
 
 /* =========================================================
-   NAVBAR
+   NAVIGATION
 ========================================================= */
 
 .navbar {
     background: #13253d;
-    color: #fff;
+
+    color: #ffffff;
+
     border-bottom: 1px solid #2a4058;
 }
 
 .nav-inner {
-    min-height: 67px;
+    min-height: 72px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 25px;
+
+    gap: 30px;
 }
 
 .brand {
     display: flex;
     align-items: center;
-    gap: 10px;
+
+    gap: 12px;
 }
 
 .brand-mark {
-    width: 35px;
-    height: 35px;
+    width: 38px;
+    height: 38px;
 
     display: flex;
     align-items: center;
@@ -168,42 +186,57 @@ img {
     color: var(--gold);
 
     font-family: Georgia, serif;
-    font-size: 12px;
+
+    font-size: 13px;
     font-weight: bold;
 }
 
 .brand-name {
-    font-size: 16px;
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 17px;
     font-weight: 800;
 }
 
 .brand-role {
+    display: block;
+
     margin-top: 1px;
 
     color: var(--gold);
 
     font-family: monospace;
-    font-size: 6px;
+
+    font-size: 8px;
+
     letter-spacing: 1px;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 25px;
+
+    gap: 28px;
 
     color: #bdc8d5;
 
-    font-size: 8px;
+    font-size: 10px;
+
     font-weight: 800;
 }
 
+.nav-links a {
+    transition: color .2s ease;
+}
+
 .nav-links a:hover {
-    color: #fff;
+    color: #ffffff;
 }
 
 .nav-resume {
-    padding: 10px 16px;
+    padding: 11px 17px;
 
     background: var(--gold);
 
@@ -211,7 +244,8 @@ img {
 
     border-radius: 3px;
 
-    font-size: 8px;
+    font-size: 10px;
+
     font-weight: 900;
 }
 
@@ -221,32 +255,29 @@ img {
 ========================================================= */
 
 .profile-section {
-    padding: 28px 0 38px;
+    padding: 32px 0 48px;
 
     background:
         radial-gradient(
-            circle at 75% 20%,
-            rgba(45, 76, 108, .22),
-            transparent 32%
+            circle at 78% 18%,
+            rgba(49, 83, 116, .22),
+            transparent 31%
         ),
         #071a31;
 
-    color: #fff;
+    color: #ffffff;
 }
 
 .profile-shell {
-    width: min(1045px, 92%);
-    margin: auto;
+    width: min(1200px, 92%);
 
-    padding: 25px 48px 32px;
+    margin: 0 auto;
 
-    border: 1px solid #53606c;
-
-    border-radius: 3px;
+    padding: 34px 48px 42px;
 
     background:
         radial-gradient(
-            circle at 85% 10%,
+            circle at 82% 15%,
             rgba(255,255,255,.035) 1px,
             transparent 1px
         ),
@@ -254,39 +285,47 @@ img {
 
     background-size: 22px 22px;
 
+    border: 1px solid #536579;
+
+    border-radius: 4px;
+
     box-shadow:
-        0 16px 35px rgba(0,0,0,.18);
+        0 18px 40px rgba(0,0,0,.20);
 }
 
 
-/* top repository pill */
+/* REPOSITORY PILL */
 
 .profile-repository {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
 
-    padding: 6px 11px;
+    gap: 9px;
 
-    border: 1px solid #3d607d;
+    padding: 7px 13px;
 
-    border-radius: 15px;
+    border: 1px solid #46627d;
+
+    border-radius: 18px;
 
     color: var(--gold);
 
     font-family: monospace;
-    font-size: 7px;
+
+    font-size: 9px;
+
     font-weight: 800;
-    letter-spacing: .8px;
+
+    letter-spacing: 1px;
 }
 
 .repository-dot {
-    width: 5px;
-    height: 5px;
-
-    border-radius: 50%;
+    width: 6px;
+    height: 6px;
 
     background: var(--green);
+
+    border-radius: 50%;
 }
 
 
@@ -295,41 +334,42 @@ img {
 .profile-main-grid {
     display: grid;
 
-    grid-template-columns: 1fr 285px;
+    grid-template-columns: minmax(0, 1fr) 310px;
 
-    gap: 45px;
+    gap: 52px;
 
     align-items: center;
 
-    margin-top: 28px;
+    margin-top: 36px;
 }
 
 
-/* LEFT */
+/* LEFT SIDE */
 
 .profile-kicker {
+    margin-bottom: 13px;
+
     color: var(--gold);
 
     font-family: monospace;
 
-    font-size: 7px;
+    font-size: 10px;
+
     font-weight: 900;
 
-    letter-spacing: 1.5px;
-
-    margin-bottom: 12px;
+    letter-spacing: 2px;
 }
 
 .profile-name {
-    color: #fff;
+    color: #ffffff;
 
-    font-size: 46px;
+    font-size: 58px;
 
-    line-height: 1;
+    line-height: .98;
 
-    letter-spacing: -1.8px;
+    letter-spacing: -2.4px;
 
-    margin-bottom: 10px;
+    margin-bottom: 13px;
 }
 
 .profile-title {
@@ -337,29 +377,29 @@ img {
 
     font-family: Georgia, serif;
 
-    font-size: 19px;
+    font-size: 23px;
 
     line-height: 1.2;
 
-    margin-bottom: 23px;
+    margin-bottom: 25px;
 }
 
 .profile-quote {
-    max-width: 610px;
+    max-width: 690px;
 
-    padding: 10px 14px;
+    padding: 12px 17px;
 
     border-left: 2px solid var(--gold);
 
-    color: #d2dce7;
+    color: #d4dee8;
 
     font-family: Georgia, serif;
 
-    font-size: 11px;
+    font-size: 14px;
 
     line-height: 1.7;
 
-    margin-bottom: 19px;
+    margin-bottom: 21px;
 }
 
 
@@ -370,15 +410,15 @@ img {
 
     flex-wrap: wrap;
 
-    gap: 7px;
+    gap: 8px;
 
-    max-width: 650px;
+    max-width: 720px;
 
-    margin-bottom: 24px;
+    margin-bottom: 25px;
 }
 
 .profile-pill {
-    padding: 5px 9px;
+    padding: 7px 11px;
 
     background: #102944;
 
@@ -386,9 +426,10 @@ img {
 
     border-radius: 4px;
 
-    color: #d3dce6;
+    color: #d8e0e8;
 
-    font-size: 7px;
+    font-size: 10px;
+
     font-weight: 700;
 }
 
@@ -397,7 +438,7 @@ img {
 
     color: var(--gold);
 
-    margin-right: 5px;
+    margin-right: 6px;
 }
 
 
@@ -405,9 +446,12 @@ img {
 
 .profile-actions {
     display: flex;
-    gap: 10px;
 
-    margin-bottom: 20px;
+    flex-wrap: wrap;
+
+    gap: 11px;
+
+    margin-bottom: 22px;
 }
 
 .profile-action {
@@ -416,13 +460,14 @@ img {
     align-items: center;
     justify-content: center;
 
-    gap: 10px;
+    gap: 11px;
 
-    padding: 11px 18px;
+    padding: 13px 20px;
 
     border-radius: 3px;
 
-    font-size: 8px;
+    font-size: 10px;
+
     font-weight: 900;
 
     letter-spacing: .3px;
@@ -430,12 +475,14 @@ img {
 
 .profile-action.primary {
     background: var(--gold);
+
     color: #081a31;
 }
 
 .profile-action.secondary {
-    border: 1px solid #49627c;
-    color: #fff;
+    border: 1px solid #4d6782;
+
+    color: #ffffff;
 }
 
 .profile-action.secondary:hover {
@@ -447,19 +494,20 @@ img {
 
 .profile-micro {
     display: flex;
+
     flex-wrap: wrap;
 
-    gap: 20px;
+    gap: 24px;
 
-    color: #92a5b8;
+    color: #9badbf;
 
     font-family: monospace;
 
-    font-size: 7px;
+    font-size: 9px;
 }
 
 .profile-micro strong {
-    color: #d6e0ea;
+    color: #d9e2eb;
 }
 
 
@@ -473,18 +521,19 @@ img {
     position: relative;
 
     width: 100%;
+
     aspect-ratio: .86;
 
-    padding: 8px;
+    padding: 9px;
+
+    background: #0b2039;
 
     border: 2px solid var(--gold);
 
     border-radius: 14px;
 
-    background: #0b2039;
-
     box-shadow:
-        0 0 22px rgba(213,169,70,.22);
+        0 0 26px rgba(213,169,70,.22);
 }
 
 .profile-photo-frame img {
@@ -501,19 +550,20 @@ img {
 .photo-label {
     position: absolute;
 
-    left: 12px;
-    right: 12px;
-    bottom: 8px;
+    left: 13px;
+    right: 13px;
+    bottom: 9px;
 
-    padding: 9px 7px;
+    padding: 10px 8px;
 
-    background: rgba(6, 23, 43, .94);
+    background: rgba(6, 23, 43, .95);
 
     border: 1px solid #304c68;
 
-    color: #fff;
+    color: #ffffff;
 
-    font-size: 8px;
+    font-size: 10px;
+
     font-weight: 800;
 
     text-align: center;
@@ -528,47 +578,47 @@ img {
 
     font-family: monospace;
 
-    font-size: 6px;
+    font-size: 8px;
 
     letter-spacing: 1px;
 }
 
 .photo-status {
-    margin-top: 9px;
+    margin-top: 10px;
 
     color: var(--green);
 
     font-family: monospace;
 
-    font-size: 7px;
+    font-size: 9px;
 }
 
 
-/* PROFILE DIVIDER */
+/* DIVIDER */
 
 .profile-divider {
-    margin-top: 27px;
+    margin-top: 31px;
 
-    border-top: 1px solid #203c58;
+    border-top: 1px solid #29435e;
 }
 
 
-/* PROFILE STAT CARDS */
+/* PROFILE STATS */
 
 .profile-stats {
     display: grid;
 
     grid-template-columns: repeat(4, 1fr);
 
-    gap: 10px;
+    gap: 12px;
 
-    margin-top: 24px;
+    margin-top: 25px;
 }
 
 .profile-stat {
-    min-height: 75px;
+    min-height: 91px;
 
-    padding: 13px;
+    padding: 16px;
 
     background: #102744;
 
@@ -582,27 +632,70 @@ img {
 
     font-family: monospace;
 
-    font-size: 20px;
+    font-size: 26px;
+
     font-weight: 900;
 
     line-height: 1;
 }
 
 .profile-stat-title {
-    margin-top: 6px;
+    margin-top: 7px;
 
-    color: #fff;
+    color: #ffffff;
 
-    font-size: 8px;
+    font-size: 11px;
+
     font-weight: 800;
 }
 
 .profile-stat-text {
-    margin-top: 2px;
+    margin-top: 3px;
 
     color: #91a6ba;
 
-    font-size: 7px;
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   COMMON LIGHT SECTION
+========================================================= */
+
+.section-label {
+    color: var(--gold-dark);
+
+    font-family: monospace;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.7px;
+}
+
+.section-heading h2 {
+    margin-top: 9px;
+
+    color: var(--navy);
+
+    font-size: 40px;
+
+    line-height: 1.08;
+
+    letter-spacing: -1px;
+}
+
+.section-heading p {
+    max-width: 850px;
+
+    margin-top: 11px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.75;
 }
 
 
@@ -611,11 +704,11 @@ img {
 ========================================================= */
 
 .research-philosophy {
-    padding: 65px 0 34px;
+    padding: 70px 0 38px;
 
     background: var(--cream);
 
-    border-bottom: 1px solid #dedbd2;
+    border-bottom: 1px solid var(--border);
 }
 
 .section-topline {
@@ -624,18 +717,7 @@ img {
     align-items: center;
     justify-content: space-between;
 
-    margin-bottom: 32px;
-}
-
-.section-label {
-    color: var(--gold2);
-
-    font-family: monospace;
-
-    font-size: 8px;
-    font-weight: 900;
-
-    letter-spacing: 1.4px;
+    margin-bottom: 36px;
 }
 
 .section-flow {
@@ -643,47 +725,49 @@ img {
 
     font-family: monospace;
 
-    font-size: 7px;
+    font-size: 9px;
+
     font-weight: 800;
 
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
 }
 
 .philosophy-grid {
     display: grid;
 
-    grid-template-columns: 290px 1fr;
+    grid-template-columns: 330px 1fr;
 
-    gap: 32px;
+    gap: 42px;
 }
 
 .philosophy-intro {
-    padding-right: 10px;
+    padding-right: 12px;
 }
 
 .philosophy-kicker {
-    color: var(--gold2);
+    color: var(--gold-dark);
 
     font-family: monospace;
 
-    font-size: 8px;
+    font-size: 10px;
+
     font-weight: 900;
 
-    letter-spacing: 1.4px;
+    letter-spacing: 1.6px;
 
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .philosophy-intro h2 {
     color: var(--navy);
 
-    font-size: 32px;
+    font-size: 39px;
 
-    line-height: 1.05;
+    line-height: 1.06;
 
-    letter-spacing: -1px;
+    letter-spacing: -1.3px;
 
-    margin-bottom: 17px;
+    margin-bottom: 20px;
 }
 
 .philosophy-intro h2 strong {
@@ -693,13 +777,15 @@ img {
 }
 
 .philosophy-intro p {
+    max-width: 320px;
+
     color: #697d92;
 
-    font-size: 10px;
+    font-size: 13px;
 
     line-height: 1.8;
 
-    margin-bottom: 19px;
+    margin-bottom: 22px;
 }
 
 .explore-btn {
@@ -707,57 +793,62 @@ img {
 
     align-items: center;
 
-    gap: 13px;
+    gap: 14px;
 
-    padding: 10px 14px;
+    padding: 12px 17px;
 
     background: var(--navy);
 
-    color: #fff;
+    color: #ffffff;
 
     border-radius: 3px;
 
-    font-size: 7px;
+    font-size: 9px;
+
     font-weight: 900;
 }
 
 .explore-btn span {
     color: var(--gold);
 
-    font-size: 13px;
+    font-size: 15px;
 }
 
 
-/* PROCESS */
+/* PHILOSOPHY CARDS */
 
 .philosophy-process {
     display: grid;
 
     grid-template-columns: repeat(2, 1fr);
 
-    gap: 10px;
+    gap: 12px;
 }
 
 .philosophy-card {
-    min-height: 135px;
+    min-height: 154px;
 
-    padding: 15px;
+    padding: 18px;
 
-    background: #fff;
+    background: #ffffff;
 
     border: 1px solid #dedbd2;
 
-    border-radius: 6px;
+    border-radius: 7px;
 
-    transition: .2s ease;
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
 }
 
 .philosophy-card:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 
-    border-color: #c9a04a;
+    border-color: #c89b3c;
 
-    box-shadow: 0 8px 20px rgba(8,26,49,.07);
+    box-shadow:
+        0 10px 25px rgba(8,26,49,.08);
 }
 
 .philosophy-number {
@@ -765,41 +856,48 @@ img {
 
     font-family: monospace;
 
-    font-size: 8px;
+    font-size: 10px;
+
     font-weight: 900;
 
-    margin-bottom: 9px;
+    margin-bottom: 11px;
 }
 
 .philosophy-card h3 {
     color: var(--navy);
 
-    font-size: 11px;
+    font-size: 15px;
 
-    margin-bottom: 6px;
+    line-height: 1.3;
+
+    margin-bottom: 8px;
 }
 
 .philosophy-card p {
     color: #738397;
 
-    font-size: 8px;
+    font-size: 10px;
 
-    line-height: 1.65;
+    line-height: 1.7;
 }
+
+
+/* COVERAGE */
 
 .coverage-strip {
     display: flex;
 
     align-items: center;
 
-    gap: 12px;
+    gap: 15px;
 
-    margin-top: 34px;
+    margin-top: 39px;
 
-    padding: 14px 0;
+    padding: 16px 0;
 
-    border-top: 1px solid #ddd9d0;
-    border-bottom: 1px solid #ddd9d0;
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
 }
 
 .coverage-title {
@@ -807,8 +905,11 @@ img {
 
     font-family: monospace;
 
-    font-size: 7px;
+    font-size: 9px;
+
     font-weight: 900;
+
+    letter-spacing: 1px;
 
     white-space: nowrap;
 }
@@ -818,32 +919,35 @@ img {
 
     flex-wrap: wrap;
 
-    gap: 6px 14px;
+    gap: 7px 15px;
 
     flex: 1;
 }
 
 .coverage-items span {
-    color: #6d7f92;
+    color: #687b90;
 
-    font-size: 7px;
+    font-size: 10px;
 }
 
 .coverage-items span:not(:last-child)::after {
     content: "|";
 
-    margin-left: 14px;
+    color: #b9b6ae;
 
-    color: #c3c0b9;
+    margin-left: 15px;
 }
 
 .coverage-end {
-    color: var(--gold2);
+    color: var(--gold-dark);
 
     font-family: monospace;
 
-    font-size: 6px;
+    font-size: 8px;
+
     font-weight: 900;
+
+    letter-spacing: .8px;
 
     white-space: nowrap;
 }
@@ -854,33 +958,9 @@ img {
 ========================================================= */
 
 .projects-section {
-    padding: 66px 0;
+    padding: 72px 0;
 
     background: #f7f6f2;
-}
-
-.section-heading h2 {
-    margin-top: 8px;
-
-    color: var(--navy);
-
-    font-size: 31px;
-
-    line-height: 1.1;
-
-    letter-spacing: -.7px;
-}
-
-.section-heading p {
-    max-width: 720px;
-
-    margin-top: 9px;
-
-    color: #738397;
-
-    font-size: 10px;
-
-    line-height: 1.7;
 }
 
 .projects-grid {
@@ -888,103 +968,114 @@ img {
 
     grid-template-columns: repeat(2, 1fr);
 
-    gap: 12px;
+    gap: 15px;
 
-    margin-top: 27px;
+    margin-top: 32px;
 }
 
 .project {
-    min-height: 150px;
+    min-height: 190px;
 
-    padding: 19px;
+    padding: 24px;
 
-    background: #fff;
+    background: #ffffff;
 
     border: 1px solid #dcd9d2;
 
-    border-radius: 6px;
+    border-radius: 7px;
 
-    transition: .2s ease;
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
 }
 
 .project:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 
-    border-color: #c8a04c;
+    border-color: #c89b3c;
 
-    box-shadow: 0 9px 22px rgba(8,26,49,.07);
+    box-shadow:
+        0 10px 25px rgba(8,26,49,.08);
 }
 
 .project-tag {
-    color: var(--gold2);
+    color: var(--gold-dark);
 
     font-family: monospace;
 
-    font-size: 6px;
+    font-size: 9px;
+
     font-weight: 900;
 
-    letter-spacing: 1.2px;
+    letter-spacing: 1.3px;
 
-    margin-bottom: 9px;
+    margin-bottom: 11px;
 }
 
 .project h3 {
     color: var(--navy);
 
-    font-size: 15px;
+    font-size: 20px;
 
-    margin-bottom: 6px;
+    line-height: 1.3;
+
+    margin-bottom: 8px;
 }
 
 .project p {
     color: #718296;
 
-    font-size: 8px;
+    font-size: 11px;
 
-    line-height: 1.7;
+    line-height: 1.75;
 
-    margin-bottom: 10px;
+    margin-bottom: 13px;
 }
 
 .project-link {
     color: #1766a9;
 
-    font-size: 7px;
+    font-size: 9px;
+
     font-weight: 900;
 }
 
 
 /* =========================================================
-   04 — AI + FINANCIAL TOOLKIT
+   04 — RESEARCH & FINANCIAL TOOLKIT
 ========================================================= */
 
 .toolkit-section {
-    padding: 66px 0;
+    padding: 72px 0;
 
     background: #f7f6f2;
 }
 
-.toolkit-feature {
-    margin-top: 27px;
 
-    padding: 34px;
+/* FEATURED WORKSPACE */
+
+.toolkit-feature {
+    margin-top: 31px;
+
+    padding: 38px;
 
     background:
         radial-gradient(
-            circle at 90% 20%,
-            rgba(53,84,116,.23),
-            transparent 28%
+            circle at 90% 18%,
+            rgba(53,84,116,.26),
+            transparent 29%
         ),
         #081a31;
 
     border: 1px solid #435a71;
 
-    border-radius: 8px;
+    border-radius: 9px;
 
-    color: #fff;
+    color: #ffffff;
 
     box-shadow:
-        0 13px 28px rgba(8,26,49,.12);
+        0 15px 32px rgba(8,26,49,.13);
 }
 
 .toolkit-feature-grid {
@@ -992,7 +1083,7 @@ img {
 
     grid-template-columns: 1.25fr .9fr;
 
-    gap: 30px;
+    gap: 38px;
 
     align-items: center;
 }
@@ -1000,7 +1091,7 @@ img {
 .toolkit-kicker {
     display: inline-flex;
 
-    padding: 5px 9px;
+    padding: 7px 11px;
 
     border: 1px solid #49657f;
 
@@ -1010,24 +1101,25 @@ img {
 
     font-family: monospace;
 
-    font-size: 7px;
+    font-size: 9px;
+
     font-weight: 900;
 
-    letter-spacing: .8px;
+    letter-spacing: .9px;
 
-    margin-bottom: 14px;
+    margin-bottom: 16px;
 }
 
 .toolkit-feature h2 {
-    max-width: 570px;
+    max-width: 650px;
 
-    font-size: 28px;
+    font-size: 36px;
 
     line-height: 1.12;
 
-    letter-spacing: -.7px;
+    letter-spacing: -1px;
 
-    margin-bottom: 13px;
+    margin-bottom: 15px;
 }
 
 .toolkit-feature h2 span {
@@ -1035,13 +1127,13 @@ img {
 }
 
 .toolkit-description {
-    max-width: 590px;
+    max-width: 640px;
 
     color: #bdcada;
 
-    font-size: 9px;
+    font-size: 13px;
 
-    line-height: 1.75;
+    line-height: 1.8;
 }
 
 .toolkit-capabilities {
@@ -1049,17 +1141,17 @@ img {
 
     flex-wrap: wrap;
 
-    gap: 18px;
+    gap: 21px;
 
-    margin-top: 19px;
+    margin-top: 21px;
 }
 
 .toolkit-capability {
-    color: #aebfce;
+    color: #b4c4d2;
 
     font-family: monospace;
 
-    font-size: 7px;
+    font-size: 9px;
 }
 
 .toolkit-capability::before {
@@ -1067,30 +1159,30 @@ img {
 
     color: var(--green);
 
-    margin-right: 5px;
+    margin-right: 6px;
 }
 
 
-/* TOOLKIT METRIC BOXES */
+/* FEATURE METRICS */
 
 .toolkit-metrics {
     display: grid;
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 9px;
+    gap: 11px;
 }
 
 .toolkit-metric {
-    min-height: 112px;
+    min-height: 130px;
 
-    padding: 14px;
+    padding: 17px;
 
     background: #102744;
 
     border: 1px solid #294866;
 
-    border-radius: 6px;
+    border-radius: 7px;
 }
 
 .toolkit-metric-number {
@@ -1098,72 +1190,75 @@ img {
 
     font-family: monospace;
 
-    font-size: 20px;
+    font-size: 27px;
+
     font-weight: 900;
 
     line-height: 1;
 
-    margin-bottom: 7px;
+    margin-bottom: 9px;
 }
 
-.toolkit-metric:nth-child(2) .toolkit-metric-number {
+.toolkit-metric:nth-child(2)
+.toolkit-metric-number {
     color: var(--green);
 }
 
-.toolkit-metric:nth-child(3) .toolkit-metric-number {
-    color: #fff;
+.toolkit-metric:nth-child(3)
+.toolkit-metric-number {
+    color: #ffffff;
 }
 
 .toolkit-metric h3 {
-    color: #fff;
+    color: #ffffff;
 
-    font-size: 8px;
+    font-size: 11px;
 
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
 .toolkit-metric p {
     color: #8fa5b9;
 
-    font-size: 7px;
+    font-size: 9px;
 
-    line-height: 1.55;
+    line-height: 1.6;
 }
 
 
-/* TOOLKIT LOWER CARDS */
+/* THREE LOWER CARDS */
 
 .toolkit-cards {
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 12px;
+    gap: 15px;
 
-    margin-top: 13px;
+    margin-top: 15px;
 }
 
 .toolkit-card {
-    min-height: 135px;
+    min-height: 170px;
 
-    padding: 18px;
+    padding: 21px;
 
-    background: #fff;
+    background: #ffffff;
 
     border: 1px solid #dcd9d2;
 
-    border-radius: 6px;
+    border-radius: 7px;
 }
 
 .toolkit-card-icon {
-    width: 28px;
-    height: 28px;
+    width: 34px;
+    height: 34px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 13px;
+    margin-bottom: 15px;
 
     background: var(--navy);
 
@@ -1171,36 +1266,39 @@ img {
 
     color: var(--gold);
 
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .toolkit-card-tag {
-    color: var(--gold2);
+    color: var(--gold-dark);
 
     font-family: monospace;
 
-    font-size: 6px;
+    font-size: 8px;
+
     font-weight: 900;
 
-    letter-spacing: 1px;
+    letter-spacing: 1.1px;
 
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .toolkit-card h3 {
     color: var(--navy);
 
-    font-size: 13px;
+    font-size: 16px;
 
-    margin-bottom: 6px;
+    line-height: 1.3;
+
+    margin-bottom: 7px;
 }
 
 .toolkit-card p {
     color: #738397;
 
-    font-size: 8px;
+    font-size: 10px;
 
-    line-height: 1.65;
+    line-height: 1.7;
 }
 
 
@@ -1209,11 +1307,11 @@ img {
 ========================================================= */
 
 .career-section {
-    padding: 66px 0;
+    padding: 72px 0;
 
-    background: #081a31;
+    background: var(--navy);
 
-    color: #fff;
+    color: #ffffff;
 }
 
 .career-heading {
@@ -1223,15 +1321,19 @@ img {
 
     justify-content: space-between;
 
-    margin-bottom: 27px;
+    margin-bottom: 31px;
 }
 
 .career-heading h2 {
-    margin-top: 8px;
+    margin-top: 9px;
 
-    font-size: 31px;
+    color: #ffffff;
 
-    line-height: 1.1;
+    font-size: 40px;
+
+    line-height: 1.08;
+
+    letter-spacing: -1px;
 }
 
 .career-period {
@@ -1239,7 +1341,7 @@ img {
 
     font-family: monospace;
 
-    font-size: 8px;
+    font-size: 10px;
 }
 
 
@@ -1250,20 +1352,20 @@ img {
 
     grid-template-columns: 1.25fr .75fr;
 
-    border: 1px solid #304b66;
-
-    border-radius: 7px;
-
     overflow: hidden;
 
     background: #0b2039;
+
+    border: 1px solid #304b66;
+
+    border-radius: 8px;
 }
 
 
 /* EXPERIENCE */
 
 .experience-column {
-    padding: 24px;
+    padding: 29px;
 
     border-right: 1px solid #304b66;
 }
@@ -1273,18 +1375,19 @@ img {
 
     font-family: monospace;
 
-    font-size: 7px;
+    font-size: 9px;
+
     font-weight: 900;
 
-    letter-spacing: 1.3px;
+    letter-spacing: 1.5px;
 
-    margin-bottom: 18px;
+    margin-bottom: 22px;
 }
 
 .timeline {
     position: relative;
 
-    padding-left: 22px;
+    padding-left: 26px;
 }
 
 .timeline::before {
@@ -1292,9 +1395,11 @@ img {
 
     position: absolute;
 
-    left: 4px;
-    top: 3px;
-    bottom: 3px;
+    left: 5px;
+
+    top: 4px;
+
+    bottom: 4px;
 
     width: 1px;
 
@@ -1304,7 +1409,7 @@ img {
 .timeline-item {
     position: relative;
 
-    padding-bottom: 18px;
+    padding-bottom: 22px;
 }
 
 .timeline-item:last-child {
@@ -1314,11 +1419,12 @@ img {
 .timeline-dot {
     position: absolute;
 
-    left: -22px;
-    top: 3px;
+    left: -26px;
 
-    width: 9px;
-    height: 9px;
+    top: 4px;
+
+    width: 11px;
+    height: 11px;
 
     border: 2px solid var(--gold);
 
@@ -1332,13 +1438,15 @@ img {
 
     font-family: monospace;
 
-    font-size: 6px;
+    font-size: 8px;
 
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
 .timeline-item h3 {
-    font-size: 12px;
+    color: #ffffff;
+
+    font-size: 16px;
 
     margin-bottom: 2px;
 }
@@ -1346,30 +1454,30 @@ img {
 .timeline-company {
     color: #9eb0c1;
 
-    font-size: 7px;
+    font-size: 10px;
 
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .timeline-item p {
+    max-width: 650px;
+
     color: #8298ad;
 
-    font-size: 7px;
+    font-size: 10px;
 
-    line-height: 1.6;
-
-    max-width: 590px;
+    line-height: 1.65;
 }
 
 
 /* EDUCATION */
 
 .education-column {
-    padding: 24px;
+    padding: 29px;
 }
 
 .education-item {
-    padding: 13px 0;
+    padding: 15px 0;
 
     border-bottom: 1px solid #29435e;
 }
@@ -1387,27 +1495,31 @@ img {
 
     font-family: monospace;
 
-    font-size: 6px;
+    font-size: 8px;
 
     font-weight: 900;
 
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
 
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
 .education-item h3 {
-    font-size: 12px;
+    color: #ffffff;
 
-    margin-bottom: 2px;
+    font-size: 15px;
+
+    line-height: 1.35;
+
+    margin-bottom: 3px;
 }
 
 .education-item p {
     color: #8fa4b8;
 
-    font-size: 7px;
+    font-size: 9px;
 
-    line-height: 1.55;
+    line-height: 1.6;
 }
 
 
@@ -1416,45 +1528,47 @@ img {
 ========================================================= */
 
 .contact-section {
-    padding: 66px 0;
+    padding: 72px 0;
 
     background: #f7f6f2;
 }
 
 .contact-box-main {
-    margin-top: 28px;
-
     display: grid;
 
-    grid-template-columns: 1fr .65fr;
+    grid-template-columns: 1fr .72fr;
 
-    gap: 35px;
+    gap: 40px;
 
-    padding: 30px;
+    margin-top: 30px;
 
-    background: #fff;
+    padding: 34px;
+
+    background: #ffffff;
 
     border: 1px solid #dcd9d2;
 
-    border-radius: 7px;
+    border-radius: 8px;
 }
 
 .contact-title {
     color: var(--navy);
 
-    font-size: 31px;
+    font-size: 40px;
 
-    line-height: 1.1;
+    line-height: 1.08;
 
-    margin-bottom: 12px;
+    letter-spacing: -1px;
+
+    margin-bottom: 14px;
 }
 
 .contact-description {
-    max-width: 550px;
+    max-width: 600px;
 
     color: #718296;
 
-    font-size: 10px;
+    font-size: 13px;
 
     line-height: 1.8;
 }
@@ -1464,13 +1578,13 @@ img {
 
     flex-wrap: wrap;
 
-    gap: 6px;
+    gap: 7px;
 
-    margin-top: 16px;
+    margin-top: 19px;
 }
 
 .contact-focus span {
-    padding: 6px 9px;
+    padding: 7px 10px;
 
     background: #f1efe9;
 
@@ -1480,7 +1594,7 @@ img {
 
     color: #62768b;
 
-    font-size: 7px;
+    font-size: 9px;
 }
 
 .contact-details {
@@ -1488,11 +1602,11 @@ img {
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 9px;
+    gap: 11px;
 }
 
 .contact-detail {
-    padding: 12px;
+    padding: 15px;
 
     background: #f7f6f2;
 
@@ -1508,17 +1622,19 @@ img {
 
     font-family: monospace;
 
-    font-size: 6px;
+    font-size: 8px;
 
     letter-spacing: 1px;
 
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
 .contact-detail strong {
     color: var(--navy);
 
-    font-size: 8px;
+    font-size: 10px;
+
+    line-height: 1.4;
 }
 
 
@@ -1527,7 +1643,7 @@ img {
 ========================================================= */
 
 footer {
-    padding: 20px;
+    padding: 23px;
 
     background: #051428;
 
@@ -1537,44 +1653,42 @@ footer {
 
     font-family: monospace;
 
-    font-size: 7px;
+    font-size: 9px;
+
+    letter-spacing: .7px;
 }
 
 
 /* =========================================================
-   RESPONSIVE
+   TABLET
 ========================================================= */
 
-@media (max-width: 900px) {
-
-    .profile-shell {
-        padding: 25px;
-    }
+@media (max-width: 1000px) {
 
     .profile-main-grid {
-        grid-template-columns: 1fr 230px;
+        grid-template-columns: minmax(0, 1fr) 250px;
 
-        gap: 25px;
+        gap: 30px;
     }
 
     .profile-name {
-        font-size: 38px;
+        font-size: 48px;
     }
 
-    .profile-stats {
-        grid-template-columns: repeat(2, 1fr);
+    .profile-title {
+        font-size: 20px;
     }
 
     .philosophy-grid {
-        grid-template-columns: 1fr;
-    }
+        grid-template-columns: 280px 1fr;
 
-    .philosophy-intro p {
-        max-width: 650px;
+        gap: 28px;
     }
 
     .toolkit-feature-grid {
         grid-template-columns: 1fr;
+
+        gap: 28px;
     }
 
     .career-box {
@@ -1587,76 +1701,106 @@ footer {
         border-bottom: 1px solid #304b66;
     }
 
-    .contact-box-main {
-        grid-template-columns: 1fr;
-    }
-
 }
 
 
-@media (max-width: 700px) {
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .container {
+        width: 92%;
+    }
 
     .nav-inner {
-        padding: 12px 0;
+        min-height: auto;
 
-        flex-wrap: wrap;
+        padding: 14px 0;
+
+        align-items: flex-start;
+
+        flex-direction: column;
     }
 
     .nav-links {
         width: 100%;
 
-        justify-content: flex-start;
-
         flex-wrap: wrap;
 
-        gap: 10px 16px;
+        gap: 11px 18px;
     }
 
     .nav-resume {
         display: none;
     }
 
+
+    /* PROFILE */
+
+    .profile-shell {
+        padding: 28px 24px 32px;
+    }
+
     .profile-main-grid {
         grid-template-columns: 1fr;
+
+        gap: 32px;
     }
 
     .profile-photo-area {
-        max-width: 260px;
+        width: min(280px, 100%);
 
-        margin: auto;
+        margin: 0 auto;
 
         order: -1;
     }
 
     .profile-name {
-        font-size: 39px;
+        font-size: 46px;
     }
 
     .profile-title {
-        font-size: 17px;
+        font-size: 20px;
+    }
+
+    .profile-quote {
+        font-size: 12px;
     }
 
     .profile-stats {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .profile-actions {
-        flex-wrap: wrap;
-    }
 
-    .philosophy-process {
-        grid-template-columns: 1fr;
-    }
+    /* PHILOSOPHY */
 
-    .coverage-strip {
+    .section-topline {
         align-items: flex-start;
 
         flex-direction: column;
+
+        gap: 12px;
     }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .philosophy-intro p {
+        max-width: 700px;
+    }
+
+
+    /* PROJECTS */
 
     .projects-grid {
         grid-template-columns: 1fr;
     }
+
+
+    /* TOOLKIT */
 
     .toolkit-metrics {
         grid-template-columns: 1fr 1fr;
@@ -1666,12 +1810,114 @@ footer {
         grid-template-columns: 1fr;
     }
 
+
+    /* CAREER */
+
     .career-heading {
         align-items: flex-start;
 
         flex-direction: column;
 
+        gap: 10px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-box-main {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .container,
+    .profile-shell {
+        width: 94%;
+    }
+
+    .profile-shell {
+        padding: 22px 18px 27px;
+    }
+
+    .profile-repository {
+        font-size: 7px;
+    }
+
+    .profile-name {
+        font-size: 38px;
+    }
+
+    .profile-title {
+        font-size: 17px;
+    }
+
+    .profile-pills {
+        gap: 6px;
+    }
+
+    .profile-pill {
+        font-size: 8px;
+
+        padding: 6px 8px;
+    }
+
+    .profile-stats {
+        grid-template-columns: 1fr 1fr;
+
         gap: 8px;
+    }
+
+    .profile-stat {
+        padding: 12px;
+
+        min-height: 75px;
+    }
+
+    .profile-stat-number {
+        font-size: 21px;
+    }
+
+    .section-heading h2,
+    .career-heading h2,
+    .contact-title {
+        font-size: 32px;
+    }
+
+    .philosophy-intro h2 {
+        font-size: 33px;
+    }
+
+    .philosophy-process {
+        grid-template-columns: 1fr;
+    }
+
+    .toolkit-feature {
+        padding: 25px 20px;
+    }
+
+    .toolkit-feature h2 {
+        font-size: 29px;
+    }
+
+    .toolkit-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .coverage-strip {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .coverage-end {
+        white-space: normal;
     }
 
     .contact-details {
@@ -1680,49 +1926,8 @@ footer {
 
 }
 
-
-@media (max-width: 450px) {
-
-    .container,
-    .profile-shell {
-        width: 94%;
-    }
-
-    .profile-shell {
-        padding: 18px;
-    }
-
-    .profile-name {
-        font-size: 33px;
-    }
-
-    .profile-title {
-        font-size: 15px;
-    }
-
-    .profile-stats {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .profile-stat {
-        min-height: 65px;
-    }
-
-    .toolkit-feature {
-        padding: 22px;
-    }
-
-    .toolkit-feature h2 {
-        font-size: 23px;
-    }
-
-    .toolkit-metrics {
-        grid-template-columns: 1fr;
-    }
-
-}
-
 </style>
+
 </head>
 
 
@@ -1914,7 +2119,7 @@ footer {
 
             INSTITUTIONAL RESEARCH REPOSITORY
             &nbsp; | &nbsp;
-            SEP 2026
+            SEP 2026 BENCHMARK
 
         </div>
 
@@ -1922,7 +2127,7 @@ footer {
         <div class="profile-main-grid">
 
 
-            <!-- LEFT -->
+            <!-- LEFT CONTENT -->
 
             <div>
 
@@ -1987,12 +2192,13 @@ footer {
                 <div class="profile-actions">
 
                     <a
-                        href="#research"
+                        href="#projects"
                         class="profile-action primary"
                     >
                         EXPLORE MY RESEARCH
                         <span>→</span>
                     </a>
+
 
                     <a
                         href="Supriya%20Rai_Resume.pdf"
@@ -2024,7 +2230,7 @@ footer {
             </div>
 
 
-            <!-- RIGHT PHOTO -->
+            <!-- PHOTO -->
 
             <div class="profile-photo-area">
 
@@ -2171,6 +2377,7 @@ footer {
                     MY APPROACH
                 </div>
 
+
                 <h2>
 
                     Research with Structure.
@@ -2181,6 +2388,7 @@ footer {
 
                 </h2>
 
+
                 <p>
 
                     I follow a fundamental, bottom-up approach
@@ -2190,12 +2398,18 @@ footer {
 
                 </p>
 
+
                 <a
                     href="#projects"
                     class="explore-btn"
                 >
+
                     EXPLORE MY RESEARCH
-                    <span>→</span>
+
+                    <span>
+                        →
+                    </span>
+
                 </a>
 
             </div>
@@ -2327,12 +2541,19 @@ footer {
             <div class="coverage-items">
 
                 <span>Indian Equities</span>
+
                 <span>Singapore Markets</span>
+
                 <span>Financial Institutions</span>
+
                 <span>REITs</span>
+
                 <span>BFSI</span>
+
                 <span>Consumer</span>
+
                 <span>Industrials</span>
+
                 <span>AI in Finance</span>
 
             </div>
@@ -2516,7 +2737,7 @@ footer {
 
 
 <!-- =========================================================
-     04 — AI + FINANCIAL TOOLKIT
+     04 — RESEARCH & FINANCIAL TOOLKIT
 ========================================================= -->
 
 <section id="toolkit" class="toolkit-section">
@@ -2682,7 +2903,7 @@ footer {
         </div>
 
 
-        <!-- THREE SUPPORTING CARDS -->
+        <!-- LOWER TOOLKIT CARDS -->
 
         <div class="toolkit-cards">
 
@@ -3020,7 +3241,6 @@ footer {
 
     <div class="container">
 
-
         <div class="section-label">
             06 — DIRECT CONNECT
         </div>
@@ -3136,7 +3356,7 @@ footer {
                     href="Supriya%20Rai_Resume.pdf"
                     download
                     class="profile-action primary"
-                    style="grid-column:1/-1;"
+                    style="grid-column: 1 / -1;"
                 >
                     ↓ DOWNLOAD CV
                 </a>
