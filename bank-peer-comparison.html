@@ -321,17 +321,73 @@
 @media(max-width:500px){.benchmark-metric-grid{grid-template-columns:1fr}.benchmark-panel{padding-left:8px;padding-right:8px}}
 </style>
 <script>
-(function(){
-const tabs=document.querySelectorAll('.benchmark-tab');
-const panels=document.querySelectorAll('.benchmark-panel');
-tabs.forEach(tab=>tab.addEventListener('click',()=>{
-tabs.forEach(t=>t.classList.remove('active'));
-panels.forEach(p=>p.classList.remove('active'));
-tab.classList.add('active');
-const panel=document.getElementById('tab-'+tab.dataset.tab);
-if(panel) panel.classList.add('active');
-}));
-})();
+document.addEventListener('DOMContentLoaded', function () {
+    const tabs = Array.from(document.querySelectorAll('.benchmark-tab'));
+    const panels = Array.from(document.querySelectorAll('.benchmark-panel'));
+
+    if (!tabs.length || !panels.length) return;
+
+    tabs.forEach(function (tab, index) {
+        const key = tab.dataset.tab;
+        const panel = document.getElementById('tab-' + key);
+
+        tab.setAttribute('role', 'tab');
+        tab.setAttribute('aria-controls', 'tab-' + key);
+        tab.setAttribute('aria-selected', tab.classList.contains('active') ? 'true' : 'false');
+        tab.setAttribute('tabindex', tab.classList.contains('active') ? '0' : '-1');
+        tab.id = 'benchmark-tab-' + key;
+
+        if (panel) {
+            panel.setAttribute('role', 'tabpanel');
+            panel.setAttribute('aria-labelledby', tab.id);
+            panel.setAttribute('tabindex', '0');
+        }
+
+        tab.addEventListener('click', function () {
+            activateTab(tab);
+        });
+
+        tab.addEventListener('keydown', function (event) {
+            let nextIndex = index;
+
+            if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+            else if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
+            else if (event.key === 'Home') nextIndex = 0;
+            else if (event.key === 'End') nextIndex = tabs.length - 1;
+            else return;
+
+            event.preventDefault();
+            tabs[nextIndex].focus();
+            activateTab(tabs[nextIndex]);
+        });
+    });
+
+    function activateTab(target) {
+        const targetPanel = document.getElementById('tab-' + target.dataset.tab);
+
+        tabs.forEach(function (tab) {
+            const selected = tab === target;
+            tab.classList.toggle('active', selected);
+            tab.setAttribute('aria-selected', selected ? 'true' : 'false');
+            tab.setAttribute('tabindex', selected ? '0' : '-1');
+        });
+
+        panels.forEach(function (panel) {
+            const visible = panel === targetPanel;
+            panel.classList.toggle('active', visible);
+            panel.hidden = !visible;
+        });
+
+        if (targetPanel) targetPanel.hidden = false;
+    }
+
+    // Initialize the first active tab and hide the other panels.
+    const initial = tabs.find(function (tab) {
+        return tab.classList.contains('active');
+    }) || tabs[0];
+
+    activateTab(initial);
+});
 </script>
 
 </head>
@@ -374,7 +430,7 @@ if(panel) panel.classList.add('active');
 <div class="container">
 <div class="benchmark-shell">
 
-<div class="benchmark-tabs" role="tablist">
+<div class="benchmark-tabs" role="tablist" aria-label="Singapore banking peer comparison views">
 <button class="benchmark-tab active" data-tab="scorecard">▱ &nbsp; Tab 1: 1H26 Peer Scorecard</button>
 <button class="benchmark-tab" data-tab="valuation">% &nbsp; Tab 2: Bank Valuation Framework</button>
 <button class="benchmark-tab" data-tab="capital">⚙ &nbsp; Tab 3: Capital &amp; Risk Dashboard</button>
