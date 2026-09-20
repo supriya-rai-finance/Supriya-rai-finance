@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>DBS Group | Investment Banking Style Pitchbook | Supriya Rai</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#dfe3e8;color:#172235}
+a{text-decoration:none;color:inherit}
+.deck{padding:30px 20px 60px}
+.slide{width:min(1180px,96vw);min-height:664px;margin:0 auto 28px;background:#fff;position:relative;overflow:hidden;box-shadow:0 10px 30px rgba(12,25,42,.12);padding:52px 62px 48px}
+.slide.dark{background:#0c1b2e;color:#fff}
+.topline{height:4px;background:#c82026;position:absolute;left:0;top:0;width:100%}
+.kicker{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:#6c7b8f;margin-bottom:12px}
+.dark .kicker{color:#9db2c9}
+h1{font-size:50px;line-height:1.05;margin-bottom:18px}
+h2{font-size:30px;line-height:1.15;margin-bottom:12px}
+h3{font-size:16px;margin-bottom:8px}
+.sub{color:#66758a;font-size:14px;line-height:1.65;max-width:760px}
+.dark .sub{color:#aebdd0}
+.header{display:flex;justify-content:space-between;gap:30px;align-items:flex-start;margin-bottom:30px}
+.logo{font-size:15px;font-weight:800;letter-spacing:1.5px}
+.logo span{color:#c82026}
+.date{font-size:10px;color:#78869a;text-align:right}
+.dark .date{color:#8fa4bc}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.metric{padding:19px;background:#f5f7f9;border:1px solid #dfe5eb}
+.metric strong{display:block;font-size:25px;color:#172235;margin-bottom:5px}
+.metric span{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:#718097;font-weight:700}
+.dark .metric{background:#12243a;border-color:#263c55}
+.dark .metric strong{color:#fff}
+.dark .metric span{color:#8fa4bc}
+.card{padding:23px;border:1px solid #dce2e9;background:#fff}
+.dark .card{background:#12243a;border-color:#263c55}
+.card p,.card li{font-size:12px;line-height:1.65;color:#64748a}
+.dark .card p,.dark .card li{color:#aebdd0}
+.card ul{padding-left:18px}
+.card li{margin-bottom:7px}
+.tag{display:inline-block;padding:6px 9px;border:1px solid #d8dfe7;color:#526277;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-right:6px}
+.red{color:#c82026}.blue{color:#24639a}.gold{color:#b4872d}
+.hero-layout{display:grid;grid-template-columns:1.25fr .75fr;gap:45px;align-items:end;height:480px}
+.hero-title{border-left:5px solid #c82026;padding-left:25px}
+.hero-title h1{font-size:66px}
+.hero-box{background:#f5f7f9;border:1px solid #dce2e9;padding:25px}
+.hero-box strong{font-size:34px;display:block;margin:6px 0}
+.hero-box small{font-size:10px;color:#718097}
+.section-number{font-size:10px;color:#8795a8;letter-spacing:2px;font-weight:700;margin-bottom:20px}
+.slide-footer{position:absolute;bottom:20px;left:62px;right:62px;border-top:1px solid #e3e7ec;padding-top:9px;display:flex;justify-content:space-between;font-size:8px;color:#8794a6}
+.dark .slide-footer{border-color:#293d54;color:#748aa2}
+.table{width:100%;border-collapse:collapse;margin-top:18px}
+.table th,.table td{padding:11px 10px;border-bottom:1px solid #e1e6eb;text-align:right;font-size:11px}
+.table th:first-child,.table td:first-child{text-align:left}
+.table th{background:#f2f5f8;color:#506077;font-size:9px;text-transform:uppercase;letter-spacing:.7px}
+.bar{height:10px;background:#edf1f5;border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:#5e8ab3}
+.callout{padding:17px 19px;border-left:4px solid #c82026;background:#f7f8fa;font-size:11px;line-height:1.6;color:#5f6e82}
+.football{margin-top:18px}
+.frow{display:grid;grid-template-columns:130px 1fr 110px;gap:14px;align-items:center;margin:18px 0}
+.fmethod{font-size:11px;font-weight:700}
+.track{height:22px;background:#edf1f5;border:1px solid #dbe1e7;position:relative}
+.range{position:absolute;height:14px;top:3px;border-radius:3px;background:#6d95bf}
+.range.green{background:#8eb2a5}
+.marker{position:absolute;top:-5px;width:2px;height:32px;background:#c99b3b}
+.marker:after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:#c99b3b;left:-2.5px;top:-5px}
+.fvalues{text-align:right;font-size:9px;color:#617087}
+.scale{display:flex;justify-content:space-between;margin-left:144px;color:#8b97a7;font-size:8px}
+.note{font-size:9px;color:#7b899b;line-height:1.55;margin-top:16px}
+.sources{font-size:10px;line-height:1.8;color:#64748a}
+.sources div{border-bottom:1px solid #e3e7ec;padding:7px 0}
+@media(max-width:800px){
+.slide{min-height:720px;padding:38px 30px 45px}
+.hero-layout,.grid4,.grid3,.grid2{grid-template-columns:1fr}
+.hero-layout{height:auto;gap:25px}
+.hero-title h1{font-size:46px}
+.slide-footer{left:30px;right:30px}
+.frow{grid-template-columns:90px 1fr}.fvalues{font-size:8px}
+.scale{margin-left:104px}
+}
+@media print{
+body{background:#fff}.deck{padding:0}.slide{box-shadow:none;margin:0;page-break-after:always;width:100%;min-height:100vh}.slide:last-child{page-break-after:auto}
+}
+</style>
+</head>
+<body>
+<div class="deck">
+
+<section class="slide dark">
+<div class="topline"></div>
+<div class="header"><div class="logo">SUPRIYA <span>RAI</span></div><div class="date">DBS GROUP · SGX: D05<br>INSTITUTIONAL RESEARCH PITCHBOOK</div></div>
+<div class="hero-layout">
+<div class="hero-title"><div class="kicker">Equity Research / Singapore Banking</div><h1>DBS<br><span class="red">Group</span></h1><p class="sub">Institutional-style company, financial performance, peer valuation and valuation sensitivity overview.</p></div>
+<div class="hero-box"><span class="kicker">Research reference</span><strong>S$76.86</strong><small>18 Sep 2026 close · market reference only</small><hr style="margin:20px 0;border:0;border-top:1px solid #dce2e9"><span class="kicker">Prepared by</span><p style="font-size:13px;color:#66758a">Supriya Rai<br>Finance & Equity Research Portfolio</p></div>
+</div>
+<div class="slide-footer"><span>Educational portfolio research · Not investment advice</span><span>01</span></div>
+</section>
+
+<section class="slide">
+<div class="topline"></div><div class="section-number">02 · CONTENTS</div><h2>DBS Research Pitchbook</h2><p class="sub">A compact investment-banking-style presentation adapted for equity research and valuation work.</p>
+<div class="grid2" style="margin-top:30px">
+<div class="card"><h3>01 · Executive Summary</h3><p>Company snapshot, key financial metrics and research framing.</p></div>
+<div class="card"><h3>02 · Company Overview</h3><p>Business model, franchise, operating segments and strategic positioning.</p></div>
+<div class="card"><h3>03 · Financial Performance</h3><p>FY2025 results, 1H26 update and core banking operating indicators.</p></div>
+<div class="card"><h3>04 · Industry & Peer Context</h3><p>Singapore banking framework and DBS / OCBC / UOB comparison.</p></div>
+<div class="card"><h3>05 · Valuation</h3><p>P/B sensitivity, P/E and dividend-yield framework with football field.</p></div>
+<div class="card"><h3>06 · Catalysts & Risks</h3><p>Variables that can influence earnings, capital and valuation.</p></div>
+</div>
+<div class="callout" style="margin-top:26px"><strong>Pitchbook structure:</strong> CFI's public pitchbook framework uses company overview, industry overview and valuation as core sections; this DBS version adapts those building blocks to an equity-research portfolio rather than a transaction pitch. citeturn0search0</div>
+<div class="slide-footer"><span>DBS Group · Research Pitchbook</span><span>02</span></div>
+</section>
+
+<section class="slide">
+<div class="topline"></div><div class="section-number">03 · EXECUTIVE SUMMARY</div><h2>DBS combines scale, profitability and diversified income</h2><p class="sub">FY2025 provides the base year, while 1H26 indicators extend the operating picture into the current research period.</p>
+<div class="grid4" style="margin-top:30px">
+<div class="metric"><strong>S$22.9B</strong><span>FY2025 total income</span></div>
+<div class="metric"><strong>S$13.1B</strong><span>FY2025 profit before tax</span></div>
+<div class="metric"><strong>16.2%</strong><span>FY2025 ROE</span></div>
+<div class="metric"><strong>S$11.0B</strong><span>FY2025 net profit</span></div>
+</div>
+<div class="grid3" style="margin-top:18px">
+<div class="card"><h3>Franchise</h3><p>Consumer banking, wealth management and institutional banking provide diversified business exposure across Asia.</p></div>
+<div class="card"><h3>Earnings</h3><p>Net interest income remains central, while fee income, wealth management and treasury customer sales diversify earnings.</p></div>
+<div class="card"><h3>Capital</h3><p>FY2025 reported CET1 was 17.0% under transitional arrangements; fully phased-in pro-forma CET1 was 15.0%.</p></div>
+</div>
+<div class="callout" style="margin-top:22px">DBS reported FY2025 total income of S$22.9B, PBT of S$13.1B, net profit of S$11.0B and ROE of 16.2%. citeturn1search0turn1search3</div>
+<div class="slide-footer"><span>Source: DBS Annual Report 2025 / FY2025 results</span><span>03</span></div>
+</section>
+
+<section class="slide">
+<div class="topline"></div><div class="section-number">04 · COMPANY OVERVIEW</div><h2>Business model & franchise</h2><p class="sub">DBS describes its core franchise around consumer banking, wealth management and institutional banking, supported by digital capabilities and an Asian operating footprint. citeturn1search1</p>
+<div class="grid3" style="margin-top:30px">
+<div class="card"><div class="tag red">Consumer</div><h3 style="margin-top:16px">Consumer Banking / Wealth Management</h3><p>Deposits, lending, cards, investments and wealth-management services. Wealth management is an important source of fee-income diversification.</p></div>
+<div class="card"><div class="tag blue">Institutional</div><h3 style="margin-top:16px">Institutional Banking</h3><p>Corporate and institutional relationships across transaction banking, financing, advisory and capital-markets activities.</p></div>
+<div class="card"><div class="tag gold">Digital</div><h3 style="margin-top:16px">Technology & AI</h3><p>Digital banking and AI-led operating initiatives are part of DBS's stated strategy and operating model.</p></div>
+</div>
+<div class="grid4" style="margin-top:22px">
+<div class="metric"><strong>S$897B</strong><span>FY2025 total assets</span></div>
+<div class="metric"><strong>S$610B</strong><span>FY2025 deposits</span></div>
+<div class="metric"><strong>40%</strong><span>FY2025 cost-income</span></div>
+<div class="metric"><strong>1.0%</strong><span>FY2025 NPL ratio</span></div>
+</div>
+<div class="slide-footer"><span>Source: DBS Annual Report 2025</span><span>04</span></div>
+</section>
+
+<section class="slide">
+<div class="topline"></div><div class="section-number">05 · FINANCIAL PERFORMANCE</div><h2>FY2025 base + 1H26 operating update</h2>
+<div class="grid2" style="margin-top:25px">
+<div class="card"><h3>FY2025</h3><table class="table"><tr><th>Metric</th><th>FY2025</th></tr><tr><td>Total income</td><td>S$22.9B</td></tr><tr><td>Profit before tax</td><td>S$13.1B</td></tr><tr><td>Net profit</td><td>S$11.0B</td></tr><tr><td>ROE</td><td>16.2%</td></tr><tr><td>NPL ratio</td><td>1.0%</td></tr><tr><td>CET1</td><td>17.0%</td></tr></table></div>
+<div class="card"><h3>1H26</h3><table class="table"><tr><th>Metric</th><th>1H26</th></tr><tr><td>Total income</td><td>S$12.0B</td></tr><tr><td>Net profit</td><td>S$6.01B</td></tr><tr><td>ROE</td><td>17.5%</td></tr><tr><td>NIM</td><td>1.88%</td></tr><tr><td>Net fee income</td><td>S$2.94B</td></tr><tr><td>Wealth AUM</td><td>S$516B</td></tr></table></div>
+</div>
+<div class="callout" style="margin-top:24px"><strong>Research lens:</strong> track NIM, fee income, wealth-management activity, loan and deposit growth, credit costs, capital and operating efficiency as the key bridge between franchise quality and earnings.</div>
+<div class="slide-footer"><span>Source: DBS investor quarterly financials and 1H26 results</span><span>05</span></div>
+</section>
+
+<section class="slide">
+<div class="topline"></div><div class="section-number">06 · PEER FRAMEWORK</div><h2>Singapore banking peer comparison</h2><p class="sub">A pitchbook-style peer page should focus on comparable profitability, capital, asset quality and valuation metrics rather than isolated headline numbers.</p>
+<table class="table" style="margin-top:30px">
+<tr><th style="text-align:left">Metric</th><th>DBS</th><th>OCBC</th><th>UOB</th><th>Research use</th></tr>
+<tr><td>ROE</td><td>17.5% 1H26</td><td>—</td><td>—</td><td>Profitability</td></tr>
+<tr><td>NIM</td><td>1.88% 1H26</td><td>—</td><td>—</td><td>Earnings driver</td></tr>
+<tr><td>NPL</td><td>1.0%</td><td>—</td><td>—</td><td>Credit quality</td></tr>
+<tr><td>CET1</td><td>16.9% 1H26</td><td>—</td><td>—</td><td>Capital</td></tr>
+<tr><td>P/B</td><td>Model input</td><td>Model input</td><td>Model input</td><td>Relative valuation</td></tr>
+</table>
+<div class="callout" style="margin-top:25px">The peer slide is intentionally structured as a model-ready framework. Populate OCBC and UOB figures from their corresponding reporting periods before using the table for a live valuation comparison.</div>
+<div class="slide-footer"><span>Peer framework · Values shown only where the DBS research file currently supports them</span><span>06</span></div>
+</section>
+
+<section class="slide">
+<div class="topline"></div><div class="section-number">07 · VALUATION SUMMARY</div><h2>Valuation framework</h2><p class="sub">For banks, the framework links profitability, book value, earnings and capital returns. The current DBS model uses P/B as the primary sensitivity and supplements it with P/E and dividend-yield lenses.</p>
+<div class="grid3" style="margin-top:28px">
+<div class="card"><h3>P/B</h3><p>FY2025 net book value: S$24.29/share. Illustrative 2.4x–3.6x sensitivity gives S$58.30–S$87.44.</p></div>
+<div class="card"><h3>P/E</h3><p>Illustrative 16x–20x range applied to FY2025 basic EPS of S$3.88 gives S$62.08–S$77.60.</p></div>
+<div class="card"><h3>Dividend Yield</h3><p>Illustrative 4.0%–5.0% yield applied to FY2025 DPS of S$3.06 gives S$61.20–S$76.50.</p></div>
+</div>
+<div class="callout" style="margin-top:25px"><strong>Important:</strong> These are sensitivity assumptions for portfolio demonstration. They are not analyst targets, forecasts or investment recommendations.</div>
+<div class="slide-footer"><span>DBS valuation workspace · Illustrative assumptions</span><span>07</span></div>
+</section>
+
+<section class="slide">
+<div class="topline"></div><div class="section-number">08 · VALUATION FOOTBALL FIELD</div><h2>Illustrative valuation range</h2><div class="football">
+<div class="scale"><span>S$50</span><span>S$60</span><span>S$70</span><span>S$80</span><span>S$90</span></div>
+<div class="frow"><div class="fmethod">P/B</div><div class="track"><div class="range" style="left:45.0%;width:48.6%"></div><div class="marker" style="left:67.2%"></div></div><div class="fvalues">68.01 – 87.44</div></div>
+<div class="frow"><div class="fmethod">P/E</div><div class="track"><div class="range" style="left:30.2%;width:38.8%"></div><div class="marker" style="left:67.2%"></div></div><div class="fvalues">62.08 – 77.60</div></div>
+<div class="frow"><div class="fmethod">Dividend Yield</div><div class="track"><div class="range green" style="left:28%;width:38.25%"></div><div class="marker" style="left:67.2%"></div></div><div class="fvalues">61.20 – 76.50</div></div>
+</div>
+<div class="grid2" style="margin-top:30px">
+<div class="card"><h3>Market reference</h3><p style="font-size:25px;color:#172235;font-weight:800">S$76.86</p><p>18 Sep 2026 close. Shown for comparison only.</p></div>
+<div class="card"><h3>Interpretation</h3><p>The football field visualises the range produced by the stated assumptions. It does not select a preferred method or imply a target price.</p></div>
+</div>
+<div class="note">Source inputs: FY2025 NAV S$24.29/share, EPS S$3.88 and DPS S$3.06. Assumptions are illustrative. Market reference is dated 18 Sep 2026.</div>
+<div class="slide-footer"><span>Valuation football field · Sensitivity, not recommendation</span><span>08</span></div>
+</section>
+
+<section class="slide">
+<div class="topline"></div><div class="section-number">09 · CATALYSTS & RISKS</div><h2>Variables to monitor</h2>
+<div class="grid2" style="margin-top:25px">
+<div class="card"><h3 class="red">Potential earnings catalysts</h3><ul><li>Wealth-management activity and net new money</li><li>Fee-income growth and treasury customer sales</li><li>Loan and deposit growth</li><li>Operating efficiency</li><li>Capital deployment and dividend capacity</li></ul></div>
+<div class="card"><h3 class="blue">Key risks / sensitivities</h3><ul><li>NIM compression as rates and deposit pricing change</li><li>Credit deterioration and higher provisions</li><li>Regional macroeconomic conditions</li><li>Capital or regulatory changes</li><li>Market volatility affecting wealth and trading activity</li></ul></div>
+</div>
+<div class="callout" style="margin-top:28px">The research framework treats these as monitoring variables rather than predetermined outcomes. Quarterly results should be used to update the thesis and valuation assumptions.</div>
+<div class="slide-footer"><span>DBS Group · Catalysts & risks</span><span>09</span></div>
+</section>
+
+<section class="slide">
+<div class="topline"></div><div class="section-number">10 · ANALYST FRAMEWORK</div><h2>From financial statements to valuation</h2>
+<div class="grid4" style="margin-top:35px">
+<div class="card"><div class="section-number">01</div><h3>Business Quality</h3><p>Franchise, segments, competitive position and strategic capabilities.</p></div>
+<div class="card"><div class="section-number">02</div><h3>Financial Analysis</h3><p>NIM, fees, loans, deposits, credit costs, capital and efficiency.</p></div>
+<div class="card"><div class="section-number">03</div><h3>Valuation</h3><p>P/B, P/E, dividend yield, ROE and peer multiples.</p></div>
+<div class="card"><div class="section-number">04</div><h3>Monitoring</h3><p>Update assumptions as new quarterly and market information arrives.</p></div>
+</div>
+<div style="margin-top:35px;padding:30px;background:#0c1b2e;color:#fff"><div class="kicker">Research philosophy</div><h2 style="color:#fff">Evidence → Analysis → Valuation → Monitoring</h2><p class="sub">The objective is to connect business fundamentals to measurable financial drivers and valuation assumptions in a transparent, repeatable process.</p></div>
+<div class="slide-footer"><span>Supriya Rai · Finance & Equity Research Portfolio</span><span>10</span></div>
+</section>
+
+<section class="slide">
+<div class="topline"></div><div class="section-number">11 · SOURCES & NOTES</div><h2>Primary sources</h2>
+<div class="sources" style="margin-top:25px">
+<div>DBS Annual Report 2025 — Financial highlights, business overview and capital disclosures. citeturn1search4</div>
+<div>DBS FY2025 results — PBT, net profit, ROE, NPL, CET1 and dividend disclosures. citeturn1search3</div>
+<div>DBS Investor Relations — quarterly financials and 2026 results materials. citeturn0search7</div>
+<div>CFI public Investment Banking Pitchbook framework — company overview, industry overview, valuation and related presentation structure. citeturn0search0turn0search3</div>
+</div>
+<div class="callout" style="margin-top:30px"><strong>Portfolio disclaimer:</strong> This pitchbook is an educational demonstration of equity research, financial analysis and valuation presentation skills. It is not investment advice, a recommendation, solicitation or forecast.</div>
+<div class="slide-footer"><span>DBS Group Investment Banking Style Pitchbook</span><span>11</span></div>
+</section>
+
+</div>
+</body>
+</html>
