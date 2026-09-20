@@ -282,10 +282,36 @@ footer{
         grid-template-columns:repeat(2,1fr);
     }
 }
+
+/* INSTITUTIONAL DASHBOARD */
+.nav{position:sticky;top:0;z-index:50;background:rgba(7,17,31,.97);border-bottom:1px solid #203047}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;padding:17px 0}
+.logo{font-size:17px;font-weight:800;letter-spacing:1px}.logo span{color:#8fb4dc}
+.back{color:#9db0c7;font-size:13px}.back:hover{color:#fff}
+.dashboard{background:#f4f5f7;color:#172235;padding:68px 0}
+.dshell{background:#101c2d;border:1px solid #263a52;border-radius:13px;overflow:hidden;box-shadow:0 18px 45px rgba(0,0,0,.2)}
+.dhead{padding:34px 38px;background:linear-gradient(135deg,#101c2d,#16263d);border-bottom:1px solid #2a3c53}
+.dkicker{color:#9bbde4;font-size:10px;letter-spacing:2px;font-weight:700;text-transform:uppercase}
+.drow{display:flex;justify-content:space-between;align-items:flex-end;gap:25px;margin-top:10px}
+.drow h2{color:#fff;font-size:39px;margin:0 0 8px}.drow p{color:#aebdd0;font-size:13px;max-width:650px}
+.dprice{text-align:right}.dprice span{display:block;color:#8297b0;font-size:9px;text-transform:uppercase;letter-spacing:1px}.dprice strong{display:block;color:#fff;font-size:30px}.dprice small{color:#8297b0;font-size:10px}
+.dbody{background:#f7f8fa;padding:28px 38px 38px}
+.dmetrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:24px}.dmetric{background:#fff;border:1px solid #dce2e9;border-radius:7px;padding:15px}.dmetric span{display:block;color:#75849a;font-size:8px;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:6px}.dmetric strong{color:#172235;font-size:18px}
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.dcard{background:#fff;border:1px solid #dce2e9;border-radius:8px;padding:22px}.dlabel{color:#71819a;font-size:9px;letter-spacing:1.4px;font-weight:700;text-transform:uppercase;margin-bottom:7px}.dcard h3{color:#172235;font-size:16px}.dcard p{color:#66758a;font-size:12px;line-height:1.6}
+.dmini{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:15px}.dmini div{background:#f4f7fa;border:1px solid #e0e5eb;padding:12px;border-radius:6px}.dmini span{display:block;color:#7b899b;font-size:8px;text-transform:uppercase;letter-spacing:.8px}.dmini strong{display:block;color:#172235;font-size:16px;margin-top:4px}
+.dsens{margin-top:18px}.dsens table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #dce2e9}.dsens th,.dsens td{padding:10px;text-align:center;border-bottom:1px solid #e4e8ed;font-size:10px;color:#405169}.dsens th{background:#edf2f7;font-size:9px}.dsens td:first-child{font-weight:700}.dbase{background:#e8f0fb!important;color:#123d70!important;font-weight:800}
+.dfootball{margin-top:18px;background:#fff;border:1px solid #dce2e9;border-radius:8px;padding:22px;color:#172235}.dfootball-head{display:flex;justify-content:space-between;gap:20px}.dfootball-head p{color:#718097;font-size:10px}.dref{text-align:right;color:#718097;font-size:9px}.dref strong{display:block;color:#172235;font-size:17px}.dscale{display:flex;justify-content:space-between;margin:20px 0 5px 140px;color:#8a97a8;font-size:8px}.dfrow{display:grid;grid-template-columns:125px 1fr 105px;gap:12px;align-items:center;margin:16px 0}.dmethod{font-size:10px;font-weight:700}.dtrack{height:21px;background:#eef2f6;border:1px solid #dce2e9;position:relative}.drange{position:absolute;top:3px;height:13px;border-radius:3px;background:#6f95c1}.drange.green{background:#8eb2a5}.dmarker{position:absolute;top:-5px;height:31px;width:2px;background:#c99b3b}.dmarker:after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:#c99b3b;left:-2.5px;top:-5px}.dfvalue{text-align:right;color:#526277;font-size:9px}
+.dnote{margin-top:14px;padding:13px 15px;background:#eef3f8;border-left:3px solid #7fa7d8;color:#65758a;font-size:10px;line-height:1.6}
+.dactions{display:flex;flex-wrap:wrap;gap:9px;margin-top:17px}.dbtn{padding:10px 14px;border-radius:4px;background:#14253a;color:#eaf1f8;border:1px solid #2e4867;font-size:10px;font-weight:700;letter-spacing:.6px}.dbtn.primary{background:#c99b3b;border-color:#c99b3b;color:#101c2d}
+@media(max-width:900px){.dmetrics{grid-template-columns:repeat(3,1fr)}.dgrid{grid-template-columns:1fr}.drow{align-items:flex-start;flex-direction:column}.dprice{text-align:left}}
+@media(max-width:600px){.dashboard{padding:48px 0}.dbody,.dhead{padding:23px 18px}.dmetrics{grid-template-columns:repeat(2,1fr)}.dmini{grid-template-columns:1fr}.dscale{margin-left:0}.dfrow{grid-template-columns:1fr;gap:6px}.dfvalue{text-align:left}.dfootball-head{display:block}.dref{text-align:left;margin-top:10px}}
+@media print{.nav,.dactions{display:none}.dashboard{padding:0;background:#fff}.dshell{box-shadow:none;border:0}}
 </style>
 </head>
 
 <body>
+<nav class="nav"><div class="container nav-inner"><div class="logo">SUPRIYA <span>RAI</span></div><a class="back" href="index.html">← Back to Portfolio</a></div></nav>
+
 
 <header>
 <div class="container">
@@ -322,6 +348,32 @@ catalysts and risks.
 </div>
 </div>
 </header>
+<section class="dashboard" id="dashboard"><div class="container"><div class="dshell">
+<div class="dhead"><div class="dkicker">Institutional Equity Research Workspace</div><div class="drow"><div><h2>Reliance Valuation Dashboard</h2><p>One consolidated view of FY2026 performance, Q1 FY2027 operating momentum and the current DCF / SOTP valuation framework.</p></div><div class="dprice"><span>Market reference</span><strong>₹1,226.40</strong><small>18 Sep 2026 NSE close · reference only</small></div></div></div>
+<div class="dbody">
+<div class="dmetrics">
+<div class="dmetric"><span>FY2026 Revenue</span><strong>₹11.76L Cr</strong></div>
+<div class="dmetric"><span>FY2026 EBITDA</span><strong>₹2.08L Cr</strong></div>
+<div class="dmetric"><span>FY2026 PAT</span><strong>₹95,754 Cr</strong></div>
+<div class="dmetric"><span>FY2026 Capex</span><strong>₹1.44L Cr</strong></div>
+<div class="dmetric"><span>Net Debt / EBITDA</span><strong>0.60x</strong></div>
+<div class="dmetric"><span>Q1 FY27 Revenue</span><strong>₹3.40L Cr</strong></div>
+</div>
+<div class="dgrid">
+<div class="dcard"><div class="dlabel">Research thesis</div><h3>What drives the valuation?</h3><p>Reliance should be assessed through the mix of mature cash-generating businesses and higher-growth consumer and new-energy platforms, with capex intensity and segment-level economics central to the valuation.</p><div class="dmini"><div><span>Business mix</span><strong>6 engines</strong></div><div><span>Core lens</span><strong>SOTP</strong></div><div><span>Cross-check</span><strong>DCF + Comps</strong></div></div></div>
+<div class="dcard"><div class="dlabel">Latest operating dashboard</div><h3>Q1 FY2027 update</h3><p>Q1 FY2027 gross revenue was ₹3,40,257 Cr, EBITDA ₹54,067 Cr, PAT ₹23,196 Cr and capex ₹38,682 Cr, according to Reliance's published results.</p><div class="dmini"><div><span>Jio</span><strong>Track ARPU</strong></div><div><span>Retail</span><strong>Track margins</strong></div><div><span>O2C</span><strong>Track spreads</strong></div></div></div>
+</div>
+<div class="dsens"><div class="dlabel">DCF sensitivity</div><table><tr><th>WACC \ g</th><th>3.5%</th><th>4.0%</th><th>4.5%</th><th>5.0%</th></tr><tr><td>9.5%</td><td>₹1,520</td><td>₹1,610</td><td>₹1,720</td><td>₹1,850</td></tr><tr><td>10.0%</td><td>₹1,390</td><td>₹1,470</td><td>₹1,560</td><td>₹1,670</td></tr><tr><td>10.5%</td><td>₹1,280</td><td>₹1,350</td><td class="dbase">₹1,430</td><td>₹1,520</td></tr><tr><td>11.0%</td><td>₹1,190</td><td>₹1,250</td><td>₹1,320</td><td>₹1,390</td></tr><tr><td>11.5%</td><td>₹1,110</td><td>₹1,170</td><td>₹1,230</td><td>₹1,290</td></tr></table></div>
+<div class="dfootball"><div class="dfootball-head"><div><div class="dlabel">Valuation range view</div><h3>Illustrative valuation football field</h3><p>Ranges are taken from the existing portfolio model and are not price targets.</p></div><div class="dref">Market reference<strong>₹1,226.40</strong>18 Sep 2026 NSE close</div></div>
+<div class="dscale"><span>₹1,000</span><span>₹1,250</span><span>₹1,500</span><span>₹1,750</span><span>₹2,000</span></div>
+<div class="dfrow"><div class="dmethod">DCF</div><div class="dtrack"><div class="drange" style="left:28%;width:57%"></div><div class="dmarker" style="left:45.1%"></div></div><div class="dfvalue">₹1,280–₹1,850</div></div>
+<div class="dfrow"><div class="dmethod">Trading Comps</div><div class="dtrack"><div class="drange" style="left:35%;width:45%"></div><div class="dmarker" style="left:45.1%"></div></div><div class="dfvalue">₹1,350–₹1,800</div></div>
+<div class="dfrow"><div class="dmethod">SOTP</div><div class="dtrack"><div class="drange green" style="left:40%;width:42%"></div><div class="dmarker" style="left:45.1%"></div></div><div class="dfvalue">₹1,400–₹1,820</div></div>
+<div class="dnote"><strong>Methodology:</strong> DCF sensitivity uses the existing 9.5%–11.5% WACC and 3.5%–5.0% terminal-growth grid. The football-field ranges are illustrative modelling outputs from the portfolio project and should be refreshed when assumptions change.</div>
+</div>
+<div class="dactions"><a class="dbtn primary" href="reliance-pitchbook.html" target="_blank" rel="noopener noreferrer">OPEN RELIANCE PITCHBOOK</a><a class="dbtn" href="#dashboard" onclick="window.print();return false">PRINT / SAVE DASHBOARD AS PDF</a></div>
+</div></div></div></section>
+
 
 
 <!-- 01 COMPANY OVERVIEW -->
