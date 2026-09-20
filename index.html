@@ -2245,6 +2245,78 @@ img {
     }
     .contact-cv,.contact-message,.contact-status { grid-column: 1; }
 }
+
+/* Direct Connect — subtle brand accents */
+.contact-detail {
+    position: relative;
+    overflow: hidden;
+}
+.contact-detail::after {
+    content: "";
+    position: absolute;
+    right: -18px;
+    bottom: -24px;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: var(--card-accent, rgba(213,169,70,.08));
+    opacity: .75;
+}
+.contact-detail.email-card {
+    --card-accent: rgba(234,67,53,.12);
+    border-top: 3px solid #ea4335;
+}
+.contact-detail.linkedin-card {
+    --card-accent: rgba(10,102,194,.12);
+    border-top: 3px solid #0a66c2;
+}
+.contact-detail.location-card {
+    --card-accent: rgba(213,169,70,.14);
+    border-top: 3px solid #d5a946;
+}
+.contact-detail.focus-card {
+    --card-accent: rgba(22,199,132,.10);
+    border-top: 3px solid #16c784;
+}
+.email-card .contact-icon {
+    color: #ea4335;
+    background: #fce8e6;
+}
+.linkedin-card .contact-icon {
+    color: #0a66c2;
+    background: #e8f1fb;
+}
+.location-card .contact-icon {
+    color: #a77b20;
+    background: #f7edd5;
+}
+.focus-card .contact-icon {
+    color: #13966a;
+    background: #e4f7ef;
+}
+.contact-detail .contact-card-art {
+    position: absolute;
+    right: 12px;
+    bottom: 8px;
+    z-index: 1;
+    opacity: .20;
+    pointer-events: none;
+}
+.mbs-art {
+    width: 72px;
+    height: 42px;
+}
+.connect-card-art {
+    width: 58px;
+    height: 48px;
+}
+.contact-detail > .contact-icon,
+.contact-detail > span,
+.contact-detail > strong,
+.contact-detail > small {
+    position: relative;
+    z-index: 3;
+}
 /* =========================================================
    LINKEDIN
 ========================================================= */
@@ -4146,7 +4218,7 @@ financial analysis, wealth management, valuation and related finance roles.
 
 <div class="contact-details">
 
-<a class="contact-detail" href="mailto:supriyasrai135@gmail.com">
+<a class="contact-detail email-card" href="mailto:supriyasrai135@gmail.com">
 <div class="contact-icon">✉</div>
 <span>EMAIL</span>
 <strong>supriyasrai135@gmail.com</strong>
@@ -4159,16 +4231,29 @@ financial analysis, wealth management, valuation and related finance roles.
 <small>VIEW LINKEDIN PROFILE →</small>
 </a>
 
-<div class="contact-detail">
+<div class="contact-detail location-card">
 <div class="contact-icon">⌖</div>
 <span>LOCATION</span>
 <strong>Singapore</strong>
+<svg class="contact-card-art mbs-art" viewBox="0 0 120 70" aria-hidden="true">
+<path d="M10 57h100" stroke="currentColor" stroke-width="3"/>
+<path d="M22 57V38h12v19M40 57V30h12v27M58 57V22h12v35M76 57V34h12v23M94 57V27h12v30" fill="none" stroke="currentColor" stroke-width="3"/>
+<path d="M47 22c8-10 18-10 26 0l-13 4Z" fill="currentColor"/>
+<path d="M50 18c7-5 13-5 20 0" fill="none" stroke="currentColor" stroke-width="2"/>
+</svg>
 </div>
 
-<div class="contact-detail">
+<div class="contact-detail focus-card">
 <div class="contact-icon">◎</div>
 <span>FOCUS AREAS</span>
 <strong>Research · Finance · Valuation</strong>
+<svg class="contact-card-art connect-card-art" viewBox="0 0 80 64" aria-hidden="true">
+<circle cx="18" cy="32" r="7" fill="none" stroke="currentColor" stroke-width="3"/>
+<circle cx="62" cy="20" r="7" fill="none" stroke="currentColor" stroke-width="3"/>
+<circle cx="62" cy="46" r="7" fill="none" stroke="currentColor" stroke-width="3"/>
+<path d="M25 29 54 22M25 35 54 43" stroke="currentColor" stroke-width="3"/>
+<path d="m51 17 5 5-7 2M51 38l5 5-7 2" fill="none" stroke="currentColor" stroke-width="2"/>
+</svg>
 </div>
 
 <a href="Supriya%20Rai_Resume.pdf" download class="contact-cv">↓ &nbsp; DOWNLOAD CV</a>
